@@ -3,6 +3,9 @@ rbenv:
 - 2.7.2
 addons:
   postgresql: 9.6
+before_install:
+  - yes | gem update --system --force
+  - gem install bundler
 script:
 - bundle exec rails db:{create,migrate} RAILS_ENV=test
 - bundle exec rspec -fd
