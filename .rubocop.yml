@@ -1,0 +1,157 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rake
+  - rubocop-rspec
+
+AllCops:
+  Exclude:
+    - './*'
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'coverage/**/*'
+    - 'db/**/*'
+    - 'lib/**/*'
+    - 'log/**/*'
+    - 'node_modules/**/*'
+    - 'public/**/*'
+    - 'spec/rails_helper.rb'
+    - 'spec/spec_helper.rb'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+    - '.git/**/*'
+  NewCops: enable
+  TargetRubyVersion: 2.7
+
+Layout/CommentIndentation:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Layout/HashAlignment:
+  EnforcedHashRocketStyle:
+    - key
+    - table
+  EnforcedColonStyle:
+    - key
+    - table
+
+Layout/LineLength:
+  Max: 80
+  IgnoredPatterns:
+    - !ruby/regexp /\A +(it|describe|context|shared_examples|include_examples|it_behaves_like) ["']/
+  Exclude:
+    - 'spec/**/*.rb'
+    - 'lib/tasks/**/*.rake'
+    - 'config/**/*.rb'
+    - 'Gemfile'
+    - 'Rakefile'
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Lint/InterpolationCheck:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+    - '**/*.gemspec'
+
+Metrics/ClassLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'spec/**/*.rb'
+    - 'app/serializers/**/*.rb'
+
+Metrics/ModuleLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Naming/InclusiveLanguage:
+  FlaggedTerms:
+    offence:
+      Suggestions:
+        - offense
+
+Naming/VariableNumber:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Performance/CollectionLiteralInLoop:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Rails/DynamicFindBy:
+  Enabled: false
+
+Rails/UniqueValidationWithoutIndex:
+  Enabled: false
+
+Rake/Desc:
+  Enabled: false
+
+RSpec/DescribeClass:
+  Exclude:
+    - 'spec/features/**/*.rb'
+
+RSpec/DescribedClass:
+  EnforcedStyle: explicit
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/ImplicitExpect:
+  EnforcedStyle: should # Custom
+
+RSpec/ImplicitSubject:
+  EnforcedStyle: single_line_only # Default
+
+RSpec/LetSetup:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'app/controllers/**/*.rb'
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyMethod:
+  Exclude:
+    - 'app/controllers/**/*'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/MultilineIfThen:
+  Enabled: false
+
+Style/SafeNavigation:
+  Enabled: false
+
+Style/SymbolArray:
+  Exclude:
+    - 'config/routes.rb'
+    - 'app/controllers/**/*.rb'
+    - 'app/models/**/*.rb'
+    - 'Gemfile'
+    - 'Rakefile'
