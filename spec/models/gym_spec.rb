@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Gym, type: :model do
   describe 'relationships' do
+    it { should have_many(:events) }
     it { should have_many(:gym_members) }
     it { should have_many(:users).through(:gym_members) }
-    it { should have_many(:events) }
   end
 
   describe 'validations' do

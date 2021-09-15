@@ -15,13 +15,13 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of(:google_token) }
     it { should validate_uniqueness_of(:google_token) }
     it { should validate_presence_of(:google_image_url) }
-    it { should validate_uniqueness_of(:google_image_url) } #uniqueness?
+    it { should validate_uniqueness_of(:google_image_url) }
     it { should validate_presence_of(:zip_code) }
     it { should validate_presence_of(:summary) }
     it { should validate_presence_of(:goal) }
-    it { should validate_presence_of(:availability_morning) }
-    it { should validate_presence_of(:availability_afternoon) }
-    it { should validate_presence_of(:availability_evening) }
+    it { should validate_inclusion_of(:availability_morning).in_array([true, false]) }
+    it { should validate_inclusion_of(:availability_afternoon).in_array([true, false]) }
+    it { should validate_inclusion_of(:availability_evening).in_array([true, false]) }
   end
 
   # before :each do

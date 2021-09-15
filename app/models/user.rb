@@ -6,7 +6,7 @@ class User < ApplicationRecord
   validates :zip_code, presence: true
   validates :summary, presence: true
   validates :goal, presence: true
-  validates :availability_morning, presence: true
-  validates :availability_afternoon, presence: true
-  validates :availability_evening, presence: true
+  validates :availability_morning, inclusion: { in: [true, false] }
+  validates :availability_afternoon, inclusion: { in: [true, false] }
+  validates :availability_evening, inclusion: { in: [true, false] }
 end
