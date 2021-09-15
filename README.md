@@ -77,7 +77,7 @@ Total Revenue for a Given Merchant | [docs][get-total-revenue-for-merchant-docs]
  -->
 ## Project Background
 
-This project was developed by Brian Fletcher, Caroline Tan, Ezzedine Alwafai, Gunnar Runkle, and Taylor Varoglu during Mod 3 of Turing School's Back End Engineering Program.  The project was completed in 10 days, from creating the two new rails applications from scratch to deploying both to Heroku.
+This project was developed by Brian Fletcher, Caroline Tan, Ezzedine Alwafai, Gunnar Runkle, Scott Borecki, and Taylor Varoglu during Mod 3 of Turing School's Back End Engineering Program.  The project was completed in 10 days, from creating the two new rails applications from scratch to deploying both to Heroku.
 
 The project description and base requirements can be found here: [link][consultancy-home]
 
