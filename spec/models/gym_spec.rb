@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Gym, type: :model do
   describe 'relationships' do
-    it { should have_many(:events) }
-    it { should have_many(:gym_members) }
+    it { should have_many(:events).dependent(:destroy) }
+    it { should have_many(:gym_members).dependent(:destroy) }
     it { should have_many(:users).through(:gym_members) }
   end
 

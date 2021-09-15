@@ -2,7 +2,7 @@ class Event < ApplicationRecord
   belongs_to :user
   belongs_to :gym
 
-  has_many :invitations
+  has_many :invitations, dependent: :destroy
   has_many :users, through: :invitations
 
   validates :user_id, presence: true, numericality: true

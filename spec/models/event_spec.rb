@@ -4,7 +4,7 @@ RSpec.describe Event, type: :model do
   describe 'relationships' do
     it { should belong_to(:user) }
     it { should belong_to(:gym) }
-    it { should have_many(:invitations) }
+    it { should have_many(:invitations).dependent(:destroy) }
     it { should have_many(:users).through(:invitations) }
   end
 

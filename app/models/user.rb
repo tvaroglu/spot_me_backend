@@ -1,7 +1,13 @@
 class User < ApplicationRecord
-  has_many :followed_users, foreign_key: :follower_id, class_name: 'Friendship', dependent: :destroy, inverse_of: :follower
+  has_many :followed_users, foreign_key: :follower_id,
+                            class_name: 'Friendship',
+                            dependent: :destroy,
+                            inverse_of: :follower
   has_many :followees, through: :followed_users
-  has_many :following_users, foreign_key: :followee_id, class_name: 'Friendship', dependent: :destroy, inverse_of: :followee
+  has_many :following_users, foreign_key: :followee_id,
+                             class_name: 'Friendship',
+                             dependent: :destroy,
+                             inverse_of: :followee
   has_many :followers, through: :following_users
 
   validates :email, presence: true, uniqueness: true
@@ -11,7 +17,10 @@ class User < ApplicationRecord
   validates :zip_code, presence: true, numericality: true
   validates :summary, presence: true
   validates :goal, presence: true
-  validates :availability_morning, inclusion: { in: [true, false] }, presence: true
-  validates :availability_afternoon, inclusion: { in: [true, false] }, presence: true
-  validates :availability_evening, inclusion: { in: [true, false] }, presence: true
+  validates :availability_morning, inclusion: { in: [true, false] },
+                                   presence: true
+  validates :availability_afternoon, inclusion: { in: [true, false] },
+                                     presence: true
+  validates :availability_evening, inclusion: { in: [true, false] },
+                                   presence: true
 end
