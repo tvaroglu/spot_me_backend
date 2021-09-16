@@ -156,7 +156,7 @@ In addition to the base project requirements, some extra explorations and extens
 
 ## Database Schema
 
-<img src="https://user-images.githubusercontent.com/74567704/133355636-6dc4278a-bb77-45f2-a277-7899632c85d2.png">
+![schema](https://user-images.githubusercontent.com/81220681/133701997-2e8a1242-d274-4bf2-af16-9f6c2a8a8480.png)
 
 <!-- Top Level Badges and Links -->
 [rubocop-badge]: https://img.shields.io/badge/code_style-rubocop-brightgreen.svg?style=flat-square
