@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'events API' do
   it 'sends a list of events' do
-    create_list(:event, 3)
+    create_list(:event, 3) # put in TimeCop date.today = a year ago
 
     get '/api/v1/events'
 
