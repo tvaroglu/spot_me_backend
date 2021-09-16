@@ -16,6 +16,15 @@ RSpec.describe Event, type: :model do
     it { should validate_presence_of(:date_time) }
     it { should validate_presence_of(:activity) }
   end
+
+  describe 'factories' do
+    describe 'event' do
+      it 'is valid with valid attributes' do
+        event = create(:event)
+        expect(event).to be_valid
+      end
+    end
+  end
   #
   # before :each do
   #

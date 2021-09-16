@@ -13,6 +13,9 @@ SimpleCov.start do
   add_filter 'app/jobs/'
 end
 
+require 'support/factory_bot.rb'
+require 'faker'
+
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec

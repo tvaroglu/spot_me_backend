@@ -17,10 +17,7 @@ class User < ApplicationRecord
   validates :zip_code, presence: true, numericality: true
   validates :summary, presence: true
   validates :goal, presence: true
-  validates :availability_morning, inclusion: { in: [true, false] },
-                                   presence: true
-  validates :availability_afternoon, inclusion: { in: [true, false] },
-                                     presence: true
-  validates :availability_evening, inclusion: { in: [true, false] },
-                                   presence: true
+  validates :availability_morning, inclusion: { in: [true, false] }
+  validates :availability_afternoon, inclusion: { in: [true, false] }
+  validates :availability_evening, inclusion: { in: [true, false] }
 end

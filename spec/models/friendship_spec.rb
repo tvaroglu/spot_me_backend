@@ -13,6 +13,15 @@ RSpec.describe Friendship, type: :model do
     it { should validate_numericality_of(:follower_id) }
     it { should validate_uniqueness_of(:followee_id).scoped_to(:follower_id) }
   end
+
+  describe 'factories' do
+    describe 'friendship' do
+      it 'is valid with valid attributes' do
+        friendship = create(:friendship)
+        expect(friendship).to be_valid
+      end
+    end
+  end
   #
   # before :each do
   #

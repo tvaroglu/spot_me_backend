@@ -13,6 +13,15 @@ RSpec.describe GymMember, type: :model do
     it { should validate_numericality_of(:gym_id) }
   end
 
+  describe 'factories' do
+    describe 'gym member' do
+      it 'is valid with valid attributes' do
+        gym_member = create(:gym_member)
+        expect(gym_member).to be_valid
+      end
+    end
+  end
+
   # before :each do
   #
   # end

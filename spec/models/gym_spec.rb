@@ -10,6 +10,15 @@ RSpec.describe Gym, type: :model do
   describe 'validations' do
     it { should validate_presence_of(:yelp_gym_id) }
   end
+
+  describe 'factories' do
+    describe 'gym' do
+      it 'is valid with valid attributes' do
+        gym = create(:gym)
+        expect(gym).to be_valid
+      end
+    end
+  end
   #
   # before :each do
   #
