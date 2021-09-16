@@ -14,11 +14,12 @@
 This is the back-end portion of the Spot-Me application, which exposes resources for the fitness application by consuming the Yelp, Google OAuth, and ZipCode APIs to effectively allow users to perform the functions described in the application.  
 
 
-These include:<br/>
-Search for gyms in your local area<br/>
-Signup for gyms <br/>
-Search for/add swol-mates<br/>
-Schedule workout sessions with swol-mates<br/>
+#### This app will allow users to:<br/>
+Search for gyms in their local area<br/>
+Signup for gyms<br/>
+Search for swol-mates<br/>
+Add swol-mates<br/>
+Schedule workout sessions with swol-mates<br/><br/>
  
 
  
@@ -46,7 +47,7 @@ Schedule workout sessions with swol-mates<br/>
 [Database Schema](#database-schema)
 
 
-  <br/><br/><br/>
+  <br/><br/>
  ### Tools Used
   
   |Development|Development|Testing|Deployment
@@ -62,6 +63,7 @@ Schedule workout sessions with swol-mates<br/>
   |[Postman](https://www.postman.com/product/rest-client/)|
 
 </div>
+<br/><br/>
 
 ## Minimum Requirements
 To access the API endpoints, you need the following:
