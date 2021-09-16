@@ -11,8 +11,17 @@
 
 # [Spot Me](https://spotme-app-api.herokuapp.com/) (BE) 
  
-Spot Me Api is an API that exposes resources for an e-commerce application using RESTful and non-RESTful endpoints.
+This is the back-end portion of the Spot-Me application, which exposes resources for the fitness application by consuming the Yelp, Google OAuth, and ZipCode APIs to effectively allow users to perform the functions described in the application.  
 
+
+These include:<br/>
+Search for gyms in your local area<br/>
+Signup for gyms <br/>
+Search for/add swol-mates<br/>
+Schedule workout sessions with swol-mates<br/>
+ 
+
+ 
  ## Contributors
 
 |Brian Fletcher|Caroline Tan|Ezzedine Alwafai|Gunnar Runkle|Scott Borecki|Taylor Varoglu
@@ -21,6 +30,7 @@ Spot Me Api is an API that exposes resources for an e-commerce application using
 |[LinkedIn](https://www.linkedin.com/in/bfl3tch/)|[LinkedIn](https://www.linkedin.com/in/carolinectan/)|[LinkedIn](https://www.linkedin.com/in/ezzedine-alwafai/)|[LinkedIn](https://www.linkedin.com/in/gunnar-runkle/)|[LinkedIn](https://www.linkedin.com/in/scott-borecki/)|[LinkedIn](https://www.linkedin.com/in/taylorvaroglu/)
 
 <br/><br/>
+ 
 </div>
 
  <div align="center">
@@ -29,13 +39,15 @@ Spot Me Api is an API that exposes resources for an e-commerce application using
 |Links
 |--- |
 [Tools Used](#tools-used)
+[Minimum Requirements](#minimum-requirements)
 [Setup](#setup)
+[Endpoints](#endpoints)
 [Learning Goals](#learning-goals)
-[Wireframes](#wireframes)
 [Database Schema](#database-schema)
 
 
-  <br/><br/><br/><ins>Tools Used</ins>
+  <br/><br/><br/>
+ ### Tools Used
   
   |Development|Development|Testing|Deployment
   |--- |--- |--- |--- |
@@ -56,7 +68,7 @@ To access the API endpoints, you need the following:
 - `GET` Requests: Internet browser or API client (such as [Postman][postman-url])
 - `POST`, `PATCH`, `DELETE` Requests: API client
 
-## Getting Started
+## Setup
 
 The `base path` of each endpoint is:
 
