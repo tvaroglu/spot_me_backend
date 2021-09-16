@@ -35,6 +35,7 @@ gem 'omniauth-google-oauth2'
 
 group :development, :test do
   gem 'pry'
+  gem 'factory_bot_rails'
   gem 'figaro'
 end
 
@@ -53,7 +54,6 @@ group :test do
   gem 'rspec-rails', '~> 4.0.1'
   gem 'simplecov'
   gem 'shoulda-matchers'
-  gem 'factory_bot_rails'
   gem 'faker'
   gem 'webmock'
   gem 'vcr'
