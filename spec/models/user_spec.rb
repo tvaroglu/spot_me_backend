@@ -27,14 +27,38 @@ RSpec.describe User, type: :model do
     it { should validate_numericality_of(:zip_code) }
     it { should validate_presence_of(:summary) }
     it { should validate_presence_of(:goal) }
+    it { should validate_presence_of(:first_name) }
+    it { should validate_presence_of(:last_name) }
+    it { should validate_presence_of(:full_name) }
   end
 
   describe 'factories' do
     describe 'user' do
+      subject(:user) { create(:user) }
+
       it 'is valid with valid attributes' do
-        user = create(:user)
         expect(user).to be_valid
       end
+    end
+  end
+
+  describe 'attributes' do
+    subject(:user) { create(:user) }
+
+    it 'has readable attributes' do
+      expect(user.email).to be_a String
+      expect(user.google_id).to be_a String
+      expect(user.google_token).to be_a String
+      expect(user.google_image_url).to be_a String
+      expect(user.zip_code).to be_a String
+      expect(user.summary).to be_a String
+      expect(user.goal).to be_an Integer
+      expect(user.availability_morning).to be_in([true, false])
+      expect(user.availability_afternoon).to be_in([true, false])
+      expect(user.availability_evening).to be_in([true, false])
+      expect(user.first_name).to be_a String
+      expect(user.last_name).to be_a String
+      expect(user.full_name).to be_a String
     end
   end
 
