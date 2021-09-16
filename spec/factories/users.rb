@@ -10,5 +10,8 @@ FactoryBot.define do
     availability_morning { [true, false].sample }
     availability_afternoon { [true, false].sample }
     availability_evening { [true, false].sample }
+    first_name { Faker::Name.first_name }
+    last_name { Faker::Name.last_name }
+    full_name { Faker::Name.name }
   end
 end
