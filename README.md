@@ -1,4 +1,6 @@
-# Spot Me API
+<div align="center">
+ 
+
 
 ![Version][version-badge]
 [![Ruby Style Guide][rubocop-badge]][rubocop-url]
@@ -7,24 +9,47 @@
 [![Stargazers][stars-badge]][stars-url]
 [![Issues][issues-badge]][issues-url]
 
-Rails Engine is an API that exposes resources for an e-commerce application using RESTful and non-RESTful endpoints.
+# [Spot Me](https://spotme-app-api.herokuapp.com/) (BE) 
+ 
+Spot Me Api is an API that exposes resources for an e-commerce application using RESTful and non-RESTful endpoints.
 
+ ## Contributors
+
+|Brian Fletcher|Caroline Tan|Ezzedine Alwafai|Gunnar Runkle|Scott Borecki|Taylor Varoglu
+|--- |--- |--- |--- |--- |--- |
+|[GitHub](https://github.com/bfl3tch)|[GitHub](https://github.com/carolinectan)|[GitHub](https://github.com/ealwafai)|[GitHub](https://github.com/gunnarrunner)|[GitHub](https://github.com/Scott-Borecki)|[GitHub](https://github.com/tvaroglu)
+|[LinkedIn](https://www.linkedin.com/in/bfl3tch/)|[LinkedIn](https://www.linkedin.com/in/carolinectan/)|[LinkedIn](https://www.linkedin.com/in/ezzedine-alwafai/)|[LinkedIn](https://www.linkedin.com/in/gunnar-runkle/)|[LinkedIn](https://www.linkedin.com/in/scott-borecki/)|[LinkedIn](https://www.linkedin.com/in/taylorvaroglu/)
+
+<br/><br/>
+</div>
+
+ <div align="center">
+ 
 ## Table of Contents
+|Links
+|--- |
+[Tools Used](#tools-used)
+[Setup](#setup)
+[Learning Goals](#learning-goals)
+[Wireframes](#wireframes)
+[Database Schema](#database-schema)
 
-- [Technologies Used](#technologies-used)
-- [Minimum Requirements](#minimum-requirements)
-- [Getting Started](#getting-started)
-- [Endpoints](#endpoints)
-- [Project Background](#project-background)
-- [Database Schema](#database-schema)
-- [Contributors](#contributors)
 
-## Technologies Used
-- Rails 5.2.6
-- Ruby 2.7.2
-- PostgreSQL 13.3
-- Gems: FactoryBot, Faker, Pry, RSpec, RuboCop, Shoulda-Matchers, SimpleCov
-- Processes: OOP, TDD, MVC, REST
+  <br/><br/><br/><ins>Tools Used</ins>
+  
+  |Development|Development|Testing|Deployment
+  |--- |--- |--- |--- |
+  |[Ruby 2.7.2](https://www.ruby-lang.org/en/downloads/)|[Bootstrap](https://rubygems.org/gems/bootstrap/versions/4.0.0)|[RSpec for Rails](https://github.com/rspec/rspec-rails)|[Heroku](http://virtual-watch-party.herokuapp.com)|
+  |[Pry](https://rubygems.org/gems/pry/versions/0.10.3)|[Github](https://desktop.github.com/)|[Capybara](https://github.com/teamcapybara/capybara)|[Travis CI](https://travis-ci.org/)|
+  |[Rails 5.2.6](https://rubygems.org/gems/rails/versions/5.2.6)|[Git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)|[Webmock](https://github.com/bblimke/webmock)
+  |[PostgresQL](https://www.postgresql.org/)|[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)|[VCR](https://github.com/vcr/vcr)
+  |[OmniAuth Google OAuth2](https://github.com/zquestz/omniauth-google-oauth2)|[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)|[Launchy](https://rubygems.org/gems/launchy/versions/2.4.3)
+  |[Postico](https://eggerapps.at/postico/)|[Rubocop](https://rubygems.org/gems/rubocop/versions/0.39.0)|[Orderly](https://github.com/jmondo/orderly)
+  |[Faraday](https://github.com/lostisland/faraday)|[Atom](https://atom.io/)|[SimpleCov](https://rubygems.org/gems/simplecov/versions/0.12.0)
+  |[Figaro](https://github.com/laserlemon/figaro)|[FactoryBot](https://github.com/thoughtbot/factory_bot)
+  |[Postman](https://www.postman.com/product/rest-client/)|
+
+</div>
 
 ## Minimum Requirements
 To access the API endpoints, you need the following:
@@ -93,6 +118,27 @@ In addition to the base project requirements, some extra explorations and extens
 - Completing all the Find and Find All endpoints for both Merchants and Items
 - Completing all the edge case tests
 - Deploying the API to Heroku for production
+
+ 
+### Learning Goals
+  
+  - ⭐ Consume two or more external APIs which require authentication
+  - ⭐ Build APIs that return JSON responses
+  - ⭐ Use an external OAuth provider to authenticate users
+  - ⭐ Create a project with a separate frontend and backend
+  - ⭐ Organize and refactor code to be more maintainable
+  - ⭐ Implement a self-referential relationship in ActiveRecord
+  - ⭐ Utilize Continuous Integration using Travis CI
+  - ⭐ Deploy to Heroku
+  - ⭐ Implement a production-quality user interface using Bootstrap or other common CSS styling framework
+  - ⭐ Implement project management by using project boards, participating in daily stand-ups and team retros
+  - ⭐ Use Rails to create web pages that allow users to CRUD resources
+  - ⭐ Utilize quality workflow practices: small commits, descriptive pull requests, and code reviews
+  - ⭐ Write thorough, understandable documentation
+  - ⭐ Create instance and class methods on a Rails model that use ActiveRecord methods and helpers
+  - ⭐ Write model and feature tests that fully cover data logic and potential user behavior
+  - ⭐ Apply RuboCop’s style guide for code quality
+  
 
 ## Database Schema
 
