@@ -5,4 +5,20 @@ class Api::V1::UsersController < ApplicationController
 
     render json: UserSerializer.new(user).serializable_hash, status: :ok
   end
+
+  def update
+    user = User.find(params[:id])
+    user.update!(user_params)
+
+    render json: UserSerializer.new(user).serializable_hash, status: :ok
+  end
+
+  private
+
+  # TODO: Do we want to allow them to update the info that is collected from
+  #       Google Oauth?
+  #       :full_name, :email, :google_id, :google_image_url
+  def user_params
+    params.permit(:zip_code, :summary, :goal, :availability_morning, :availability_afternoon, :availability_evening)
+  end
 end
