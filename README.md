@@ -179,23 +179,23 @@ In addition to the base project requirements, some extra explorations and extens
 [issues-url]: https://github.com/tvaroglu/spot_me_backend/issues
 
 Docs <!-- Create .md files for each endpoint then link after each ": " with appropriate file path -->
-[users-endpoints-link]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
-[get-user-dashboard-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
-[get-user-profile-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
-[update-user-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
-[create-register-new-user-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
-[friendships-endpoints-link]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
-[add-friend-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
-[remove-friend-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
-[events-endpoints-link]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
-[create-user-event-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
-[create-user-event-new-page-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
-[gyms-endpoints-link]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
-[add-gym-member-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
-[remove-gym-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
-[get-gyms-near-user-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
-[get-user-gym-show-page-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
-[get-gym-show-page-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
+[users-endpoints-link]: <!-- enter file path here i.e. /docs/get_users.md -->
+[get-user-dashboard-docs]:
+[get-user-profile-docs]:
+[update-user-docs]:
+[create-register-new-user-docs]:
+[friendships-endpoints-link]:
+[add-friend-docs]:
+[remove-friend-docs]:
+[events-endpoints-link]:
+[create-user-event-docs]:
+[create-user-event-new-page-docs]:
+[gyms-endpoints-link]:
+[add-gym-member-docs]:
+[remove-gym-docs]:
+[get-gyms-near-user-docs]:
+[get-user-gym-show-page-docs]:
+[get-gym-show-page-docs]:
 
 <!-- Docs Template -->
 <!-- [merchants-endpoints-link]: /doc/merchants_endpoints.md -->
