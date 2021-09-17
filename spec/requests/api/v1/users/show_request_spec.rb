@@ -8,7 +8,7 @@ require 'rails_helper'
 # See spec/support/request_spec_helper.rb for #json and #json_data helpers.
 describe 'Users API', type: :request do
   describe 'GET /api/v1/users/:id' do
-    let!(:users) { create_list(:user, 30) }
+    let!(:users) { create_list(:user, 10) }
     let(:user_id) { users.first.id }
     let(:bad_user_id) { User.last.id + 1 }
 
