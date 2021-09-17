@@ -87,31 +87,42 @@ Notes:
 - For `GET` requests, an example link is provided for demonstration purposes.  
 - Unless otherwise noted, the results are sorted by name in case-sensitive alphabetical order (i.e. A-Z then a-z).
 
+Endpoint | Docs | Example
+---------|------|--------
+**Users** | [docs][users-endpoints-link]
+Get User Dashboard | [docs][get-user-dashboard-docs] | [example][insert file path here]
+Get User Profile | [docs][get-user-profile-docs] | [example][insert file path here]
+Update User | [docs][update-user-docs] | [example][insert file path here]
+Create/Register New User Endpoint | [docs][create-register-new-user-docs] | [example][insert file path here]
+**Friends** | [docs][friendships-endpoints-link]
+Add Friend | [docs][add-friend-docs] | [example][insert file path here]
+Remove Friend | [docs][remove-friend-docs] | [example][insert file path here]
+**Events** | [docs][events-endpoints-link]
+Create User Event | [docs][create-user-event-docs] | [example][insert file path here]
+Get User Event New Page | [docs][create-user-event-new-page-docs] | [example][insert file path here]
+**Gyms** | [docs][gyms-endpoints-link]
+Add Gym Member | [docs][add-gym-member-docs] | [example][insert file path here]
+Remove Gym | [docs][remove-gym-docs] | [example][insert file path here]
+Get Gyms Near User | [docs][get-gyms-near-user-docs] | [example][insert file path here]
+Get User Gym Show Page | [docs][get-user-gym-show-page-docs] | [example][insert file path here]
+Get Gym Show Page | [docs][get-gym-show-page-docs] | [example][insert file path here]
+
+<!-- Note: Did not add unvetted endpoints:
+GET /users/:id/events
+GET /events/:id
+GET /users/search
+DELETE /events/:id
+PATCH /events/:id
+POST /gyms
+-->
+
 <!-- Endpoint | Docs | Example
 ---------|------|--------
 **Merchants** | [docs][merchants-endpoints-link]
 Get All Merchants | [docs][get-all-merchants-docs] | [example][get-all-merchants-ex]
 Get One Merchant | [docs][get-one-merchant-docs] | [example][get-one-merchant-ex]
-**Items** | [docs][items-endpoints-link]
-Get All Items | [docs][get-all-items-docs] | [example][get-all-items-ex]
-Get One Item | [docs][get-one-item-docs] | [example][get-one-item-ex]
-Create an Item | [docs][create-an-item-docs]
-Update an Item | [docs][update-an-item-docs]
-Destroy an Item | [docs][delete-an-item-docs]
-**Relationships** | [docs][relationship-endpoints-link]
-Get a Merchant's Items | [docs][get-a-merchants-items-docs] | [example][get-a-merchants-items-ex]
-Get an Item's Merchant | [docs][get-an-items-merchant-docs] | [example][get-an-items-merchant-ex]
-**Search** | [docs][search-endpoints-link]
-Find All Items | [docs][find-all-items-docs] | [example][find-all-items-ex]
-Find One Item | [docs][find-one-item-docs] | [example][find-one-item-ex]
-Find All Merchants | [docs][find-all-merchants-docs] | [example][find-all-merchants-ex]
-Find One Merchant | [docs][find-one-merchant-docs] | [example][find-one-merchant-ex]
-**Business Intelligence** | [docs][bi-endpoints-link]
-Items by Most Revenue | [docs][get-items-with-most-revenue-docs] | [example][get-items-with-most-revenue-ex]
-Merchants with Most Revenue | [docs][get-merchants-with-most-revenue-docs] | [example][get-merchants-with-most-revenue-ex]
-Merchants with Most Items Sold | [docs][get-merchants-with-most-items-sold-docs] | [example][get-merchants-with-most-items-sold-ex]
-Total Revenue for a Given Merchant | [docs][get-total-revenue-for-merchant-docs] | [example][get-total-revenue-for-merchant-ex]
- -->
+-->
+
 ## Project Background
 
 This project was developed by Brian Fletcher, Caroline Tan, Ezzedine Alwafai, Gunnar Runkle, Scott Borecki, and Taylor Varoglu during Mod 3 of Turing School's Back End Engineering Program.  Created from scratch and deployed to Heroku, this project consists of a front-end and back-end Ruby on Rails application that was completed in 10 days.
@@ -167,45 +178,35 @@ In addition to the base project requirements, some extra explorations and extens
 [issues-badge]: https://img.shields.io/github/issues/tvaroglu/spot_me_backend.svg?style=flat-square
 [issues-url]: https://github.com/tvaroglu/spot_me_backend/issues
 
-<!-- Docs -->
-[merchants-endpoints-link]: /doc/merchants_endpoints.md
-[get-all-merchants-docs]: /doc/merchants_endpoints.md#get-all-merchants
-[get-one-merchant-docs]: /doc/merchants_endpoints.md#get-one-merchant
-[items-endpoints-link]: /doc/items_endpoints.md
-[get-all-items-docs]: /doc/items_endpoints.md#get-all-items
-[get-one-item-docs]: /doc/items_endpoints.md#get-one-item
-[create-an-item-docs]: /doc/items_endpoints.md#create-an-item
-[update-an-item-docs]: /doc/items_endpoints.md#update-an-item
-[delete-an-item-docs]: /doc/items_endpoints.md#delete-an-item
-[relationship-endpoints-link]: /doc/relationship_endpoints.md
-[get-a-merchants-items-docs]: /doc/relationship_endpoints.md#get-a-merchants-items
-[get-an-items-merchant-docs]: /doc/relationship_endpoints.md#get-an-items-merchant
-[search-endpoints-link]: /doc/search_endpoints.md
-[find-all-items-docs]: /doc/search_endpoints.md#find-all-items
-[find-one-item-docs]: /doc/search_endpoints.md#find-one-item
-[find-all-merchants-docs]: /doc/search_endpoints.md#find-all-merchants
-[find-one-merchant-docs]: /doc/search_endpoints.md#find-one-merchant
-[bi-endpoints-link]: /doc/business_intelligence_endpoints.md
-[get-items-with-most-revenue-docs]: /doc/business_intelligence_endpoints.md#get-items-with-most-revenue
-[get-merchants-with-most-revenue-docs]: /doc/business_intelligence_endpoints.md#get-merchants-with-most-revenue
-[get-merchants-with-most-items-sold-docs]: /doc/business_intelligence_endpoints.md#get-merchants-with-most-items-sold
-[get-total-revenue-for-merchant-docs]: /doc/business_intelligence_endpoints.md#get-total-revenue-for-a-merchant
+Docs
+[users-endpoints-link]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
+[get-user-dashboard-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
+[get-user-profile-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
+[update-user-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
+[create-register-new-user-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
+[friendships-endpoints-link]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
+[add-friend-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
+[remove-friend-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
+[events-endpoints-link]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
+[create-user-event-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
+[create-user-event-new-page-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
+[gyms-endpoints-link]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
+[add-gym-member-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
+[remove-gym-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
+[get-gyms-near-user-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
+[get-user-gym-show-page-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
+[get-gym-show-page-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
 
-<!-- Examples -->
-[get-all-merchants-ex]: https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3
-[get-one-merchant-ex]: https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants/42
-[get-all-items-ex]: https://rails-engine-scott-borecki.herokuapp.com/api/v1/items?per_page=3
-[get-one-item-ex]: https://rails-engine-scott-borecki.herokuapp.com/api/v1/items/179
-[get-a-merchants-items-ex]: https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants/33/items
-[get-an-items-merchant-ex]: https://rails-engine-scott-borecki.herokuapp.com/api/v1/items/209/merchant
-[find-all-items-ex]: https://rails-engine-scott-borecki.herokuapp.com/api/v1/items/find_all?min_price=94.99&max_price=99.99
-[find-one-item-ex]: https://rails-engine-scott-borecki.herokuapp.com/api/v1/items/find?min_price=94.99&max_price=99.99
-[find-all-merchants-ex]: https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants/find_all?name=ILL
-[find-one-merchant-ex]: https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants/find?name=ILL
-[get-items-with-most-revenue-ex]: https://rails-engine-scott-borecki.herokuapp.com/api/v1/revenue/items?quantity=3
-[get-merchants-with-most-revenue-ex]: https://rails-engine-scott-borecki.herokuapp.com/api/v1/revenue/merchants?quantity=3
-[get-merchants-with-most-items-sold-ex]: https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants/most_items?quantity=3
-[get-total-revenue-for-merchant-ex]: https://rails-engine-scott-borecki.herokuapp.com/api/v1/revenue/merchants/42
+<!-- Docs Template -->
+<!-- [merchants-endpoints-link]: /doc/merchants_endpoints.md -->
+
+Examples
+
+
+
+<!-- Examples Template-->
+<!-- [get-all-merchants-ex]: https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+<!-- [get-one-merchant-ex]: https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants/42 -->
 
 <!-- Links -->
 [Repository]: https://github.com/tvaroglu/spot_me_backend
