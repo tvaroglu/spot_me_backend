@@ -13,12 +13,27 @@ class Api::V1::UsersController < ApplicationController
     render json: UserSerializer.new(user).serializable_hash, status: :ok
   end
 
+  def create
+    user = User.create!(user_create_params)
+
+    render json: UserSerializer.new(user).serializable_hash, status: :created
+  end
+
   private
 
   # TODO: Do we want to allow them to update the info that is collected from
   #       Google Oauth?
   #       :full_name, :email, :google_id, :google_image_url
   def user_params
-    params.permit(:zip_code, :summary, :goal, :availability_morning, :availability_afternoon, :availability_evening)
+    params.permit(:zip_code, :summary, :goal, :availability_morning,
+                  :availability_afternoon, :availability_evening)
+  end
+
+  # TODO: Delete last row of params after removing columns from table
+  def user_create_params
+    params.permit(:zip_code, :summary, :goal, :availability_morning,
+                  :availability_afternoon, :availability_evening, :full_name,
+                  :email, :google_id, :google_image_url,
+                  :google_token, :first_name, :last_name) # Delete after removing columns
   end
 end
