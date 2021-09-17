@@ -10,7 +10,7 @@ describe 'Users API', type: :request do
   describe 'GET /api/v1/users/:id' do
     let!(:users) { create_list(:user, 30) }
     let(:user_id) { users.first.id }
-    let(:bad_user_id) { User.last.id }
+    let(:bad_user_id) { User.last.id + 1 }
 
     context 'when the user record exists' do
       before { get "/api/v1/users/#{user_id}" }
