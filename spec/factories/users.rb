@@ -56,9 +56,9 @@ def experienced_user
   # Event variable naming convention:
   #   event<user>_<gym>_<friend>
   let!(:event1_1a_2) { create(:event, user: user1, gym: gym1) }
-  let!(:event1_1b_3) { create(:event, user: user1, gym: gym2) }
-  let!(:event1_1c_5) { create(:event, user: user1, gym: gym2) }
-  let!(:event1_1d_3) { create(:event, user: user1, gym: gym2) }
+  let!(:event1_1b_3) { create(:event, user: user1, gym: gym1) }
+  let!(:event1_1c_5) { create(:event, user: user1, gym: gym1) }
+  let!(:event1_1d_3) { create(:event, user: user1, gym: gym1) }
   let!(:event1_2a_2) { create(:event, user: user1, gym: gym2) }
   let!(:event1_2b_5) { create(:event, user: user1, gym: gym2) }
   let!(:event1_2c_3) { create(:event, user: user1, gym: gym2) }
