@@ -6,12 +6,18 @@ RSpec.describe User, type: :model do
                                           .class_name('Friendship')
                                           .dependent(:destroy)
                                           .inverse_of(:follower) }
+
     it { should have_many(:followees).through(:followed_users) }
     it { should have_many(:following_users).with_foreign_key(:followee_id)
                                            .class_name('Friendship')
                                            .dependent(:destroy)
                                            .inverse_of(:followee) }
+
     it { should have_many(:followers).through(:following_users) }
+    it { should have_many(:events).dependent(:destroy) }
+    it { should have_many(:gym_members).dependent(:destroy) }
+    it { should have_many(:invitations).through(:events) }
+    it { should have_many(:gyms).through(:gym_members) }
   end
 
   describe 'validations' do
@@ -19,16 +25,12 @@ RSpec.describe User, type: :model do
     it { should validate_uniqueness_of(:email) }
     it { should validate_presence_of(:google_id) }
     it { should validate_uniqueness_of(:google_id) }
-    it { should validate_presence_of(:google_token) }
-    it { should validate_uniqueness_of(:google_token) }
     it { should validate_presence_of(:google_image_url) }
     it { should validate_uniqueness_of(:google_image_url) }
     it { should validate_presence_of(:zip_code) }
     it { should validate_numericality_of(:zip_code) }
     it { should validate_presence_of(:summary) }
     it { should validate_presence_of(:goal) }
-    it { should validate_presence_of(:first_name) }
-    it { should validate_presence_of(:last_name) }
     it { should validate_presence_of(:full_name) }
   end
 
@@ -48,7 +50,6 @@ RSpec.describe User, type: :model do
     it 'has readable attributes' do
       expect(user.email).to be_a String
       expect(user.google_id).to be_a String
-      expect(user.google_token).to be_a String
       expect(user.google_image_url).to be_a String
       expect(user.zip_code).to be_a String
       expect(user.summary).to be_a String
@@ -56,23 +57,7 @@ RSpec.describe User, type: :model do
       expect(user.availability_morning).to be_in([true, false])
       expect(user.availability_afternoon).to be_in([true, false])
       expect(user.availability_evening).to be_in([true, false])
-      expect(user.first_name).to be_a String
-      expect(user.last_name).to be_a String
       expect(user.full_name).to be_a String
     end
   end
-
-  # before :each do
-  #
-  # end
-  #
-  # describe 'class methods' do
-  #   describe '.' do
-  #   end
-  # end
-  #
-  # describe 'instance methods' do
-  #   describe '#' do
-  #   end
-  # end
 end

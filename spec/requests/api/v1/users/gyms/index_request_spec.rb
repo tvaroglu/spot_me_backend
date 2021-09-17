@@ -6,26 +6,28 @@ require 'rails_helper'
 #   https://relishapp.com/rspec/rspec-core/docs/example-groups/shared-examples
 #
 # See spec/support/request_spec_helper.rb for #json and #json_data helpers.
-describe 'Users API', type: :request do
-  describe 'GET /api/v1/users/:id' do
-    let!(:users) { create_list(:user, 30) }
-    let(:user_id) { users.first.id }
+describe 'Users::Gyms API', type: :request do
+  describe 'GET /api/v1/users/:id/gyms' do
+    # See spec/factories/users.rb for #experienced_user test setup method
+    experienced_user
+    let(:user_id) { user1.id }
+    let(:no_gym_user_id) { user9.id }
     let(:bad_user_id) { User.last.id + 1 }
 
-    context 'when the user record exists' do
-      before { get "/api/v1/users/#{user_id}" }
+    context 'when the user gyms records exists' do
+      before { get "/api/v1/users/#{user_id}/gyms" }
 
-      it 'returns the user', :aggregate_failures do
+      it 'returns the users gyms', :aggregate_failures do
         expect(json).not_to be_empty
-        expect(json_data.size).to eq(3)
-        expect(json_data[:id]).to eq(user_id.to_s)
+        expect(json_data.size).to eq(2)
+        expect(json_data.first[:id]).to eq(gym1.id.to_s)
       end
 
       include_examples 'status code 200'
     end
 
     context 'when the user record does not exist' do
-      before { get "/api/v1/users/#{bad_user_id}" }
+      before { get "/api/v1/users/#{bad_user_id}/gyms" }
 
       it 'returns an error message', :aggregate_failures do
         expect(json).not_to be_empty
@@ -38,6 +40,13 @@ describe 'Users API', type: :request do
       end
 
       include_examples 'status code 404'
+    end
+
+    context 'when the user has no gyms' do
+      before { get "/api/v1/users/#{no_gym_user_id}/gyms" }
+
+      include_examples 'returns nil data'
+      include_examples 'status code 200'
     end
   end
 end

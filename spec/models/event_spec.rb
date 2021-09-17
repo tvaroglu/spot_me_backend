@@ -19,24 +19,21 @@ RSpec.describe Event, type: :model do
 
   describe 'factories' do
     describe 'event' do
+      subject(:event) { create(:event) }
+
       it 'is valid with valid attributes' do
-        event = create(:event)
         expect(event).to be_valid
       end
     end
+
+    describe '#event_with_invitation' do
+      subject(:event_with_invite) { event_with_invitation }
+
+      it 'is valid with valid attributes' do
+        expect(event_with_invite).to be_valid
+        expect(event_with_invite.invitations.size).to eq(1)
+        expect(event_with_invite.invitations.first).to be_an Invitation
+      end
+    end
   end
-  #
-  # before :each do
-  #
-  # end
-  #
-  # describe 'class methods' do
-  #   describe '.' do
-  #   end
-  # end
-  #
-  # describe 'instance methods' do
-  #   describe '#' do
-  #   end
-  # end
 end
