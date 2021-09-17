@@ -6,3 +6,9 @@ FactoryBot.define do
     gym
   end
 end
+
+def event_with_invitation
+  FactoryBot.create(:event) do |event|
+    FactoryBot.create(:invitation, event: event)
+  end
+end
