@@ -36,7 +36,6 @@ describe 'Users API', type: :request do
 
         it 'updates the user', :aggregate_failures do
           user.reload
-          require "pry"; binding.pry
 
           expect(json).not_to be_empty
           expect(json_data.size).to eq(3)
