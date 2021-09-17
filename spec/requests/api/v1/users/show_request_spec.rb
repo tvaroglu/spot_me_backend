@@ -10,6 +10,7 @@ describe 'Users API', type: :request do
   describe 'GET /api/v1/users/:id' do
     let!(:users) { create_list(:user, 30) }
     let(:user_id) { users.first.id }
+    let(:bad_user_id) { User.last.id }
 
     context 'when the user record exists' do
       before { get "/api/v1/users/#{user_id}" }
@@ -24,7 +25,7 @@ describe 'Users API', type: :request do
     end
 
     context 'when the user record does not exist' do
-      before { get '/api/v1/users/40' }
+      before { get "/api/v1/users/#{bad_user_id}" }
 
       it 'returns an error message', :aggregate_failures do
         expect(json).not_to be_empty
@@ -33,7 +34,7 @@ describe 'Users API', type: :request do
         expect(json[:message]).to eq('your query could not be completed')
 
         expect(json[:errors]).to be_an Array
-        expect(json[:errors]).to eq(["Couldn't find User with 'id'=40"])
+        expect(json[:errors]).to eq(["Couldn't find User with 'id'=#{bad_user_id}"])
       end
 
       include_examples 'status code 404'
