@@ -13,7 +13,6 @@ class User < ApplicationRecord
 
   validates :email, presence: true, uniqueness: true
   validates :google_id, presence: true, uniqueness: true
-  validates :google_token, presence: true, uniqueness: true
   validates :google_image_url, presence: true, uniqueness: true
   validates :zip_code, presence: true, numericality: true
   validates :summary, presence: true
@@ -21,7 +20,5 @@ class User < ApplicationRecord
   validates :availability_morning, inclusion: { in: [true, false] }
   validates :availability_afternoon, inclusion: { in: [true, false] }
   validates :availability_evening, inclusion: { in: [true, false] }
-  validates :first_name, presence: true
-  validates :last_name, presence: true
   validates :full_name, presence: true
 end

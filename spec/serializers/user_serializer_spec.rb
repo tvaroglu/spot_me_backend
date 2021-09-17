@@ -27,16 +27,13 @@ describe 'UserSerializer', type: :serializer do
 
           expect(user_data).to have_key(:attributes)
           expect(user_attributes).to be_a Hash
-          expect(user_attributes.size).to eq(13)
+          expect(user_attributes.size).to eq(10)
 
           expect(user_attributes).to have_key(:email)
           expect(user_attributes[:email]).to be_a String
 
           expect(user_attributes).to have_key(:google_id)
           expect(user_attributes[:google_id]).to be_a String
-
-          expect(user_attributes).to have_key(:google_token)
-          expect(user_attributes[:google_token]).to be_a String
 
           expect(user_attributes).to have_key(:google_image_url)
           expect(user_attributes[:google_image_url]).to be_a String
@@ -58,12 +55,6 @@ describe 'UserSerializer', type: :serializer do
 
           expect(user_attributes).to have_key(:availability_evening)
           expect(user_attributes[:availability_evening]).to be_in([true, false])
-
-          expect(user_attributes).to have_key(:first_name)
-          expect(user_attributes[:first_name]).to be_a String
-
-          expect(user_attributes).to have_key(:last_name)
-          expect(user_attributes[:last_name]).to be_a String
 
           expect(user_attributes).to have_key(:full_name)
           expect(user_attributes[:full_name]).to be_a String
@@ -98,16 +89,13 @@ describe 'UserSerializer', type: :serializer do
 
             expect(user_data).to have_key(:attributes)
             expect(user_data[:attributes]).to be_a Hash
-            expect(user_data[:attributes].size).to eq(13)
+            expect(user_data[:attributes].size).to eq(10)
 
             expect(user_data[:attributes]).to have_key(:email)
             expect(user_data[:attributes][:email]).to be_a String
 
             expect(user_data[:attributes]).to have_key(:google_id)
             expect(user_data[:attributes][:google_id]).to be_a String
-
-            expect(user_data[:attributes]).to have_key(:google_token)
-            expect(user_data[:attributes][:google_token]).to be_a String
 
             expect(user_data[:attributes]).to have_key(:google_image_url)
             expect(user_data[:attributes][:google_image_url]).to be_a String
@@ -129,12 +117,6 @@ describe 'UserSerializer', type: :serializer do
 
             expect(user_data[:attributes]).to have_key(:availability_evening)
             expect(user_data[:attributes][:availability_evening]).to be_in([true, false])
-
-            expect(user_data[:attributes]).to have_key(:first_name)
-            expect(user_data[:attributes][:first_name]).to be_a String
-
-            expect(user_data[:attributes]).to have_key(:last_name)
-            expect(user_data[:attributes][:last_name]).to be_a String
 
             expect(user_data[:attributes]).to have_key(:full_name)
             expect(user_data[:attributes][:full_name]).to be_a String

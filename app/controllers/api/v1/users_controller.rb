@@ -29,11 +29,9 @@ class Api::V1::UsersController < ApplicationController
                   :availability_afternoon, :availability_evening)
   end
 
-  # TODO: Delete last row of params after removing columns from table
   def user_create_params
     params.permit(:zip_code, :summary, :goal, :availability_morning,
                   :availability_afternoon, :availability_evening, :full_name,
-                  :email, :google_id, :google_image_url,
-                  :google_token, :first_name, :last_name) # Delete after removing columns
+                  :email, :google_id, :google_image_url)
   end
 end

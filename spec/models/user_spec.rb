@@ -23,16 +23,12 @@ RSpec.describe User, type: :model do
     it { should validate_uniqueness_of(:email) }
     it { should validate_presence_of(:google_id) }
     it { should validate_uniqueness_of(:google_id) }
-    it { should validate_presence_of(:google_token) }
-    it { should validate_uniqueness_of(:google_token) }
     it { should validate_presence_of(:google_image_url) }
     it { should validate_uniqueness_of(:google_image_url) }
     it { should validate_presence_of(:zip_code) }
     it { should validate_numericality_of(:zip_code) }
     it { should validate_presence_of(:summary) }
     it { should validate_presence_of(:goal) }
-    it { should validate_presence_of(:first_name) }
-    it { should validate_presence_of(:last_name) }
     it { should validate_presence_of(:full_name) }
   end
 
@@ -52,7 +48,6 @@ RSpec.describe User, type: :model do
     it 'has readable attributes' do
       expect(user.email).to be_a String
       expect(user.google_id).to be_a String
-      expect(user.google_token).to be_a String
       expect(user.google_image_url).to be_a String
       expect(user.zip_code).to be_a String
       expect(user.summary).to be_a String
@@ -60,8 +55,6 @@ RSpec.describe User, type: :model do
       expect(user.availability_morning).to be_in([true, false])
       expect(user.availability_afternoon).to be_in([true, false])
       expect(user.availability_evening).to be_in([true, false])
-      expect(user.first_name).to be_a String
-      expect(user.last_name).to be_a String
       expect(user.full_name).to be_a String
     end
   end

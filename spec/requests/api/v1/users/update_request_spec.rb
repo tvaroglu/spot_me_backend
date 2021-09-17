@@ -39,8 +39,7 @@ describe 'Users API', type: :request do
 
           expect(json).not_to be_empty
           expect(json_data.size).to eq(3)
-          # TODO: Update attribute size after removing columns.
-          expect(json_data[:attributes].size).to eq(13)
+          expect(json_data[:attributes].size).to eq(10)
           expect(json_data[:attributes][:summary]).to eq(summary)
           expect(json_data[:attributes][:full_name]).to eq(user.full_name)
           expect(json_data[:attributes][:google_id]).to eq(user.google_id)
