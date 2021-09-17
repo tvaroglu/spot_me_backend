@@ -50,10 +50,10 @@ Schedule/delete workout sessions with swol-mates<br><br>
   |[Ruby 2.7.2](https://www.ruby-lang.org/en/downloads/)|[Bootstrap](https://rubygems.org/gems/bootstrap/versions/4.0.0)|[RSpec for Rails](https://github.com/rspec/rspec-rails)|[Heroku](http://virtual-watch-party.herokuapp.com)|
   |[Rails 5.2.6](https://rubygems.org/gems/rails/versions/5.2.6)|[GitHub](https://desktop.github.com/)|[Capybara](https://github.com/teamcapybara/capybara)|[Travis CI](https://travis-ci.org/)|
   |[Pry](https://rubygems.org/gems/pry/versions/0.10.3)|[Git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)|[Webmock](https://github.com/bblimke/webmock)|
-  |[PostgresQL](https://www.postgresql.org/)|[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)|
+  |[PostgresQL](https://www.postgresql.org/)|[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)|[SimpleCov](https://rubygems.org/gems/simplecov/versions/0.12.0)|
  |[OmniAuth Google OAuth2](https://github.com/zquestz/omniauth-google-oauth2)|[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)|
  |[Postico](https://eggerapps.at/postico/)|[Rubocop](https://rubygems.org/gems/rubocop/versions/0.39.0)|
- |[Faraday](https://github.com/lostisland/faraday)|[Atom](https://atom.io/)|[SimpleCov](https://rubygems.org/gems/simplecov/versions/0.12.0)|
+ |[Faraday](https://github.com/lostisland/faraday)|[Atom](https://atom.io/)|
  |[Figaro](https://github.com/laserlemon/figaro)|[FactoryBot](https://github.com/thoughtbot/factory_bot)|
  |[Postman](https://www.postman.com/product/rest-client/)|
 
@@ -114,7 +114,7 @@ Total Revenue for a Given Merchant | [docs][get-total-revenue-for-merchant-docs]
  -->
 ## Project Background
 
-This project was developed by Brian Fletcher, Caroline Tan, Ezzedine Alwafai, Gunnar Runkle, Scott Borecki, and Taylor Varoglu during Mod 3 of Turing School's Back End Engineering Program.  The project was completed in 10 days, from creating the two new rails applications from scratch to deploying both to Heroku.
+This project was developed by Brian Fletcher, Caroline Tan, Ezzedine Alwafai, Gunnar Runkle, Scott Borecki, and Taylor Varoglu during Mod 3 of Turing School's Back End Engineering Program.  Created from scratch and deployed to Heroku, this project consists of a front-end and back-end Ruby on Rails application that was completed in 10 days.
 
 The project description and base requirements can be found here: [link][consultancy-home]
 
@@ -123,12 +123,10 @@ In addition to the base project requirements, some extra explorations and extens
 - Validating query params by leveraging ActiveModel::Validations
 - Using customized FactoryBot methods to significantly DRY up code in test files
 - Using RSpec's Shared Examples feature for frequently-used tests to DRY up code in test files
-- Documenting complicated methods in general accordance with TomDoc for Ruby specifications
+- Documenting complicated methods in general accordance with [TomDoc](http://tomdoc.org/) for Ruby specifications
 - Creating documentation for each API endpoint to assist user in production
-- Using GitHub Projects to track user stories and progress as well as creating new issues
+- Using GitHub Projects to track user stories and progress, as well as creating new issues
 - Implementing RuboCop and RuboCop extensions for code styling and best practices
-- Completing all the Find and Find All endpoints for both Merchants and Items
-- Completing all the edge case tests
 - Deploying the API to Heroku for production
 
  
