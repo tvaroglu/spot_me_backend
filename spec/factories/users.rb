@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :user do
     email { Faker::Internet.email }
-    google_id { Faker::Alphanumeric.alphanumeric(number: 10) } # Update with same number of characters as id
+    google_id { Faker::Alphanumeric.alphanumeric(number: 21) }
     google_image_url { Faker::Avatar.image }
     zip_code { Faker::Address.zip_code.first(5) }
     summary { Faker::GreekPhilosophers.quote }
