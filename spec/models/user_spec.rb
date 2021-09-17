@@ -12,6 +12,10 @@ RSpec.describe User, type: :model do
                                            .dependent(:destroy)
                                            .inverse_of(:followee) }
     it { should have_many(:followers).through(:following_users) }
+    it { should have_many(:events).dependent(:destroy) }
+    it { should have_many(:gym_members).dependent(:destroy) }
+    it { should have_many(:invitations).through(:events) }
+    it { should have_many(:gyms).through(:gym_members) }
   end
 
   describe 'validations' do
