@@ -1,7 +1,5 @@
 <div align="center">
  
-
-
 ![Version][version-badge]
 [![Ruby Style Guide][rubocop-badge]][rubocop-url]
 [![Contributors][contributors-badge]][contributors-url]
@@ -9,32 +7,29 @@
 [![Stargazers][stars-badge]][stars-url]
 [![Issues][issues-badge]][issues-url]
 
-# [Spot Me](https://spotme-app-api.herokuapp.com/) (BE) 
+# [Spot Me](https://spotme-app-api.herokuapp.com/) (Back-End) 
  
-This is the back-end portion of the Spot-Me application, which exposes resources for the fitness application by consuming the Yelp, Google OAuth, and ZipCode APIs to effectively allow users to perform the functions described in the application.  
+This is the back-end portion of the Spot-Me application, which exposes resources for the fitness application by consuming the Google OAuth and Yelp APIs to allow users to perform the functions described in the application. Google OAuth allows the app to authorize users and retrieve data, such as their full_name, email address, Google ID, Google image URL, and zip code. Yelp allows the applications users search for specifically gyms in an inputed location (city, state, and/or zip code) based on a predefined radius.
 
-
-#### This app will allow users to:<br/>
-Search for gyms in their local area<br/>
-Signup for gyms<br/>
-Search for swol-mates<br/>
-Add swol-mates<br/>
-Schedule workout sessions with swol-mates<br/><br/>
- 
+#### Spot Me allow users to:<br>
+Search for gyms in their local area<br>
+Add gyms to their account<br>
+Search for swol-mates that have a gym(s) in common<br>
+Add/delete swol-mates as friends<br>
+Schedule/delete workout sessions with swol-mates<br><br>
 
  
- ## Contributors
+## Contributors
 
 |Brian Fletcher|Caroline Tan|Ezzedine Alwafai|Gunnar Runkle|Scott Borecki|Taylor Varoglu
 |--- |--- |--- |--- |--- |--- |
 |[GitHub](https://github.com/bfl3tch)|[GitHub](https://github.com/carolinectan)|[GitHub](https://github.com/ealwafai)|[GitHub](https://github.com/gunnarrunner)|[GitHub](https://github.com/Scott-Borecki)|[GitHub](https://github.com/tvaroglu)
 |[LinkedIn](https://www.linkedin.com/in/bfl3tch/)|[LinkedIn](https://www.linkedin.com/in/carolinectan/)|[LinkedIn](https://www.linkedin.com/in/ezzedine-alwafai/)|[LinkedIn](https://www.linkedin.com/in/gunnar-runkle/)|[LinkedIn](https://www.linkedin.com/in/scott-borecki/)|[LinkedIn](https://www.linkedin.com/in/taylorvaroglu/)
 
-<br/><br/>
- 
+<br> 
 </div>
 
- <div align="center">
+<div align="center">
  
 ## Table of Contents
 |Links
@@ -47,8 +42,8 @@ Schedule workout sessions with swol-mates<br/><br/>
 [Database Schema](#database-schema)
 
 
-  <br/><br/>
- ### Tools Used
+<br><br>
+## Tools Used
   
   |Development|Development|Testing|Deployment
   |--- |--- |--- |--- |
@@ -62,10 +57,13 @@ Schedule workout sessions with swol-mates<br/><br/>
   |[Figaro](https://github.com/laserlemon/figaro)|[FactoryBot](https://github.com/thoughtbot/factory_bot)
   |[Postman](https://www.postman.com/product/rest-client/)|
 
+
+
+<br>
 </div>
-<br/><br/>
 
 ## Minimum Requirements
+
 To access the API endpoints, you need the following:
 - `GET` Requests: Internet browser or API client (such as [Postman][postman-url])
 - `POST`, `PATCH`, `DELETE` Requests: API client
