@@ -6,6 +6,6 @@ class UserSerializer
              :availability_evening, :first_name, :last_name, :full_name
 
   # TODO: Add relationships so they can be included in serialized hash
-  # has_many :followees
-  # has_many :followers
+  # has_many :gyms
+  # has_many :events
 end
