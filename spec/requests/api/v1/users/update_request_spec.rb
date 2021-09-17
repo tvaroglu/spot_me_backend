@@ -6,9 +6,6 @@ describe 'Users API', type: :request do
     let!(:user) { create(:user) }
     let(:bad_user_id) { User.last.id + 1 }
 
-    let(:message404) { 'your query could not be completed' }
-    let(:message422) { 'your record could not be saved' }
-
     context 'when the user does not exist' do
       let(:valid_attributes) { { summary: 'I like mud' } }
 
@@ -29,7 +26,7 @@ describe 'Users API', type: :request do
 
     context 'when the user exists' do
       context 'when the request is valid' do
-        let(:summary) { 'I like mud'}
+        let(:summary) { 'I like mud' }
         let(:valid_attributes) { { summary: summary } }
 
         before { patch "/api/v1/users/#{user.id}", params: valid_attributes }

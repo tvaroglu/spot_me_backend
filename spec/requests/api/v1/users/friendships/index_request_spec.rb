@@ -11,7 +11,7 @@ describe 'Users::Friendships API', type: :request do
     # See spec/factories/users.rb for #experienced_user test setup method
     experienced_user
     let(:user_id) { user1.id }
-    let(:no_friend_user_id) {user9.id}
+    let(:no_friend_user_id) { user9.id }
     let(:bad_user_id) { User.last.id + 1 }
 
     context 'when the user friendships records exists' do
@@ -42,7 +42,7 @@ describe 'Users::Friendships API', type: :request do
       include_examples 'status code 404'
     end
 
-    context 'whent the user has no friendships' do
+    context 'when the user has no friendships' do
       before { get "/api/v1/users/#{no_friend_user_id}/friendships" }
 
       include_examples 'returns nil data'

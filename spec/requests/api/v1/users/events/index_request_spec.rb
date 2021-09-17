@@ -11,7 +11,7 @@ describe 'Users::Events API', type: :request do
     # See spec/factories/users.rb for #experienced_user test setup method
     experienced_user
     let(:user_id) { user1.id }
-    let(:no_event_user_id) {user9.id}
+    let(:no_event_user_id) { user9.id }
     let(:bad_user_id) { User.last.id + 1 }
 
     context 'when the user events records exists' do
@@ -42,7 +42,7 @@ describe 'Users::Events API', type: :request do
       include_examples 'status code 404'
     end
 
-    context 'whent the user has no events' do
+    context 'when the user has no events' do
       before { get "/api/v1/users/#{no_event_user_id}/events" }
 
       include_examples 'returns nil data'

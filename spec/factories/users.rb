@@ -26,11 +26,11 @@ def experienced_user
 
   # Friendship variable naming convention:
   #   ff<follower_user>_<followee_user>
-  let!(:ff1_2){ create(:friendship, follower_id: user1.id, followee_id: user2.id) }
-  let!(:ff1_3){ create(:friendship, follower_id: user1.id, followee_id: user3.id) }
-  let!(:ff1_4){ create(:friendship, follower_id: user1.id, followee_id: user4.id) }
-  let!(:ff1_5){ create(:friendship, follower_id: user1.id, followee_id: user5.id) }
-  let!(:ff1_6){ create(:friendship, follower_id: user1.id, followee_id: user6.id) }
+  let!(:ff1_2) { create(:friendship, follower_id: user1.id, followee_id: user2.id) }
+  let!(:ff1_3) { create(:friendship, follower_id: user1.id, followee_id: user3.id) }
+  let!(:ff1_4) { create(:friendship, follower_id: user1.id, followee_id: user4.id) }
+  let!(:ff1_5) { create(:friendship, follower_id: user1.id, followee_id: user5.id) }
+  let!(:ff1_6) { create(:friendship, follower_id: user1.id, followee_id: user6.id) }
 
   let!(:gym1) { create(:gym) }
   let!(:gym2) { create(:gym) }

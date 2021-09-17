@@ -6,11 +6,13 @@ RSpec.describe User, type: :model do
                                           .class_name('Friendship')
                                           .dependent(:destroy)
                                           .inverse_of(:follower) }
+
     it { should have_many(:followees).through(:followed_users) }
     it { should have_many(:following_users).with_foreign_key(:followee_id)
                                            .class_name('Friendship')
                                            .dependent(:destroy)
                                            .inverse_of(:followee) }
+
     it { should have_many(:followers).through(:following_users) }
     it { should have_many(:events).dependent(:destroy) }
     it { should have_many(:gym_members).dependent(:destroy) }

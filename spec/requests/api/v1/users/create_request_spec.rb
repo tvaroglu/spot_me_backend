@@ -46,7 +46,7 @@ describe 'Users API', type: :request do
          "Google can't be blank",
          "Google image url can't be blank",
          "Zip code can't be blank",
-         "Zip code is not a number",
+         'Zip code is not a number',
          "Summary can't be blank",
          "Full name can't be blank"]
       end
