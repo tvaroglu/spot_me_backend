@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :users, only: [:show]
+      resources :users, only: [:show] do
+        resources :events, only: [:index], controller: 'users/events'
+      end
     end
   end
 end
