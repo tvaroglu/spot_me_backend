@@ -58,9 +58,6 @@ describe 'UserSerializer', type: :serializer do
 
           expect(user_attributes).to have_key(:full_name)
           expect(user_attributes[:full_name]).to be_a String
-
-          # TODO: Add relationships for followers and followees?  Or will we do
-          #       that in a separate serialized hash?
         end
       end
 
@@ -120,9 +117,6 @@ describe 'UserSerializer', type: :serializer do
 
             expect(user_data[:attributes]).to have_key(:full_name)
             expect(user_data[:attributes][:full_name]).to be_a String
-
-            # TODO: Add relationships for followers and followees?  Or will we do
-            #       that in a separate serialized hash?
           end
         end
       end

@@ -58,18 +58,4 @@ RSpec.describe User, type: :model do
       expect(user.full_name).to be_a String
     end
   end
-
-  # before :each do
-  #
-  # end
-  #
-  # describe 'class methods' do
-  #   describe '.' do
-  #   end
-  # end
-  #
-  # describe 'instance methods' do
-  #   describe '#' do
-  #   end
-  # end
 end
