@@ -90,22 +90,22 @@ Notes:
 Endpoint | Docs | Example
 ---------|------|--------
 **Users** | [docs][users-endpoints-link]
-Get User Dashboard | [docs][get-user-dashboard-docs] | [example][insert file path here]
-Get User Profile | [docs][get-user-profile-docs] | [example][insert file path here]
-Update User | [docs][update-user-docs] | [example][insert file path here]
-Create/Register New User Endpoint | [docs][create-register-new-user-docs] | [example][insert file path here]
+Get User Dashboard | [docs][get-user-dashboard-docs] | [example][get-user-dashboard-ex]
+Get User Profile | [docs][get-user-profile-docs] | [example][get-user-profile-ex]
+Update User | [docs][update-user-docs] | [example][update-user-ex]
+Create/Register New User Endpoint | [docs][create-register-new-user-docs] | [example][create-register-new-user-ex]
 **Friends** | [docs][friendships-endpoints-link]
-Add Friend | [docs][add-friend-docs] | [example][insert file path here]
-Remove Friend | [docs][remove-friend-docs] | [example][insert file path here]
+Add Friend | [docs][add-friend-docs] | [example][add-friend-ex]
+Remove Friend | [docs][remove-friend-docs] | [example][remove-friend-ex]
 **Events** | [docs][events-endpoints-link]
-Create User Event | [docs][create-user-event-docs] | [example][insert file path here]
-Get User Event New Page | [docs][create-user-event-new-page-docs] | [example][insert file path here]
+Create User Event | [docs][create-user-event-docs] | [example][create-user-event-ex]
+Get User Event New Page | [docs][create-user-event-new-page-docs] | [example][create-user-event-new-ex]
 **Gyms** | [docs][gyms-endpoints-link]
-Add Gym Member | [docs][add-gym-member-docs] | [example][insert file path here]
-Remove Gym | [docs][remove-gym-docs] | [example][insert file path here]
-Get Gyms Near User | [docs][get-gyms-near-user-docs] | [example][insert file path here]
-Get User Gym Show Page | [docs][get-user-gym-show-page-docs] | [example][insert file path here]
-Get Gym Show Page | [docs][get-gym-show-page-docs] | [example][insert file path here]
+Add Gym Member | [docs][add-gym-member-docs] | [example][add-gym-member-ex]
+Remove Gym | [docs][remove-gym-docs] | [example][remove-gym-ex]
+Get Gyms Near User | [docs][get-gyms-near-user-docs] | [example][get-gyms-near-user-ex]
+Get User Gym Show Page | [docs][get-user-gym-show-page-docs] | [example][get-user-gym-show-page-ex]
+Get Gym Show Page | [docs][get-gym-show-page-docs] | [example][get-gym-show-page-ex]
 
 <!-- Note: Did not add unvetted endpoints:
 GET /users/:id/events
@@ -178,7 +178,7 @@ In addition to the base project requirements, some extra explorations and extens
 [issues-badge]: https://img.shields.io/github/issues/tvaroglu/spot_me_backend.svg?style=flat-square
 [issues-url]: https://github.com/tvaroglu/spot_me_backend/issues
 
-Docs
+Docs <!-- Create .md files for each endpoint then link after each ": " with appropriate file path -->
 [users-endpoints-link]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
 [get-user-dashboard-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
 [get-user-profile-docs]: <!-- enter file path here i.e. /docs/users_endpoints.md -->
@@ -201,12 +201,23 @@ Docs
 <!-- [merchants-endpoints-link]: /doc/merchants_endpoints.md -->
 
 Examples
-
+[get-user-dashboard-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+[get-user-profile-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+[update-user-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+[create-register-new-user-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+[add-friend-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+[remove-friend-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+[create-user-event-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+[create-user-event-new-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+[add-gym-member-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+[remove-gym-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+[get-gyms-near-user-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+[get-user-gym-show-page-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+[get-gym-show-page-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
 
 
 <!-- Examples Template-->
 <!-- [get-all-merchants-ex]: https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
-<!-- [get-one-merchant-ex]: https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants/42 -->
 
 <!-- Links -->
 [Repository]: https://github.com/tvaroglu/spot_me_backend
