@@ -10,6 +10,8 @@ Rails.application.routes.draw do
           resources :events, only: [:create], controller: 'users/gyms/events'
         end
       end
+
+      resources :gyms, only: [:show]
     end
   end
 end
