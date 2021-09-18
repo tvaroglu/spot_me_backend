@@ -11,12 +11,12 @@ user1 = create(:user, availability_morning: true)
 user2 = create(:user, availability_morning: true) # no followers # no events
 user3 = create(:user, availability_morning: true, availability_afternoon: true)
 user4 = create(:user, availability_morning: true, availability_afternoon: true) # no followees
-user5 = create(:user, availability_morning: true, availability_afternoon: true) # no events
-user6 = create(:user, availability_morning: true, availability_evening: true)
+user5 = create(:user, availability_morning: true, availability_afternoon: true) # no events # no invitations
+user6 = create(:user, availability_morning: true, availability_evening: true) # no invitations
 user7 = create(:user, availability_evening: true)
 user8 = create(:user, availability_morning: true, availability_morning: true, availability_evening: true) # no events
-user9 = create(:user, availability_afternoon: true, availability_evening: true)
-user10 = create(:user, availability_evening: true) # no gym membership
+user9 = create(:user, availability_afternoon: true, availability_evening: true) # no invitations
+user10 = create(:user, availability_evening: true) # no gym membership # no events # no invitations
 
 # GYMS
 gym1 = create(:gym)
@@ -54,45 +54,35 @@ gym_member20 = create(:gym_member, user: user5, gym: gym5)
 event1 = create(:event, user: user1, gym: gym1)
 event2 = create(:event, user: user1, gym: gym1)
 event3 = create(:event, user: user1, gym: gym3)
-
 event4 = create(:event, user: user3, gym: gym1)
 event5 = create(:event, user: user3, gym: gym4)
-
-event6 = create(:event, user: user4, gym: gym2)
-
+event6 = create(:event, user: user5, gym: gym5)
 event7 = create(:event, user: user5, gym: gym5)
 event8 = create(:event, user: user5, gym: gym5)
-
 event9 = create(:event, user: user6, gym: gym4)
-
 event10 = create(:event, user: user7, gym: gym1)
-
 event11 = create(:event, user: user8, gym: gym4)
 event12 = create(:event, user: user8, gym: gym4)
-
 event13 = create(:event, user: user9, gym: gym1)
-
-event14 = create(:event, user: user10, gym: gym3)
-event15 = create(:event, user: user10, gym: gym3)
+event14 = create(:event, user: user9, gym: gym1)
+event15 = create(:event, user: user9, gym: gym4)
 
 # INVITATIONS (user is the 'invitee')
-# invitation1 = create(:invitation, user: user3, event: event1)
-# invitation2 = create(:invitation, user: user4, event: event2)
-# invitation3 = create(:invitation, user: user7, event: event3)
-#
-# invitation4 = create(:invitation, user: , event: event4)
-# invitation5 = create(:invitation, user: , event: event5)
-#
-# invitation6 = create(:invitation, user: , event: event6)
-# invitation7 = create(:invitation, user: , event: event7)
-# invitation8 = create(:invitation, user: , event: event8)
-# invitation9 = create(:invitation, user: , event: event9)
-# invitation10 = create(:invitation, user: , event: event10)
-# invitation11 = create(:invitation, user: , event: event11)
-# invitation12 = create(:invitation, user: , event: event12)
-# invitation13 = create(:invitation, user: , event: event13)
-# invitation14 = create(:invitation, user: , event: event14)
-# invitation15 = create(:invitation, user: , event: event15)
+invitation1 = create(:invitation, user: user3, event: event1)
+invitation2 = create(:invitation, user: user4, event: event2)
+invitation3 = create(:invitation, user: user7, event: event3)
+invitation4 = create(:invitation, user: user1, event: event4)
+invitation5 = create(:invitation, user: user6, event: event5)
+invitation6 = create(:invitation, user: user1, event: event6)
+invitation7 = create(:invitation, user: user2, event: event7)
+invitation8 = create(:invitation, user: user1, event: event8)
+invitation9 = create(:invitation, user: user2, event: event9)
+invitation10 = create(:invitation, user: user1, event: event10)
+invitation11 = create(:invitation, user: user6, event: event11)
+invitation12 = create(:invitation, user: user7, event: event12)
+invitation13 = create(:invitation, user: user7, event: event13)
+invitation14 = create(:invitation, user: user7, event: event14)
+invitation15 = create(:invitation, user: user6, event: event15)
 
 # FRIENDSHIPS
 friendship1 = create(:friendship, follower_id: user1, followee_id: user3)
