@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      resources :gym_search, only: [:index]
       resources :users, only: [:show, :update, :create] do
         resources :events, only: [:index], controller: 'users/events'
         resources :friendships, only: [:index], controller: 'users/friendships'
