@@ -33,10 +33,11 @@ gem 'faraday'
 gem 'json'
 gem 'jsonapi-serializer'
 gem 'omniauth-google-oauth2'
+gem 'factory_bot_rails'
+gem 'faker'
 
 group :development, :test do
   gem 'pry'
-  gem 'factory_bot_rails'
   gem 'figaro'
 end
 
@@ -55,7 +56,6 @@ group :test do
   gem 'rspec-rails', '~> 4.0.1'
   gem 'simplecov'
   gem 'shoulda-matchers'
-  gem 'faker'
   gem 'webmock'
   gem 'vcr'
 end
