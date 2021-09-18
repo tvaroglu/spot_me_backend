@@ -8,7 +8,7 @@
 
 # USERS
 user1 = create(:user, availability_morning: true)
-user2 = create(:user, availability_morning: true) # no followers
+user2 = create(:user, availability_morning: true) # no followers # no events
 user3 = create(:user, availability_morning: true, availability_afternoon: true)
 user4 = create(:user, availability_morning: true, availability_afternoon: true) # no followees
 user5 = create(:user, availability_morning: true, availability_afternoon: true)
@@ -32,7 +32,7 @@ gym_member3 = create(:gym_member, user: user4, gym: gym1)
 gym_member4 = create(:gym_member, user: user7, gym: gym1)
 gym_member5 = create(:gym_member, user: user9, gym: gym1)
 
-gym_member6 = create(:gym_member, user: user4, gym: gym2)
+gym_member6 = create(:gym_member, user: user4, gym: gym2) # only 1 member
 
 gym_member7 = create(:gym_member, user: user1, gym: gym3)
 gym_member8 = create(:gym_member, user: user5, gym: gym3)
@@ -41,7 +41,7 @@ gym_member10 = create(:gym_member, user: user10, gym: gym3)
 
 gym_member11 = create(:gym_member, user: user2, gym: gym4)
 gym_member12 = create(:gym_member, user: user3, gym: gym4)
-gym_member13 = create(:gym_member, user: user4, gym: gym4)
+gym_member13 = create(:gym_member, user: user6, gym: gym4)
 gym_member14 = create(:gym_member, user: user7, gym: gym4)
 gym_member16 = create(:gym_member, user: user8, gym: gym4)
 gym_member17 = create(:gym_member, user: user9, gym: gym4)
@@ -49,6 +49,50 @@ gym_member17 = create(:gym_member, user: user9, gym: gym4)
 gym_member18 = create(:gym_member, user: user1, gym: gym5)
 gym_member19 = create(:gym_member, user: user2, gym: gym5)
 gym_member20 = create(:gym_member, user: user5, gym: gym5)
+
+# EVENTS (user is the 'host')
+event1 = create(:event, user: user1, gym: gym1)
+event2 = create(:event, user: user1, gym: gym1)
+event3 = create(:event, user: user1, gym: gym3)
+
+event4 = create(:event, user: user3, gym: gym1)
+event5 = create(:event, user: user3, gym: gym4)
+
+event6 = create(:event, user: user4, gym: gym2)
+
+event7 = create(:event, user: user5, gym: gym5)
+event8 = create(:event, user: user5, gym: gym5)
+
+event9 = create(:event, user: user6, gym: gym4)
+
+event10 = create(:event, user: user7, gym: gym1)
+
+event11 = create(:event, user: user8, gym: gym4)
+event12 = create(:event, user: user8, gym: gym4)
+
+event13 = create(:event, user: user9, gym: gym1)
+
+event14 = create(:event, user: user10, gym: gym3)
+event15 = create(:event, user: user10, gym: gym3)
+
+# INVITATIONS (user is the 'invitee')
+# invitation1 = create(:invitation, user: user3, event: event1)
+# invitation2 = create(:invitation, user: user4, event: event2)
+# invitation3 = create(:invitation, user: user7, event: event3)
+#
+# invitation4 = create(:invitation, user: , event: event4)
+# invitation5 = create(:invitation, user: , event: event5)
+#
+# invitation6 = create(:invitation, user: , event: event6)
+# invitation7 = create(:invitation, user: , event: event7)
+# invitation8 = create(:invitation, user: , event: event8)
+# invitation9 = create(:invitation, user: , event: event9)
+# invitation10 = create(:invitation, user: , event: event10)
+# invitation11 = create(:invitation, user: , event: event11)
+# invitation12 = create(:invitation, user: , event: event12)
+# invitation13 = create(:invitation, user: , event: event13)
+# invitation14 = create(:invitation, user: , event: event14)
+# invitation15 = create(:invitation, user: , event: event15)
 
 # FRIENDSHIPS
 friendship1 = create(:friendship, follower_id: user1, followee_id: user3)
