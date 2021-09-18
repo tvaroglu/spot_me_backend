@@ -70,3 +70,15 @@ def experienced_user
   let!(:invite1_2b_5) { create(:invitation, event: event1_2b_5, user: user5) }
   let!(:invite1_2c_3) { create(:invitation, event: event1_2c_3, user: user3) }
 end
+
+def user_with_gym_friend
+  FactoryBot.create(:user) do |user1|
+    FactoryBot.create(:user) do |user2|
+      FactoryBot.create(:gym) do |gym|
+        FactoryBot.create(:gym_member, gym: gym, user: user1)
+        FactoryBot.create(:gym_member, gym: gym, user: user2)
+        FactoryBot.create(:friendship, follower_id: user1.id, followee_id: user2.id)
+      end
+    end
+  end
+end

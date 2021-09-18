@@ -42,6 +42,21 @@ RSpec.describe User, type: :model do
         expect(user).to be_valid
       end
     end
+
+    describe '#user_with_gym_friend' do
+      subject(:user) { user_with_gym_friend }
+
+      it 'creates valid objects' do
+        expect(user).to be_valid
+        expect(Friendship.all.size).to eq(1)
+        expect(Gym.all.size).to eq(1)
+        expect(GymMember.all.size).to eq(2)
+        expect(User.all.size).to eq(2)
+        expect(user.followees.size).to eq(1)
+        expect(user.followers.size).to eq(0)
+        expect(user.gyms.size).to eq(1)
+      end
+    end
   end
 
   describe 'attributes' do
