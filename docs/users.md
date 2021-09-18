@@ -7,7 +7,6 @@ POST       | `/users` | Create a new user.     | [Link](#create-new-user)
 PATCH       | `/users/{user_id}` | Update an existing user.     | [Link](#update-existing-user)
 GET       | `/users/{:user_id}/gyms` | Get a user's gyms.     | [Link](#get-user-gyms)
 GET       | `/users/{:user_id}/friendships` | Get a user's friends.     | [Link](#get-user-friends)
-GET       | `/users/{:user_id}/events` | Get a user's events.     | [Link](#get-user-events)
 
 ---
 
@@ -350,86 +349,6 @@ Status: 200 OK
 
 ### Example Response (Successful)
 #### (if User doesn't have any friends)
-
-```
-Status: 200 OK
-```
-
-```
-{:data=>[]}
-```
-
-### Example Response (Resource Not Found)
-
-```
-Status: 404 Not Found
-```
-
-```
-{:message=>"your query could not be completed",
- :errors=>["Couldn't find User with 'id'=40"]
-}
-```
-
----
-
-## Get User Events
-
-Returns a user and their associated events.
-
-```
-GET /users/{:user_id}/events
-```
-
-
-### Parameters
-
-Name       | Data Type    | In    | Required/Optional | Description
------------|--------------|-------|-------------------|------------
-`user_id` | Integer | Path | Required | The ID of the user.
-
-### Example Request
-
-```
-GET https://spotme-app-api.herokuapp.com/api/v1/users/1/events
-```
-
-### Example Response (Successful)
-#### (if User has Events)
-```
-Status: 200 OK
-```
-
-```
-{:data=>
-  [
-   {:id=>"1211",
-    :type=>"event",
-    :attributes=>
-     {:user_id=>5142,
-      :gym_id=>613,
-      :date_time=>"2021-09-21T13:37:24.508Z",
-      :activity=>"Lifting"}},
-   {:id=>"1212",
-    :type=>"event",
-    :attributes=>
-     {:user_id=>5142,
-      :gym_id=>614,
-      :date_time=>"2021-09-20T13:37:24.511Z",
-      :activity=>"Cycling"}},
-   {:id=>"1213",
-    :type=>"event",
-    :attributes=>
-     {:user_id=>5142,
-      :gym_id=>614,
-      :date_time=>"2021-09-23T13:37:24.513Z",
-      :activity=>"Cardio"}}
-  ]
-}
-```
-
-### Example Response (Successful)
-#### (if User doesn't have any events)
 
 ```
 Status: 200 OK

@@ -77,7 +77,7 @@ https://spotme-app.herokuapp.com/api/v1
 
 
 The following table presents each API endpoint and its associated documentation
-- For `GET` requests, an example link is provided for demonstration purposes.  
+- For `GET` requests, an example link is provided for demonstration purposes  
 <!-- - Unless otherwise noted, the results are sorted by name in case-sensitive alphabetical order (i.e. A-Z then a-z). -->
 
 Endpoint | Docs | Example
@@ -88,28 +88,16 @@ Create New User | [docs](/docs/users.md#create-new-user) |
 Update Existing User | [docs](/docs/users.md#update-existing-user) |
 Get User's Gyms | [docs](/docs/users.md#get-user-gyms) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/gyms)
 Get User's Friends | [docs](/docs/users.md#get-user-friends) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships)
-Get User's Events | [docs](/docs/users.md#get-user-events) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/events)
-**Friends** | [docs][friendships-endpoints-link]
 Add Friend | [docs][add-friend-docs] |
 Remove Friend | [docs][remove-friend-docs] |
-**Events** | [docs][events-endpoints-link]
-Get User New Event Page | [docs][get-user-event-new-page-docs] | [example][get-user-event-new-ex]
-Create User New Event | [docs][create-user-event-docs] |
-**Gyms** | [docs][gyms-endpoints-link]
+**Events** | [docs](/docs/events.md)
+Get User's Events | [docs](/docs/events.md#get-user-events) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/events)
+Create User New Event | [docs](/docs/events#create-new-event.md) |
+**Gyms** | [docs](/docs/gyms.md)
 Get Gyms Near User | [docs][get-gyms-near-user-docs] | [example][get-gyms-near-user-ex]
-Get Gym Show Page | [docs][get-gym-show-page-docs] | [example][get-gym-show-page-ex]
+Add Gym Member | [docs](/docs/gyms#create-new-gym-member.md) |
+Remove Gym Member | [docs](/docs/gyms#remove-existing-gym-member.md) |
 Get User Gym Show Page | [docs][get-user-gym-show-page-docs] | [example][get-user-gym-show-page-ex]
-Add Gym Member | [docs][add-gym-member-docs] |
-Remove Gym | [docs][remove-gym-docs] |
-
-<!-- Note: Did not add unvetted endpoints:
-GET /users/:id/events
-GET /events/:id
-GET /users/search
-DELETE /events/:id
-PATCH /events/:id
-POST /gyms
--->
 
 
 ## Project Overview
@@ -153,6 +141,7 @@ In addition to the base project requirements, some extra explorations and extens
 ## Database Schema
 
 ![schema](https://user-images.githubusercontent.com/81220681/133701997-2e8a1242-d274-4bf2-af16-9f6c2a8a8480.png)
+
 
 <!-- Top Level Badges and Links -->
 [rubocop-badge]: https://img.shields.io/badge/code_style-rubocop-brightgreen.svg?style=flat-square
