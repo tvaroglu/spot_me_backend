@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# require 'factory_bot_rails'
+include FactoryBot::Syntax::Methods
+
 Friendship.destroy_all
 GymMember.destroy_all
 Gym.destroy_all
@@ -21,7 +24,7 @@ user4 = create(:user, availability_morning: true, availability_afternoon: true) 
 user5 = create(:user, availability_morning: true, availability_afternoon: true) # no events # no invitations
 user6 = create(:user, availability_morning: true, availability_evening: true) # no invitations
 user7 = create(:user, availability_evening: true)
-user8 = create(:user, availability_morning: true, availability_morning: true, availability_evening: true) # no events
+user8 = create(:user, availability_morning: true, availability_afternoon: true, availability_evening: true) # no events
 user9 = create(:user, availability_afternoon: true, availability_evening: true) # no invitations
 user10 = create(:user, availability_evening: true) # no gym membership # no events # no invitations
 
@@ -92,23 +95,23 @@ invitation14 = create(:invitation, user: user7, event: event14)
 invitation15 = create(:invitation, user: user6, event: event15)
 
 # FRIENDSHIPS
-friendship1 = create(:friendship, follower_id: user1, followee_id: user3)
-friendship2 = create(:friendship, follower_id: user1, followee_id: user9)
-friendship3 = create(:friendship, follower_id: user1, followee_id: user10)
-friendship4 = create(:friendship, follower_id: user3, followee_id: user1)
-friendship5 = create(:friendship, follower_id: user4, followee_id: user7)
-friendship6 = create(:friendship, follower_id: user4, followee_id: user8)
-friendship7 = create(:friendship, follower_id: user5, followee_id: user6)
-friendship8 = create(:friendship, follower_id: user6, followee_id: user2)
-friendship9 = create(:friendship, follower_id: user6, followee_id: user10)
-friendship10 = create(:friendship, follower_id: user7, followee_id: user1)
-friendship11 = create(:friendship, follower_id: user7, followee_id: user6)
-friendship12 = create(:friendship, follower_id: user7, followee_id: user9)
-friendship13 = create(:friendship, follower_id: user7, followee_id: user10)
-friendship14 = create(:friendship, follower_id: user8, followee_id: user2)
-friendship15 = create(:friendship, follower_id: user8, followee_id: user3)
-friendship16 = create(:friendship, follower_id: user9, followee_id: user5)
-friendship17 = create(:friendship, follower_id: user9, followee_id: user6)
-friendship18 = create(:friendship, follower_id: user9, followee_id: user8)
-friendship19 = create(:friendship, follower_id: user9, followee_id: user10)
-friendship20 = create(:friendship, follower_id: user10, followee_id: user3)
+friendship1 = create(:friendship, follower: user1, followee: user3)
+friendship2 = create(:friendship, follower: user1, followee: user9)
+friendship3 = create(:friendship, follower: user1, followee: user10)
+friendship4 = create(:friendship, follower: user3, followee: user1)
+friendship5 = create(:friendship, follower: user4, followee: user7)
+friendship6 = create(:friendship, follower: user4, followee: user8)
+friendship7 = create(:friendship, follower: user5, followee: user6)
+friendship8 = create(:friendship, follower: user6, followee: user2)
+friendship9 = create(:friendship, follower: user6, followee: user10)
+friendship10 = create(:friendship, follower: user7, followee: user1)
+friendship11 = create(:friendship, follower: user7, followee: user6)
+friendship12 = create(:friendship, follower: user7, followee: user9)
+friendship13 = create(:friendship, follower: user7, followee: user10)
+friendship14 = create(:friendship, follower: user8, followee: user2)
+friendship15 = create(:friendship, follower: user8, followee: user3)
+friendship16 = create(:friendship, follower: user9, followee: user5)
+friendship17 = create(:friendship, follower: user9, followee: user6)
+friendship18 = create(:friendship, follower: user9, followee: user8)
+friendship19 = create(:friendship, follower: user9, followee: user10)
+friendship20 = create(:friendship, follower: user10, followee: user3)
