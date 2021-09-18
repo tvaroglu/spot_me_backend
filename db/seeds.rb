@@ -21,7 +21,7 @@ user4 = create(:user, availability_morning: true, availability_afternoon: true) 
 user5 = create(:user, availability_morning: true, availability_afternoon: true) # no events # no invitations
 user6 = create(:user, availability_morning: true, availability_evening: true) # no invitations
 user7 = create(:user, availability_evening: true)
-user8 = create(:user, availability_morning: true, availability_morning: true, availability_evening: true) # no events
+user8 = create(:user, availability_morning: true, availability_afternoon: true, availability_evening: true) # no events
 user9 = create(:user, availability_afternoon: true, availability_evening: true) # no invitations
 user10 = create(:user, availability_evening: true) # no gym membership # no events # no invitations
 
