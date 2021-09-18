@@ -1,24 +1,27 @@
 <div align="center">
- 
-![Version][version-badge]
-[![Ruby Style Guide][rubocop-badge]][rubocop-url]
+
 [![Contributors][contributors-badge]][contributors-url]
 [![Forks][forks-badge]][forks-url]
 [![Stargazers][stars-badge]][stars-url]
 [![Issues][issues-badge]][issues-url]
+<br>
+![Version][version-badge]
+[![Ruby Style Guide][rubocop-badge]][rubocop-url]
+![Build][build-badge]
 
-# [Spot Me](https://spotme-app-api.herokuapp.com/) (Back-End) 
- 
-This is the back-end portion of the Spot-Me application, which exposes resources for the fitness application by consuming the Google OAuth and Yelp APIs to allow users to perform the functions described in the application. Google OAuth allows the app to authorize users and retrieve data, such as their full_name, email address, Google ID, Google image URL, and zip code. Yelp allows the applications users search for specifically gyms in an inputed location (city, state, and/or zip code) based on a predefined radius.
+# [SpotMe](https://spotme-app.herokuapp.com/) (BE)
 
-#### Spot Me allow users to:<br>
-Search for gyms in their local area<br>
-Add gyms to their account<br>
-Search for swol-mates that have a gym(s) in common<br>
-Add/delete swol-mates as friends<br>
-Schedule/delete workout sessions with swol-mates<br><br>
+This is the back-end architecture of the Spot-Me application, which exposes resources for the fitness application front end by consuming the Google OAuth and Yelp APIs, allowing users to perform the functions described within the application. Google OAuth allows the app to authorize users and retrieve data, such as their name, email address, Google ID, Google image URL, and zip code. Yelp allows the application users to search for specific gyms within an input location (city, state, and/or zip code) based on a predefined radius.
 
- 
+#### SpotMe allows users to:<br>
+⭐Search for gyms in their local area<br>
+⭐Add gyms to their account<br>
+⭐Search for swol-mates that have a gym(s) in common<br>
+⭐Add/delete swol-mates as friends<br>
+⭐Schedule/delete workout sessions with swol-mates<br><br>
+
+# <a href="https://github.com/tvaroglu/spot_me_frontend"><img src="https://img.shields.io/static/v1?style=flat-square&label=Spot+Me&message=Front+End+Repo&color=9cf"></a><br/><br/>
+
 ## Contributors
 
 |Brian Fletcher|Caroline Tan|Ezzedine Alwafai|Gunnar Runkle|Scott Borecki|Taylor Varoglu
@@ -26,25 +29,24 @@ Schedule/delete workout sessions with swol-mates<br><br>
 |[GitHub](https://github.com/bfl3tch)|[GitHub](https://github.com/carolinectan)|[GitHub](https://github.com/ealwafai)|[GitHub](https://github.com/gunnarrunner)|[GitHub](https://github.com/Scott-Borecki)|[GitHub](https://github.com/tvaroglu)
 |[LinkedIn](https://www.linkedin.com/in/bfl3tch/)|[LinkedIn](https://www.linkedin.com/in/carolinectan/)|[LinkedIn](https://www.linkedin.com/in/ezzedine-alwafai/)|[LinkedIn](https://www.linkedin.com/in/gunnar-runkle/)|[LinkedIn](https://www.linkedin.com/in/scott-borecki/)|[LinkedIn](https://www.linkedin.com/in/taylorvaroglu/)
 
-<br> 
+<br>
 </div>
 
 <div align="center">
- 
+
 ## Table of Contents
 |Links
 |--- |
 [Tools Used](#tools-used)
-[Minimum Requirements](#minimum-requirements)
-[Setup](#setup)
 [Endpoints](#endpoints)
+[Project Overview](#project-overview)
 [Learning Goals](#learning-goals)
 [Database Schema](#database-schema)
 
 
 <br><br>
 ## Tools Used
-  
+
   |Development|Development|Testing|Deployment
   |--- |--- |--- |--- |
   |[Ruby 2.7.2](https://www.ruby-lang.org/en/downloads/)|[Bootstrap](https://rubygems.org/gems/bootstrap/versions/4.0.0)|[RSpec for Rails](https://github.com/rspec/rspec-rails)|[Heroku](http://virtual-watch-party.herokuapp.com)|
@@ -58,17 +60,11 @@ Schedule/delete workout sessions with swol-mates<br><br>
  |[Postman](https://www.postman.com/product/rest-client/)|
 
 
-
 <br>
 </div>
 
-## Minimum Requirements
 
-To access the API endpoints, you need the following:
-- `GET` Requests: Internet browser or API client (such as [Postman][postman-url])
-- `POST`, `PATCH`, `DELETE` Requests: API client
-
-## Setup
+## Endpoints
 
 The `base path` of each endpoint is:
 
@@ -76,36 +72,35 @@ The `base path` of each endpoint is:
 https://spotme-app.herokuapp.com/api/v1
 ```
 
-- For `GET` requests, you can simply send the endpoint requests through your internet browser.  
-- For any other requests (i.e. `POST`, `PATCH`, `DELETE`), you will need to use an API client to provide the request body and access the endpoints.
+- For `GET` requests, you can send the endpoint requests through your internet browser, or utilize an API client (i.e. [Postman][postman-url])
+- For any other requests (i.e. `POST`, `PATCH`, `DELETE`), you will need to use an API client to provide the required request body
 
-## Endpoints
 
-The following table presents each API endpoint and its documentation.  
-
-Notes:
+The following table presents each API endpoint and its associated documentation
 - For `GET` requests, an example link is provided for demonstration purposes.  
-- Unless otherwise noted, the results are sorted by name in case-sensitive alphabetical order (i.e. A-Z then a-z).
+<!-- - Unless otherwise noted, the results are sorted by name in case-sensitive alphabetical order (i.e. A-Z then a-z). -->
 
 Endpoint | Docs | Example
 ---------|------|--------
-**Users** | [docs][users-endpoints-link]
-Get User Dashboard | [docs][get-user-dashboard-docs] | [example][get-user-dashboard-ex]
-Get User Profile | [docs][get-user-profile-docs] | [example][get-user-profile-ex]
-Update User | [docs][update-user-docs] | [example][update-user-ex]
-Create/Register New User Endpoint | [docs][create-register-new-user-docs] | [example][create-register-new-user-ex]
+**Users** | [docs](/docs/users.md)
+Get Existing User | [docs](/docs/users.md#get-one-user) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1)
+Create New User | [docs](/docs/users.md#create-new-user) |
+Update Existing User | [docs](/docs/users.md#update-existing-user) |
+Get User's Gyms | [docs](/docs/users.md#get-user-gyms) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/gyms)
+Get User's Friends | [docs](/docs/users.md#get-user-friends) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships)
+Get User's Events | [docs](/docs/users.md#get-user-events) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/events)
 **Friends** | [docs][friendships-endpoints-link]
-Add Friend | [docs][add-friend-docs] | [example][add-friend-ex]
-Remove Friend | [docs][remove-friend-docs] | [example][remove-friend-ex]
+Add Friend | [docs][add-friend-docs] |
+Remove Friend | [docs][remove-friend-docs] |
 **Events** | [docs][events-endpoints-link]
-Create User Event | [docs][create-user-event-docs] | [example][create-user-event-ex]
-Get User Event New Page | [docs][create-user-event-new-page-docs] | [example][create-user-event-new-ex]
+Get User New Event Page | [docs][get-user-event-new-page-docs] | [example][get-user-event-new-ex]
+Create User New Event | [docs][create-user-event-docs] |
 **Gyms** | [docs][gyms-endpoints-link]
-Add Gym Member | [docs][add-gym-member-docs] | [example][add-gym-member-ex]
-Remove Gym | [docs][remove-gym-docs] | [example][remove-gym-ex]
 Get Gyms Near User | [docs][get-gyms-near-user-docs] | [example][get-gyms-near-user-ex]
-Get User Gym Show Page | [docs][get-user-gym-show-page-docs] | [example][get-user-gym-show-page-ex]
 Get Gym Show Page | [docs][get-gym-show-page-docs] | [example][get-gym-show-page-ex]
+Get User Gym Show Page | [docs][get-user-gym-show-page-docs] | [example][get-user-gym-show-page-ex]
+Add Gym Member | [docs][add-gym-member-docs] |
+Remove Gym | [docs][remove-gym-docs] |
 
 <!-- Note: Did not add unvetted endpoints:
 GET /users/:id/events
@@ -116,18 +111,12 @@ PATCH /events/:id
 POST /gyms
 -->
 
-<!-- Endpoint | Docs | Example
----------|------|--------
-**Merchants** | [docs][merchants-endpoints-link]
-Get All Merchants | [docs][get-all-merchants-docs] | [example][get-all-merchants-ex]
-Get One Merchant | [docs][get-one-merchant-docs] | [example][get-one-merchant-ex]
--->
 
-## Project Background
+## Project Overview
 
 This project was developed by Brian Fletcher, Caroline Tan, Ezzedine Alwafai, Gunnar Runkle, Scott Borecki, and Taylor Varoglu during Mod 3 of Turing School's Back End Engineering Program.  Created from scratch and deployed to Heroku, this project consists of a front-end and back-end Ruby on Rails application that was completed in 10 days.
 
-The project description and base requirements can be found here: [link][consultancy-home]
+The project description and base requirements can be found  [here][consultancy-home]
 
 In addition to the base project requirements, some extra explorations and extensions completed included:
 
@@ -140,26 +129,26 @@ In addition to the base project requirements, some extra explorations and extens
 - Implementing RuboCop and RuboCop extensions for code styling and best practices
 - Deploying the API to Heroku for production
 
- 
+
 ### Learning Goals
-  
+
   - ⭐ Consume two or more external APIs which require authentication
   - ⭐ Build APIs that return JSON responses
   - ⭐ Use an external OAuth provider to authenticate users
-  - ⭐ Create a project with a separate frontend and backend
+  - ⭐ Create a project with a separate front end and back end
+  - ⭐ Apply RuboCop’s style guide for code quality
   - ⭐ Organize and refactor code to be more maintainable
   - ⭐ Implement a self-referential relationship in ActiveRecord
-  - ⭐ Utilize Continuous Integration using Travis CI
+  - ⭐ Create instance and class methods on a Rails model that use ActiveRecord methods and helpers
+  - ⭐ Use Rails to create web pages that allow users to CRUD resources
+  - ⭐ Write model and feature tests that fully cover data logic and potential user behavior
+  - ⭐ Utilize Continuous Integration via Travis CI
   - ⭐ Deploy to Heroku
   - ⭐ Implement a production-quality user interface using Bootstrap or other common CSS styling framework
-  - ⭐ Implement project management by using project boards, participating in daily stand-ups and team retros
-  - ⭐ Use Rails to create web pages that allow users to CRUD resources
+  - ⭐ Implement agile project management by using project boards, participating in daily stand-ups and team retros
   - ⭐ Utilize quality workflow practices: small commits, descriptive pull requests, and code reviews
   - ⭐ Write thorough, understandable documentation
-  - ⭐ Create instance and class methods on a Rails model that use ActiveRecord methods and helpers
-  - ⭐ Write model and feature tests that fully cover data logic and potential user behavior
-  - ⭐ Apply RuboCop’s style guide for code quality
-  
+
 
 ## Database Schema
 
@@ -177,10 +166,13 @@ In addition to the base project requirements, some extra explorations and extens
 [stars-url]: https://github.com/tvaroglu/spot_me_backend/stargazers
 [issues-badge]: https://img.shields.io/github/issues/tvaroglu/spot_me_backend.svg?style=flat-square
 [issues-url]: https://github.com/tvaroglu/spot_me_backend/issues
+[build-badge]: https://img.shields.io/travis/tvaroglu/spot_me_backend?style=flat-square
 
-Docs <!-- Create .md files for each endpoint then link after each ": " with appropriate file path -->
-[users-endpoints-link]: <!-- enter file path here i.e. /docs/get_users.md -->
-[get-user-dashboard-docs]:
+
+<!-- Docs -->
+<!-- Create .md files for each endpoint then link after each ": " with appropriate file path -->
+<!-- [users-endpoints-link]: <!-- enter file path here i.e. /docs/get_users.md -->
+<!-- [get-user-dashboard-docs]:
 [get-user-profile-docs]:
 [update-user-docs]:
 [create-register-new-user-docs]:
@@ -195,25 +187,25 @@ Docs <!-- Create .md files for each endpoint then link after each ": " with appr
 [remove-gym-docs]:
 [get-gyms-near-user-docs]:
 [get-user-gym-show-page-docs]:
-[get-gym-show-page-docs]:
+[get-gym-show-page-docs]: -->
 
 <!-- Docs Template -->
 <!-- [merchants-endpoints-link]: /doc/merchants_endpoints.md -->
 
-Examples
-[get-user-dashboard-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
-[get-user-profile-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
-[update-user-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
-[create-register-new-user-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
-[add-friend-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
-[remove-friend-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
-[create-user-event-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
-[create-user-event-new-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
-[add-gym-member-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
-[remove-gym-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
-[get-gyms-near-user-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
-[get-user-gym-show-page-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
-[get-gym-show-page-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+<!-- Examples -->
+<!-- [get-user-dashboard-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+<!-- [get-user-profile-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+<!-- [update-user-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+<!-- [create-register-new-user-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+<!-- [add-friend-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+<!-- [remove-friend-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+<!-- [create-user-event-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+<!-- [create-user-event-new-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+<!-- [add-gym-member-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+<!-- [remove-gym-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+<!-- [get-gyms-near-user-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+<!-- [get-user-gym-show-page-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
+<!-- [get-gym-show-page-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
 
 
 <!-- Examples Template-->
