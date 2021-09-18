@@ -1,5 +1,5 @@
 # See spec/concerns/response.rb for #json_response and #json_error_response
-# helpers
+# helpers.
 class Api::V1::Users::FriendshipsController < ApplicationController
   def index
     user = User.find(params[:user_id])

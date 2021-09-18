@@ -82,3 +82,11 @@ def user_with_gym_friend
     end
   end
 end
+
+def user_with_gym
+  FactoryBot.create(:user) do |user1|
+    FactoryBot.create(:gym) do |gym|
+      FactoryBot.create(:gym_member, gym: gym, user: user1)
+    end
+  end
+end
