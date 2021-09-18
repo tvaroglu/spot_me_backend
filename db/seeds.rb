@@ -8,13 +8,13 @@
 
 # USERS
 user1 = create(:user, availability_morning: true)
-user2 = create(:user, availability_morning: true) # no followers
+user2 = create(:user, availability_morning: true) # no followers # no events
 user3 = create(:user, availability_morning: true, availability_afternoon: true)
 user4 = create(:user, availability_morning: true, availability_afternoon: true) # no followees
-user5 = create(:user, availability_morning: true, availability_afternoon: true)
+user5 = create(:user, availability_morning: true, availability_afternoon: true) # no events
 user6 = create(:user, availability_morning: true, availability_evening: true)
 user7 = create(:user, availability_evening: true)
-user8 = create(:user, availability_morning: true, availability_morning: true, availability_evening: true)
+user8 = create(:user, availability_morning: true, availability_morning: true, availability_evening: true) # no events
 user9 = create(:user, availability_afternoon: true, availability_evening: true)
 user10 = create(:user, availability_evening: true) # no gym membership
 
@@ -49,6 +49,25 @@ gym_member17 = create(:gym_member, user: user9, gym: gym4)
 gym_member18 = create(:gym_member, user: user1, gym: gym5)
 gym_member19 = create(:gym_member, user: user2, gym: gym5)
 gym_member20 = create(:gym_member, user: user5, gym: gym5)
+
+# EVENTS (user id is the 'host')
+event1 = create(:event, user: user1)
+event2 = create(:event, user: user1)
+event3 = create(:event, user: user1)
+event4 = create(:event, user: user3)
+event5 = create(:event, user: user3)
+event6 = create(:event, user: user4)
+event7 = create(:event, user: user4)
+event8 = create(:event, user: user4)
+event9 = create(:event, user: user4)
+event10 = create(:event, user: user6)
+event11 = create(:event, user: user7)
+event12 = create(:event, user: user7)
+event13 = create(:event, user: user9)
+event14 = create(:event, user: user10)
+event15 = create(:event, user: user10)
+
+# INVITATIONS
 
 # FRIENDSHIPS
 friendship1 = create(:friendship, follower_id: user1, followee_id: user3)
