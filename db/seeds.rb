@@ -8,22 +8,47 @@
 
 # USERS
 user1 = create(:user, availability_morning: true)
-user2 = create(:user, availability_morning: true) # no followers :(
+user2 = create(:user, availability_morning: true) # no followers
 user3 = create(:user, availability_morning: true, availability_afternoon: true)
-user4 = create(:user, availability_morning: true, availability_afternoon: true) # no followees :(
+user4 = create(:user, availability_morning: true, availability_afternoon: true) # no followees
 user5 = create(:user, availability_morning: true, availability_afternoon: true)
 user6 = create(:user, availability_morning: true, availability_evening: true)
 user7 = create(:user, availability_evening: true)
 user8 = create(:user, availability_morning: true, availability_morning: true, availability_evening: true)
 user9 = create(:user, availability_afternoon: true, availability_evening: true)
-user10 = create(:user, availability_evening: true)
+user10 = create(:user, availability_evening: true) # no gym membership
 
 # GYMS
 gym1 = create(:gym)
-gym2 = create(:gym)
+gym2 = create(:gym) # only one gym member
 gym3 = create(:gym)
 gym4 = create(:gym)
 gym5 = create(:gym)
+
+# GYM MEMBERS
+gym_member1 = create(:gym_member, user: user1, gym: gym1)
+gym_member2 = create(:gym_member, user: user3, gym: gym1)
+gym_member3 = create(:gym_member, user: user4, gym: gym1)
+gym_member4 = create(:gym_member, user: user7, gym: gym1)
+gym_member5 = create(:gym_member, user: user9, gym: gym1)
+
+gym_member6 = create(:gym_member, user: user4, gym: gym2)
+
+gym_member7 = create(:gym_member, user: user1, gym: gym3)
+gym_member8 = create(:gym_member, user: user5, gym: gym3)
+gym_member9 = create(:gym_member, user: user7, gym: gym3)
+gym_member10 = create(:gym_member, user: user10, gym: gym3)
+
+gym_member11 = create(:gym_member, user: user2, gym: gym4)
+gym_member12 = create(:gym_member, user: user3, gym: gym4)
+gym_member13 = create(:gym_member, user: user4, gym: gym4)
+gym_member14 = create(:gym_member, user: user7, gym: gym4)
+gym_member16 = create(:gym_member, user: user8, gym: gym4)
+gym_member17 = create(:gym_member, user: user9, gym: gym4)
+
+gym_member18 = create(:gym_member, user: user1, gym: gym5)
+gym_member19 = create(:gym_member, user: user2, gym: gym5)
+gym_member20 = create(:gym_member, user: user5, gym: gym5)
 
 # FRIENDSHIPS
 friendship1 = create(:friendship, follower_id: user1, followee_id: user3)
