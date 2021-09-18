@@ -38,10 +38,10 @@ This is the back-end architecture of the Spot-Me application, which exposes reso
 |Links
 |--- |
 [Tools Used](#tools-used)
-[Endpoints](#endpoints)
 [Project Overview](#project-overview)
 [Learning Goals](#learning-goals)
 [Database Schema](#database-schema)
+[Endpoints](#endpoints)
 
 
 <br><br>
@@ -50,19 +50,59 @@ This is the back-end architecture of the Spot-Me application, which exposes reso
   |Development|Development|Testing|Deployment
   |--- |--- |--- |--- |
   |[Ruby 2.7.2](https://www.ruby-lang.org/en/downloads/)|[Bootstrap](https://rubygems.org/gems/bootstrap/versions/4.0.0)|[RSpec for Rails](https://github.com/rspec/rspec-rails)|[Heroku](http://virtual-watch-party.herokuapp.com)|
-  |[Rails 5.2.6](https://rubygems.org/gems/rails/versions/5.2.6)|[GitHub](https://desktop.github.com/)|[Capybara](https://github.com/teamcapybara/capybara)|[Travis CI](https://travis-ci.org/)|
-  |[Pry](https://rubygems.org/gems/pry/versions/0.10.3)|[Git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)|[Webmock](https://github.com/bblimke/webmock)|
-  |[PostgresQL](https://www.postgresql.org/)|[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)|[SimpleCov](https://rubygems.org/gems/simplecov/versions/0.12.0)|
+  |[Rails 5.2.6](https://rubygems.org/gems/rails/versions/5.2.6)|[GitHub](https://desktop.github.com/)|[Webmock](https://github.com/bblimke/webmock)|[TravisCI](https://travis-ci.org/)|
+  |[Pry](https://rubygems.org/gems/pry/versions/0.10.3)|[Git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)|[SimpleCov](https://rubygems.org/gems/simplecov/versions/0.12.0)|
+  |[PostgresQL](https://www.postgresql.org/)|[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)||
  |[OmniAuth Google OAuth2](https://github.com/zquestz/omniauth-google-oauth2)|[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)|
  |[Postico](https://eggerapps.at/postico/)|[Rubocop](https://rubygems.org/gems/rubocop/versions/0.39.0)|
- |[Faraday](https://github.com/lostisland/faraday)|[Atom](https://atom.io/)|
- |[Figaro](https://github.com/laserlemon/figaro)|[FactoryBot](https://github.com/thoughtbot/factory_bot)|
+ |[Faraday](https://github.com/lostisland/faraday)|[FactoryBot](https://github.com/thoughtbot/factory_bot)|
+ |[Figaro](https://github.com/laserlemon/figaro)|[Atom](https://atom.io/)|
  |[Postman](https://www.postman.com/product/rest-client/)|
 
 
 <br>
 </div>
 
+## Project Overview
+
+This project was developed by Brian Fletcher, Caroline Tan, Ezzedine Alwafai, Gunnar Runkle, Scott Borecki, and Taylor Varoglu during Mod 3 of Turing School's Back End Engineering Program.  Created from scratch and deployed to Heroku, this project consists of a front-end and back-end Ruby on Rails application that was completed in 10 days.
+
+The project description and base requirements can be found  [here][consultancy-home]
+
+In addition to the base project requirements, some extra explorations and extensions completed included:
+
+- Validating query params by leveraging ActiveModel::Validations
+- Using customized FactoryBot methods and RSpec's Shared Examples feature for frequently-used tests to significantly DRY up code in test files
+- Documenting complicated methods in general accordance with [TomDoc](http://tomdoc.org/) for Ruby specifications
+- Creating documentation for each API endpoint to assist user in production
+- Using GitHub Projects to track user stories and progress, as well as creating new issues
+- Implementing RuboCop and RuboCop extensions for code styling and best practices
+- Deploying the API to Heroku for production
+
+
+### Learning Goals
+
+  - ⭐ Consume two or more external APIs which require authentication
+  - ⭐ Build APIs that return JSON responses
+  - ⭐ Use an external OAuth provider to authenticate users
+  - ⭐ Create a project with a separate front-end and back-end
+  - ⭐ Apply RuboCop’s style guide for code quality
+  - ⭐ Organize and refactor code to be more maintainable
+  - ⭐ Implement a self-referential relationship in ActiveRecord
+  - ⭐ Create instance and class methods on a Rails model that use ActiveRecord methods and helpers
+  - ⭐ Use Rails to create web pages that allow users to CRUD resources
+  - ⭐ Write model and feature tests that fully cover data logic and potential user behavior
+  - ⭐ Utilize Continuous Integration via Travis CI
+  - ⭐ Deploy to Heroku
+  - ⭐ Implement a production-quality user interface using Bootstrap or other common CSS styling framework
+  - ⭐ Implement agile project management by using project boards, participating in daily stand-ups and team retros
+  - ⭐ Utilize quality workflow practices: small commits, descriptive pull requests, and code reviews
+  - ⭐ Write thorough, understandable documentation
+
+
+## Database Schema
+
+![schema](https://user-images.githubusercontent.com/81220681/133701997-2e8a1242-d274-4bf2-af16-9f6c2a8a8480.png)
 
 ## Endpoints
 
@@ -88,59 +128,19 @@ Create New User | [docs](/docs/users.md#create-new-user) |
 Update Existing User | [docs](/docs/users.md#update-existing-user) |
 Get User's Gyms | [docs](/docs/users.md#get-user-gyms) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/gyms)
 Get User's Friends | [docs](/docs/users.md#get-user-friends) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships)
-Add Friend | [docs][add-friend-docs] |
-Remove Friend | [docs][remove-friend-docs] |
+Add Friend | *pending* |
+Remove Friend | *pending* |
 **Events** | [docs](/docs/events.md)
 Get User's Events | [docs](/docs/events.md#get-user-events) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/events)
+Get User New Event | *pending* | *pending*
 Create User New Event | [docs](/docs/events#create-new-event.md) |
 **Gyms** | [docs](/docs/gyms.md)
-Get Gyms Near User | [docs][get-gyms-near-user-docs] | [example][get-gyms-near-user-ex]
+Get Gyms Near User | *pending* | *pending*
+Get Gym Show Page | [docs](/docs/gyms#get-gym.md) | [example](https://spotme-app-api.herokuapp.com/api/v1/gyms/1)
 Add Gym Member | [docs](/docs/gyms#create-new-gym-member.md) |
 Remove Gym Member | [docs](/docs/gyms#remove-existing-gym-member.md) |
-Get User Gym Show Page | [docs][get-user-gym-show-page-docs] | [example][get-user-gym-show-page-ex]
 
 
-## Project Overview
-
-This project was developed by Brian Fletcher, Caroline Tan, Ezzedine Alwafai, Gunnar Runkle, Scott Borecki, and Taylor Varoglu during Mod 3 of Turing School's Back End Engineering Program.  Created from scratch and deployed to Heroku, this project consists of a front-end and back-end Ruby on Rails application that was completed in 10 days.
-
-The project description and base requirements can be found  [here][consultancy-home]
-
-In addition to the base project requirements, some extra explorations and extensions completed included:
-
-- Validating query params by leveraging ActiveModel::Validations
-- Using customized FactoryBot methods to significantly DRY up code in test files
-- Using RSpec's Shared Examples feature for frequently-used tests to DRY up code in test files
-- Documenting complicated methods in general accordance with [TomDoc](http://tomdoc.org/) for Ruby specifications
-- Creating documentation for each API endpoint to assist user in production
-- Using GitHub Projects to track user stories and progress, as well as creating new issues
-- Implementing RuboCop and RuboCop extensions for code styling and best practices
-- Deploying the API to Heroku for production
-
-
-### Learning Goals
-
-  - ⭐ Consume two or more external APIs which require authentication
-  - ⭐ Build APIs that return JSON responses
-  - ⭐ Use an external OAuth provider to authenticate users
-  - ⭐ Create a project with a separate front end and back end
-  - ⭐ Apply RuboCop’s style guide for code quality
-  - ⭐ Organize and refactor code to be more maintainable
-  - ⭐ Implement a self-referential relationship in ActiveRecord
-  - ⭐ Create instance and class methods on a Rails model that use ActiveRecord methods and helpers
-  - ⭐ Use Rails to create web pages that allow users to CRUD resources
-  - ⭐ Write model and feature tests that fully cover data logic and potential user behavior
-  - ⭐ Utilize Continuous Integration via Travis CI
-  - ⭐ Deploy to Heroku
-  - ⭐ Implement a production-quality user interface using Bootstrap or other common CSS styling framework
-  - ⭐ Implement agile project management by using project boards, participating in daily stand-ups and team retros
-  - ⭐ Utilize quality workflow practices: small commits, descriptive pull requests, and code reviews
-  - ⭐ Write thorough, understandable documentation
-
-
-## Database Schema
-
-![schema](https://user-images.githubusercontent.com/81220681/133701997-2e8a1242-d274-4bf2-af16-9f6c2a8a8480.png)
 
 
 <!-- Top Level Badges and Links -->
@@ -157,29 +157,14 @@ In addition to the base project requirements, some extra explorations and extens
 [issues-url]: https://github.com/tvaroglu/spot_me_backend/issues
 [build-badge]: https://img.shields.io/travis/tvaroglu/spot_me_backend?style=flat-square
 
+<!-- Links -->
+[Repository]: https://github.com/tvaroglu/spot_me_backend
+[postman-url]: https://www.postman.com/
+[consultancy-home]: https://backend.turing.edu/module3/projects/consultancy/
 
-<!-- Docs -->
-<!-- Create .md files for each endpoint then link after each ": " with appropriate file path -->
-<!-- [users-endpoints-link]: <!-- enter file path here i.e. /docs/get_users.md -->
-<!-- [get-user-dashboard-docs]:
-[get-user-profile-docs]:
-[update-user-docs]:
-[create-register-new-user-docs]:
-[friendships-endpoints-link]:
-[add-friend-docs]:
-[remove-friend-docs]:
-[events-endpoints-link]:
-[create-user-event-docs]:
-[create-user-event-new-page-docs]:
-[gyms-endpoints-link]:
-[add-gym-member-docs]:
-[remove-gym-docs]:
-[get-gyms-near-user-docs]:
-[get-user-gym-show-page-docs]:
-[get-gym-show-page-docs]: -->
+<!-- Images -->
+[github-avatar]: https://avatars.githubusercontent.com/u/79381792?s=100
 
-<!-- Docs Template -->
-<!-- [merchants-endpoints-link]: /doc/merchants_endpoints.md -->
 
 <!-- Examples -->
 <!-- [get-user-dashboard-ex]: <!-- enter URL here i.e. https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
@@ -199,16 +184,3 @@ In addition to the base project requirements, some extra explorations and extens
 
 <!-- Examples Template-->
 <!-- [get-all-merchants-ex]: https://rails-engine-scott-borecki.herokuapp.com/api/v1/merchants?page=1&per_page=3 -->
-
-<!-- Links -->
-[Repository]: https://github.com/tvaroglu/spot_me_backend
-[postman-url]: https://www.postman.com/
-[consultancy-home]: https://backend.turing.edu/module3/projects/consultancy/
-
-<!-- Badges -->
-[github-follow-badge]: https://img.shields.io/github/followers/scott-borecki?label=follow&style=social
-[gmail-badge]: https://img.shields.io/badge/gmail-scottborecki@gmail.com-green?style=flat&logo=gmail&logoColor=white&color=white&labelColor=EA4335
-[linkedin-badge]: https://img.shields.io/badge/Scott--Borecki-%23OpenToWork-green?style=flat&logo=Linkedin&logoColor=white&color=success&labelColor=0A66C2
-
-<!-- Images -->
-[github-avatar]: https://avatars.githubusercontent.com/u/79381792?s=100

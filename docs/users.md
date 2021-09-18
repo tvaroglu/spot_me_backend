@@ -5,8 +5,8 @@ HTTP Verb | Endpoint                   | Description                | Link
 GET       | `/users/{user_id}` | Get a single user.     | [Link](#get-one-user)
 POST       | `/users` | Create a new user.     | [Link](#create-new-user)
 PATCH       | `/users/{user_id}` | Update an existing user.     | [Link](#update-existing-user)
-GET       | `/users/{:user_id}/gyms` | Get a user's gyms.     | [Link](#get-user-gyms)
-GET       | `/users/{:user_id}/friendships` | Get a user's friends.     | [Link](#get-user-friends)
+GET       | `/users/{user_id}/gyms` | Get a user's gyms.     | [Link](#get-user-gyms)
+GET       | `/users/{user_id}/friendships` | Get a user's friends.     | [Link](#get-user-friends)
 
 ---
 
@@ -226,7 +226,7 @@ Status: 422 Unprocessable Entity
 Returns a user and their associated gyms.
 
 ```
-GET /users/{:user_id}/gyms
+GET /users/{user_id}/gyms
 ```
 
 
@@ -289,7 +289,7 @@ Status: 404 Not Found
 Returns a user and their associated friends.
 
 ```
-GET /users/{:user_id}/friendships
+GET /users/{user_id}/friendships
 ```
 
 

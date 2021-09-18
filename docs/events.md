@@ -2,8 +2,8 @@
 
 HTTP Verb | Endpoint                   | Description                | Link
 ----------|----------------------------|----------------------------|---------------------------
-GET       | `/users/{:user_id}/events` | Get a user's events.     | [Link](#get-user-events)
-POST       | `/users/:user_id/gyms/:gym_id/events` | Create a new event.     | [Link](#create-new-event)
+GET       | `/users/{user_id}/events` | Get a user's events.     | [Link](#get-user-events)
+POST       | `/users/{user_id}/gyms/:gym_id/events` | Create a new event.     | [Link](#create-new-event)
 
 
 ---
@@ -13,7 +13,7 @@ POST       | `/users/:user_id/gyms/:gym_id/events` | Create a new event.     | [
 Returns a user and their associated events.
 
 ```
-GET /users/{:user_id}/events
+GET /users/{user_id}/events
 ```
 
 
@@ -93,7 +93,7 @@ Status: 404 Not Found
 Create a new event based on provided attributes.
 
 ```
-POST /users/:user_id/gyms/:gym_id/events
+POST /users/{user_id}/gyms/{gym_id}/events
 ```
 
 
@@ -141,5 +141,41 @@ Status: 422 Unprocessable Entity
 ```
 {:message=>"your record could not be saved",
   :errors=>["Date time can't be blank"]
+}
+```
+
+### Example Response (Bad Request)
+
+```
+Status: 400 Bad Request
+```
+
+```
+{:message=>"your query could not be completed",
+  :errors=>["User with 'id'=1432 is not a member of Gym with 'id'=666"]
+}
+```
+
+### Example Response (User Not Found)
+
+```
+Status: 404 Not Found
+```
+
+```
+{:message=>"your query could not be completed",
+  :errors=>["Couldn't find User with 'id'=1432"]
+}
+```
+
+### Example Response (Gym Not Found)
+
+```
+Status: 404 Not Found
+```
+
+```
+{:message=>"your query could not be completed",
+  :errors=>["Couldn't find Gym with 'id'=1432"]
 }
 ```
