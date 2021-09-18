@@ -51,7 +51,7 @@ describe 'Users::Gyms::Events API', type: :request do
     end
 
     context 'when the user does not exist' do
-      let(:bad_user_id) { User.last.id + 1}
+      let(:bad_user_id) { User.last.id + 1 }
 
       before { post "/api/v1/users/#{bad_user_id}/gyms/#{gym.id}/events", params: valid_attributes }
 
@@ -71,7 +71,7 @@ describe 'Users::Gyms::Events API', type: :request do
     end
 
     context 'when the gym does not exist' do
-      let(:bad_gym_id) { Gym.last.id + 1}
+      let(:bad_gym_id) { Gym.last.id + 1 }
 
       before { post "/api/v1/users/#{user.id}/gyms/#{bad_gym_id}/events", params: valid_attributes }
 

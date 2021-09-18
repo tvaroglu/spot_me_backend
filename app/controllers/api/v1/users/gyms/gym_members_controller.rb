@@ -24,8 +24,8 @@ class Api::V1::Users::Gyms::GymMembersController < ApplicationController
   private
 
   def error_gym_member_not_found
-    {:message=>"your query could not be completed",
-     :errors=>["User with 'id'=#{params[:user_id]} is not "\
-               "a member of Gym with 'id'=#{params[:gym_id]}"]}
+    { message: 'your query could not be completed',
+      errors: ["User with 'id'=#{params[:user_id]} is not "\
+               "a member of Gym with 'id'=#{params[:gym_id]}"] }
   end
 end
