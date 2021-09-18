@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 # See spec/support/requests_shared_examples.rb for shared examples
-describe 'Users::Gyms API', type: :request do
-  describe 'DELETE /api/v1/users/:user_id/gyms/:id' do
+describe 'Users::Gyms::GymMembers API', type: :request do
+  describe 'DELETE /api/v1/users/:user_id/gyms/:gym_id' do
     # See spec/factories/users.rb for #user_with_gym test setup method
     let!(:user) { user_with_gym }
     let(:gym) { Gym.last }
