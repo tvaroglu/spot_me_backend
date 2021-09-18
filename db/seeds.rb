@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# USERS
 user1 = create(:user, availability_morning: true)
 user2 = create(:user, availability_morning: true) # no followers :(
 user3 = create(:user, availability_morning: true, availability_afternoon: true)
@@ -17,6 +18,14 @@ user8 = create(:user, availability_morning: true, availability_morning: true, av
 user9 = create(:user, availability_afternoon: true, availability_evening: true)
 user10 = create(:user, availability_evening: true)
 
+# GYMS
+gym1 = create(:gym)
+gym2 = create(:gym)
+gym3 = create(:gym)
+gym4 = create(:gym)
+gym5 = create(:gym)
+
+# FRIENDSHIPS
 friendship1 = create(:friendship, follower_id: user1, followee_id: user3)
 friendship2 = create(:friendship, follower_id: user1, followee_id: user9)
 friendship3 = create(:friendship, follower_id: user1, followee_id: user10)
