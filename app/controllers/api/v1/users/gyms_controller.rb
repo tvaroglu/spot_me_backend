@@ -15,14 +15,15 @@ class Api::V1::Users::GymsController < ApplicationController
 
     return gym_member.destroy! if gym_member.present?
 
-    render json: {:message=>"your query could not be completed",
-                  :errors=>[gym_member_not_found_message]},
-           status: :not_found
+    render json: error_gym_member_not_found,
+           status: :bad_request
   end
 
   private
 
-  def gym_member_not_found_message
-    "Couldn't find Gym with 'id'=#{params[:id]} where User is a member"
+  def error_gym_member_not_found
+    {:message=>"your query could not be completed",
+     :errors=>["User with 'id'=#{params[:user_id]} is not "\
+               "a member of Gym with 'id'=#{params[:id]}"]}
   end
 end

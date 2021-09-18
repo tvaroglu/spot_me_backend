@@ -2,7 +2,7 @@ require 'rails_helper'
 
 # See spec/support/requests_shared_examples.rb for shared examples
 describe 'Users::Gyms API', type: :request do
-  describe 'DELETE /api/v1/users/:user_id/gyms/:gym_id' do
+  describe 'DELETE /api/v1/users/:user_id/gyms/:id' do
     # See spec/factories/users.rb for #user_with_gym test setup method
     let!(:user) { user_with_gym }
     let(:gym) { Gym.last }
@@ -60,10 +60,10 @@ describe 'Users::Gyms API', type: :request do
         expect(json[:message]).to eq('your query could not be completed')
 
         expect(json[:errors]).to be_an Array
-        expect(json[:errors]).to eq(["Couldn't find Gym with 'id'=#{new_gym.id} where User is a member"])
+        expect(json[:errors]).to eq(["User with 'id'=#{user.id} is not a member of Gym with 'id'=#{new_gym.id}"])
       end
 
-      include_examples 'status code 404'
+      include_examples 'status code 400'
     end
   end
 end
