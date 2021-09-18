@@ -6,6 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Friendship.destroy_all
+GymMember.destroy_all
+Gym.destroy_all
+Invitation.destroy_all
+Event.destroy_all
+User.destroy_all
+
 # USERS
 user1 = create(:user, availability_morning: true)
 user2 = create(:user, availability_morning: true) # no followers # no events
