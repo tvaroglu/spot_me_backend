@@ -2,17 +2,21 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   describe 'relationships' do
-    it { should have_many(:followed_users).with_foreign_key(:follower_id)
-                                          .class_name('Friendship')
-                                          .dependent(:destroy)
-                                          .inverse_of(:follower) }
+    it 'has many followed users' do
+      should have_many(:followed_users).with_foreign_key(:follower_id)
+                                       .class_name('Friendship')
+                                       .dependent(:destroy)
+                                       .inverse_of(:follower)
+    end
 
     it { should have_many(:followees).through(:followed_users) }
 
-    it { should have_many(:following_users).with_foreign_key(:followee_id)
-                                           .class_name('Friendship')
-                                           .dependent(:destroy)
-                                           .inverse_of(:followee) }
+    it 'has many following users' do
+      should have_many(:following_users).with_foreign_key(:followee_id)
+                                        .class_name('Friendship')
+                                        .dependent(:destroy)
+                                        .inverse_of(:followee)
+    end
 
     it { should have_many(:followers).through(:following_users) }
 
@@ -42,6 +46,18 @@ RSpec.describe User, type: :model do
 
       it 'is valid with valid attributes' do
         expect(user).to be_valid
+      end
+    end
+
+    describe '#user_with_friend' do
+      subject(:user) { user_with_friend }
+
+      it 'creates valid objects' do
+        expect(user).to be_valid
+        expect(user.followees.size).to eq(1)
+        expect(user.followers.size).to eq(0)
+        expect(User.all.size).to eq(2)
+        expect(Friendship.all.size).to eq(1)
       end
     end
 

@@ -1,6 +1,11 @@
 require 'rails_helper'
 
-# See spec/support/requests_shared_examples.rb for shared examples
+# See spec/support/shared_examples/ for shared examples for tests where
+# `include_examples` is used. See Shared Examples in the RSpec docs for more
+# info:
+#   https://relishapp.com/rspec/rspec-core/docs/example-groups/shared-examples
+#
+# See spec/support/request_spec_helper.rb for #json and #json_data helpers.
 describe 'Users API', type: :request do
   describe 'PATCH /api/v1/users/:id' do
     let!(:user) { create(:user) }
