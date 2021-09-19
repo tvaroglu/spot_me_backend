@@ -4,4 +4,5 @@ class Gym < ApplicationRecord
   has_many :users, through: :gym_members
 
   validates :yelp_gym_id, presence: true
+  validates :name, presence: true
 end

@@ -9,6 +9,7 @@ RSpec.describe Gym, type: :model do
 
   describe 'validations' do
     it { should validate_presence_of(:yelp_gym_id) }
+    it { should validate_presence_of(:name) }
   end
 
   describe 'factories' do

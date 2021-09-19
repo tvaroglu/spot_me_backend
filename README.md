@@ -102,7 +102,7 @@ In addition to the base project requirements, some extra explorations and extens
 
 ## Database Schema
 
-![schema](https://user-images.githubusercontent.com/81220681/133701997-2e8a1242-d274-4bf2-af16-9f6c2a8a8480.png)
+![schema](https://user-images.githubusercontent.com/58891447/133915612-26cef18e-d9a0-488f-a05f-d2f842ed3d67.png)
 
 ## Endpoints
 

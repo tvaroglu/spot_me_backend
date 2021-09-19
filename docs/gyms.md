@@ -22,7 +22,6 @@ GET /gyms/{gym_id}
 Name       | Data Type    | In    | Required/Optional | Description
 -----------|--------------|-------|-------------------|------------
 `gym_id` | Integer | Path | Required | The ID of the gym.
-<!-- sample gym yelp_id: dYewYWV40roEGF9SzAHI5Q -->
 
 ### Example Request
 
@@ -40,7 +39,9 @@ Status: 200 OK
 {:data=>
   {:id=>"1654",
    :type=>"gym",
-   :attributes=>{:yelp_gym_id=>"preb6u3g2bot2u0ouivy02"}}
+   :attributes=>{
+    :yelp_gym_id=>"preb6u3g2bot2u0ouivy02"
+    :name=>"Planet Fitness"}}
 }
 ```
 
