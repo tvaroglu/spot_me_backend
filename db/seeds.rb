@@ -10,7 +10,7 @@
 include FactoryBot::Syntax::Methods
 
 Friendship.destroy_all
-GymMember.destroy_all
+GymMembership.destroy_all
 Gym.destroy_all
 Invitation.destroy_all
 Event.destroy_all
@@ -29,53 +29,53 @@ user9 = create(:user, availability_afternoon: true, availability_evening: true) 
 user10 = create(:user, availability_evening: true) # no gym membership # no events # no invitations
 
 # GYMS
-gym1 = create(:gym)
-gym2 = create(:gym) # only one gym member
-gym3 = create(:gym)
-gym4 = create(:gym)
-gym5 = create(:gym)
+gym1 = 'lex65fkcol5gfq89rymmd2'
+gym2 = 'gekb7mgqksbwyfqjz5x6fd' # only one gym member
+gym3 = '6x10s0lbnry4ivkzcjpilk'
+gym4 = 'yfsp4c59p3wrlplrn1rf7r'
+gym5 = 'wxaw9m796t6wdnsk53uieh'
 
 # GYM MEMBERS
-gym_member1 = create(:gym_member, user: user1, gym: gym1)
-gym_member2 = create(:gym_member, user: user3, gym: gym1)
-gym_member3 = create(:gym_member, user: user4, gym: gym1)
-gym_member4 = create(:gym_member, user: user7, gym: gym1)
-gym_member5 = create(:gym_member, user: user9, gym: gym1)
+gym_member1 = create(:gym_membership, user: user1, yelp_gym_id: gym1)
+gym_member2 = create(:gym_membership, user: user3, yelp_gym_id: gym1)
+gym_member3 = create(:gym_membership, user: user4, yelp_gym_id: gym1)
+gym_member4 = create(:gym_membership, user: user7, yelp_gym_id: gym1)
+gym_member5 = create(:gym_membership, user: user9, yelp_gym_id: gym1)
 
-gym_member6 = create(:gym_member, user: user4, gym: gym2) # only 1 member
+gym_member6 = create(:gym_membership, user: user4, yelp_gym_id: gym2) # only 1 member
 
-gym_member7 = create(:gym_member, user: user1, gym: gym3)
-gym_member8 = create(:gym_member, user: user5, gym: gym3)
-gym_member9 = create(:gym_member, user: user7, gym: gym3)
-gym_member10 = create(:gym_member, user: user10, gym: gym3)
+gym_member7 = create(:gym_membership, user: user1, yelp_gym_id: gym3)
+gym_member8 = create(:gym_membership, user: user5, yelp_gym_id: gym3)
+gym_member9 = create(:gym_membership, user: user7, yelp_gym_id: gym3)
+gym_member10 = create(:gym_membership, user: user10, yelp_gym_id: gym3)
 
-gym_member11 = create(:gym_member, user: user2, gym: gym4)
-gym_member12 = create(:gym_member, user: user3, gym: gym4)
-gym_member13 = create(:gym_member, user: user6, gym: gym4)
-gym_member14 = create(:gym_member, user: user7, gym: gym4)
-gym_member16 = create(:gym_member, user: user8, gym: gym4)
-gym_member17 = create(:gym_member, user: user9, gym: gym4)
+gym_member11 = create(:gym_membership, user: user2, yelp_gym_id: gym4)
+gym_member12 = create(:gym_membership, user: user3, yelp_gym_id: gym4)
+gym_member13 = create(:gym_membership, user: user6, yelp_gym_id: gym4)
+gym_member14 = create(:gym_membership, user: user7, yelp_gym_id: gym4)
+gym_member16 = create(:gym_membership, user: user8, yelp_gym_id: gym4)
+gym_member17 = create(:gym_membership, user: user9, yelp_gym_id: gym4)
 
-gym_member18 = create(:gym_member, user: user1, gym: gym5)
-gym_member19 = create(:gym_member, user: user2, gym: gym5)
-gym_member20 = create(:gym_member, user: user5, gym: gym5)
+gym_member18 = create(:gym_membership, user: user1, yelp_gym_id: gym5)
+gym_member19 = create(:gym_membership, user: user2, yelp_gym_id: gym5)
+gym_member20 = create(:gym_membership, user: user5, yelp_gym_id: gym5)
 
 # EVENTS (user is the 'host')
-event1 = create(:event, user: user1, gym: gym1)
-event2 = create(:event, user: user1, gym: gym1)
-event3 = create(:event, user: user1, gym: gym3)
-event4 = create(:event, user: user3, gym: gym1)
-event5 = create(:event, user: user3, gym: gym4)
-event6 = create(:event, user: user5, gym: gym5)
-event7 = create(:event, user: user5, gym: gym5)
-event8 = create(:event, user: user5, gym: gym5)
-event9 = create(:event, user: user6, gym: gym4)
-event10 = create(:event, user: user7, gym: gym1)
-event11 = create(:event, user: user8, gym: gym4)
-event12 = create(:event, user: user8, gym: gym4)
-event13 = create(:event, user: user9, gym: gym1)
-event14 = create(:event, user: user9, gym: gym1)
-event15 = create(:event, user: user9, gym: gym4)
+event1 = create(:event, user: user1, yelp_gym_id: gym1)
+event2 = create(:event, user: user1, yelp_gym_id: gym1)
+event3 = create(:event, user: user1, yelp_gym_id: gym3)
+event4 = create(:event, user: user3, yelp_gym_id: gym1)
+event5 = create(:event, user: user3, yelp_gym_id: gym4)
+event6 = create(:event, user: user5, yelp_gym_id: gym5)
+event7 = create(:event, user: user5, yelp_gym_id: gym5)
+event8 = create(:event, user: user5, yelp_gym_id: gym5)
+event9 = create(:event, user: user6, yelp_gym_id: gym4)
+event10 = create(:event, user: user7, yelp_gym_id: gym1)
+event11 = create(:event, user: user8, yelp_gym_id: gym4)
+event12 = create(:event, user: user8, yelp_gym_id: gym4)
+event13 = create(:event, user: user9, yelp_gym_id: gym1)
+event14 = create(:event, user: user9, yelp_gym_id: gym1)
+event15 = create(:event, user: user9, yelp_gym_id: gym4)
 
 # INVITATIONS (user is the 'invitee')
 invitation1 = create(:invitation, user: user3, event: event1)

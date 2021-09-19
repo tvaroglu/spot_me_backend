@@ -6,8 +6,8 @@ require 'rails_helper'
 #   https://relishapp.com/rspec/rspec-core/docs/example-groups/shared-examples
 #
 # See spec/support/request_spec_helper.rb for #json and #json_data helpers.
-describe 'Users::Gyms::GymMembers API', type: :request do
-  describe 'POST /api/v1/users/:user_id/gyms/:gym_id/gym_members' do
+describe 'Users::Gyms::GymMemberships API', type: :request do
+  describe 'POST /api/v1/users/:user_id/gyms/:gym_id/gym_memberships' do
     let!(:user) { create(:user) }
     let!(:gym) { create(:gym) }
     let(:valid_attributes) do
@@ -18,7 +18,7 @@ describe 'Users::Gyms::GymMembers API', type: :request do
     end
 
     context 'when the request is valid' do
-      before { post "/api/v1/users/#{user.id}/gyms/#{gym.id}/gym_members", params: valid_attributes }
+      before { post "/api/v1/users/#{user.id}/gyms/#{gym.id}/gym_memberships", params: valid_attributes }
 
       it 'creates a gym member', :aggregate_failures do
         expect(json).not_to be_empty
@@ -33,7 +33,7 @@ describe 'Users::Gyms::GymMembers API', type: :request do
     context 'when the user does not exist' do
       let(:bad_user_id) { User.last.id + 1 }
 
-      before { post "/api/v1/users/#{bad_user_id}/gyms/#{gym.id}/gym_members", params: valid_attributes }
+      before { post "/api/v1/users/#{bad_user_id}/gyms/#{gym.id}/gym_memberships", params: valid_attributes }
 
       it 'returns an error message', :aggregate_failures do
         expect(json).not_to be_empty
@@ -53,7 +53,7 @@ describe 'Users::Gyms::GymMembers API', type: :request do
     context 'when the gym does not exist' do
       let(:bad_gym_id) { Gym.last.id + 1 }
 
-      before { post "/api/v1/users/#{user.id}/gyms/#{bad_gym_id}/gym_members", params: valid_attributes }
+      before { post "/api/v1/users/#{user.id}/gyms/#{bad_gym_id}/gym_memberships", params: valid_attributes }
 
       it 'returns an error message', :aggregate_failures do
         expect(json).not_to be_empty

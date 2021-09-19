@@ -5,9 +5,9 @@ class Api::V1::Users::Gyms::EventsController < ApplicationController
   def create
     user = User.find(params[:user_id])
     gym = Gym.find(params[:gym_id])
-    gym_member = GymMember.find_by(user: user, gym: gym)
+    gym_membership = GymMembership.find_by(user: user, gym: gym)
 
-    if gym_member.blank?
+    if gym_membership.blank?
       render json: error_gym_member_not_found,
              status: :bad_request
       return

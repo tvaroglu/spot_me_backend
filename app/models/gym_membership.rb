@@ -1,4 +1,4 @@
-class GymMember < ApplicationRecord
+class GymMembership < ApplicationRecord
   belongs_to :user
 
   validates :user_id, presence: true, numericality: true

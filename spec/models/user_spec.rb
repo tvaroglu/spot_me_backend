@@ -21,7 +21,7 @@ RSpec.describe User, type: :model do
     it { should have_many(:followers).through(:following_users) }
 
     it { should have_many(:events).dependent(:destroy) }
-    it { should have_many(:gym_members).dependent(:destroy) }
+    it { should have_many(:gym_memberships).dependent(:destroy) }
     it { should have_many(:invitations).through(:events) }
   end
 
@@ -54,7 +54,7 @@ RSpec.describe User, type: :model do
       it 'creates valid objects' do
         expect(User.all.size).to eq(9)
         expect(Friendship.all.size).to eq(5)
-        expect(GymMember.all.size).to eq(11)
+        expect(GymMembership.all.size).to eq(11)
         expect(Event.all.size).to eq(7)
         expect(Invitation.all.size).to eq(7)
       end
@@ -77,9 +77,9 @@ RSpec.describe User, type: :model do
 
       it 'creates valid objects' do
         expect(user).to be_valid
-        expect(GymMember.all.size).to eq(1)
+        expect(GymMembership.all.size).to eq(1)
         expect(User.all.size).to eq(1)
-        expect(user.gym_members.size).to eq(1)
+        expect(user.gym_memberships.size).to eq(1)
       end
     end
 
@@ -89,11 +89,11 @@ RSpec.describe User, type: :model do
       it 'creates valid objects' do
         expect(user).to be_valid
         expect(Friendship.all.size).to eq(1)
-        expect(GymMember.all.size).to eq(2)
+        expect(GymMembership.all.size).to eq(2)
         expect(User.all.size).to eq(2)
         expect(user.followees.size).to eq(1)
         expect(user.followers.size).to eq(0)
-        expect(user.gym_members.size).to eq(1)
+        expect(user.gym_memberships.size).to eq(1)
       end
     end
   end
@@ -118,7 +118,7 @@ RSpec.describe User, type: :model do
   describe 'instance methods' do
     describe '#upcoming_events' do
       let(:user) { user_with_gym }
-      let(:gym) { user.gym_members.first.yelp_gym_id }
+      let(:gym) { user.gym_memberships.first.yelp_gym_id }
 
       context 'when there are upcoming events' do
         let!(:past_event) { create(:event, date_time: DateTime.yesterday, user: user, yelp_gym_id: gym) }

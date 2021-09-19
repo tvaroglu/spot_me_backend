@@ -6,7 +6,7 @@ require 'rails_helper'
 #   https://relishapp.com/rspec/rspec-core/docs/example-groups/shared-examples
 #
 # See spec/support/request_spec_helper.rb for #json helper.
-describe 'Users::Gyms::GymMembers API', type: :request do
+describe 'Users::Gyms::GymMemberships API', type: :request do
   describe 'DELETE /api/v1/users/:user_id/gyms/:gym_id' do
     # See spec/factories/users.rb for #user_with_gym test setup method
     let!(:user) { user_with_gym }

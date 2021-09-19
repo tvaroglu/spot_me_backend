@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe GymMember, type: :model do
+RSpec.describe GymMembership, type: :model do
   describe 'relationships' do
     it { should belong_to(:user) }
   end
@@ -12,10 +12,10 @@ RSpec.describe GymMember, type: :model do
   end
 
   describe 'factories' do
-    describe 'gym member' do
+    describe 'gym membership' do
       it 'is valid with valid attributes' do
-        gym_member = create(:gym_member)
-        expect(gym_member).to be_valid
+        gym_membership = create(:gym_membership)
+        expect(gym_membership).to be_valid
       end
     end
   end
