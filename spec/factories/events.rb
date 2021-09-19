@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :event do
-    date_time { DateTime.now + rand(1..10).days }
     activity { Faker::Hobby.activity }
+    date_time { DateTime.now + rand(1..10).days }
+    yelp_gym_id { Faker::Alphanumeric.alphanumeric(number: 22) }
     user
-    gym
   end
 end
 
