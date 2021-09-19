@@ -28,7 +28,7 @@ Name       | Data Type    | In    | Required/Optional | Description
 ### Example Request
 
 ```
-GET https://spotme-app-api.herokuapp.com/api/v1/users/21
+GET https://spotme-app-api.herokuapp.com/api/v1/users/31
 ```
 
 ### Example Response (Successful)
@@ -175,7 +175,7 @@ Name       | Data Type    | In    | Required/Optional | Description
 ### Example Request
 
 ```
-PATCH https://spotme-app-api.herokuapp.com/api/v1/users/21
+PATCH https://spotme-app-api.herokuapp.com/api/v1/users/31
 ```
 
 ### Example Response (Successful)
@@ -239,7 +239,7 @@ Name       | Data Type    | In    | Required/Optional | Description
 ### Example Request
 
 ```
-GET https://spotme-app-api.herokuapp.com/api/v1/users/21/gyms
+GET https://spotme-app-api.herokuapp.com/api/v1/users/31/gyms
 ```
 
 ### Example Response (Successful)
@@ -302,7 +302,7 @@ Name       | Data Type    | In    | Required/Optional | Description
 ### Example Request
 
 ```
-GET https://spotme-app-api.herokuapp.com/api/v1/users/21/friendships
+GET https://spotme-app-api.herokuapp.com/api/v1/users/31/friendships
 ```
 
 ### Example Response (Successful)
