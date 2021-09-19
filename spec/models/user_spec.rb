@@ -23,7 +23,6 @@ RSpec.describe User, type: :model do
     it { should have_many(:events).dependent(:destroy) }
     it { should have_many(:gym_members).dependent(:destroy) }
     it { should have_many(:invitations).through(:events) }
-    it { should have_many(:gyms).through(:gym_members) }
   end
 
   describe 'validations' do
@@ -66,10 +65,9 @@ RSpec.describe User, type: :model do
 
       it 'creates valid objects' do
         expect(user).to be_valid
-        expect(Gym.all.size).to eq(1)
         expect(GymMember.all.size).to eq(1)
         expect(User.all.size).to eq(1)
-        expect(user.gyms.size).to eq(1)
+        expect(user.gym_members.size).to eq(1)
       end
     end
 
@@ -79,12 +77,11 @@ RSpec.describe User, type: :model do
       it 'creates valid objects' do
         expect(user).to be_valid
         expect(Friendship.all.size).to eq(1)
-        expect(Gym.all.size).to eq(1)
         expect(GymMember.all.size).to eq(2)
         expect(User.all.size).to eq(2)
         expect(user.followees.size).to eq(1)
         expect(user.followers.size).to eq(0)
-        expect(user.gyms.size).to eq(1)
+        expect(user.gym_members.size).to eq(1)
       end
     end
   end
@@ -109,13 +106,13 @@ RSpec.describe User, type: :model do
   describe 'instance methods' do
     describe '#upcoming_events' do
       let(:user) { user_with_gym }
-      let(:gym) { user.gyms.first }
+      let(:gym) { user.gym_members.first.yelp_gym_id }
 
       context 'when there are upcoming events' do
-        let!(:past_event) { create(:event, date_time: DateTime.yesterday, user: user, gym: gym) }
-        let!(:upcoming_event_1) { create(:event, user: user, gym: gym) }
-        let!(:upcoming_event_2) { create(:event, user: user, gym: gym) }
-        let!(:upcoming_event_3) { create(:event, user: user, gym: gym) }
+        let!(:past_event) { create(:event, date_time: DateTime.yesterday, user: user, yelp_gym_id: gym) }
+        let!(:upcoming_event_1) { create(:event, user: user, yelp_gym_id: gym) }
+        let!(:upcoming_event_2) { create(:event, user: user, yelp_gym_id: gym) }
+        let!(:upcoming_event_3) { create(:event, user: user, yelp_gym_id: gym) }
 
         it 'returns the upcoming events for the user' do
           expect(user.upcoming_events).to eq [upcoming_event_1, upcoming_event_2, upcoming_event_3]
@@ -123,7 +120,7 @@ RSpec.describe User, type: :model do
       end
 
       context 'when there are no upcoming events' do
-        let!(:past_event) { create(:event, date_time: DateTime.yesterday, user: user, gym: gym) }
+        let!(:past_event) { create(:event, date_time: DateTime.yesterday, user: user, yelp_gym_id: gym) }
 
         it 'can return an empty array' do
           expect(user.upcoming_events).to be_empty

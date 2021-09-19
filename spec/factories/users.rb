@@ -82,19 +82,15 @@ end
 def user_with_gym_friend
   FactoryBot.create(:user) do |user1|
     FactoryBot.create(:user) do |user2|
-      FactoryBot.create(:gym) do |gym|
-        FactoryBot.create(:gym_member, gym: gym, user: user1)
-        FactoryBot.create(:gym_member, gym: gym, user: user2)
-        FactoryBot.create(:friendship, follower_id: user1.id, followee_id: user2.id)
-      end
+      FactoryBot.create(:gym_member, yelp_gym_id: 'c2jzsndq8brvn9fbckeec2', user: user1)
+      FactoryBot.create(:gym_member, yelp_gym_id: 'c2jzsndq8brvn9fbckeec2', user: user2)
+      FactoryBot.create(:friendship, follower_id: user1.id, followee_id: user2.id)
     end
   end
 end
 
 def user_with_gym
   FactoryBot.create(:user) do |user1|
-    FactoryBot.create(:gym) do |gym|
-      FactoryBot.create(:gym_member, gym: gym, user: user1)
-    end
+    FactoryBot.create(:gym_member, user: user1)
   end
 end
