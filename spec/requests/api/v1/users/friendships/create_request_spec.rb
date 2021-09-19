@@ -26,7 +26,7 @@ describe 'Users::Friendships API', type: :request do
     end
 
     context 'when the user does not exist' do
-      let(:bad_user_id) { User.last.id + 1}
+      let(:bad_user_id) { User.last.id + 1 }
 
       before { post "/api/v1/users/#{bad_user_id}/friendships", params: valid_attributes }
 
@@ -46,7 +46,7 @@ describe 'Users::Friendships API', type: :request do
     end
 
     context 'when the friend user does not exist' do
-      let(:bad_user_id) { User.last.id + 1}
+      let(:bad_user_id) { User.last.id + 1 }
       let(:invalid_attributes) { { followee_id: bad_user_id } }
 
       before { post "/api/v1/users/#{user.id}/friendships", params: invalid_attributes }

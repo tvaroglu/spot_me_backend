@@ -2,7 +2,8 @@ class Api::V1::GymSearchController < ApplicationController
   before_action :find_gyms, only: [:index]
 
   def index
-    render json: FoundGymSerializer.new(find_gyms).serializable_hash, status: :ok
+    render json: FoundGymSerializer.new(find_gyms).serializable_hash,
+           status: :ok
   end
 
   private
