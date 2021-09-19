@@ -6,14 +6,14 @@ RSpec.describe User, type: :model do
                                           .class_name('Friendship')
                                           .dependent(:destroy)
                                           .inverse_of(:follower) }
-
     it { should have_many(:followees).through(:followed_users) }
+
     it { should have_many(:following_users).with_foreign_key(:followee_id)
                                            .class_name('Friendship')
                                            .dependent(:destroy)
                                            .inverse_of(:followee) }
-
     it { should have_many(:followers).through(:following_users) }
+
     it { should have_many(:events).dependent(:destroy) }
     it { should have_many(:gym_members).dependent(:destroy) }
     it { should have_many(:invitations).through(:events) }
@@ -85,6 +85,22 @@ RSpec.describe User, type: :model do
       expect(user.availability_afternoon).to be_in([true, false])
       expect(user.availability_evening).to be_in([true, false])
       expect(user.full_name).to be_a String
+    end
+  end
+
+  describe 'instance methods' do
+    let(:user) { user_with_gym }
+    let(:gym) { user.gyms.first }
+
+    let!(:past_event) { create(:event, date_time: DateTime.yesterday, user: user, gym: gym) }
+    let!(:upcoming_event_1) { create(:event, user: user, gym: gym) }
+    let!(:upcoming_event_2) { create(:event, user: user, gym: gym) }
+    let!(:upcoming_event_3) { create(:event, user: user, gym: gym) }
+
+    it 'can return upcoming_events for the user' do
+      expected = user.upcoming_events
+
+      expect(expected).to eq [upcoming_event_1, upcoming_event_2, upcoming_event_3]
     end
   end
 end

@@ -21,4 +21,8 @@ class User < ApplicationRecord
   validates :availability_afternoon, inclusion: { in: [true, false] }
   validates :availability_evening, inclusion: { in: [true, false] }
   validates :full_name, presence: true
+
+  def upcoming_events
+    events.where('date_time >= ?', Time.zone.now)
+  end
 end
