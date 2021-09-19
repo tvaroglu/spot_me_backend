@@ -48,6 +48,18 @@ RSpec.describe User, type: :model do
       end
     end
 
+    describe '#experienced_user' do
+      experienced_user
+
+      it 'creates valid objects' do
+        expect(User.all.size).to eq(9)
+        expect(Friendship.all.size).to eq(5)
+        expect(GymMember.all.size).to eq(11)
+        expect(Event.all.size).to eq(7)
+        expect(Invitation.all.size).to eq(7)
+      end
+    end
+
     describe '#user_with_friend' do
       subject(:user) { user_with_friend }
 
