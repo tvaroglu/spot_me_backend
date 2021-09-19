@@ -1,0 +1,523 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?location=34145&radius=40000&sort_by=distance&term=gyms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - DONT_SHARE_MY_SECRET_KEY
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Server:
+      - envoy
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4985'
+      X-Zipkin-Id:
+      - e7eb11697f20fa17
+      Ratelimit-Resettime:
+      - '2021-09-20T00:00:00+00:00'
+      X-B3-Sampled:
+      - '0'
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-d692g; site=public_api_v3
+      X-Cloudmap:
+      - routing_uswest2
+      X-Proxied:
+      - 10-69-87-203-uswest2aprod
+      X-Extlb:
+      - 10-69-87-203-uswest2aprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 19 Sep 2021 03:46:32 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-den8252-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "dYewYWV40roEGF9SzAHI5Q", "alias": "ambitions-wellness-and-body-coaching-marco-island",
+        "name": "Ambitions Wellness and Body Coaching", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/FOiNcgNgOtrz_54DrhFWzA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/ambitions-wellness-and-body-coaching-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 1, "categories": [{"alias": "healthtrainers", "title": "Trainers"},
+        {"alias": "yoga", "title": "Yoga"}, {"alias": "nutritionists", "title": "Nutritionists"}],
+        "rating": 5.0, "coordinates": {"latitude": 25.933615, "longitude": -81.698522},
+        "transactions": [], "location": {"address1": "1817 San Marco Rd", "address2":
+        null, "address3": "", "city": "Marco Island", "zip_code": "34145", "country":
+        "US", "state": "FL", "display_address": ["1817 San Marco Rd", "Marco Island,
+        FL 34145"]}, "phone": "+12393949235", "display_phone": "(239) 394-9235", "distance":
+        2580.2116310113224}, {"id": "yQaElwKOFU865x1jxH3KGw", "alias": "xcel-fitness-spa-marco-island",
+        "name": "Xcel Fitness Spa", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/xcel-fitness-spa-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 10, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias":
+        "massage", "title": "Massage"}, {"alias": "healthtrainers", "title": "Trainers"}],
+        "rating": 4.0, "coordinates": {"latitude": 25.9341526, "longitude": -81.6989467},
+        "transactions": [], "price": "$$$", "location": {"address1": "1817 San Marco
+        Rd", "address2": null, "address3": "", "city": "Marco Island", "zip_code":
+        "34145", "country": "US", "state": "FL", "display_address": ["1817 San Marco
+        Rd", "Marco Island, FL 34145"]}, "phone": "+12393949235", "display_phone":
+        "(239) 394-9235", "distance": 2580.2116310113224}, {"id": "HxK5-XEhjl0x0RR9PAgBVQ",
+        "alias": "ymca-of-south-collier-marco-ymca-marco-island", "name": "YMCA of
+        South Collier-Marco YMCA", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/f3IWcztQgl8-9j1z8BsLdg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/ymca-of-south-collier-marco-ymca-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 10, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias":
+        "childcare", "title": "Child Care & Day Care"}, {"alias": "healthtrainers",
+        "title": "Trainers"}], "rating": 4.0, "coordinates": {"latitude": 25.93536,
+        "longitude": -81.70816}, "transactions": [], "location": {"address1": "101
+        Sand Hill St", "address2": "", "address3": "", "city": "Marco Island", "zip_code":
+        "34145", "country": "US", "state": "FL", "display_address": ["101 Sand Hill
+        St", "Marco Island, FL 34145"]}, "phone": "+12393949622", "display_phone":
+        "(239) 394-9622", "distance": 3006.3576771165713}, {"id": "77ZmLGWFlgXoGie_p22wvQ",
+        "alias": "tender-touch-massage-marco-island", "name": "Tender Touch Massage",
+        "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/tender-touch-massage-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 1, "categories": [{"alias": "yoga", "title": "Yoga"}, {"alias":
+        "massage_therapy", "title": "Massage Therapy"}, {"alias": "physicaltherapy",
+        "title": "Physical Therapy"}], "rating": 5.0, "coordinates": {"latitude":
+        25.9206, "longitude": -81.72583}, "transactions": [], "location": {"address1":
+        "651 S Collier Blvd", "address2": "", "address3": "", "city": "Marco Island",
+        "zip_code": "34145", "country": "US", "state": "FL", "display_address": ["651
+        S Collier Blvd", "Marco Island, FL 34145"]}, "phone": "+12393896999", "display_phone":
+        "(239) 389-6999", "distance": 3085.063199321182}, {"id": "5ri7jEdMHytwaNpuz89Veg",
+        "alias": "puresoul-personal-training-marco-island", "name": "PureSoul Personal
+        Training", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/U_8a5NOR7H5vwcPQ5TVVLg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/puresoul-personal-training-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 1, "categories": [{"alias": "healthtrainers", "title": "Trainers"},
+        {"alias": "nutritionists", "title": "Nutritionists"}, {"alias": "yoga", "title":
+        "Yoga"}], "rating": 5.0, "coordinates": {"latitude": 25.93563, "longitude":
+        -81.71219}, "transactions": [], "location": {"address1": null, "address2":
+        null, "address3": "", "city": "Marco Island", "zip_code": "34145", "country":
+        "US", "state": "FL", "display_address": ["Marco Island, FL 34145"]}, "phone":
+        "+14014407345", "display_phone": "(401) 440-7345", "distance": 3419.511245856647},
+        {"id": "uiOijFqy7BxDfOa2SlEGkQ", "alias": "revival-yoga-fitness-studio-marco-island",
+        "name": "Revival Yoga Fitness Studio", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/sPbtQogiYGyyL_sFzgDurQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/revival-yoga-fitness-studio-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 10, "categories": [{"alias": "yoga", "title": "Yoga"}, {"alias":
+        "pilates", "title": "Pilates"}], "rating": 4.5, "coordinates": {"latitude":
+        25.9543380737305, "longitude": -81.7285919189453}, "transactions": [], "location":
+        {"address1": "760 N Collier Blvd", "address2": "Ste 107", "address3": "",
+        "city": "Marco Island", "zip_code": "34145", "country": "US", "state": "FL",
+        "display_address": ["760 N Collier Blvd", "Ste 107", "Marco Island, FL 34145"]},
+        "phone": "+12393933400", "display_phone": "(239) 393-3400", "distance": 5780.626421179173},
+        {"id": "tk8UhlNErqTmL65pdkGR1g", "alias": "marco-fitness-club-marco-island",
+        "name": "Marco Fitness Club", "image_url": "", "is_closed": false, "url":
+        "https://www.yelp.com/biz/marco-fitness-club-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 3, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias":
+        "healthtrainers", "title": "Trainers"}], "rating": 4.0, "coordinates": {"latitude":
+        25.959680557251, "longitude": -81.7245101928711}, "transactions": [], "location":
+        {"address1": "871 E Elkcam Cir", "address2": "", "address3": "", "city": "Marco
+        Island", "zip_code": "34145", "country": "US", "state": "FL", "display_address":
+        ["871 E Elkcam Cir", "Marco Island, FL 34145"]}, "phone": "+12393943705",
+        "display_phone": "(239) 394-3705", "distance": 6126.426255565895}, {"id":
+        "xWJzfnHx8aEvi7l1Qcc19A", "alias": "1on1getfit-naples-2", "name": "1on1getfit",
+        "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/CodR3jx8_45MItEASwNxpw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/1on1getfit-naples-2?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 1, "categories": [{"alias": "nutritionists", "title": "Nutritionists"},
+        {"alias": "healthtrainers", "title": "Trainers"}, {"alias": "weightlosscenters",
+        "title": "Weight Loss Centers"}], "rating": 5.0, "coordinates": {"latitude":
+        26.04595939009, "longitude": -81.6995589367082}, "transactions": [], "location":
+        {"address1": "6060 Collier Blvd", "address2": "", "address3": "", "city":
+        "Naples", "zip_code": "34114", "country": "US", "state": "FL", "display_address":
+        ["6060 Collier Blvd", "Naples, FL 34114"]}, "phone": "+12392937361", "display_phone":
+        "(239) 293-7361", "distance": 15068.754782760383}, {"id": "IZO8EwsTMxP6rLh-vvIkEg",
+        "alias": "hardcore-gym-naples", "name": "Hardcore Gym", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/1xIv8JLSpP8nPbF3upLB1w/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/hardcore-gym-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 12, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
+        5.0, "coordinates": {"latitude": 26.074733, "longitude": -81.7180927}, "transactions":
+        [], "location": {"address1": "11524 Tamiami Trl E", "address2": null, "address3":
+        "", "city": "Naples", "zip_code": "34113", "country": "US", "state": "FL",
+        "display_address": ["11524 Tamiami Trl E", "Naples, FL 34113"]}, "phone":
+        "+12397932639", "display_phone": "(239) 793-2639", "distance": 18386.506018478212},
+        {"id": "Gq1bUOCQXr7k83ZehwUVHA", "alias": "zumba-with-casta-naples", "name":
+        "Zumba With Casta", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/dOSEGQD82fwAdGClbcAb_A/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/zumba-with-casta-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 2, "categories": [{"alias": "healthtrainers", "title": "Trainers"}],
+        "rating": 5.0, "coordinates": {"latitude": 26.109026, "longitude": -81.76371},
+        "transactions": [], "location": {"address1": "3500 Thomasson Dr", "address2":
+        "", "address3": "", "city": "Naples", "zip_code": "34112", "country": "US",
+        "state": "FL", "display_address": ["3500 Thomasson Dr", "Naples, FL 34112"]},
+        "phone": "+12394652043", "display_phone": "(239) 465-2043", "distance": 22775.1597933018},
+        {"id": "t7kOb1q4uCY1trbrD7EdHw", "alias": "arts-and-hot-yoga-naples", "name":
+        "Arts & Hot Yoga", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Y5P_MAnOdQx5_a9WRwdz3g/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/arts-and-hot-yoga-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 2, "categories": [{"alias": "yoga", "title": "Yoga"}, {"alias":
+        "meditationcenters", "title": "Meditation Centers"}, {"alias": "lifecoach",
+        "title": "Life Coach"}], "rating": 5.0, "coordinates": {"latitude": 26.11565,
+        "longitude": -81.75704}, "transactions": [], "location": {"address1": "4270
+        Tamiami Trl E", "address2": "Ste 16", "address3": "", "city": "Naples", "zip_code":
+        "34112", "country": "US", "state": "FL", "display_address": ["4270 Tamiami
+        Trl E", "Ste 16", "Naples, FL 34112"]}, "phone": "+12393001066", "display_phone":
+        "(239) 300-1066", "distance": 23530.63554890676}, {"id": "Ph-l7AABs7Bu1bCUFpalFA",
+        "alias": "the-sweet-science-boxing-naples", "name": "The Sweet Science Boxing",
+        "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/the-sweet-science-boxing-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 3, "categories": [{"alias": "healthtrainers", "title": "Trainers"},
+        {"alias": "boxing", "title": "Boxing"}, {"alias": "gyms", "title": "Gyms"}],
+        "rating": 5.0, "coordinates": {"latitude": 26.11565, "longitude": -81.75704},
+        "transactions": [], "location": {"address1": "4270 Tamiami Trl E", "address2":
+        "Ste 13", "address3": null, "city": "Naples", "zip_code": "34112", "country":
+        "US", "state": "FL", "display_address": ["4270 Tamiami Trl E", "Ste 13", "Naples,
+        FL 34112"]}, "phone": "+12397778732", "display_phone": "(239) 777-8732", "distance":
+        23589.542323878202}, {"id": "p3TYsD-nQ_H4H3qJINeF7w", "alias": "modern-steps-school-of-dance-naples",
+        "name": "Modern Steps School Of Dance", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/1D2QDCTc3Vj4I0MRMXjH5w/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/modern-steps-school-of-dance-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 1, "categories": [{"alias": "theater", "title": "Performing
+        Arts"}, {"alias": "dancestudio", "title": "Dance Studios"}], "rating": 5.0,
+        "coordinates": {"latitude": 26.1168370216529, "longitude": -81.7553837189102},
+        "transactions": [], "location": {"address1": "4117 Tamiami Trl E", "address2":
+        "", "address3": "", "city": "Naples", "zip_code": "34112", "country": "US",
+        "state": "FL", "display_address": ["4117 Tamiami Trl E", "Naples, FL 34112"]},
+        "phone": "+12397753445", "display_phone": "(239) 775-3445", "distance": 23675.95011343892},
+        {"id": "ycYJSNH4cpkkHKj3ZlwTQQ", "alias": "pure-fitness-naples", "name": "Pure
+        Fitness", "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/pure-fitness-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 1, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
+        5.0, "coordinates": {"latitude": 26.11957, "longitude": -81.75707}, "transactions":
+        [], "location": {"address1": "3831 Tamiami Trl E", "address2": null, "address3":
+        null, "city": "Naples", "zip_code": "34112", "country": "US", "state": "FL",
+        "display_address": ["3831 Tamiami Trl E", "Naples, FL 34112"]}, "phone": "+12397937475",
+        "display_phone": "(239) 793-7475", "distance": 24009.201538904643}, {"id":
+        "-aD2laK768E7SRIU8PW6gg", "alias": "drip-hot-yoga-naples", "name": "Drip Hot
+        Yoga", "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/drip-hot-yoga-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 3, "categories": [{"alias": "yoga", "title": "Yoga"}, {"alias":
+        "massage", "title": "Massage"}], "rating": 5.0, "coordinates": {"latitude":
+        26.123462, "longitude": -81.770781}, "transactions": [], "location": {"address1":
+        "3212 Bayshore Dr", "address2": "", "address3": null, "city": "Naples", "zip_code":
+        "34112", "country": "US", "state": "FL", "display_address": ["3212 Bayshore
+        Dr", "Naples, FL 34112"]}, "phone": "+17274920096", "display_phone": "(727)
+        492-0096", "distance": 24803.13998889454}, {"id": "3rXE3wNkZCLQ0LdCmvq9oQ",
+        "alias": "trijake-fitness-naples", "name": "TriJake Fitness", "image_url":
+        "https://s3-media3.fl.yelpcdn.com/bphoto/XX7wqkahe16UVA2lKEYkSQ/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/trijake-fitness-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 4, "categories": [{"alias": "healthtrainers", "title": "Trainers"}],
+        "rating": 5.0, "coordinates": {"latitude": 26.1281399, "longitude": -81.76079},
+        "transactions": [], "location": {"address1": "200 Palm Drive 43-3", "address2":
+        "", "address3": "", "city": "Naples", "zip_code": "34112", "country": "US",
+        "state": "FL", "display_address": ["200 Palm Drive 43-3", "Naples, FL 34112"]},
+        "phone": "", "display_phone": "", "distance": 25028.1569712333}, {"id": "V_cyxLoEfzDsixGPAtC6zw",
+        "alias": "planet-fitness-naples-3", "name": "Planet Fitness", "image_url":
+        "https://s3-media3.fl.yelpcdn.com/bphoto/Zf92fHClYDIoyb3pP6951g/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/planet-fitness-naples-3?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 20, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
+        3.0, "coordinates": {"latitude": 26.129761, "longitude": -81.772522}, "transactions":
+        [], "location": {"address1": "2650 Tamiami Trl E", "address2": null, "address3":
+        null, "city": "Naples", "zip_code": "34112", "country": "US", "state": "FL",
+        "display_address": ["2650 Tamiami Trl E", "Naples, FL 34112"]}, "phone": "+12395449171",
+        "display_phone": "(239) 544-9171", "distance": 25523.59941699116}, {"id":
+        "MTphZhcEeHTGUCkwpM7tow", "alias": "tri-tone-triple-barre-fitness-naples",
+        "name": "Tri Tone Triple Barre Fitness", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/SrrmAki7_MiVglr5R1gfWQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/tri-tone-triple-barre-fitness-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 5, "categories": [{"alias": "barreclasses", "title": "Barre
+        Classes"}], "rating": 5.0, "coordinates": {"latitude": 26.13678, "longitude":
+        -81.78163}, "transactions": [], "location": {"address1": "1800 Tamiami Trl
+        E", "address2": "", "address3": null, "city": "Naples", "zip_code": "34112",
+        "country": "US", "state": "FL", "display_address": ["1800 Tamiami Trl E",
+        "Naples, FL 34112"]}, "phone": "+12394041034", "display_phone": "(239) 404-1034",
+        "distance": 26556.36780934057}, {"id": "6_NmdY946RBKA9LYTr6l7A", "alias":
+        "infant-swimming-resource-naples-naples", "name": "Infant Swimming Resource
+        Naples", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/ow82YqVJ6h08bTPRPKeUJQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/infant-swimming-resource-naples-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 2, "categories": [{"alias": "swimminglessons", "title": "Swimming
+        Lessons/Schools"}, {"alias": "swimmingpools", "title": "Swimming Pools"}],
+        "rating": 3.0, "coordinates": {"latitude": 26.138722, "longitude": -81.780302},
+        "transactions": [], "location": {"address1": "1949 Davis Blvd", "address2":
+        "", "address3": "", "city": "Naples", "zip_code": "34104", "country": "US",
+        "state": "FL", "display_address": ["1949 Davis Blvd", "Naples, FL 34104"]},
+        "phone": "+12393316915", "display_phone": "(239) 331-6915", "distance": 26708.835300594896},
+        {"id": "xnuYs-1f9OlfRunVZHIlEA", "alias": "american-sports-karate-naples",
+        "name": "American Sports Karate", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/pI7kIqeZzULYmBN_DudMIA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/american-sports-karate-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 3, "categories": [{"alias": "karate", "title": "Karate"}],
+        "rating": 5.0, "coordinates": {"latitude": 26.1505054, "longitude": -81.690138},
+        "transactions": [], "location": {"address1": "9950 Business Cir", "address2":
+        null, "address3": "", "city": "Naples", "zip_code": "34112", "country": "US",
+        "state": "FL", "display_address": ["9950 Business Cir", "Naples, FL 34112"]},
+        "phone": "+12396432275", "display_phone": "(239) 643-2275", "distance": 26700.711523141435}],
+        "total": 115, "region": {"center": {"longitude": -81.69708251953125, "latitude":
+        25.91046095897436}}}'
+  recorded_at: Sun, 19 Sep 2021 03:46:32 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?location=34145&radius=40000&sort_by=distance&term=gyms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - DONT_SHARE_MY_SECRET_KEY
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-95qdr; site=public_api_v3
+      X-B3-Sampled:
+      - '0'
+      Ratelimit-Resettime:
+      - '2021-09-20T00:00:00+00:00'
+      Ratelimit-Dailylimit:
+      - '5000'
+      X-Zipkin-Id:
+      - 78067a19939e6f15
+      Ratelimit-Remaining:
+      - '4984'
+      Server:
+      - envoy
+      X-Proxied:
+      - 10-69-152-99-uswest2bprod
+      X-Extlb:
+      - 10-69-152-99-uswest2bprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 19 Sep 2021 03:46:33 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-den8254-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "dYewYWV40roEGF9SzAHI5Q", "alias": "ambitions-wellness-and-body-coaching-marco-island",
+        "name": "Ambitions Wellness and Body Coaching", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/FOiNcgNgOtrz_54DrhFWzA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/ambitions-wellness-and-body-coaching-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 1, "categories": [{"alias": "healthtrainers", "title": "Trainers"},
+        {"alias": "yoga", "title": "Yoga"}, {"alias": "nutritionists", "title": "Nutritionists"}],
+        "rating": 5.0, "coordinates": {"latitude": 25.933615, "longitude": -81.698522},
+        "transactions": [], "location": {"address1": "1817 San Marco Rd", "address2":
+        null, "address3": "", "city": "Marco Island", "zip_code": "34145", "country":
+        "US", "state": "FL", "display_address": ["1817 San Marco Rd", "Marco Island,
+        FL 34145"]}, "phone": "+12393949235", "display_phone": "(239) 394-9235", "distance":
+        2580.2116310113224}, {"id": "yQaElwKOFU865x1jxH3KGw", "alias": "xcel-fitness-spa-marco-island",
+        "name": "Xcel Fitness Spa", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/xcel-fitness-spa-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 10, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias":
+        "massage", "title": "Massage"}, {"alias": "healthtrainers", "title": "Trainers"}],
+        "rating": 4.0, "coordinates": {"latitude": 25.9341526, "longitude": -81.6989467},
+        "transactions": [], "price": "$$$", "location": {"address1": "1817 San Marco
+        Rd", "address2": null, "address3": "", "city": "Marco Island", "zip_code":
+        "34145", "country": "US", "state": "FL", "display_address": ["1817 San Marco
+        Rd", "Marco Island, FL 34145"]}, "phone": "+12393949235", "display_phone":
+        "(239) 394-9235", "distance": 2580.2116310113224}, {"id": "HxK5-XEhjl0x0RR9PAgBVQ",
+        "alias": "ymca-of-south-collier-marco-ymca-marco-island", "name": "YMCA of
+        South Collier-Marco YMCA", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/f3IWcztQgl8-9j1z8BsLdg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/ymca-of-south-collier-marco-ymca-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 10, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias":
+        "childcare", "title": "Child Care & Day Care"}, {"alias": "healthtrainers",
+        "title": "Trainers"}], "rating": 4.0, "coordinates": {"latitude": 25.93536,
+        "longitude": -81.70816}, "transactions": [], "location": {"address1": "101
+        Sand Hill St", "address2": "", "address3": "", "city": "Marco Island", "zip_code":
+        "34145", "country": "US", "state": "FL", "display_address": ["101 Sand Hill
+        St", "Marco Island, FL 34145"]}, "phone": "+12393949622", "display_phone":
+        "(239) 394-9622", "distance": 3006.3576771165713}, {"id": "77ZmLGWFlgXoGie_p22wvQ",
+        "alias": "tender-touch-massage-marco-island", "name": "Tender Touch Massage",
+        "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/tender-touch-massage-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 1, "categories": [{"alias": "yoga", "title": "Yoga"}, {"alias":
+        "massage_therapy", "title": "Massage Therapy"}, {"alias": "physicaltherapy",
+        "title": "Physical Therapy"}], "rating": 5.0, "coordinates": {"latitude":
+        25.9206, "longitude": -81.72583}, "transactions": [], "location": {"address1":
+        "651 S Collier Blvd", "address2": "", "address3": "", "city": "Marco Island",
+        "zip_code": "34145", "country": "US", "state": "FL", "display_address": ["651
+        S Collier Blvd", "Marco Island, FL 34145"]}, "phone": "+12393896999", "display_phone":
+        "(239) 389-6999", "distance": 3085.063199321182}, {"id": "5ri7jEdMHytwaNpuz89Veg",
+        "alias": "puresoul-personal-training-marco-island", "name": "PureSoul Personal
+        Training", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/U_8a5NOR7H5vwcPQ5TVVLg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/puresoul-personal-training-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 1, "categories": [{"alias": "healthtrainers", "title": "Trainers"},
+        {"alias": "nutritionists", "title": "Nutritionists"}, {"alias": "yoga", "title":
+        "Yoga"}], "rating": 5.0, "coordinates": {"latitude": 25.93563, "longitude":
+        -81.71219}, "transactions": [], "location": {"address1": null, "address2":
+        null, "address3": "", "city": "Marco Island", "zip_code": "34145", "country":
+        "US", "state": "FL", "display_address": ["Marco Island, FL 34145"]}, "phone":
+        "+14014407345", "display_phone": "(401) 440-7345", "distance": 3419.511245856647},
+        {"id": "uiOijFqy7BxDfOa2SlEGkQ", "alias": "revival-yoga-fitness-studio-marco-island",
+        "name": "Revival Yoga Fitness Studio", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/sPbtQogiYGyyL_sFzgDurQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/revival-yoga-fitness-studio-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 10, "categories": [{"alias": "yoga", "title": "Yoga"}, {"alias":
+        "pilates", "title": "Pilates"}], "rating": 4.5, "coordinates": {"latitude":
+        25.9543380737305, "longitude": -81.7285919189453}, "transactions": [], "location":
+        {"address1": "760 N Collier Blvd", "address2": "Ste 107", "address3": "",
+        "city": "Marco Island", "zip_code": "34145", "country": "US", "state": "FL",
+        "display_address": ["760 N Collier Blvd", "Ste 107", "Marco Island, FL 34145"]},
+        "phone": "+12393933400", "display_phone": "(239) 393-3400", "distance": 5780.626421179173},
+        {"id": "tk8UhlNErqTmL65pdkGR1g", "alias": "marco-fitness-club-marco-island",
+        "name": "Marco Fitness Club", "image_url": "", "is_closed": false, "url":
+        "https://www.yelp.com/biz/marco-fitness-club-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 3, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias":
+        "healthtrainers", "title": "Trainers"}], "rating": 4.0, "coordinates": {"latitude":
+        25.959680557251, "longitude": -81.7245101928711}, "transactions": [], "location":
+        {"address1": "871 E Elkcam Cir", "address2": "", "address3": "", "city": "Marco
+        Island", "zip_code": "34145", "country": "US", "state": "FL", "display_address":
+        ["871 E Elkcam Cir", "Marco Island, FL 34145"]}, "phone": "+12393943705",
+        "display_phone": "(239) 394-3705", "distance": 6126.426255565895}, {"id":
+        "xWJzfnHx8aEvi7l1Qcc19A", "alias": "1on1getfit-naples-2", "name": "1on1getfit",
+        "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/CodR3jx8_45MItEASwNxpw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/1on1getfit-naples-2?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 1, "categories": [{"alias": "nutritionists", "title": "Nutritionists"},
+        {"alias": "healthtrainers", "title": "Trainers"}, {"alias": "weightlosscenters",
+        "title": "Weight Loss Centers"}], "rating": 5.0, "coordinates": {"latitude":
+        26.04595939009, "longitude": -81.6995589367082}, "transactions": [], "location":
+        {"address1": "6060 Collier Blvd", "address2": "", "address3": "", "city":
+        "Naples", "zip_code": "34114", "country": "US", "state": "FL", "display_address":
+        ["6060 Collier Blvd", "Naples, FL 34114"]}, "phone": "+12392937361", "display_phone":
+        "(239) 293-7361", "distance": 15068.754782760383}, {"id": "IZO8EwsTMxP6rLh-vvIkEg",
+        "alias": "hardcore-gym-naples", "name": "Hardcore Gym", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/1xIv8JLSpP8nPbF3upLB1w/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/hardcore-gym-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 12, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
+        5.0, "coordinates": {"latitude": 26.074733, "longitude": -81.7180927}, "transactions":
+        [], "location": {"address1": "11524 Tamiami Trl E", "address2": null, "address3":
+        "", "city": "Naples", "zip_code": "34113", "country": "US", "state": "FL",
+        "display_address": ["11524 Tamiami Trl E", "Naples, FL 34113"]}, "phone":
+        "+12397932639", "display_phone": "(239) 793-2639", "distance": 18386.506018478212},
+        {"id": "Gq1bUOCQXr7k83ZehwUVHA", "alias": "zumba-with-casta-naples", "name":
+        "Zumba With Casta", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/dOSEGQD82fwAdGClbcAb_A/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/zumba-with-casta-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 2, "categories": [{"alias": "healthtrainers", "title": "Trainers"}],
+        "rating": 5.0, "coordinates": {"latitude": 26.109026, "longitude": -81.76371},
+        "transactions": [], "location": {"address1": "3500 Thomasson Dr", "address2":
+        "", "address3": "", "city": "Naples", "zip_code": "34112", "country": "US",
+        "state": "FL", "display_address": ["3500 Thomasson Dr", "Naples, FL 34112"]},
+        "phone": "+12394652043", "display_phone": "(239) 465-2043", "distance": 22775.1597933018},
+        {"id": "t7kOb1q4uCY1trbrD7EdHw", "alias": "arts-and-hot-yoga-naples", "name":
+        "Arts & Hot Yoga", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Y5P_MAnOdQx5_a9WRwdz3g/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/arts-and-hot-yoga-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 2, "categories": [{"alias": "yoga", "title": "Yoga"}, {"alias":
+        "meditationcenters", "title": "Meditation Centers"}, {"alias": "lifecoach",
+        "title": "Life Coach"}], "rating": 5.0, "coordinates": {"latitude": 26.11565,
+        "longitude": -81.75704}, "transactions": [], "location": {"address1": "4270
+        Tamiami Trl E", "address2": "Ste 16", "address3": "", "city": "Naples", "zip_code":
+        "34112", "country": "US", "state": "FL", "display_address": ["4270 Tamiami
+        Trl E", "Ste 16", "Naples, FL 34112"]}, "phone": "+12393001066", "display_phone":
+        "(239) 300-1066", "distance": 23530.63554890676}, {"id": "Ph-l7AABs7Bu1bCUFpalFA",
+        "alias": "the-sweet-science-boxing-naples", "name": "The Sweet Science Boxing",
+        "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/the-sweet-science-boxing-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 3, "categories": [{"alias": "healthtrainers", "title": "Trainers"},
+        {"alias": "boxing", "title": "Boxing"}, {"alias": "gyms", "title": "Gyms"}],
+        "rating": 5.0, "coordinates": {"latitude": 26.11565, "longitude": -81.75704},
+        "transactions": [], "location": {"address1": "4270 Tamiami Trl E", "address2":
+        "Ste 13", "address3": null, "city": "Naples", "zip_code": "34112", "country":
+        "US", "state": "FL", "display_address": ["4270 Tamiami Trl E", "Ste 13", "Naples,
+        FL 34112"]}, "phone": "+12397778732", "display_phone": "(239) 777-8732", "distance":
+        23589.542323878202}, {"id": "p3TYsD-nQ_H4H3qJINeF7w", "alias": "modern-steps-school-of-dance-naples",
+        "name": "Modern Steps School Of Dance", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/1D2QDCTc3Vj4I0MRMXjH5w/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/modern-steps-school-of-dance-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 1, "categories": [{"alias": "theater", "title": "Performing
+        Arts"}, {"alias": "dancestudio", "title": "Dance Studios"}], "rating": 5.0,
+        "coordinates": {"latitude": 26.1168370216529, "longitude": -81.7553837189102},
+        "transactions": [], "location": {"address1": "4117 Tamiami Trl E", "address2":
+        "", "address3": "", "city": "Naples", "zip_code": "34112", "country": "US",
+        "state": "FL", "display_address": ["4117 Tamiami Trl E", "Naples, FL 34112"]},
+        "phone": "+12397753445", "display_phone": "(239) 775-3445", "distance": 23675.95011343892},
+        {"id": "ycYJSNH4cpkkHKj3ZlwTQQ", "alias": "pure-fitness-naples", "name": "Pure
+        Fitness", "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/pure-fitness-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 1, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
+        5.0, "coordinates": {"latitude": 26.11957, "longitude": -81.75707}, "transactions":
+        [], "location": {"address1": "3831 Tamiami Trl E", "address2": null, "address3":
+        null, "city": "Naples", "zip_code": "34112", "country": "US", "state": "FL",
+        "display_address": ["3831 Tamiami Trl E", "Naples, FL 34112"]}, "phone": "+12397937475",
+        "display_phone": "(239) 793-7475", "distance": 24009.201538904643}, {"id":
+        "-aD2laK768E7SRIU8PW6gg", "alias": "drip-hot-yoga-naples", "name": "Drip Hot
+        Yoga", "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/drip-hot-yoga-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 3, "categories": [{"alias": "yoga", "title": "Yoga"}, {"alias":
+        "massage", "title": "Massage"}], "rating": 5.0, "coordinates": {"latitude":
+        26.123462, "longitude": -81.770781}, "transactions": [], "location": {"address1":
+        "3212 Bayshore Dr", "address2": "", "address3": null, "city": "Naples", "zip_code":
+        "34112", "country": "US", "state": "FL", "display_address": ["3212 Bayshore
+        Dr", "Naples, FL 34112"]}, "phone": "+17274920096", "display_phone": "(727)
+        492-0096", "distance": 24803.13998889454}, {"id": "3rXE3wNkZCLQ0LdCmvq9oQ",
+        "alias": "trijake-fitness-naples", "name": "TriJake Fitness", "image_url":
+        "https://s3-media3.fl.yelpcdn.com/bphoto/XX7wqkahe16UVA2lKEYkSQ/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/trijake-fitness-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 4, "categories": [{"alias": "healthtrainers", "title": "Trainers"}],
+        "rating": 5.0, "coordinates": {"latitude": 26.1281399, "longitude": -81.76079},
+        "transactions": [], "location": {"address1": "200 Palm Drive 43-3", "address2":
+        "", "address3": "", "city": "Naples", "zip_code": "34112", "country": "US",
+        "state": "FL", "display_address": ["200 Palm Drive 43-3", "Naples, FL 34112"]},
+        "phone": "", "display_phone": "", "distance": 25028.1569712333}, {"id": "V_cyxLoEfzDsixGPAtC6zw",
+        "alias": "planet-fitness-naples-3", "name": "Planet Fitness", "image_url":
+        "https://s3-media3.fl.yelpcdn.com/bphoto/Zf92fHClYDIoyb3pP6951g/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/planet-fitness-naples-3?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 20, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
+        3.0, "coordinates": {"latitude": 26.129761, "longitude": -81.772522}, "transactions":
+        [], "location": {"address1": "2650 Tamiami Trl E", "address2": null, "address3":
+        null, "city": "Naples", "zip_code": "34112", "country": "US", "state": "FL",
+        "display_address": ["2650 Tamiami Trl E", "Naples, FL 34112"]}, "phone": "+12395449171",
+        "display_phone": "(239) 544-9171", "distance": 25523.59941699116}, {"id":
+        "MTphZhcEeHTGUCkwpM7tow", "alias": "tri-tone-triple-barre-fitness-naples",
+        "name": "Tri Tone Triple Barre Fitness", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/SrrmAki7_MiVglr5R1gfWQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/tri-tone-triple-barre-fitness-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 5, "categories": [{"alias": "barreclasses", "title": "Barre
+        Classes"}], "rating": 5.0, "coordinates": {"latitude": 26.13678, "longitude":
+        -81.78163}, "transactions": [], "location": {"address1": "1800 Tamiami Trl
+        E", "address2": "", "address3": null, "city": "Naples", "zip_code": "34112",
+        "country": "US", "state": "FL", "display_address": ["1800 Tamiami Trl E",
+        "Naples, FL 34112"]}, "phone": "+12394041034", "display_phone": "(239) 404-1034",
+        "distance": 26556.36780934057}, {"id": "6_NmdY946RBKA9LYTr6l7A", "alias":
+        "infant-swimming-resource-naples-naples", "name": "Infant Swimming Resource
+        Naples", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/ow82YqVJ6h08bTPRPKeUJQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/infant-swimming-resource-naples-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 2, "categories": [{"alias": "swimminglessons", "title": "Swimming
+        Lessons/Schools"}, {"alias": "swimmingpools", "title": "Swimming Pools"}],
+        "rating": 3.0, "coordinates": {"latitude": 26.138722, "longitude": -81.780302},
+        "transactions": [], "location": {"address1": "1949 Davis Blvd", "address2":
+        "", "address3": "", "city": "Naples", "zip_code": "34104", "country": "US",
+        "state": "FL", "display_address": ["1949 Davis Blvd", "Naples, FL 34104"]},
+        "phone": "+12393316915", "display_phone": "(239) 331-6915", "distance": 26708.835300594896},
+        {"id": "xnuYs-1f9OlfRunVZHIlEA", "alias": "american-sports-karate-naples",
+        "name": "American Sports Karate", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/pI7kIqeZzULYmBN_DudMIA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/american-sports-karate-naples?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 3, "categories": [{"alias": "karate", "title": "Karate"}],
+        "rating": 5.0, "coordinates": {"latitude": 26.1505054, "longitude": -81.690138},
+        "transactions": [], "location": {"address1": "9950 Business Cir", "address2":
+        null, "address3": "", "city": "Naples", "zip_code": "34112", "country": "US",
+        "state": "FL", "display_address": ["9950 Business Cir", "Naples, FL 34112"]},
+        "phone": "+12396432275", "display_phone": "(239) 643-2275", "distance": 26700.711523141435}],
+        "total": 115, "region": {"center": {"longitude": -81.69708251953125, "latitude":
+        25.91046095897436}}}'
+  recorded_at: Sun, 19 Sep 2021 03:46:33 GMT
+recorded_with: VCR 6.0.0

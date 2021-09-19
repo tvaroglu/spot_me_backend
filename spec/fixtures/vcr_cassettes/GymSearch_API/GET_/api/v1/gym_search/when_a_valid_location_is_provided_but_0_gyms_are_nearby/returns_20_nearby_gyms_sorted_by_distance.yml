@@ -1,0 +1,137 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?location=89405&radius=40000&sort_by=distance&term=gyms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - DONT_SHARE_MY_SECRET_KEY
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      X-B3-Sampled:
+      - '0'
+      X-Zipkin-Id:
+      - 84320d337ca80d3b
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-nbbdt; site=public_api_v3
+      Ratelimit-Resettime:
+      - '2021-09-20T00:00:00+00:00'
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4981'
+      Server:
+      - envoy
+      X-Cloudmap:
+      - routing_uswest2
+      X-Proxied:
+      - 10-69-64-74-uswest2aprod
+      X-Extlb:
+      - 10-69-64-74-uswest2aprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 19 Sep 2021 03:46:36 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-den8274-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [], "total": 0, "region": {"center": {"longitude": -119.432373046875,
+        "latitude": 40.4462157989704}}}'
+  recorded_at: Sun, 19 Sep 2021 03:46:36 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?location=89405&radius=40000&sort_by=distance&term=gyms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - DONT_SHARE_MY_SECRET_KEY
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Ratelimit-Resettime:
+      - '2021-09-20T00:00:00+00:00'
+      X-B3-Sampled:
+      - '0'
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-95qdr; site=public_api_v3
+      X-Zipkin-Id:
+      - da1675970c0373ef
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4980'
+      Server:
+      - envoy
+      X-Cloudmap:
+      - routing_uswest2
+      X-Proxied:
+      - 10-69-98-90-uswest2aprod
+      X-Extlb:
+      - 10-69-98-90-uswest2aprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 19 Sep 2021 03:46:37 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-den8254-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [], "total": 0, "region": {"center": {"longitude": -119.432373046875,
+        "latitude": 40.4462157989704}}}'
+  recorded_at: Sun, 19 Sep 2021 03:46:37 GMT
+recorded_with: VCR 6.0.0
