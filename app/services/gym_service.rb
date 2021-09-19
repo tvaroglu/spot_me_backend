@@ -1,4 +1,4 @@
-class YelpService
+class GymService
   class << self
     def conn
       Faraday.new(url: 'https://api.yelp.com/') do |faraday|
