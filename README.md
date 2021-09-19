@@ -128,8 +128,8 @@ Create New User | [docs](/docs/users.md#create-new-user) |
 Update Existing User | [docs](/docs/users.md#update-existing-user) |
 Get User's Gyms | [docs](/docs/users.md#get-user-gyms) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/31/gyms)
 Get User's Friends | [docs](/docs/users.md#get-user-friends) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/31/friendships)
-Add Friend | *pending* |
-Remove Friend | *pending* |
+Add Friend | [docs](/docs/users.md#add-friend) |
+Remove Friend | [docs](/docs/users.md#remove-friend) |
 **Events** | [docs](/docs/events.md)
 Get User's Events | [docs](/docs/events.md#get-user-events) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/31/events)
 Get User New Event | *pending* | *pending*

@@ -72,8 +72,10 @@ POST /users/{user_id}/gyms/{gym_id}/gym_members
 
 Name       | Data Type    | In    | Required/Optional | Description
 -----------|--------------|-------|-------------------|------------
-`user_id` | String | Body | Required | The id of the user record.
-`gym_id` | String | Body | Required | The id of the gym record.
+`user_id` | String | Parameters | Required | The id of the user.
+`gym_id` | String | Parameters | Required | The id of the gym.
+`user_id` | String | Body | Required | The id of the user.
+`gym_id` | String | Body | Required | The id of the gym.
 
 
 ### Example Request
@@ -135,8 +137,8 @@ DELETE /users/{user_id}/gyms/{gym_id}
 
 Name       | Data Type    | In    | Required/Optional | Description
 -----------|--------------|-------|-------------------|------------
-`user_id` | String | Body | Required | The id of the user record.
-`gym_id` | String | Body | Required | The id of the gym record.
+`user_id` | String | Parameters | Required | The id of the user record.
+`gym_id` | String | Parameters | Required | The id of the gym record.
 
 
 ### Example Request
@@ -149,6 +151,7 @@ DELETE https://spotme-app-api.herokuapp.com/api/v1/users/31/gyms/16
 
 ```
 Status: 204 No Content
+
 
 ```
 

@@ -3,7 +3,7 @@
 HTTP Verb | Endpoint                   | Description                | Link
 ----------|----------------------------|----------------------------|---------------------------
 GET       | `/users/{user_id}/events` | Get a user's events.     | [Link](#get-user-events)
-POST       | `/users/{user_id}/gyms/:gym_id/events` | Create a new event.     | [Link](#create-new-event)
+POST       | `/users/{user_id}/gyms/{gym_id}/events` | Create a new event.     | [Link](#create-new-event)
 
 
 ---
@@ -105,6 +105,8 @@ Name       | Data Type    | In    | Required/Optional | Description
 `gym_id` | String | Body | Required | The id of the gym the event will take place at.
 `activity` | String | Body | Required | The activity (title) of the event.
 `date_time` | Datetime | Body | Required | The date and time of the event.
+`user_id` | String | Parameters | Required | The id of the user.
+`gym_id` | String | Parameters | Required | The id of the gym.
 
 
 ### Example Request

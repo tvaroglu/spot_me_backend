@@ -7,6 +7,8 @@ POST       | `/users` | Create a new user.     | [Link](#create-new-user)
 PATCH       | `/users/{user_id}` | Update an existing user.     | [Link](#update-existing-user)
 GET       | `/users/{user_id}/gyms` | Get a user's gyms.     | [Link](#get-user-gyms)
 GET       | `/users/{user_id}/friendships` | Get a user's friends.     | [Link](#get-user-friends)
+POST       | `/users/{user_id}/friendships` | Add a friend.     | [Link](#add-friend)
+DELETE       | `/users/{user_id}/friendships/{friend_id}` | Remove a friend.     | [Link](#remove-friend)
 
 ---
 
@@ -160,6 +162,7 @@ PATCH /users/{user_id}
 
 Name       | Data Type    | In    | Required/Optional | Description
 -----------|--------------|-------|-------------------|------------
+`user_id` | String | Parameters | Required | The id of the user.
 `email` | String | Body | Required | The email of the user.
 `google_id` | String | Body | Required | The Google id of the user.
 `google_image_url` | String | Body | Required | The Google profile picture for the user.
@@ -367,5 +370,126 @@ Status: 404 Not Found
 ```
 {:message=>"your query could not be completed",
  :errors=>["Couldn't find User with 'id'=40"]
+}
+```
+
+---
+
+## Add Friend
+
+Create a new friendship between users.
+
+```
+POST /users/{user_id}/friendships
+```
+
+
+### Parameters
+
+Name       | Data Type    | In    | Required/Optional | Description
+-----------|--------------|-------|-------------------|------------
+`user_id` | String | Parameters | Required | The id of the user.
+`followee_id` | String | Body | Required | The id of the friend.
+
+
+### Example Request
+
+```
+POST https://spotme-app-api.herokuapp.com/api/v1/users/31/friendships
+```
+
+### Example Response (Successful)
+
+```
+Status: 201 Created
+```
+
+```
+{:data=>
+  {:id=>"315",
+    :type=>"friendship",
+    :attributes=>{:follower_id=>841, :followee_id=>842}
+  }
+}
+```
+
+### Example Response (User Not Found)
+
+```
+Status: 404 Not Found
+```
+
+```
+{:message=>"your query could not be completed",
+  :errors=>["Couldn't find User with 'id'=847"]
+}
+```
+
+### Example Response (Friend Not Found)
+
+```
+Status: 404 Not Found
+```
+
+```
+{:message=>"your query could not be completed",
+  :errors=>["Couldn't find User with 'id'=851"]
+}
+```
+
+---
+
+## Remove Friend
+
+Delete an existing friendship between users.
+
+```
+DELETE /users/{user_id}/friendships/{friend_id}
+```
+
+
+### Parameters
+
+Name       | Data Type    | In    | Required/Optional | Description
+-----------|--------------|-------|-------------------|------------
+`user_id` | String | Parameters | Required | The id of the user.
+`friend_id` | String | Parameters | Required | The id of the friend.
+
+
+### Example Request
+
+```
+DELETE https://spotme-app-api.herokuapp.com/api/v1/users/31/friendships/61
+```
+
+### Example Response (No Content)
+
+```
+Status: 204 No Content
+
+
+```
+
+### Example Response (User Not Found)
+
+```
+Status: 404 Not Found
+```
+
+```
+{:message=>"your query could not be completed",
+  :errors=>["Couldn't find User with 'id'=847"]
+}
+```
+
+### Example Response (Friend Not Found)
+
+```
+Status: 404 Not Found
+```
+
+```
+{:message=>"your query could not be completed",
+  :errors=>["Couldn't find User with 'id'=851"]
 }
 ```
