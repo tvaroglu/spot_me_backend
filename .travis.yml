@@ -6,6 +6,9 @@ addons:
 before_install:
 - yes | gem update --system --force
 - gem install bundler
+env:
+  global:
+    secure: sHbQ5vg54DdGgwfb/cF67M4wtLq5VsOVRqudOpIcwllHsIgMCGVGJfPLtrv4bOYAW6P9oheB8zRPWFVGuu79WOqoUyOZ62fT+uRvkubKVDD4pLtxL03/lvaXJ+Ky5+I1BTsYlZXVRBgp+nDD5bWAiFrJgJ8dK1uim96SipqOjxKOonOGSPsKNvJA4W/QYJ8KAYsbHgiig/ekdmCERQcXsrB3KEqjC4I7tY/vu3YaSB7jhe1Rb0xhvCedQZNgQqngOxQoZ7U8YSacGLvzOwdFvc5WRyALJg2IJ8+FkOAtTKGZLEaso8Gv/k+yoA9OuAHU03/WSerznrLFBaN1KwO+iYOGlUQfof6gijirmclh0mvg6PTM9ZGObYt4jzM672pOD94ZKU/3MxJrniOigLuCjTTT3FTsrqwBMl6pSn1FMY5sEVyYaIBSP2Sofjoelcwj8BadqqKJUe8/ta8RGe+bh83l3Z0a1cJ8eCIKQ1w4bwzZrxpGSkxscrNsn4CXO8MQLWYNFgu1trpMrUxSr88do9yEohgdh5c+5pRkZTJqmTPZTQ6kfO5dr7mQpBu2WnPDsm/3ajTSqDcjmWLjhmZJrJHQKDDR7Aa4kwbyELaeIRU0Fb5tgsAxD8BukxAeIYpkkncMm3EOSb7zJjanO9TpyQZ8fvtiWMKvDaynC1WRcOM=
 script:
 - bundle exec rails db:{create,migrate} RAILS_ENV=test
 - bundle exec rspec -fd

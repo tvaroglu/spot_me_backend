@@ -16,47 +16,48 @@ describe 'GymSearch API', type: :request do
 
     context 'when a valid location is provided with a plethora of gyms' do
       it 'returns 20 nearby gyms sorted by distance', :aggregate_failures, :vcr do
-        get "/api/v1/gym_search?zip_code=34145"
+        get '/api/v1/gym_search?zip_code=34145'
         JSON.parse(response.body, symbolize_names: true)
 
-        expect(response.status).to eq(200)
+        expect(response.status).to eq 200
         expect(json).not_to be_empty
-        expect(json_data.size).to eq(20)
+        expect(json_data.size).to eq 20
         expect(json_data.first[:attributes][:yelp_gym_id]).to be_a(String)
       end
     end
 
     context 'when a valid location is provided with less than 20 available gyms' do
       it 'returns 20 nearby gyms sorted by distance', :aggregate_failures, :vcr do
-        get "/api/v1/gym_search?zip_code=04572"
+        get '/api/v1/gym_search?zip_code=04572'
         JSON.parse(response.body, symbolize_names: true)
 
-        expect(response.status).to eq(200)
+        expect(response.status).to eq 200
         expect(json).not_to be_empty
-        expect(json_data.size).to eq(16)
+        expect(json_data.size).to eq 16
         expect(json_data.first[:attributes][:yelp_gym_id]).to be_a(String)
       end
     end
 
     context 'when a valid location is provided but 0 gyms are nearby' do
       it 'returns 20 nearby gyms sorted by distance', :aggregate_failures, :vcr do
-        get "/api/v1/gym_search?zip_code=89405"
+        get '/api/v1/gym_search?zip_code=89405'
         JSON.parse(response.body, symbolize_names: true)
 
-        expect(response.status).to eq(200)
+        expect(response.status).to eq 200
         expect(json).not_to be_empty
-        expect(json_data.size).to eq(0)
+        expect(json_data.size).to eq 0
       end
     end
 
     context 'when an invalid location is provided' do
       it 'returns an error', :aggregate_failures, :vcr do
-        get "/api/v1/gym_search?zip_code=34112352323234545"
+        get '/api/v1/gym_search?zip_code=34112352323234545'
         JSON.parse(response.body, symbolize_names: true)
-        expect(response.status).to eq(400)
-        expect(json[:code]).to eq(400)
+
+        expect(response.status).to eq 400
+        expect(json[:code]).to eq 400
         expect(json[:error]).to eq({})
-        expect(json[:status]).to eq("Bad Request")
+        expect(json[:status]).to eq 'Bad Request'
       end
     end
   end

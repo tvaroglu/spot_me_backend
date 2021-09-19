@@ -5,7 +5,7 @@ class GymFromSearch
     @id = nil
     @name = info[:name]
     @yelp_gym_id = info[:id]
-    @address = info[:location][:display_address].join(", ")
+    @address = info[:location][:display_address].join(', ')
     @phone = info[:display_phone]
   end
 end
