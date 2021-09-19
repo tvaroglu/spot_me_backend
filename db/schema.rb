@@ -10,19 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_19_042302) do
+ActiveRecord::Schema.define(version: 2021_09_19_214702) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
     t.bigint "user_id"
-    t.bigint "gym_id"
     t.datetime "date_time"
     t.string "activity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["gym_id"], name: "index_events_on_gym_id"
+    t.string "yelp_gym_id"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
@@ -35,18 +34,10 @@ ActiveRecord::Schema.define(version: 2021_09_19_042302) do
 
   create_table "gym_members", force: :cascade do |t|
     t.bigint "user_id"
-    t.bigint "gym_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["gym_id"], name: "index_gym_members_on_gym_id"
-    t.index ["user_id"], name: "index_gym_members_on_user_id"
-  end
-
-  create_table "gyms", force: :cascade do |t|
     t.string "yelp_gym_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "name"
+    t.index ["user_id"], name: "index_gym_members_on_user_id"
   end
 
   create_table "invitations", force: :cascade do |t|
@@ -73,9 +64,7 @@ ActiveRecord::Schema.define(version: 2021_09_19_042302) do
     t.string "full_name"
   end
 
-  add_foreign_key "events", "gyms"
   add_foreign_key "events", "users"
-  add_foreign_key "gym_members", "gyms"
   add_foreign_key "gym_members", "users"
   add_foreign_key "invitations", "events"
   add_foreign_key "invitations", "users"
