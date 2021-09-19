@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_19_223523) do
+ActiveRecord::Schema.define(version: 2021_09_19_234743) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +21,8 @@ ActiveRecord::Schema.define(version: 2021_09_19_223523) do
     t.string "activity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "yelp_gym_id"
+    t.bigint "gym_membership_id"
+    t.index ["gym_membership_id"], name: "index_events_on_gym_membership_id"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
@@ -40,15 +41,6 @@ ActiveRecord::Schema.define(version: 2021_09_19_223523) do
     t.index ["user_id"], name: "index_gym_memberships_on_user_id"
   end
 
-  create_table "invitations", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "event_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["event_id"], name: "index_invitations_on_event_id"
-    t.index ["user_id"], name: "index_invitations_on_user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "google_id"
@@ -64,8 +56,7 @@ ActiveRecord::Schema.define(version: 2021_09_19_223523) do
     t.string "full_name"
   end
 
+  add_foreign_key "events", "gym_memberships"
   add_foreign_key "events", "users"
   add_foreign_key "gym_memberships", "users"
-  add_foreign_key "invitations", "events"
-  add_foreign_key "invitations", "users"
 end
