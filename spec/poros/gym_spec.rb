@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Gym do
+describe Gym, type: :poros do
   describe 'Gym PORO initialization' do
     let(:response) do
       {
@@ -28,12 +28,14 @@ RSpec.describe Gym do
       }
     end
 
-    it 'creates a valid new gym with good params' do
-      new_gym = GymFromSearch.new(response)
+    it 'creates a valid gym with valid attributes' do
+      new_gym = Gym.new(response)
 
-      expect(new_gym).to be_an_instance_of(GymFromSearch)
+      expect(new_gym).to be_an_instance_of(Gym)
       expect(new_gym.name).to eq('Quest Fitness')
       expect(new_gym.address).to eq('2 Livewell Dr, Kennebunk, ME 04043')
+      expect(new_gym.phone).to eq('(207) 467-3800')
+      expect(new_gym.yelp_gym_id).to eq('gHmS3WIjRRhSWG4OdCQYLA')
     end
   end
 end

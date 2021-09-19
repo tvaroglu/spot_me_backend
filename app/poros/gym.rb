@@ -1,4 +1,4 @@
-class GymFromSearch
+class Gym
   attr_reader :id, :yelp_gym_id, :name, :address, :phone
 
   def initialize(info)
