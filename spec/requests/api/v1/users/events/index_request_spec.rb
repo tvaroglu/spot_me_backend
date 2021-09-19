@@ -19,6 +19,7 @@ describe 'Users::Events API', type: :request do
 
       it 'returns the users events', :aggregate_failures do
         expect(json).not_to be_empty
+
         expect(json_data.size).to eq(7)
         expect(json_data.first[:id]).to eq(event1_1a_2.id.to_s)
       end

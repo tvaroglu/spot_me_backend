@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :event do
-    date_time { DateTime.now + rand(10).days }
+    date_time { DateTime.now + rand(1..10).days }
     activity { Faker::Hobby.activity }
     user
     gym
