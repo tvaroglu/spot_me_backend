@@ -16,5 +16,12 @@ class GymService
         symbolize_names: true
       )
     end
+
+    def find_gym(gym_id)
+      JSON.parse(
+        conn.get("v3/businesses/#{gym_id}").body,
+        symbolize_names: true
+      )
+    end
   end
 end
