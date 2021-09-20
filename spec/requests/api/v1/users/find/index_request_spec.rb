@@ -13,7 +13,7 @@ describe 'Users::Find API', type: :request do
     let(:bad_user_id) { User.last.id + 1 }
 
     context 'when the user record exists' do
-      before { get "/api/v1/users/find", params: { google_id: user.google_id } }
+      before { get '/api/v1/users/find', params: { google_id: user.google_id } }
 
       it 'returns the user', :aggregate_failures do
         expect(json).not_to be_empty
@@ -26,7 +26,7 @@ describe 'Users::Find API', type: :request do
     end
 
     context 'when the user record does not exist' do
-      before { get "/api/v1/users/find", params: { google_id: bad_user_id } }
+      before { get '/api/v1/users/find', params: { google_id: bad_user_id } }
 
       it 'returns an error message', :aggregate_failures do
         expect(json).not_to be_empty
@@ -42,7 +42,7 @@ describe 'Users::Find API', type: :request do
     end
 
     context 'when no params are provided' do
-      before { get "/api/v1/users/find" }
+      before { get '/api/v1/users/find' }
 
       it 'returns an error message', :aggregate_failures do
         expect(json).not_to be_empty

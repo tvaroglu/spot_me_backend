@@ -2,7 +2,9 @@
 # helpers.
 class Api::V1::Users::FindController < ApplicationController
   def index
-    return render json: error_message, status: :not_found if params[:google_id].blank?
+    if params[:google_id].blank?
+      return render json: error_message, status: :not_found
+    end
 
     user = User.find_by!(google_id: params[:google_id])
 
@@ -13,8 +15,8 @@ class Api::V1::Users::FindController < ApplicationController
 
   def error_message
     {
-      message: "your query could not be completed",
-      errors: ["must provide google_id to retrieve user"]
+      message: 'your query could not be completed',
+      errors: ['must provide google_id to retrieve user']
     }
   end
 end
