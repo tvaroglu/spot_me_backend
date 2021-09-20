@@ -102,7 +102,7 @@ POST /users/{user_id}/gym_memberships/{gym_membership_id}/events
 Name       | Data Type    | In    | Required/Optional | Description
 -----------|--------------|-------|-------------------|------------
 `user_id` | String | Body | Required | The id of the user hosting the event.
-`gym_id` | String | Body | Required | The id of the gym the event will take place at.
+`gym_membership_id` | String | Body | Required | The id of the gym the event will take place at.
 `activity` | String | Body | Required | The activity (title) of the event.
 `date_time` | Datetime | Body | Required | The date and time of the event.
 

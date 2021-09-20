@@ -21,8 +21,7 @@ POST /users/{user_id}/gym_memberships
 
 Name       | Data Type    | In    | Required/Optional | Description
 -----------|--------------|-------|-------------------|------------
-`user_id` | String | Body | Required | The id of the user record.
-`gym_id` | String | Body | Required | The id of the gym record.
+`user_id` | String | Parameters | Required | The id of the user record.
 
 
 ### Example Request
@@ -85,7 +84,7 @@ DELETE /users/{user_id}/gym_memberships/{gym_membership_id}
 Name       | Data Type    | In    | Required/Optional | Description
 -----------|--------------|-------|-------------------|------------
 `user_id` | String | Body | Required | The id of the user record.
-`gym_id` | String | Body | Required | The id of the gym record.
+`gym_membership_id` | String | Body | Required | The id of the gym record.
 
 
 ### Example Request
