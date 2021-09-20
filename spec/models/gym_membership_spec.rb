@@ -10,6 +10,7 @@ RSpec.describe GymMembership, type: :model do
     it { should validate_presence_of(:user_id) }
     it { should validate_numericality_of(:user_id) }
     it { should validate_presence_of(:yelp_gym_id) }
+    it { should validate_presence_of(:gym_name) }
   end
 
   describe 'factories' do

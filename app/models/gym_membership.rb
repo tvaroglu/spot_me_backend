@@ -5,4 +5,5 @@ class GymMembership < ApplicationRecord
 
   validates :user_id, presence: true, numericality: true
   validates :yelp_gym_id, presence: true
+  validates :gym_name, presence: true
 end
