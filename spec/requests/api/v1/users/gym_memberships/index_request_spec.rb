@@ -11,8 +11,8 @@ describe 'Users::GymMemberhips API', type: :request do
     # See spec/factories/users.rb for #experienced_user test setup method
     experienced_user
     let(:user_id) { user1.id }
-    let(:gym_membership1_id) { gym_mem1_1.id}
-    let(:gym_membership2_id) { gym_mem1_2.id}
+    let(:gym_membership1_id) { gym_mem1_1.id }
+    let(:gym_membership2_id) { gym_mem1_2.id }
     let(:no_gym_user_id) { user9.id }
     let(:bad_user_id) { User.last.id + 1 }
 

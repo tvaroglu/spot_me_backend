@@ -22,7 +22,7 @@ RSpec.describe User, type: :model do
 
     it { should have_many(:events).through(:gym_memberships) }
     it { should have_many(:gym_memberships).dependent(:destroy) }
-    it { should have_many(:invited_events).class_name('Event') }
+    it { should have_many(:invited_events).class_name('Event').dependent(:destroy) }
   end
 
   describe 'validations' do

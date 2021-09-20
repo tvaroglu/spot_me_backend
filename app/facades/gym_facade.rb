@@ -9,9 +9,9 @@ class GymFacade
     def query_yelp(location)
       gyms = GymService.get_gyms(location)
 
-      if gyms[:businesses]
-        gyms[:businesses].map { |gym| Gym.new(gym) }
-      end
+      return unless gyms[:businesses]
+
+      gyms[:businesses].map { |gym| Gym.new(gym) }
     end
   end
 end

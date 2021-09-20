@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe GymMembership, type: :model do
   describe 'relationships' do
     it { should belong_to(:user) }
-    it { should have_many(:events) }
+    it { should have_many(:events).dependent(:destroy) }
   end
 
   describe 'validations' do
