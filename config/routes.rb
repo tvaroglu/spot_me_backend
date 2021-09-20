@@ -7,11 +7,9 @@ Rails.application.routes.draw do
       resources :users, only: [:show, :update, :create] do
         resources :events, only: [:index], controller: 'users/events'
         resources :friendships, only: [:index, :create, :destroy], controller: 'users/friendships'
-        resources :gyms, only: [], controller: 'users/gyms' do
-          resources :events, only: [:create], controller: 'users/gyms/events'
+        resources :gym_memberships, only: [:index, :create, :destroy], controller: 'users/gym_memberships' do
+          resources :events, only: [:create], controller: 'users/gym_memberships/events'
         end
-
-        resources :gym_memberships, only: [:index, :create, :destroy], controller: 'users/gym_memberships'
       end
 
       resources :gyms, only: [:show]

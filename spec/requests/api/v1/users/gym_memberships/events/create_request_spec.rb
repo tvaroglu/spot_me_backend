@@ -6,31 +6,32 @@ require 'rails_helper'
 #   https://relishapp.com/rspec/rspec-core/docs/example-groups/shared-examples
 #
 # See spec/support/request_spec_helper.rb for #json and #json_data helpers.
-describe 'Users::Gyms::Events API', type: :request do
-  describe 'POST /api/v1/users/:user_id/gyms/:gym_id/events' do
+describe 'Users::GymMemberships::Events API', type: :request do
+  describe 'POST /api/v1/users/:user_id/gym_memberships/:gym_membership_id/events' do
     # See spec/factories/users.rb for #user_with_gym_friend test setup method
     let!(:user) { user_with_gym_friend }
-    let(:gym) { Gym.last }
+    let!(:gym_membership) { user.gym_memberships.last }
+    let(:friend) { User.last }
     let(:activity) { 'Lifting' }
     let(:date_time) { '2022-09-24T00:24:11.000Z' }
     let(:valid_attributes) do
       {
         activity: activity,
         date_time: date_time,
-        gym_id: gym.id,
+        gym_membership_id: gym_membership.id,
         user_id: user.id
       }
     end
 
     context 'when the request is valid' do
-      before { post "/api/v1/users/#{user.id}/gyms/#{gym.id}/events", params: valid_attributes }
+      before { post "/api/v1/users/#{user.id}/gym_memberships/#{gym_membership.id}/events", params: valid_attributes }
 
       it 'creates an event', :aggregate_failures do
         expect(json).not_to be_empty
         expect(json_data.size).to eq(3)
         expect(json_data[:attributes][:activity]).to eq(activity)
         expect(json_data[:attributes][:date_time]).to eq(date_time)
-        expect(json_data[:attributes][:gym_id]).to eq(gym.id)
+        expect(json_data[:attributes][:gym_membership_id]).to eq(gym_membership.id)
         expect(json_data[:attributes][:user_id]).to eq(user.id)
       end
 
@@ -38,7 +39,7 @@ describe 'Users::Gyms::Events API', type: :request do
     end
 
     context 'when the request is invalid' do
-      before { post "/api/v1/users/#{user.id}/gyms/#{gym.id}/events", params: { activity: 100 } }
+      before { post "/api/v1/users/#{user.id}/gym_memberships/#{gym_membership.id}/events", params: { activity: 100 } }
 
       it 'returns an error message', :aggregate_failures do
         expect(json).not_to be_empty
@@ -58,7 +59,7 @@ describe 'Users::Gyms::Events API', type: :request do
     context 'when the user does not exist' do
       let(:bad_user_id) { User.last.id + 1 }
 
-      before { post "/api/v1/users/#{bad_user_id}/gyms/#{gym.id}/events", params: valid_attributes }
+      before { post "/api/v1/users/#{bad_user_id}/gym_memberships/#{gym_membership.id}/events", params: valid_attributes }
 
       it 'returns an error message', :aggregate_failures do
         expect(json).not_to be_empty
@@ -75,17 +76,17 @@ describe 'Users::Gyms::Events API', type: :request do
       include_examples 'status code 404'
     end
 
-    context 'when the gym does not exist' do
-      let(:bad_gym_id) { Gym.last.id + 1 }
+    context 'when the gym membership does not exist' do
+      let(:bad_gym_membership_id) { GymMembership.last.id + 1 }
 
-      before { post "/api/v1/users/#{user.id}/gyms/#{bad_gym_id}/events", params: valid_attributes }
+      before { post "/api/v1/users/#{user.id}/gym_memberships/#{bad_gym_membership_id}/events", params: valid_attributes }
 
       it 'returns an error message', :aggregate_failures do
         expect(json).not_to be_empty
         expect(json.size).to eq(2)
 
         message = 'your query could not be completed'
-        error_message = ["Couldn't find Gym with 'id'=#{bad_gym_id}"]
+        error_message = ["Couldn't find GymMembership with 'id'=#{bad_gym_membership_id}"]
 
         expect(json[:message]).to eq(message)
         expect(json[:errors]).to be_an Array
@@ -96,23 +97,23 @@ describe 'Users::Gyms::Events API', type: :request do
     end
 
     context 'when the user does not belong to the gym' do
-      let(:new_gym) { create(:gym) }
+      let(:new_gym_membership) { create(:gym_membership) }
 
-      before { post "/api/v1/users/#{user.id}/gyms/#{new_gym.id}/events", params: valid_attributes }
+      before { post "/api/v1/users/#{user.id}/gym_memberships/#{new_gym_membership.id}/events", params: valid_attributes }
 
       it 'returns an error message', :aggregate_failures do
         expect(json).not_to be_empty
         expect(json.size).to eq(2)
 
         message = 'your query could not be completed'
-        error_message = ["User with 'id'=#{user.id} is not a member of Gym with 'id'=#{new_gym.id}"]
+        error_message = ["Couldn't find GymMembership with 'id'=#{new_gym_membership.id} [WHERE \"gym_memberships\".\"user_id\" = $1]"]
 
         expect(json[:message]).to eq(message)
         expect(json[:errors]).to be_an Array
         expect(json[:errors]).to eq(error_message)
       end
 
-      include_examples 'status code 400'
+      include_examples 'status code 404'
     end
   end
 end
