@@ -4,7 +4,7 @@ describe 'EventSerializer', type: :serializer do
   describe 'instance methods' do
     describe '#serializable_hash' do
       context 'when I provide a valid event' do
-        let!(:event) { event_with_invitation }
+        let!(:event) { create(:event) }
         let(:event_hash) { EventSerializer.new(event).serializable_hash }
         let(:event_data) { event_hash[:data] }
         let(:event_attributes) { event_data[:attributes] }
@@ -32,8 +32,8 @@ describe 'EventSerializer', type: :serializer do
           expect(event_attributes).to have_key(:user_id)
           expect(event_attributes[:user_id]).to be_an Integer
 
-          expect(event_attributes).to have_key(:yelp_gym_id)
-          expect(event_attributes[:yelp_gym_id]).to be_a String
+          expect(event_attributes).to have_key(:gym_membership_id)
+          expect(event_attributes[:gym_membership_id]).to be_an Integer
 
           expect(event_attributes).to have_key(:date_time)
           expect(event_attributes[:date_time]).to be_a ActiveSupport::TimeWithZone
