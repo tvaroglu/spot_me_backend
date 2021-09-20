@@ -8,12 +8,6 @@ require 'rails_helper'
 # See spec/support/request_spec_helper.rb for #json and #json_data helpers.
 describe 'GymSearch API', type: :request do
   describe 'GET /api/v1/gym_search' do
-    # See spec/factories/users.rb for #experienced_user test setup method
-    experienced_user
-    let(:user_id) { user1.id }
-    let(:no_event_user_id) { user9.id }
-    let(:bad_user_id) { User.last.id + 1 }
-
     context 'when a valid location is provided with a plethora of gyms' do
       it 'returns 20 nearby gyms sorted by distance', :aggregate_failures, :vcr do
         get '/api/v1/gym_search?zip_code=34145'
@@ -56,7 +50,7 @@ describe 'GymSearch API', type: :request do
 
         expect(response.status).to eq 400
         expect(json[:code]).to eq 400
-        expect(json[:error]).to eq({})
+        expect(json[:error]).to eq('Invalid zip code')
         expect(json[:status]).to eq 'Bad Request'
       end
     end

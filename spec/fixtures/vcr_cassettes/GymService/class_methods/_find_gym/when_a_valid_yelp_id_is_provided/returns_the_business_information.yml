@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/tk8UhlNErqTmL65pdkGR1g
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - DONT_SHARE_MY_SECRET_KEY
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4986'
+      X-Routing-Service:
+      - routing-main--useast1-7bbf457c88-4c9sz; site=public_api_v3
+      Ratelimit-Resettime:
+      - '2021-09-21T00:00:00+00:00'
+      X-B3-Sampled:
+      - '0'
+      X-Zipkin-Id:
+      - 8ab40f4bf95ac171
+      Server:
+      - envoy
+      X-Cloudmap:
+      - routing_useast1
+      X-Proxied:
+      - 10-65-175-160-useast1bprod
+      X-Extlb:
+      - 10-65-175-160-useast1bprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Mon, 20 Sep 2021 14:05:36 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-lga21924-LGA
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id": "tk8UhlNErqTmL65pdkGR1g", "alias": "marco-fitness-club-marco-island",
+        "name": "Marco Fitness Club", "image_url": "", "is_claimed": false, "is_closed":
+        false, "url": "https://www.yelp.com/biz/marco-fitness-club-marco-island?adjust_creative=U3I_hTsM_rclzkCXyDmD1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=U3I_hTsM_rclzkCXyDmD1w",
+        "phone": "+12393943705", "display_phone": "(239) 394-3705", "review_count":
+        3, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "healthtrainers",
+        "title": "Trainers"}], "rating": 4.0, "location": {"address1": "871 E Elkcam
+        Cir", "address2": "", "address3": "", "city": "Marco Island", "zip_code":
+        "34145", "country": "US", "state": "FL", "display_address": ["871 E Elkcam
+        Cir", "Marco Island, FL 34145"], "cross_streets": ""}, "coordinates": {"latitude":
+        25.959680557251, "longitude": -81.7245101928711}, "photos": [], "hours": [{"open":
+        [{"is_overnight": false, "start": "0600", "end": "2000", "day": 0}, {"is_overnight":
+        false, "start": "0600", "end": "2000", "day": 1}, {"is_overnight": false,
+        "start": "0600", "end": "2000", "day": 2}, {"is_overnight": false, "start":
+        "0600", "end": "2000", "day": 3}, {"is_overnight": false, "start": "0600",
+        "end": "2000", "day": 4}, {"is_overnight": false, "start": "0800", "end":
+        "1600", "day": 5}, {"is_overnight": false, "start": "0900", "end": "1500",
+        "day": 6}], "hours_type": "REGULAR", "is_open_now": true}], "transactions":
+        []}'
+  recorded_at: Mon, 20 Sep 2021 14:05:36 GMT
+recorded_with: VCR 6.0.0

@@ -155,3 +155,4 @@ Style/SymbolArray:
     - 'app/models/**/*.rb'
     - 'Gemfile'
     - 'Rakefile'
+    - 'spec/**/*.rb'

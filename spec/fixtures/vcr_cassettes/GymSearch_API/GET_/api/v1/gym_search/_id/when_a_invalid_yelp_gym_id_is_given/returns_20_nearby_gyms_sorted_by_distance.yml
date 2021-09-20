@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.yelp.com/v3/businesses/search?location=34112352323234545&radius=40000&sort_by=distance&term=gyms
+    uri: https://api.yelp.com/v3/businesses/bad_gym_id
     body:
       encoding: US-ASCII
       string: ''
@@ -17,44 +17,44 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 404
+      message: Not Found
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '123'
+      - '102'
       Content-Type:
       - application/json
-      X-Zipkin-Id:
-      - da668144ab09bad0
       Server:
       - envoy
+      X-Routing-Service:
+      - routing-main--useast1-7bbf457c88-cvxns; site=public_api_v3
       X-B3-Sampled:
       - '0'
-      X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-89w7v; site=public_api_v3
+      X-Zipkin-Id:
+      - a739400c4b61f6a5
       X-Cloudmap:
-      - routing_uswest2
+      - routing_useast1
       X-Proxied:
-      - 10-69-189-127-uswest2bprod
+      - 10-65-171-158-useast1bprod
       X-Extlb:
-      - 10-69-189-127-uswest2bprod
+      - 10-65-171-158-useast1bprod
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 20 Sep 2021 02:05:41 GMT
+      - Mon, 20 Sep 2021 14:25:32 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8277-DEN
+      - cache-pwk4941-PWK
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
     body:
       encoding: UTF-8
-      string: '{"error": {"code": "LOCATION_NOT_FOUND", "description": "Could not
-        execute search, try specifying a more exact location."}}'
-  recorded_at: Mon, 20 Sep 2021 02:05:41 GMT
+      string: '{"error": {"code": "BUSINESS_NOT_FOUND", "description": "The requested
+        business could not be found."}}'
+  recorded_at: Mon, 20 Sep 2021 14:25:31 GMT
 recorded_with: VCR 6.0.0

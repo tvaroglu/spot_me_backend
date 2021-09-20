@@ -9,7 +9,7 @@ RSpec.describe GymService do
 
         expect(setup.headers).to include('Authorization')
         expect(setup.headers.values).to include(ENV['yelp_api_key'])
-        expect(params).to eq 'term=gyms&radius=40000&sort_by=distance'
+        expect(params).to eq('term=gyms&radius=40000&sort_by=distance')
       end
     end
 
@@ -43,10 +43,34 @@ RSpec.describe GymService do
 
       context 'when bad zip code is queried' do
         it 'returns an error if the location provided is not found', :vcr do
-          bad_zip = '23452345632456334[]'
+          bad_zip = '23452345632456334234'
           results = GymService.get_gyms(bad_zip)
 
+          expect(results).to be_a(Hash)
           expect(results[:error][:code]).to eq('LOCATION_NOT_FOUND')
+        end
+      end
+    end
+
+    describe '::find_gym' do
+      context 'when a valid yelp id is provided' do
+        it 'returns the business information', :vcr do
+          yelp_gym_id = 'tk8UhlNErqTmL65pdkGR1g'
+          results = GymService.find_gym(yelp_gym_id)
+
+          expect(results).to be_a(Hash)
+          expect(results[:name]).to eq('Marco Fitness Club')
+          expect(results[:id]).to eq('tk8UhlNErqTmL65pdkGR1g')
+        end
+      end
+
+      context 'when an invalid yelp id is provided' do
+        it 'returns an error if the gym is not found', :vcr do
+          yelp_gym_id = 'badgymid'
+          results = GymService.find_gym(yelp_gym_id)
+
+          expect(results).to be_a(Hash)
+          expect(results[:error][:code]).to eq('BUSINESS_NOT_FOUND')
         end
       end
     end
