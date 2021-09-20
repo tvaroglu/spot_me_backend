@@ -24,7 +24,7 @@ class GymFacade
             error: gym[:error][:description],
             status: :not_found.to_s.tr('_', ' ').titleize,
             code: Rack::Utils::SYMBOL_TO_STATUS_CODE[:not_found]
-            },
+          },
           code: :not_found
         }
       else
@@ -35,7 +35,7 @@ class GymFacade
     def invalid_gym_id_length
       {
         errors: {
-          error: "Invalid ID length",
+          error: 'Invalid ID length',
           status: :bad_request.to_s.tr('_', ' ').titleize,
           code: Rack::Utils::SYMBOL_TO_STATUS_CODE[:bad_request]
         },

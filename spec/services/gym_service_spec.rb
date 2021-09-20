@@ -59,8 +59,8 @@ RSpec.describe GymService do
           results = GymService.find_gym(yelp_gym_id)
 
           expect(results).to be_a(Hash)
-          expect(results[:name]).to eq("Marco Fitness Club")
-          expect(results[:id]).to eq("tk8UhlNErqTmL65pdkGR1g")
+          expect(results[:name]).to eq('Marco Fitness Club')
+          expect(results[:id]).to eq('tk8UhlNErqTmL65pdkGR1g')
         end
       end
 
@@ -70,7 +70,7 @@ RSpec.describe GymService do
           results = GymService.find_gym(yelp_gym_id)
 
           expect(results).to be_a(Hash)
-          expect(results[:error][:code]).to eq("BUSINESS_NOT_FOUND")
+          expect(results[:error][:code]).to eq('BUSINESS_NOT_FOUND')
         end
       end
     end

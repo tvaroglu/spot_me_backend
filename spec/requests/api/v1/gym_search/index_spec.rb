@@ -50,7 +50,7 @@ describe 'GymSearch API', type: :request do
 
         expect(response.status).to eq 400
         expect(json[:code]).to eq 400
-        expect(json[:error]).to eq("Invalid zip code")
+        expect(json[:error]).to eq('Invalid zip code')
         expect(json[:status]).to eq 'Bad Request'
       end
     end
