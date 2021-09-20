@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :gym_search, only: [:index]
-      delete 'users/:user_id/gyms/:gym_id', to: 'users/gyms/gym_members#destroy'
       resources :users, only: [:show, :update, :create] do
         resources :events, only: [:index], controller: 'users/events'
         resources :friendships, only: [:index, :create, :destroy], controller: 'users/friendships'
@@ -13,7 +12,7 @@ Rails.application.routes.draw do
           resources :gym_members, only: [:create], controller: 'users/gyms/gym_members'
         end
 
-        resources :gym_memberships, only: [:index], controller: 'users/gym_memberships'
+        resources :gym_memberships, only: [:index, :destroy], controller: 'users/gym_memberships'
       end
 
       resources :gyms, only: [:show]

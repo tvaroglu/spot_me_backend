@@ -6,14 +6,14 @@ require 'rails_helper'
 #   https://relishapp.com/rspec/rspec-core/docs/example-groups/shared-examples
 #
 # See spec/support/request_spec_helper.rb for #json helper.
-describe 'Users::Gyms::GymMemberships API', type: :request do
-  describe 'DELETE /api/v1/users/:user_id/gyms/:gym_id' do
+describe 'Users::GymMemberships API', type: :request do
+  describe 'DELETE /api/v1/users/:user_id/gym_memberships/:id' do
     # See spec/factories/users.rb for #gym_membership test setup method
     let!(:user) { user_with_gym_membership }
-    let(:gym) { Gym.last }
+    let(:gym_membership) { user.gym_memberships.last }
 
     context 'when the user exists' do
-      before { delete "/api/v1/users/#{user.id}/gyms/#{gym.id}" }
+      before { delete "/api/v1/users/#{user.id}/gym_memberships/#{gym_membership.id}" }
 
       include_examples 'status code 204'
     end
@@ -21,7 +21,7 @@ describe 'Users::Gyms::GymMemberships API', type: :request do
     context 'when the user does not exist' do
       let(:bad_user_id) { User.last.id + 1 }
 
-      before { delete "/api/v1/users/#{bad_user_id}/gyms/#{gym.id}" }
+      before { delete "/api/v1/users/#{bad_user_id}/gym_memberships/#{gym_membership.id}" }
 
       it 'returns an error message', :aggregate_failures do
         expect(json).not_to be_empty
@@ -36,10 +36,10 @@ describe 'Users::Gyms::GymMemberships API', type: :request do
       include_examples 'status code 404'
     end
 
-    context 'when the gym does not exist' do
-      let(:bad_gym_id) { Gym.last.id + 1 }
+    context 'when the gym membership does not exist' do
+      let(:bad_gym_membership_id) { GymMembership.last.id + 1 }
 
-      before { delete "/api/v1/users/#{user.id}/gyms/#{bad_gym_id}" }
+      before { delete "/api/v1/users/#{user.id}/gym_memberships/#{bad_gym_membership_id}" }
 
       it 'returns an error message', :aggregate_failures do
         expect(json).not_to be_empty
@@ -47,28 +47,10 @@ describe 'Users::Gyms::GymMemberships API', type: :request do
         expect(json[:message]).to eq('your query could not be completed')
 
         expect(json[:errors]).to be_an Array
-        expect(json[:errors]).to eq(["Couldn't find Gym with 'id'=#{bad_gym_id}"])
+        expect(json[:errors]).to eq(["Couldn't find GymMembership with 'id'=#{bad_gym_membership_id}"])
       end
 
       include_examples 'status code 404'
-    end
-
-    context 'when the user is not a member of the gym' do
-      let(:new_gym) { create(:gym) }
-
-      before { delete "/api/v1/users/#{user.id}/gyms/#{new_gym.id}" }
-
-      it 'returns an error message', :aggregate_failures do
-        expect(json).not_to be_empty
-        expect(json.size).to eq(2)
-
-        expect(json[:message]).to eq('your query could not be completed')
-
-        expect(json[:errors]).to be_an Array
-        expect(json[:errors]).to eq(["User with 'id'=#{user.id} is not a member of Gym with 'id'=#{new_gym.id}"])
-      end
-
-      include_examples 'status code 400'
     end
   end
 end
