@@ -22,7 +22,7 @@ describe 'GymSearch API', type: :request do
         expect(response.status).to eq 200
         expect(json).not_to be_empty
         expect(json_data.size).to eq 20
-        expect(json_data.first[:attributes][:yelp_gym_id]).to be_a(String)
+        expect(json_data.first[:id]).to be_a(String)
       end
     end
 
@@ -34,7 +34,7 @@ describe 'GymSearch API', type: :request do
         expect(response.status).to eq 200
         expect(json).not_to be_empty
         expect(json_data.size).to eq 16
-        expect(json_data.first[:attributes][:yelp_gym_id]).to be_a(String)
+        expect(json_data.first[:id]).to be_a(String)
       end
     end
 

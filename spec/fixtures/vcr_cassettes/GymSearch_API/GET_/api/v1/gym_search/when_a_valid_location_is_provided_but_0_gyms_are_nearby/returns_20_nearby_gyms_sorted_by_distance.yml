@@ -24,36 +24,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
+      Ratelimit-Remaining:
+      - '4988'
+      X-Zipkin-Id:
+      - 6ff7b84bce1afc0c
+      Ratelimit-Resettime:
+      - '2021-09-21T00:00:00+00:00'
       X-B3-Sampled:
       - '0'
-      X-Zipkin-Id:
-      - 84320d337ca80d3b
       X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-nbbdt; site=public_api_v3
-      Ratelimit-Resettime:
-      - '2021-09-20T00:00:00+00:00'
-      Ratelimit-Dailylimit:
-      - '5000'
-      Ratelimit-Remaining:
-      - '4981'
+      - routing-main--uswest2-7b96896cd8-gxd8z; site=public_api_v3
       Server:
       - envoy
+      Ratelimit-Dailylimit:
+      - '5000'
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
-      - 10-69-64-74-uswest2aprod
+      - 10-69-84-252-uswest2aprod
       X-Extlb:
-      - 10-69-64-74-uswest2aprod
+      - 10-69-84-252-uswest2aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 19 Sep 2021 03:46:36 GMT
+      - Mon, 20 Sep 2021 02:05:40 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8274-DEN
+      - cache-den8280-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -66,7 +66,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"businesses": [], "total": 0, "region": {"center": {"longitude": -119.432373046875,
         "latitude": 40.4462157989704}}}'
-  recorded_at: Sun, 19 Sep 2021 03:46:36 GMT
+  recorded_at: Mon, 20 Sep 2021 02:05:40 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/search?location=89405&radius=40000&sort_by=distance&term=gyms
@@ -91,36 +91,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Resettime:
-      - '2021-09-20T00:00:00+00:00'
-      X-B3-Sampled:
-      - '0'
+      Server:
+      - envoy
       X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-95qdr; site=public_api_v3
-      X-Zipkin-Id:
-      - da1675970c0373ef
+      - routing-main--uswest2-7b96896cd8-n4rwm; site=public_api_v3
       Ratelimit-Dailylimit:
       - '5000'
       Ratelimit-Remaining:
-      - '4980'
-      Server:
-      - envoy
+      - '4987'
+      X-Zipkin-Id:
+      - 4901b1ce835d98ad
+      X-B3-Sampled:
+      - '0'
+      Ratelimit-Resettime:
+      - '2021-09-21T00:00:00+00:00'
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
-      - 10-69-98-90-uswest2aprod
+      - 10-69-189-127-uswest2bprod
       X-Extlb:
-      - 10-69-98-90-uswest2aprod
+      - 10-69-189-127-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 19 Sep 2021 03:46:37 GMT
+      - Mon, 20 Sep 2021 02:05:40 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8254-DEN
+      - cache-den8226-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -133,5 +133,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"businesses": [], "total": 0, "region": {"center": {"longitude": -119.432373046875,
         "latitude": 40.4462157989704}}}'
-  recorded_at: Sun, 19 Sep 2021 03:46:37 GMT
+  recorded_at: Mon, 20 Sep 2021 02:05:40 GMT
 recorded_with: VCR 6.0.0

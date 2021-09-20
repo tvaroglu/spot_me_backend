@@ -24,36 +24,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Remaining:
-      - '4983'
-      Ratelimit-Resettime:
-      - '2021-09-20T00:00:00+00:00'
       X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-dd49q; site=public_api_v3
+      - routing-main--uswest2-7b96896cd8-6wtjq; site=public_api_v3
       X-B3-Sampled:
       - '0'
       X-Zipkin-Id:
-      - 8667d3f00d2a0a11
+      - 247077166ee45fac
       Server:
       - envoy
+      Ratelimit-Remaining:
+      - '4990'
       Ratelimit-Dailylimit:
       - '5000'
+      Ratelimit-Resettime:
+      - '2021-09-21T00:00:00+00:00'
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
-      - 10-69-189-127-uswest2bprod
+      - 10-69-138-171-uswest2bprod
       X-Extlb:
-      - 10-69-189-127-uswest2bprod
+      - 10-69-138-171-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 19 Sep 2021 03:46:35 GMT
+      - Mon, 20 Sep 2021 02:05:39 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8243-DEN
+      - cache-den8234-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -216,7 +216,7 @@ http_interactions:
         "+12073384598", "display_phone": "(207) 338-4598", "distance": 43655.58741866142}],
         "total": 16, "region": {"center": {"longitude": -69.36630249023438, "latitude":
         44.10811081310502}}}'
-  recorded_at: Sun, 19 Sep 2021 03:46:35 GMT
+  recorded_at: Mon, 20 Sep 2021 02:05:39 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/search?location=04572&radius=40000&sort_by=distance&term=gyms
@@ -242,35 +242,35 @@ http_interactions:
       Content-Type:
       - application/json
       Ratelimit-Resettime:
-      - '2021-09-20T00:00:00+00:00'
-      X-Zipkin-Id:
-      - 7f7c117d9009d931
-      X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-g7g2v; site=public_api_v3
+      - '2021-09-21T00:00:00+00:00'
       X-B3-Sampled:
       - '0'
-      Ratelimit-Remaining:
-      - '4982'
-      Ratelimit-Dailylimit:
-      - '5000'
+      X-Zipkin-Id:
+      - 711adcf9c982ebaa
       Server:
       - envoy
+      Ratelimit-Dailylimit:
+      - '5000'
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-fczkd; site=public_api_v3
+      Ratelimit-Remaining:
+      - '4989'
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
-      - 10-69-98-90-uswest2aprod
+      - 10-69-138-171-uswest2bprod
       X-Extlb:
-      - 10-69-98-90-uswest2aprod
+      - 10-69-138-171-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 19 Sep 2021 03:46:35 GMT
+      - Mon, 20 Sep 2021 02:05:39 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8257-DEN
+      - cache-den8260-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -433,5 +433,5 @@ http_interactions:
         "+12073384598", "display_phone": "(207) 338-4598", "distance": 43655.58741866142}],
         "total": 16, "region": {"center": {"longitude": -69.36630249023438, "latitude":
         44.10811081310502}}}'
-  recorded_at: Sun, 19 Sep 2021 03:46:35 GMT
+  recorded_at: Mon, 20 Sep 2021 02:05:39 GMT
 recorded_with: VCR 6.0.0
