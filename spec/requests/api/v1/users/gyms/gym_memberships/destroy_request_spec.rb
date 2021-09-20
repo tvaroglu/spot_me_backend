@@ -8,8 +8,8 @@ require 'rails_helper'
 # See spec/support/request_spec_helper.rb for #json helper.
 describe 'Users::Gyms::GymMemberships API', type: :request do
   describe 'DELETE /api/v1/users/:user_id/gyms/:gym_id' do
-    # See spec/factories/users.rb for #user_with_gym test setup method
-    let!(:user) { user_with_gym }
+    # See spec/factories/users.rb for #gym_membership test setup method
+    let!(:user) { user_with_gym_membership }
     let(:gym) { Gym.last }
 
     context 'when the user exists' do

@@ -20,9 +20,9 @@ RSpec.describe User, type: :model do
 
     it { should have_many(:followers).through(:following_users) }
 
-    it { should have_many(:events).dependent(:destroy) }
+    it { should have_many(:events).through(:gym_memberships) }
     it { should have_many(:gym_memberships).dependent(:destroy) }
-    it { should have_many(:invitations).through(:events) }
+    it { should have_many(:invited_events).class_name('Event') }
   end
 
   describe 'validations' do
@@ -56,7 +56,6 @@ RSpec.describe User, type: :model do
         expect(Friendship.all.size).to eq(5)
         expect(GymMembership.all.size).to eq(11)
         expect(Event.all.size).to eq(7)
-        expect(Invitation.all.size).to eq(7)
       end
     end
 
@@ -72,14 +71,29 @@ RSpec.describe User, type: :model do
       end
     end
 
-    describe '#user_with_gym' do
-      subject(:user) { user_with_gym }
+    describe '#user_with_gym_membership' do
+      context 'when I do not provide a yelp_gym_id' do
+        subject(:user) { user_with_gym_membership }
 
-      it 'creates valid objects' do
-        expect(user).to be_valid
-        expect(GymMembership.all.size).to eq(1)
-        expect(User.all.size).to eq(1)
-        expect(user.gym_memberships.size).to eq(1)
+        it 'creates valid objects with a default yelp_gym_id' do
+          expect(user).to be_valid
+          expect(GymMembership.all.size).to eq(1)
+          expect(User.all.size).to eq(1)
+          expect(user.gym_memberships.size).to eq(1)
+          expect(user.gym_memberships.first.yelp_gym_id).to eq('c2jzsndq8brvn9fbckeec2')
+        end
+      end
+
+      context 'when I do provide a yelp_gym_id' do
+        subject(:user) { user_with_gym_membership(yelp_gym_id: 'fvdr0ksvy2nhith42ffur2') }
+
+        it 'creates valid objects with the provided yelp_gym_id' do
+          expect(user).to be_valid
+          expect(GymMembership.all.size).to eq(1)
+          expect(User.all.size).to eq(1)
+          expect(user.gym_memberships.size).to eq(1)
+          expect(user.gym_memberships.first.yelp_gym_id).to eq('fvdr0ksvy2nhith42ffur2')
+        end
       end
     end
 
@@ -117,31 +131,32 @@ RSpec.describe User, type: :model do
 
   describe 'instance methods' do
     describe '#upcoming_events' do
-      let(:user) { user_with_gym }
-      let(:gym) { user.gym_memberships.first.yelp_gym_id }
+      let(:user1) { user_with_gym_membership }
+      let(:user2) { user_with_gym_membership }
+      let(:gym) { user1.gym_memberships.first.id }
 
       context 'when there are upcoming events' do
-        let!(:past_event) { create(:event, date_time: DateTime.yesterday, user: user, yelp_gym_id: gym) }
-        let!(:upcoming_event_1) { create(:event, user: user, yelp_gym_id: gym) }
-        let!(:upcoming_event_2) { create(:event, user: user, yelp_gym_id: gym) }
-        let!(:upcoming_event_3) { create(:event, user: user, yelp_gym_id: gym) }
+        let!(:past_event) { create(:event, date_time: DateTime.yesterday, user: user2, gym_membership_id: gym) }
+        let!(:upcoming_event_1) { create(:event, user: user2, gym_membership_id: gym) }
+        let!(:upcoming_event_2) { create(:event, user: user2, gym_membership_id: gym) }
+        let!(:upcoming_event_3) { create(:event, user: user2, gym_membership_id: gym) }
 
         it 'returns the upcoming events for the user' do
-          expect(user.upcoming_events).to eq [upcoming_event_1, upcoming_event_2, upcoming_event_3]
+          expect(user1.upcoming_events).to eq [upcoming_event_1, upcoming_event_2, upcoming_event_3]
         end
       end
 
       context 'when there are no upcoming events' do
-        let!(:past_event) { create(:event, date_time: DateTime.yesterday, user: user, yelp_gym_id: gym) }
+        let!(:past_event) { create(:event, date_time: DateTime.yesterday, user: user2, gym_membership_id: gym) }
 
         it 'can return an empty array' do
-          expect(user.upcoming_events).to be_empty
+          expect(user1.upcoming_events).to be_empty
         end
       end
 
       context 'when there are no events' do
         it 'can return an empty array' do
-          expect(user.upcoming_events).to be_empty
+          expect(user1.upcoming_events).to be_empty
         end
       end
     end
