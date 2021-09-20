@@ -3,7 +3,7 @@
 HTTP Verb | Endpoint                   | Description                | Link
 ----------|----------------------------|----------------------------|---------------------------
 GET       | `/users/{user_id}/events` | Get a user's events.     | [Link](#get-user-events)
-POST       | `/users/{user_id}/gyms/:gym_id/events` | Create a new event.     | [Link](#create-new-event)
+POST       | `/users/{user_id}/gym_memberships/{gym_membership_id}/events` | Create a new event.     | [Link](#create-new-event)
 
 
 ---
@@ -26,7 +26,7 @@ Name       | Data Type    | In    | Required/Optional | Description
 ### Example Request
 
 ```
-GET https://spotme-app-api.herokuapp.com/api/v1/users/31/events
+GET https://spotme-app-api.herokuapp.com/api/v1/users/1/events
 ```
 
 ### Example Response (Successful)
@@ -93,7 +93,7 @@ Status: 404 Not Found
 Create a new event based on provided attributes.
 
 ```
-POST /users/{user_id}/gyms/{gym_id}/events
+POST /users/{user_id}/gym_memberships/{gym_membership_id}/events
 ```
 
 
@@ -102,7 +102,7 @@ POST /users/{user_id}/gyms/{gym_id}/events
 Name       | Data Type    | In    | Required/Optional | Description
 -----------|--------------|-------|-------------------|------------
 `user_id` | String | Body | Required | The id of the user hosting the event.
-`gym_id` | String | Body | Required | The id of the gym the event will take place at.
+`gym_membership_id` | String | Body | Required | The id of the gym the event will take place at.
 `activity` | String | Body | Required | The activity (title) of the event.
 `date_time` | Datetime | Body | Required | The date and time of the event.
 
@@ -110,7 +110,7 @@ Name       | Data Type    | In    | Required/Optional | Description
 ### Example Request
 
 ```
-POST https://spotme-app-api.herokuapp.com/api/v1/users/31/gyms/16/events
+POST https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships/1/events
 ```
 
 ### Example Response (Successful)

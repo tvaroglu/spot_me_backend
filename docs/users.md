@@ -5,7 +5,7 @@ HTTP Verb | Endpoint                   | Description                | Link
 GET       | `/users/{user_id}` | Get a single user.     | [Link](#get-one-user)
 POST       | `/users` | Create a new user.     | [Link](#create-new-user)
 PATCH       | `/users/{user_id}` | Update an existing user.     | [Link](#update-existing-user)
-GET       | `/users/{user_id}/gyms` | Get a user's gyms.     | [Link](#get-user-gyms)
+GET       | `/users/{user_id}/gym_memberships` | Get a user's gyms.     | [Link](#get-user-gyms)
 GET       | `/users/{user_id}/friendships` | Get a user's friends.     | [Link](#get-user-friends)
 
 ---
@@ -28,7 +28,7 @@ Name       | Data Type    | In    | Required/Optional | Description
 ### Example Request
 
 ```
-GET https://spotme-app-api.herokuapp.com/api/v1/users/31
+GET https://spotme-app-api.herokuapp.com/api/v1/users/1
 ```
 
 ### Example Response (Successful)
@@ -175,7 +175,7 @@ Name       | Data Type    | In    | Required/Optional | Description
 ### Example Request
 
 ```
-PATCH https://spotme-app-api.herokuapp.com/api/v1/users/31
+PATCH https://spotme-app-api.herokuapp.com/api/v1/users/1
 ```
 
 ### Example Response (Successful)
@@ -226,7 +226,7 @@ Status: 422 Unprocessable Entity
 Returns a user and their associated gyms.
 
 ```
-GET /users/{user_id}/gyms
+GET /users/{user_id}/gym_memberships
 ```
 
 
@@ -239,7 +239,7 @@ Name       | Data Type    | In    | Required/Optional | Description
 ### Example Request
 
 ```
-GET https://spotme-app-api.herokuapp.com/api/v1/users/31/gyms
+GET https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
 ```
 
 ### Example Response (Successful)
@@ -302,7 +302,7 @@ Name       | Data Type    | In    | Required/Optional | Description
 ### Example Request
 
 ```
-GET https://spotme-app-api.herokuapp.com/api/v1/users/31/friendships
+GET https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships
 ```
 
 ### Example Response (Successful)
