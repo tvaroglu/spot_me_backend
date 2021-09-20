@@ -123,20 +123,20 @@ The following table presents each API endpoint and its associated documentation
 Endpoint | Docs | Example
 ---------|------|--------
 **Users** | [docs](/docs/users.md)
-Get Existing User | [docs](/docs/users.md#get-one-user) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/31)
+Get Existing User | [docs](/docs/users.md#get-one-user) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1)
 Create New User | [docs](/docs/users.md#create-new-user) |
 Update Existing User | [docs](/docs/users.md#update-existing-user) |
-Get User's Gyms | [docs](/docs/users.md#get-user-gyms) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/31/gyms)
-Get User's Friends | [docs](/docs/users.md#get-user-friends) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/31/friendships)
+Get User's Gyms | [docs](/docs/users.md#get-user-gyms) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships)
+Get User's Friends | [docs](/docs/users.md#get-user-friends) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships)
 Add Friend | *pending* |
 Remove Friend | *pending* |
 **Events** | [docs](/docs/events.md)
-Get User's Events | [docs](/docs/events.md#get-user-events) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/31/events)
+Get User's Events | [docs](/docs/events.md#get-user-events) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/events)
 Get User New Event | *pending* | *pending*
 Create User New Event | [docs](/docs/events#create-new-event.md) |
 **Gyms** | [docs](/docs/gyms.md)
 Get Gyms Near User | *pending* | *pending*
-Get Gym Show Page | [docs](/docs/gyms#get-gym.md) | [example](https://spotme-app-api.herokuapp.com/api/v1/gyms/16)
+Get Gym Show Page | *pending* | *pending*
 Add Gym Member | [docs](/docs/gyms#create-new-gym-member.md) |
 Remove Gym Member | [docs](/docs/gyms#remove-existing-gym-member.md) |
 
