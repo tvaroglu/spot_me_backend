@@ -7,10 +7,9 @@ class User < ApplicationRecord
                              inverse_of: :followee
   has_many :followers, through: :following_users
 
-  has_many :events, dependent: :destroy
-  has_many :gym_members, dependent: :destroy
-  has_many :gyms, through: :gym_members
-  has_many :invitations, through: :events
+  has_many :invited_events, class_name: 'Event', dependent: :destroy
+  has_many :gym_memberships, dependent: :destroy
+  has_many :events, through: :gym_memberships
 
   validates :email, presence: true, uniqueness: true
   validates :google_id, presence: true, uniqueness: true

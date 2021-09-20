@@ -91,7 +91,7 @@ Status: 201 Created
 ```
 {:data=>
   {:id=>"3995",
-   :type=>"gym_member",
+   :type=>"gym_membership",
    :attributes=>{:user_id=>5866, :gym_id=>1861}}
 }
 ```

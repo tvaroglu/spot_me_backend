@@ -1,14 +1,8 @@
 FactoryBot.define do
   factory :event do
-    date_time { DateTime.now + rand(1..10).days }
     activity { Faker::Hobby.activity }
+    date_time { DateTime.now + rand(1..10).days }
     user
-    gym
-  end
-end
-
-def event_with_invitation
-  FactoryBot.create(:event) do |event|
-    FactoryBot.create(:invitation, event: event)
+    gym_membership
   end
 end

@@ -32,43 +32,33 @@ def experienced_user
   let!(:ff1_5) { create(:friendship, follower_id: user1.id, followee_id: user5.id) }
   let!(:ff1_6) { create(:friendship, follower_id: user1.id, followee_id: user6.id) }
 
-  let!(:gym1) { create(:gym) }
-  let!(:gym2) { create(:gym) }
-  let!(:gym3) { create(:gym) }
+  let!(:gym1) { 'mkmn8pidmebehvh79u1ovg' }
+  let!(:gym2) { 'fvdr0ksvy2nhith42ffur2' }
+  let!(:gym3) { 'j30b22smeauhacmvx4sfgh' }
 
   # Gym Member variable naming convention:
-  #   gym_mem<user>_<gym_number>
-  let!(:gym_mem1_1) { create(:gym_member, user: user1, gym: gym1) }
-  let!(:gym_mem1_2) { create(:gym_member, user: user1, gym: gym2) }
-  let!(:gym_mem2_1) { create(:gym_member, user: user2, gym: gym1) }
-  let!(:gym_mem2_2) { create(:gym_member, user: user2, gym: gym2) }
-  let!(:gym_mem2_3) { create(:gym_member, user: user2, gym: gym3) }
-  let!(:gym_mem3_1) { create(:gym_member, user: user3, gym: gym1) }
-  let!(:gym_mem3_2) { create(:gym_member, user: user3, gym: gym2) }
-  let!(:gym_mem4_3) { create(:gym_member, user: user4, gym: gym3) }
-  let!(:gym_mem5_1) { create(:gym_member, user: user5, gym: gym1) }
-  let!(:gym_mem5_2) { create(:gym_member, user: user5, gym: gym2) }
-  let!(:gym_mem6_3) { create(:gym_member, user: user6, gym: gym3) }
+  #   gym_mem<user>_<gym>
+  let!(:gym_mem1_1) { create(:gym_membership, user: user1, yelp_gym_id: gym1) }
+  let!(:gym_mem1_2) { create(:gym_membership, user: user1, yelp_gym_id: gym2) }
+  let!(:gym_mem2_1) { create(:gym_membership, user: user2, yelp_gym_id: gym1) }
+  let!(:gym_mem2_2) { create(:gym_membership, user: user2, yelp_gym_id: gym2) }
+  let!(:gym_mem2_3) { create(:gym_membership, user: user2, yelp_gym_id: gym3) }
+  let!(:gym_mem3_1) { create(:gym_membership, user: user3, yelp_gym_id: gym1) }
+  let!(:gym_mem3_2) { create(:gym_membership, user: user3, yelp_gym_id: gym2) }
+  let!(:gym_mem4_3) { create(:gym_membership, user: user4, yelp_gym_id: gym3) }
+  let!(:gym_mem5_1) { create(:gym_membership, user: user5, yelp_gym_id: gym1) }
+  let!(:gym_mem5_2) { create(:gym_membership, user: user5, yelp_gym_id: gym2) }
+  let!(:gym_mem6_3) { create(:gym_membership, user: user6, yelp_gym_id: gym3) }
 
   # Event variable naming convention:
   #   event<user>_<gym>_<friend>
-  let!(:event1_1a_2) { create(:event, user: user1, gym: gym1) }
-  let!(:event1_1b_3) { create(:event, user: user1, gym: gym1) }
-  let!(:event1_1c_5) { create(:event, user: user1, gym: gym1) }
-  let!(:event1_1d_3) { create(:event, user: user1, gym: gym1) }
-  let!(:event1_2a_2) { create(:event, user: user1, gym: gym2) }
-  let!(:event1_2b_5) { create(:event, user: user1, gym: gym2) }
-  let!(:event1_2c_3) { create(:event, user: user1, gym: gym2) }
-
-  # Invitation variable naming convention:
-  #   invite<user>_<gym>_<friend>
-  let!(:invite1_1a_2) { create(:invitation, event: event1_1a_2, user: user2) }
-  let!(:invite1_1b_3) { create(:invitation, event: event1_1b_3, user: user3) }
-  let!(:invite1_1c_5) { create(:invitation, event: event1_1c_5, user: user5) }
-  let!(:invite1_1d_3) { create(:invitation, event: event1_1d_3, user: user3) }
-  let!(:invite1_2a_2) { create(:invitation, event: event1_2a_2, user: user2) }
-  let!(:invite1_2b_5) { create(:invitation, event: event1_2b_5, user: user5) }
-  let!(:invite1_2c_3) { create(:invitation, event: event1_2c_3, user: user3) }
+  let!(:event1_1a_2) { create(:event, gym_membership: gym_mem1_1, user: user2) }
+  let!(:event1_1b_3) { create(:event, gym_membership: gym_mem1_1, user: user3) }
+  let!(:event1_1c_5) { create(:event, gym_membership: gym_mem1_1, user: user5) }
+  let!(:event1_1d_3) { create(:event, gym_membership: gym_mem1_1, user: user3) }
+  let!(:event1_2a_2) { create(:event, gym_membership: gym_mem1_2, user: user2) }
+  let!(:event1_2b_5) { create(:event, gym_membership: gym_mem1_2, user: user5) }
+  let!(:event1_2c_3) { create(:event, gym_membership: gym_mem1_2, user: user3) }
 end
 
 def user_with_friend
@@ -82,19 +72,15 @@ end
 def user_with_gym_friend
   FactoryBot.create(:user) do |user1|
     FactoryBot.create(:user) do |user2|
-      FactoryBot.create(:gym) do |gym|
-        FactoryBot.create(:gym_member, gym: gym, user: user1)
-        FactoryBot.create(:gym_member, gym: gym, user: user2)
-        FactoryBot.create(:friendship, follower_id: user1.id, followee_id: user2.id)
-      end
+      FactoryBot.create(:gym_membership, yelp_gym_id: 'c2jzsndq8brvn9fbckeec2', user: user1)
+      FactoryBot.create(:gym_membership, yelp_gym_id: 'c2jzsndq8brvn9fbckeec2', user: user2)
+      FactoryBot.create(:friendship, follower_id: user1.id, followee_id: user2.id)
     end
   end
 end
 
-def user_with_gym
-  FactoryBot.create(:user) do |user1|
-    FactoryBot.create(:gym) do |gym|
-      FactoryBot.create(:gym_member, gym: gym, user: user1)
-    end
+def user_with_gym_membership(yelp_gym_id: 'c2jzsndq8brvn9fbckeec2')
+  FactoryBot.create(:user) do |user|
+    FactoryBot.create(:gym_membership, yelp_gym_id: yelp_gym_id, user: user)
   end
 end

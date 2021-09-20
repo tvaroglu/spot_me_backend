@@ -10,19 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_19_042302) do
+ActiveRecord::Schema.define(version: 2021_09_20_002950) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
     t.bigint "user_id"
-    t.bigint "gym_id"
     t.datetime "date_time"
     t.string "activity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["gym_id"], name: "index_events_on_gym_id"
+    t.bigint "gym_membership_id"
+    t.index ["gym_membership_id"], name: "index_events_on_gym_membership_id"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
@@ -33,29 +33,13 @@ ActiveRecord::Schema.define(version: 2021_09_19_042302) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "gym_members", force: :cascade do |t|
+  create_table "gym_memberships", force: :cascade do |t|
     t.bigint "user_id"
-    t.bigint "gym_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["gym_id"], name: "index_gym_members_on_gym_id"
-    t.index ["user_id"], name: "index_gym_members_on_user_id"
-  end
-
-  create_table "gyms", force: :cascade do |t|
     t.string "yelp_gym_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "name"
-  end
-
-  create_table "invitations", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "event_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["event_id"], name: "index_invitations_on_event_id"
-    t.index ["user_id"], name: "index_invitations_on_user_id"
+    t.string "gym_name"
+    t.index ["user_id"], name: "index_gym_memberships_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -73,10 +57,7 @@ ActiveRecord::Schema.define(version: 2021_09_19_042302) do
     t.string "full_name"
   end
 
-  add_foreign_key "events", "gyms"
+  add_foreign_key "events", "gym_memberships"
   add_foreign_key "events", "users"
-  add_foreign_key "gym_members", "gyms"
-  add_foreign_key "gym_members", "users"
-  add_foreign_key "invitations", "events"
-  add_foreign_key "invitations", "users"
+  add_foreign_key "gym_memberships", "users"
 end
