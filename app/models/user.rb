@@ -26,6 +26,12 @@ class User < ApplicationRecord
     events.where('date_time >= ?', Time.zone.now)
   end
 
+  def friends_at_same_gym(yelp_gym_id)
+    followees.joins('INNER JOIN gym_memberships g on g.user_id = friendships.followee_id')
+    .where('g.yelp_gym_id = ?', yelp_gym_id)
+    .group(:id)
+  end
+
   def self.users_at_same_gym(yelp_gym_id)
     select('users.*')
     .joins('INNER JOIN gym_memberships g on g.user_id = users.id')
