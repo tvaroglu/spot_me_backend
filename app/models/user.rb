@@ -25,4 +25,11 @@ class User < ApplicationRecord
   def upcoming_events
     events.where('date_time >= ?', Time.zone.now)
   end
+
+  def self.users_at_same_gym(yelp_gym_id)
+    select('users.*')
+    .joins('INNER JOIN gym_memberships g on g.user_id = users.id')
+    .where('g.yelp_gym_id = ?', yelp_gym_id)
+    .group(:id)
+  end
 end

@@ -18,8 +18,8 @@ class Api::V1::Users::GymMemberships::EventsController < ApplicationController
   end
 
   def destroy
-    user = User.find(params[:user_id])
-    gym_membership = GymMembership.find(params[:gym_membership_id])
+    User.find(params[:user_id])
+    GymMembership.find(params[:gym_membership_id])
     event = Event.find(params[:id])
 
     event.destroy! if event

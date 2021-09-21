@@ -160,5 +160,35 @@ RSpec.describe User, type: :model do
         end
       end
     end
+
+    describe '::users_at_same_gym' do
+      let!(:user1) { user_with_gym_membership }
+      let!(:yelp_gym_id) { user1.gym_memberships.first.yelp_gym_id }
+
+      context 'when there are multiple users at the same gym' do
+        let!(:user2) { create(:user) }
+        let!(:shared_gym) { create(:gym_membership, user_id: user2.id, yelp_gym_id: yelp_gym_id) }
+
+        it 'returns the users that belong to the same gym' do
+          expected = User.users_at_same_gym(yelp_gym_id)
+
+          expect(expected.length).to eq 2
+          expect(expected.first).to eq user1
+          expect(expected.last).to eq user2
+        end
+      end
+
+      context 'when there are not multiple users at the same gym' do
+        let!(:user2) { create(:user) }
+        let!(:other_gym) { create(:gym_membership, user_id: user2.id) }
+
+        it 'only returns the users that belong to the same gym' do
+          expected = User.users_at_same_gym(yelp_gym_id)
+
+          expect(expected.length).to eq 1
+          expect(expected.first).to eq user1
+        end
+      end
+    end
   end
 end
