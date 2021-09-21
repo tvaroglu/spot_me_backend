@@ -28,11 +28,14 @@ describe 'Users::GymMemberships::Events API', type: :request do
 
       it 'creates an event', :aggregate_failures do
         expect(json).not_to be_empty
-        expect(json_data.size).to eq(3)
+
+        expect(json_data.size).to eq(4)
         expect(json_data[:attributes][:activity]).to eq(activity)
         expect(json_data[:attributes][:date_time]).to eq(date_time)
         expect(json_data[:attributes][:gym_membership_id]).to eq(gym_membership.id)
         expect(json_data[:attributes][:user_id]).to eq(user.id)
+
+        expect(json_data[:relationships][:user][:meta][:full_name]).to eq(user.full_name)
       end
 
       include_examples 'status code 201'

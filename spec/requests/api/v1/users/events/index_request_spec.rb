@@ -17,11 +17,16 @@ describe 'Users::Events API', type: :request do
     context 'when the user events records exists' do
       before { get "/api/v1/users/#{user_id}/events" }
 
-      it 'returns the users events', :aggregate_failures do
+      it 'returns the users events and full name', :aggregate_failures do
         expect(json).not_to be_empty
 
         expect(json_data.size).to eq(7)
         expect(json_data.first[:id]).to eq(event1_1a_2.id.to_s)
+
+        meta = json_data.first[:relationships][:user][:meta]
+
+        expect(meta.size).to eq 1
+        expect(meta[:full_name]).to be_a String
       end
 
       include_examples 'status code 200'

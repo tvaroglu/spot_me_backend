@@ -31,8 +31,7 @@ class User < ApplicationRecord
   end
 
   def non_friends_at_same_gym(yelp_gym_id)
-    result = User.users_at_same_gym(yelp_gym_id) - friends_at_same_gym(yelp_gym_id)
-    result.reject { |user| user.id == id }
+    User.users_at_same_gym(yelp_gym_id) - friends_at_same_gym(yelp_gym_id) - [self]
   end
 
   def self.users_at_same_gym(yelp_gym_id)
