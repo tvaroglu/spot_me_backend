@@ -19,13 +19,16 @@ class Api::V1::Users::GymMemberships::EventsController < ApplicationController
 
   def destroy
     user = User.find(params[:user_id])
-    event = user.events.find_by(id: params[:id], gym_membership_id: params[:gym_membership_id])
+    event = user.events.find_by(
+      id: params[:id], gym_membership_id: params[:gym_membership_id]
+    )
 
     return event.destroy! if event
 
-    if GymMembership.find(params[:gym_membership_id]).blank?
-      render json: error_message(params[:gym_membership_id]), status: :not_found
-    else
+    # TODO: Understand why we need this conditional...
+    # If the class doesn't hold the error_message method, it doesn't dynamically serialize the error..
+    # And if I don't execute anything after the return statement, method returns 204
+    unless GymMembership.find(params[:gym_membership_id]).blank?
       render json: error_message(params[:id]), status: :not_found
     end
   end

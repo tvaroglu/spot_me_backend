@@ -51,7 +51,7 @@ describe 'Users::Find API', type: :request do
         expect(json[:message]).to eq('your query could not be completed')
 
         expect(json[:errors]).to be_an Array
-        expect(json[:errors]).to eq(["must provide google_id to retrieve user"])
+        expect(json[:errors]).to eq(['must provide google_id to retrieve user'])
       end
 
       include_examples 'status code 404'
