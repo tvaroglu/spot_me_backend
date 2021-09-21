@@ -6,10 +6,11 @@ Rails.application.routes.draw do
       resources :gym_search, only: [:index, :show]
       namespace :users do
         resources :find, only: [:index]
-        resources :gym_members, only: [:index]
       end
 
       resources :users, only: [:show, :update, :create] do
+        # route to return all members at gym (that user is NOT friends with), for gym show page:
+        resources :gym_members, only: [:index], controller: 'users/gym_members'
         # TODO: explore adding user information into events index via serializer
         resources :events, only: [:index], controller: 'users/events'
         resources :friendships, only: [:index, :create, :destroy], controller: 'users/friendships'
