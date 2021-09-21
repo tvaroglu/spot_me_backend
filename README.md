@@ -127,9 +127,9 @@ Get User                   | [docs](/docs/users.md#get-user)          | [example
 Create New User            | [docs](/docs/users.md#create-new-user)   |
 Update User                | [docs](/docs/users.md#update-user)       |
 **Friendships**            | [docs](/docs/friendships.md)
-Get User's Friends         | [docs](/docs/users.md#get-users-friends) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships)
-Add Friend                 | *pending* |
-Remove Friend              | *pending* |
+Get User's Friends         | [docs](/docs/friendships.md#get-users-friends) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships)
+Create New Friendship      | [docs](/docs/friendships.md#create-new-friendship)
+Delete Friendship          | [docs](/docs/friendships.md#delete-friendship)
 **Events**                 | [docs](/docs/events.md)
 Get User's Events          | [docs](/docs/events.md#get-user-events)  | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/events)
 Get User New Event         | *pending* | *pending*
