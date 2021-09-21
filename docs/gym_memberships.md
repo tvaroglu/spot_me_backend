@@ -160,7 +160,7 @@ Status: 404 Not Found
 
 ### Unprocessable Entity
 
-When the Yelp Gym ID is not provided
+When the Yelp Gym ID is not provided:
 
 ```
 Status: 422 Unprocessable Entity
@@ -175,7 +175,7 @@ Status: 422 Unprocessable Entity
 
 ### Unprocessable Entity
 
-When the gym name is not provided
+When the gym name is not provided:
 
 ```
 Status: 422 Unprocessable Entity
