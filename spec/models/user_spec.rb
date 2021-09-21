@@ -183,6 +183,47 @@ RSpec.describe User, type: :model do
         end
       end
     end
+
+    describe 'non_friends_at_same_gym' do
+      context 'when the user has a friend at the same gym' do
+        let!(:user1) { user_with_gym_friend }
+        let!(:yelp_gym_id) { user1.gym_memberships.first.yelp_gym_id }
+        let!(:user2) { create(:user) }
+        let!(:gym_membership) { create(:gym_membership, user: user2, yelp_gym_id: yelp_gym_id) }
+
+        it 'returns users from the shared gym' do
+          expected = user1.non_friends_at_same_gym(yelp_gym_id)
+          # require "pry"; binding.pry
+          expect(expected.length).to eq 1
+          expect(expected.first).to eq user2
+        end
+      end
+
+      context "when the user doesn't have a friend at the same gym" do
+        let!(:user1) { user_with_gym_membership }
+        let!(:yelp_gym_id) { user1.gym_memberships.first.yelp_gym_id }
+        let!(:user2) { create(:user) }
+        let!(:gym_membership) { create(:gym_membership, user: user2, yelp_gym_id: yelp_gym_id) }
+
+        it "returns users from the shared gym who the user isn't following" do
+          expected = user1.non_friends_at_same_gym(yelp_gym_id)
+
+          expect(expected.length).to eq 1
+          expect(expected.first).to eq user2
+        end
+      end
+
+      context 'when the user is already friends with everyone at the gym' do
+        let!(:user1) { user_with_gym_friend }
+        let!(:yelp_gym_id) { user1.gym_memberships.first.yelp_gym_id }
+
+        it "returns users from the shared gym who the user isn't following" do
+          expected = user1.non_friends_at_same_gym(yelp_gym_id)
+
+          expect(expected).to be_empty
+        end
+      end
+    end
   end
 
   describe 'class methods' do

@@ -30,6 +30,11 @@ class User < ApplicationRecord
     followees.users_at_same_gym(yelp_gym_id)
   end
 
+  def non_friends_at_same_gym(yelp_gym_id)
+    result = User.users_at_same_gym(yelp_gym_id) - friends_at_same_gym(yelp_gym_id)
+    result = result.reject { |user| user.id == id }
+  end
+
   def self.users_at_same_gym(yelp_gym_id)
     joins(:gym_memberships)
     .where(gym_memberships: { yelp_gym_id: yelp_gym_id })

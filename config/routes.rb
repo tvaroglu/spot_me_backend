@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :gym_search, only: [:index, :show]
       namespace :users do
         resources :find, only: [:index]
+        resources :gym_members, only: [:index]
       end
 
       resources :users, only: [:show, :update, :create] do
