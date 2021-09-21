@@ -27,8 +27,7 @@ class User < ApplicationRecord
   end
 
   def friends_at_same_gym(yelp_gym_id)
-    followees.joins(:gym_memberships)
-    .where(gym_memberships: { yelp_gym_id: yelp_gym_id })
+    followees.users_at_same_gym(yelp_gym_id)
   end
 
   def self.users_at_same_gym(yelp_gym_id)

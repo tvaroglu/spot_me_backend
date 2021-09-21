@@ -11,7 +11,6 @@ Rails.application.routes.draw do
       resources :users, only: [:show, :update, :create] do
         # TODO: explore adding user information into events index via serializer
         resources :events, only: [:index], controller: 'users/events'
-        # TODO: need an endpoint of user's friends at the gym and user's at the gym (for gym show page, if member)
         resources :friendships, only: [:index, :create, :destroy], controller: 'users/friendships'
         resources :gym_memberships, only: [:index, :create, :destroy], controller: 'users/gym_memberships' do
           resources :events, only: [:create, :destroy], controller: 'users/gym_memberships/events'

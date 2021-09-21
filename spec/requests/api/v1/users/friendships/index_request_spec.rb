@@ -26,6 +26,21 @@ describe 'Users::Friendships API', type: :request do
       include_examples 'status code 200'
     end
 
+    context 'when I provide yelp_gym_id in query params' do
+      before { get "/api/v1/users/#{user_id}/friendships?yelp_gym_id=#{gym1}" }
+
+      it 'returns the users friends at that gym', :aggregate_failures do
+        expect(json).not_to be_empty
+        expect(json_data.size).to eq(3)
+
+        expect(json_data.first[:id]).to eq(user2.id.to_s)
+        expect(json_data.second[:id]).to eq(user3.id.to_s)
+        expect(json_data.third[:id]).to eq(user5.id.to_s)
+      end
+
+      include_examples 'status code 200'
+    end
+
     context 'when the user record does not exist' do
       before { get "/api/v1/users/#{bad_user_id}/friendships" }
 
