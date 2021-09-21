@@ -3,5 +3,5 @@ class EventSerializer
 
   attributes :user_id, :gym_membership_id, :date_time, :activity
 
-  belongs_to :user, meta: proc { |event_record| { full_name: event_record.user.full_name } }
+  belongs_to :user, meta: proc { |event| { full_name: event.user.full_name } }
 end
