@@ -15,7 +15,7 @@ describe 'Users API', type: :request do
         google_image_url: Faker::Avatar.image,
         zip_code: Faker::Address.zip_code.first(5),
         summary: Faker::GreekPhilosophers.quote,
-        goal: rand(0..5),
+        goal: ['Gain Muscle', 'Lose Weight', 'Maintain Weight', 'Increase Flexibility', 'Increase Stamina'].sample,
         availability_morning: [true, false].sample,
         availability_afternoon: [true, false].sample,
         availability_evening: [true, false].sample,
@@ -53,10 +53,11 @@ describe 'Users API', type: :request do
          "Zip code can't be blank",
          'Zip code is not a number',
          "Summary can't be blank",
+         "Goal can't be blank",
          "Full name can't be blank"]
       end
 
-      before { post '/api/v1/users', params: { goal: 'value1' } }
+      before { post '/api/v1/users', params: {} }
 
       it 'returns an error message', :aggregate_failures do
         expect(json).not_to be_empty

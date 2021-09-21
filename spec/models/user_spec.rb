@@ -122,7 +122,7 @@ RSpec.describe User, type: :model do
       expect(user.google_image_url).to be_a String
       expect(user.zip_code).to be_a String
       expect(user.summary).to be_a String
-      expect(user.goal).to be_an Integer
+      expect(user.goal).to be_an String
       expect(user.availability_morning).to be_in([true, false])
       expect(user.availability_afternoon).to be_in([true, false])
       expect(user.availability_evening).to be_in([true, false])
