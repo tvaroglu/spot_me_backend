@@ -36,6 +36,7 @@ RSpec.describe User, type: :model do
     it { should validate_numericality_of(:zip_code) }
     it { should validate_presence_of(:summary) }
     it { should validate_presence_of(:goal) }
+    it { should define_enum_for(:goal).with_values([:gain_muscle, :lose_weight, :maintain_weight, :increase_flexibility, :increase_stamina]) }
     it { should validate_presence_of(:full_name) }
   end
 
