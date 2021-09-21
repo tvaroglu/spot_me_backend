@@ -134,11 +134,13 @@ Remove Friend | *pending* |
 Get User's Events | [docs](/docs/events.md#get-user-events) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/events)
 Get User New Event | *pending* | *pending*
 Create User New Event | [docs](/docs/events#create-new-event.md) |
-**Gyms** | [docs](/docs/gyms.md)
+**Gym Members** | [docs](/docs/gym_memberships.md)
+Get User's Gym Memberships | [docs](/docs/gym_memberships.md#get-users-gym-memberships)
+Create Gym Membership | [docs](/docs/gym_memberships.md#create-gym-membership)
+Delete Gym Membership | [docs](/docs/gym_memberships.md#delete-gym-membership)
+**Gym Search** | [docs](/docs/gym_search.md)
 Get Gyms Near User | *pending* | *pending*
 Get Gym Show Page | *pending* | *pending*
-Add Gym Member | [docs](/docs/gyms#create-new-gym-member.md) |
-Remove Gym Member | [docs](/docs/gyms#remove-existing-gym-member.md) |
 
 
 
