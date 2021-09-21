@@ -5,7 +5,6 @@ HTTP Verb | Endpoint                   | Description                | Link
 GET       | `/users/{user_id}`         | Get a single user.         | [Link](#get-user)
 POST      | `/users`                   | Create a new user.         | [Link](#create-new-user)
 PATCH     | `/users/{user_id}`         | Update an existing user.   | [Link](#update-user)
-GET       | `/users/{user_id}/friendships` | Get a user's friends.  | [Link](#get-user-friends)
 
 ---
 
@@ -74,33 +73,51 @@ Status: 404 Not Found
 
 ## Create New User
 
-Create a new user based on their provided attributes.
+Create a new user with the provided attributes.
 
 ```
 POST /users
 ```
 
+### Request Body
 
-### Parameters
-
-Name       | Data Type    | In    | Required/Optional | Description
------------|--------------|-------|-------------------|------------
-`email` | String | Body | Required | The email of the user.
-`google_id` | String | Body | Required | The Google id of the user.
-`google_image_url` | String | Body | Required | The Google profile picture for the user.
-`zip_code` | String | Body | Required | The zip code of the user.
-`summary` | String | Body | Required | The summary of the user for their profile.
-`goal` | Integer | Body | Required | The primary goal of the user.
-`availability_morning` | Boolean | Body | Required | The morning availability of the user.
-`availability_afternoon` | Boolean | Body | Required | The afternoon availability of the user.
-`availability_evening` | Boolean | Body | Required | The evening availability of the user.
-`full_name` | String | Body | Required | The name of the user.
+Name                     | Data Type | Required/Optional | Description
+-------------------------|-----------|-------------------|------------
+`email`                  | String    | Required          | The email of the user.
+`google_id`              | String    | Required          | The Google id of the user.
+`google_image_url`       | String    | Required          | The Google profile picture for the user.
+`zip_code`               | String    | Required          | The zip code of the user.
+`summary`                | String    | Required          | The summary of the user for their profile.
+`goal`                   | Integer   | Required          | The primary goal of the user.
+`availability_morning`   | Boolean   | Required          | The morning availability of the user.
+`availability_afternoon` | Boolean   | Required          | The afternoon availability of the user.
+`availability_evening`   | Boolean   | Required          | The evening availability of the user.
+`full_name`              | String    | Required          | The name of the user.
 
 
 ### Example Request
 
 ```
 POST https://spotme-app-api.herokuapp.com/api/v1/users
+```
+
+With the following request body:
+
+```
+{
+  :full_name=>"Joann Champlin"
+  :email=>"jenna@runolfsdottir.info",
+  :google_id=>"123456789102345678910",
+  :google_image_url=>
+    "https://robohash.org/rerumnamenim.png?size=300x300&set=set1",
+  :zip_code=>"41895",
+  :summary=>
+    "The virtue of justice consists in moderation, as regulated by wisdom.",
+  :goal=>5,
+  :availability_morning=>false,
+  :availability_afternoon=>false,
+  :availability_evening=>false,
+}
 ```
 
 ### Example Response
@@ -188,6 +205,25 @@ Name                      | Data Type | Required/Optional | Description
 
 ```
 PATCH https://spotme-app-api.herokuapp.com/api/v1/users/1
+```
+
+With the following request body:
+
+```
+{
+  :full_name=>"Joann Champlin"
+  :email=>"jenna@runolfsdottir.info",
+  :google_id=>"123456789102345678910",
+  :google_image_url=>
+    "https://robohash.org/rerumnamenim.png?size=300x300&set=set1",
+  :zip_code=>"41895",
+  :summary=>
+    "The virtue of justice consists in moderation, as regulated by wisdom.",
+  :goal=>5,
+  :availability_morning=>false,
+  :availability_afternoon=>false,
+  :availability_evening=>false,
+}
 ```
 
 ### Example Response
