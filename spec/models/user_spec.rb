@@ -176,7 +176,7 @@ RSpec.describe User, type: :model do
       end
 
       context "when the user doesn't have a follower (friend)" do
-        it "returns an empty array" do
+        it 'returns an empty array' do
           expected = user2.friends_at_same_gym(yelp_gym_id)
 
           expect(expected).to be_empty
