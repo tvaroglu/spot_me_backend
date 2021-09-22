@@ -2,9 +2,73 @@
 
 HTTP Verb | Endpoint                   | Description                | Link
 ----------|----------------------------|----------------------------|---------------------------
+GET       | `/users/find?google_id={google_id}`         | Retrieve a user by their Google ID.         | [Link](#find-user)
 GET       | `/users/{user_id}`         | Get a single user.         | [Link](#get-user)
 POST      | `/users`                   | Create a new user.         | [Link](#create-new-user)
 PATCH     | `/users/{user_id}`         | Update an existing user.   | [Link](#update-user)
+
+---
+
+## Find User
+
+Returns a user based on their Google id to facilitate OAuth.
+
+```
+GET /users/find?google_id={google_id}
+```
+
+### Parameters
+
+Name       | Data Type    | In    | Required/Optional | Description
+-----------|--------------|-------|-------------------|------------
+`google_id`  | Integer      | Path  | Required          | The Google ID of the user.
+
+### Example Request
+
+```
+GET https://spotme-app-api.herokuapp.com/api/v1/users/find?google_id=1
+```
+
+### Example Response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  :data=>{
+    :id=>"4965",
+    :type=>"user",
+    :attributes=>{
+      :email=>"ron_hermiston@schinner.net",
+      :google_id=>"123456789102345678910",
+      :google_image_url=>
+        "https://robohash.org/doloribusutmagni.png?size=300x300&set=set1",
+      :zip_code=>"55919",
+      :summary=>"The secret to humor is surprise.",
+      :goal=>4,
+      :availability_morning=>false,
+      :availability_afternoon=>true,
+      :availability_evening=>true,
+      :full_name=>"Alvaro Stanton"
+    }
+  }
+}
+```
+
+### Resource Not Found
+
+```
+Status: 404 Not Found
+```
+
+```
+{
+  :message=>"your query could not be completed",
+  :errors=>["Couldn't find User"]
+}
+```
 
 ---
 

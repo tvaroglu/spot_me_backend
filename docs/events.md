@@ -4,6 +4,7 @@ HTTP Verb | Endpoint                   | Description                | Link
 ----------|----------------------------|----------------------------|---------------------------
 GET       | `/users/{user_id}/events` | Get a user's events.     | [Link](#get-user-events)
 POST       | `/users/{user_id}/gym_memberships/{gym_membership_id}/events` | Create a new event.     | [Link](#create-new-event)
+DELETE       | `/users/{user_id}/gym_memberships/{gym_membership_id}/events/{event_id}` | Delete an  existing event.     | [Link](#delete-existing-event)
 
 
 ---
@@ -177,5 +178,75 @@ Status: 404 Not Found
 ```
 {:message=>"your query could not be completed",
   :errors=>["Couldn't find Gym with 'id'=1432"]
+}
+```
+
+---
+
+## Delete Existing Event
+
+Delete an existing event.
+
+```
+DELETE /users/{user_id}/gym_memberships/{gym_membership_id}/events/{event_id}
+```
+
+### Parameters
+
+Name       | Data Type    | In    | Required/Optional | Description
+-----------|--------------|-------|-------------------|------------
+`user_id` | String | Path | Required | The id of the user.
+`gym_membership` | String | Path | Required | The id of the gym.
+`event_id` | String | Path | Required | The id of the event.
+
+### Example Request
+
+```
+DELETE https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships/1/events/1
+```
+
+### Example Response
+
+```
+Status: 204 No Content
+
+```
+
+### User Not Found
+
+```
+Status: 404 Not Found
+```
+
+```
+{
+  :message=>"your query could not be completed",
+  :errors=>["Couldn't find User with 'id'=4879"]
+}
+```
+
+### Gym Not Found
+
+```
+Status: 404 Not Found
+```
+
+```
+{
+  :message=>"your query could not be completed",
+  :errors=>["Couldn't find GymMembership with 'id'=1084"]
+}
+```
+
+### Event Not Found
+
+```
+Status: 404 Not Found
+```
+
+```
+{
+  :message=>"your query could not be completed",
+  :errors=>["Couldn't find Event with 'id'=420"]
 }
 ```

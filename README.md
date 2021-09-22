@@ -11,7 +11,7 @@
 
 # [SpotMe](https://spotme-app.herokuapp.com/) (BE)
 
-This is the back-end architecture of the Spot-Me application, which exposes resources for the fitness application front end by consuming the Google OAuth and Yelp APIs, allowing users to perform the functions described within the application. Google OAuth allows the app to authorize users and retrieve data, such as their name, email address, Google ID, Google image URL, and zip code. Yelp allows the application users to search for specific gyms within an input location (city, state, and/or zip code) based on a predefined radius.
+This is the back-end architecture of the Spot-Me application, which exposes resources for the fitness application front end by consuming the Google OAuth and Yelp APIs, allowing users to perform the functions described within the application. Google OAuth allows the app to authorize users and retrieve data, such as their name, email address, Google ID, Google image URL, and zip code. Yelp allows the application users to search for specific gyms within an input location (zip code) based on a predefined radius.
 
 #### SpotMe allows users to:<br>
 ⭐Search for gyms in their local area<br>
@@ -123,6 +123,7 @@ The following table presents each API endpoint and its associated documentation
 Endpoint                   | Docs                                     | Example
 ---------------------------|------------------------------------------|--------
 **Users**                  | [docs](/docs/users.md)
+Find                   | [docs](/docs/users.md#find-user)          | [example](https://spotme-app-api.herokuapp.com/api/v1/users/find?google_id=1)
 Get User                   | [docs](/docs/users.md#get-user)          | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1)
 Create New User            | [docs](/docs/users.md#create-new-user)   |
 Update User                | [docs](/docs/users.md#update-user)       |
@@ -132,9 +133,10 @@ Create New Friendship      | [docs](/docs/friendships.md#create-new-friendship)
 Delete Friendship          | [docs](/docs/friendships.md#delete-friendship)
 **Events**                 | [docs](/docs/events.md)
 Get User's Events          | [docs](/docs/events.md#get-user-events)  | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/events)
-Get User New Event         | *pending* | *pending*
 Create User New Event      | [docs](/docs/events#create-new-event.md) |
+Delete Existing Event      | [docs](/docs/events#delete-existing-event.md) |
 **Gym Members**            | [docs](/docs/gym_memberships.md)
+Get Users at Gym | [docs](/docs/gym_memberships.md#get-users-at-gym) | [TODO]
 Get User's Gym Memberships | [docs](/docs/gym_memberships.md#get-users-gym-memberships)
 Create Gym Membership      | [docs](/docs/gym_memberships.md#create-gym-membership)
 Delete Gym Membership      | [docs](/docs/gym_memberships.md#delete-gym-membership)
