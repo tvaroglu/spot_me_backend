@@ -2,7 +2,7 @@
 
 HTTP Verb | Endpoint                   | Description                | Link
 ----------|----------------------------|----------------------------|---------------------------
-GET       | `/users/find?google_id={google_id}`         | Retrieve a user by their Google ID.         | [Link](#find-user)
+GET       | `/users/find`         | Retrieve a user by their Google ID.         | [Link](#find-user)
 GET       | `/users/{user_id}`         | Get a single user.         | [Link](#get-user)
 POST      | `/users`                   | Create a new user.         | [Link](#create-new-user)
 PATCH     | `/users/{user_id}`         | Update an existing user.   | [Link](#update-user)
@@ -14,14 +14,14 @@ PATCH     | `/users/{user_id}`         | Update an existing user.   | [Link](#up
 Returns a user based on their Google id to facilitate OAuth.
 
 ```
-GET /users/find?google_id={google_id}
+GET /users/find
 ```
 
 ### Parameters
 
 Name       | Data Type    | In    | Required/Optional | Description
 -----------|--------------|-------|-------------------|------------
-`google_id`  | Integer      | Path  | Required          | The Google ID of the user.
+`google_id`  | Integer      | Query Parameters  | Required          | The Google ID of the user.
 
 ### Example Request
 

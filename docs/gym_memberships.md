@@ -2,7 +2,7 @@
 
 HTTP Verb | Endpoint                   | Description                | Link
 ----------|----------------------------|----------------------------|---------------------------
-GET       | `/users/{user_id}/gym_members?yelp_gym_id={yelp_gym_id}` | Get users that belong to the same gym.     | [Link](#get-users-at-same-gym)
+GET       | `/users/{user_id}/gym_members` | Get users that belong to the same gym.     | [Link](#get-users-at-same-gym)
 GET       | `/users/{user_id}/gym_memberships` | Get a user's gym memberships.     | [Link](#get-users-gym-memberships)
 POST      | `/users/{user_id}/gym_memberships` | Create gym membership.     | [Link](#create-gym-membership)
 DELETE    | `/users/{user_id}/gym_memberships/{gym_membership_id}` | Remove a gym membership from a user.     | [Link](#delete-gym-membership)
@@ -14,7 +14,7 @@ DELETE    | `/users/{user_id}/gym_memberships/{gym_membership_id}` | Remove a gy
 Returns all users that belong to the same gym that the user is not already friends with.
 
 ```
-GET /users/{user_id}/gym_members?yelp_gym_id={yelp_gym_id}
+GET /users/{user_id}/gym_members
 ```
 
 
@@ -23,7 +23,7 @@ GET /users/{user_id}/gym_members?yelp_gym_id={yelp_gym_id}
 Name       | Data Type    | In    | Required/Optional | Description
 -----------|--------------|-------|-------------------|------------
 `user_id`  | Integer      | Path  | Required          | The ID of the user.
-`yelp_gym_id`  | String      | Path  | Required          | The Yelp gym ID of the gym.
+`yelp_gym_id`  | String      | Query Parameters  | Required          | The Yelp gym ID of the gym.
 
 ### Example Request
 

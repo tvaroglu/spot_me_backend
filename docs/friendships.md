@@ -188,7 +188,7 @@
   Name       | Data Type    | In    | Required/Optional | Description
   -----------|--------------|-------|-------------------|------------
   `user_id` | String | Path | Required | The id of the user record.
-  `friendship_id` | String | Path | Required | The id of the friend.
+  `friendship_id` | String | Path | Required | The id of the friendship.
 
 ### Example Request
 
@@ -216,7 +216,7 @@
   }
   ```
 
-### Friend Not Found
+### Friend User Not Found
 
   ```
   Status: 404 Not Found

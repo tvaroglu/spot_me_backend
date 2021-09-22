@@ -196,7 +196,7 @@ DELETE /users/{user_id}/gym_memberships/{gym_membership_id}/events/{event_id}
 Name       | Data Type    | In    | Required/Optional | Description
 -----------|--------------|-------|-------------------|------------
 `user_id` | String | Path | Required | The id of the user.
-`gym_membership` | String | Path | Required | The id of the gym.
+`gym_membership` | String | Path | Required | The id of the gym membership.
 `event_id` | String | Path | Required | The id of the event.
 
 ### Example Request
