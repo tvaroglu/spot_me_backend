@@ -35,7 +35,6 @@ describe 'GymMemberships::Users API', type: :request do
 
         it 'returns the users that are members of the given gym', :aggregate_failures do
           expect(json).not_to be_empty
-          require "pry"; binding.pry
           expect(json[:meta][:gym_member_count]).to eq(4)
           expect(json_data.size).to eq(4)
 
