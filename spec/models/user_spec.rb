@@ -3,19 +3,19 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   describe 'relationships' do
     it 'has many followed users' do
-      should have_many(:followed_users).with_foreign_key(:follower_id)
-                                       .class_name('Friendship')
-                                       .dependent(:destroy)
-                                       .inverse_of(:follower)
+      expect(subject).to have_many(:followed_users).with_foreign_key(:follower_id)
+                                                   .class_name('Friendship')
+                                                   .dependent(:destroy)
+                                                   .inverse_of(:follower)
     end
 
     it { should have_many(:followees).through(:followed_users) }
 
     it 'has many following users' do
-      should have_many(:following_users).with_foreign_key(:followee_id)
-                                        .class_name('Friendship')
-                                        .dependent(:destroy)
-                                        .inverse_of(:followee)
+      expect(subject).to have_many(:following_users).with_foreign_key(:followee_id)
+                                                    .class_name('Friendship')
+                                                    .dependent(:destroy)
+                                                    .inverse_of(:followee)
     end
 
     it { should have_many(:followers).through(:following_users) }
@@ -36,6 +36,7 @@ RSpec.describe User, type: :model do
     it { should validate_numericality_of(:zip_code) }
     it { should validate_presence_of(:summary) }
     it { should validate_presence_of(:goal) }
+    it { should define_enum_for(:goal).with_values(['Gain Muscle', 'Lose Weight', 'Maintain Weight', 'Increase Flexibility', 'Increase Stamina']) }
     it { should validate_presence_of(:full_name) }
   end
 
@@ -121,7 +122,7 @@ RSpec.describe User, type: :model do
       expect(user.google_image_url).to be_a String
       expect(user.zip_code).to be_a String
       expect(user.summary).to be_a String
-      expect(user.goal).to be_an Integer
+      expect(user.goal).to be_a String
       expect(user.availability_morning).to be_in([true, false])
       expect(user.availability_afternoon).to be_in([true, false])
       expect(user.availability_evening).to be_in([true, false])

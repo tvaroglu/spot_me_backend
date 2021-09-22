@@ -15,12 +15,16 @@ class User < ApplicationRecord
   validates :google_id, presence: true, uniqueness: true
   validates :google_image_url, presence: true, uniqueness: true
   validates :zip_code, presence: true, numericality: true
+
   validates :summary, presence: true
   validates :goal, presence: true
   validates :availability_morning, inclusion: { in: [true, false] }
   validates :availability_afternoon, inclusion: { in: [true, false] }
   validates :availability_evening, inclusion: { in: [true, false] }
   validates :full_name, presence: true
+
+  enum goal: { 'Gain Muscle' => 0, 'Lose Weight' => 1, 'Maintain Weight' => 2,
+               'Increase Flexibility' => 3, 'Increase Stamina' => 4 }
 
   def upcoming_events
     events.where('date_time >= ?', Time.zone.now)

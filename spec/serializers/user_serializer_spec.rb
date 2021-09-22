@@ -45,7 +45,7 @@ describe 'UserSerializer', type: :serializer do
           expect(user_attributes[:summary]).to be_a String
 
           expect(user_attributes).to have_key(:goal)
-          expect(user_attributes[:goal]).to be_an Integer
+          expect(user_attributes[:goal]).to be_a String
 
           expect(user_attributes).to have_key(:availability_morning)
           expect(user_attributes[:availability_morning]).to be_in([true, false])
@@ -104,7 +104,7 @@ describe 'UserSerializer', type: :serializer do
             expect(user_data[:attributes][:summary]).to be_a String
 
             expect(user_data[:attributes]).to have_key(:goal)
-            expect(user_data[:attributes][:goal]).to be_an Integer
+            expect(user_data[:attributes][:goal]).to be_a String
 
             expect(user_data[:attributes]).to have_key(:availability_morning)
             expect(user_data[:attributes][:availability_morning]).to be_in([true, false])

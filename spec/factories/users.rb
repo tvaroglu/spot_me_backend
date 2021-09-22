@@ -5,7 +5,7 @@ FactoryBot.define do
     google_image_url { Faker::Avatar.image }
     zip_code { Faker::Address.zip_code.first(5) }
     summary { Faker::GreekPhilosophers.quote }
-    goal { rand(0..5) }
+    goal { ['Gain Muscle', 'Lose Weight', 'Maintain Weight', 'Increase Flexibility', 'Increase Stamina'].sample }
     availability_morning { [true, false].sample }
     availability_afternoon { [true, false].sample }
     availability_evening { [true, false].sample }
