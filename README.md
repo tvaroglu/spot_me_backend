@@ -49,14 +49,14 @@ This is the back-end architecture of the Spot-Me application, which exposes reso
 
   |Development|Development|Testing|Deployment
   |--- |--- |--- |--- |
-  |[Ruby 2.7.2](https://www.ruby-lang.org/en/downloads/)|[Bootstrap](https://rubygems.org/gems/bootstrap/versions/4.0.0)|[RSpec for Rails](https://github.com/rspec/rspec-rails)|[Heroku](http://virtual-watch-party.herokuapp.com)|
+  |[Ruby 2.7.2](https://www.ruby-lang.org/en/downloads/)|[Atom](https://atom.io/)|[RSpec for Rails](https://github.com/rspec/rspec-rails)|[Heroku](http://virtual-watch-party.herokuapp.com)|
   |[Rails 5.2.6](https://rubygems.org/gems/rails/versions/5.2.6)|[GitHub](https://desktop.github.com/)|[Webmock](https://github.com/bblimke/webmock)|[TravisCI](https://travis-ci.org/)|
-  |[Pry](https://rubygems.org/gems/pry/versions/0.10.3)|[Git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)|[SimpleCov](https://rubygems.org/gems/simplecov/versions/0.12.0)|
-  |[PostgresQL](https://www.postgresql.org/)|[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)||
- |[OmniAuth Google OAuth2](https://github.com/zquestz/omniauth-google-oauth2)|[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)|
- |[Postico](https://eggerapps.at/postico/)|[Rubocop](https://rubygems.org/gems/rubocop/versions/0.39.0)|
+  |[Pry](https://rubygems.org/gems/pry/versions/0.10.3)|[Git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)|[VCR](https://github.com/vcr/vcr)|
+  |[PostgresQL](https://www.postgresql.org/)|[HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)|[SimpleCov](https://rubygems.org/gems/simplecov/versions/0.12.0)|
+ |[Postico](https://eggerapps.at/postico/)|[CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)|
+ |[OmniAuth Google OAuth2](https://github.com/zquestz/omniauth-google-oauth2)|[Rubocop](https://rubygems.org/gems/rubocop/versions/0.39.0)|
  |[Faraday](https://github.com/lostisland/faraday)|[FactoryBot](https://github.com/thoughtbot/factory_bot)|
- |[Figaro](https://github.com/laserlemon/figaro)|[Atom](https://atom.io/)|
+ |[Figaro](https://github.com/laserlemon/figaro)||
  |[Postman](https://www.postman.com/product/rest-client/)|
 
 
@@ -102,7 +102,7 @@ In addition to the base project requirements, some extra explorations and extens
 
 ## Database Schema
 
-![schema](https://user-images.githubusercontent.com/58891447/133915612-26cef18e-d9a0-488f-a05f-d2f842ed3d67.png)
+![schema](https://user-images.githubusercontent.com/58891447/134279349-099867ba-43ba-456c-b394-fd1b78efde5d.png)
 
 ## Endpoints
 
@@ -123,7 +123,7 @@ The following table presents each API endpoint and its associated documentation
 Endpoint                   | Docs                                     | Example
 ---------------------------|------------------------------------------|--------
 **Users**                  | [docs](/docs/users.md)
-Find                   | [docs](/docs/users.md#find-user)          | [example](https://spotme-app-api.herokuapp.com/api/v1/users/find?google_id=1)
+Find                   | [docs](/docs/users.md#find-user)          | [example](https://spotme-app-api.herokuapp.com/api/v1/users/find?google_id=atcsd36zl1b150p2m38wp)
 Get User                   | [docs](/docs/users.md#get-user)          | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1)
 Create New User            | [docs](/docs/users.md#create-new-user)   |
 Update User                | [docs](/docs/users.md#update-user)       |
@@ -136,7 +136,7 @@ Get User's Events          | [docs](/docs/events.md#get-user-events)  | [example
 Create User New Event      | [docs](/docs/events#create-new-event.md) |
 Delete Existing Event      | [docs](/docs/events#delete-existing-event.md) |
 **Gym Members**            | [docs](/docs/gym_memberships.md)
-Get Users at Gym | [docs](/docs/gym_memberships.md#get-users-at-gym) | [TODO]
+Get Users at Gym | [docs](/docs/gym_memberships.md#get-users-at-gym) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_members?yelp_gym_id=lex65fkcol5gfq89rymmd2)
 Get User's Gym Memberships | [docs](/docs/gym_memberships.md#get-users-gym-memberships)
 Create Gym Membership      | [docs](/docs/gym_memberships.md#create-gym-membership)
 Delete Gym Membership      | [docs](/docs/gym_memberships.md#delete-gym-membership)

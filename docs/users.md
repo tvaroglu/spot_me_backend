@@ -26,7 +26,7 @@ Name       | Data Type    | In    | Required/Optional | Description
 ### Example Request
 
 ```
-GET https://spotme-app-api.herokuapp.com/api/v1/users/find?google_id=1
+GET https://spotme-app-api.herokuapp.com/api/v1/users/find?google_id=atcsd36zl1b150p2m38wp
 ```
 
 ### Example Response
