@@ -172,3 +172,59 @@
     :errors=>["Couldn't find User with 'id'=40"]
   }
   ```
+
+---
+
+## Delete Friendship
+
+  Remove an existing friendship.
+
+  ```
+  DELETE /users/{user_id}/friendships/{friendship_id}
+  ```
+
+### Parameters
+
+  Name       | Data Type    | In    | Required/Optional | Description
+  -----------|--------------|-------|-------------------|------------
+  `user_id` | String | Path | Required | The id of the user record.
+  `friendship_id` | String | Path | Required | The id of the friendship.
+
+### Example Request
+
+  ```
+  DELETE https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships/1
+  ```
+
+### Example Response
+
+  ```
+  Status: 204 No Content
+
+  ```
+
+### User Not Found
+
+  ```
+  Status: 404 Not Found
+  ```
+
+  ```
+  {
+    :message=>"your query could not be completed",
+    :errors=>["Couldn't find User with 'id'=4879"]
+  }
+  ```
+
+### Friend User Not Found
+
+  ```
+  Status: 404 Not Found
+  ```
+
+  ```
+  {
+    :message=>"your query could not be completed",
+    :errors=>["Couldn't find User with 'id'=1084"]
+  }
+  ```
