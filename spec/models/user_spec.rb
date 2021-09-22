@@ -3,19 +3,19 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   describe 'relationships' do
     it 'has many followed users' do
-      should have_many(:followed_users).with_foreign_key(:follower_id)
-                                       .class_name('Friendship')
-                                       .dependent(:destroy)
-                                       .inverse_of(:follower)
+      expect(subject).to have_many(:followed_users).with_foreign_key(:follower_id)
+                                                   .class_name('Friendship')
+                                                   .dependent(:destroy)
+                                                   .inverse_of(:follower)
     end
 
     it { should have_many(:followees).through(:followed_users) }
 
     it 'has many following users' do
-      should have_many(:following_users).with_foreign_key(:followee_id)
-                                        .class_name('Friendship')
-                                        .dependent(:destroy)
-                                        .inverse_of(:followee)
+      expect(subject).to have_many(:following_users).with_foreign_key(:followee_id)
+                                                    .class_name('Friendship')
+                                                    .dependent(:destroy)
+                                                    .inverse_of(:followee)
     end
 
     it { should have_many(:followers).through(:following_users) }

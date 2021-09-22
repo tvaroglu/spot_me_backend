@@ -9,6 +9,7 @@ class Api::V1::Users::EventsController < ApplicationController
 
     options = {}
     options[:include] = [:user]
-    render json: EventSerializer.new(events, options).serializable_hash, status: :ok
+    render json: EventSerializer.new(events, options).serializable_hash,
+           status: :ok
   end
 end

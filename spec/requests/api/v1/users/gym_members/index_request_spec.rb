@@ -54,7 +54,7 @@ describe 'Users::GymMembers API', type: :request do
         expect(json[:message]).to eq('your query could not be completed')
 
         expect(json[:errors]).to be_an Array
-        expect(json[:errors]).to eq(['must provide yelp_gym_id to retrieve current users at this gym'])
+        expect(json[:errors]).to eq(['must provide yelp_gym_id to retrieve members at this gym'])
       end
 
       include_examples 'status code 404'

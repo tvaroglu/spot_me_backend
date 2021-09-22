@@ -31,11 +31,13 @@ class User < ApplicationRecord
   end
 
   def non_friends_at_same_gym(yelp_gym_id)
-    User.users_at_same_gym(yelp_gym_id) - friends_at_same_gym(yelp_gym_id) - [self]
+    User.users_at_same_gym(yelp_gym_id) -
+      friends_at_same_gym(yelp_gym_id) -
+      [self]
   end
 
   def self.users_at_same_gym(yelp_gym_id)
     joins(:gym_memberships)
-    .where(gym_memberships: { yelp_gym_id: yelp_gym_id })
+      .where(gym_memberships: { yelp_gym_id: yelp_gym_id })
   end
 end

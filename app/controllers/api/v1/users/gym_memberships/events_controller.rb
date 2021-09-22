@@ -22,7 +22,7 @@ class Api::V1::Users::GymMemberships::EventsController < ApplicationController
     GymMembership.find(params[:gym_membership_id])
     event = Event.find(params[:id])
 
-    event.destroy! if event
+    event.destroy!
   end
 
   private
