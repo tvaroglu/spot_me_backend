@@ -120,25 +120,27 @@ The following table presents each API endpoint and its associated documentation
 - For `GET` requests, an example link is provided for demonstration purposes  
 <!-- - Unless otherwise noted, the results are sorted by name in case-sensitive alphabetical order (i.e. A-Z then a-z). -->
 
-Endpoint | Docs | Example
----------|------|--------
-**Users** | [docs](/docs/users.md)
-Get Existing User | [docs](/docs/users.md#get-one-user) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1)
-Create New User | [docs](/docs/users.md#create-new-user) |
-Update Existing User | [docs](/docs/users.md#update-existing-user) |
-Get User's Gyms | [docs](/docs/users.md#get-user-gyms) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships)
-Get User's Friends | [docs](/docs/users.md#get-user-friends) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships)
-Add Friend | *pending* |
-Remove Friend | *pending* |
-**Events** | [docs](/docs/events.md)
-Get User's Events | [docs](/docs/events.md#get-user-events) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/events)
-Get User New Event | *pending* | *pending*
-Create User New Event | [docs](/docs/events#create-new-event.md) |
-**Gyms** | [docs](/docs/gyms.md)
-Get Gyms Near User | *pending* | *pending*
-Get Gym Show Page | *pending* | *pending*
-Add Gym Member | [docs](/docs/gyms#create-new-gym-member.md) |
-Remove Gym Member | [docs](/docs/gyms#remove-existing-gym-member.md) |
+Endpoint                   | Docs                                     | Example
+---------------------------|------------------------------------------|--------
+**Users**                  | [docs](/docs/users.md)
+Get User                   | [docs](/docs/users.md#get-user)          | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1)
+Create New User            | [docs](/docs/users.md#create-new-user)   |
+Update User                | [docs](/docs/users.md#update-user)       |
+**Friendships**            | [docs](/docs/friendships.md)
+Get User's Friends         | [docs](/docs/friendships.md#get-users-friends) | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships)
+Create New Friendship      | [docs](/docs/friendships.md#create-new-friendship)
+Delete Friendship          | [docs](/docs/friendships.md#delete-friendship)
+**Events**                 | [docs](/docs/events.md)
+Get User's Events          | [docs](/docs/events.md#get-user-events)  | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/events)
+Get User New Event         | *pending* | *pending*
+Create User New Event      | [docs](/docs/events#create-new-event.md) |
+**Gym Members**            | [docs](/docs/gym_memberships.md)
+Get User's Gym Memberships | [docs](/docs/gym_memberships.md#get-users-gym-memberships)
+Create Gym Membership      | [docs](/docs/gym_memberships.md#create-gym-membership)
+Delete Gym Membership      | [docs](/docs/gym_memberships.md#delete-gym-membership)
+**Gym Search**             | [docs](/docs/gym_search.md)
+Get Gyms Near User         | *pending* | *pending*
+Get Gym Show Page          | *pending* | *pending*
 
 
 
