@@ -16,7 +16,7 @@ describe 'EventSerializer', type: :serializer do
           expect(event_hash).to have_key(:data)
 
           expect(event_data).to be_a Hash
-          expect(event_data.size).to eq(3)
+          expect(event_data.size).to eq(4)
 
           expect(event_data).to have_key(:id)
           expect(event_data[:id]).to be_a String
@@ -40,6 +40,10 @@ describe 'EventSerializer', type: :serializer do
 
           expect(event_attributes).to have_key(:activity)
           expect(event_attributes[:activity]).to be_a String
+
+          expect(event_data[:relationships][:user][:meta].size).to eq 1
+          expect(event_data[:relationships][:user][:meta]).to have_key(:full_name)
+          expect(event_data[:relationships][:user][:meta][:full_name]).to be_a String
         end
       end
 

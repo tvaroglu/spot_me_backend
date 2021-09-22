@@ -7,6 +7,9 @@ class Api::V1::Users::EventsController < ApplicationController
     # events (e.g. if we decide to add activity log to dashboard)
     events = user.upcoming_events
 
-    render json: EventSerializer.new(events).serializable_hash, status: :ok
+    options = {}
+    options[:include] = [:user]
+    render json: EventSerializer.new(events, options).serializable_hash,
+           status: :ok
   end
 end

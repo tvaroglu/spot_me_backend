@@ -29,4 +29,19 @@ class User < ApplicationRecord
   def upcoming_events
     events.where('date_time >= ?', Time.zone.now)
   end
+
+  def friends_at_same_gym(yelp_gym_id)
+    followees.users_at_same_gym(yelp_gym_id)
+  end
+
+  def non_friends_at_same_gym(yelp_gym_id)
+    User.users_at_same_gym(yelp_gym_id) -
+      friends_at_same_gym(yelp_gym_id) -
+      [self]
+  end
+
+  def self.users_at_same_gym(yelp_gym_id)
+    joins(:gym_memberships)
+      .where(gym_memberships: { yelp_gym_id: yelp_gym_id })
+  end
 end

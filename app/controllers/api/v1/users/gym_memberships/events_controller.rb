@@ -17,6 +17,14 @@ class Api::V1::Users::GymMemberships::EventsController < ApplicationController
     render json: EventSerializer.new(event).serializable_hash, status: :created
   end
 
+  def destroy
+    User.find(params[:user_id])
+    GymMembership.find(params[:gym_membership_id])
+    event = Event.find(params[:id])
+
+    event.destroy!
+  end
+
   private
 
   def event_params
