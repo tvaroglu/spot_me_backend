@@ -3,7 +3,12 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      namespace :gym_memberships do
+        resources :users, only: [:index]
+      end
+
       resources :gym_search, only: [:index, :show]
+
       namespace :users do
         resources :find, only: [:index]
       end
@@ -16,7 +21,6 @@ Rails.application.routes.draw do
           resources :events, only: [:create, :destroy], controller: 'users/gym_memberships/events'
         end
       end
-
     end
   end
 end
