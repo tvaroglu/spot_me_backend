@@ -23,10 +23,10 @@ class User < ApplicationRecord
   validates :availability_evening, inclusion: { in: [true, false] }
   validates :full_name, presence: true
 
-  enum goal: ['Gain Muscle', 'Lose Weight', 'Maintain Weight', 'Increase Flexibility', 'Increase Stamina']
+  enum goal: { 'Gain Muscle' => 0, 'Lose Weight' => 1, 'Maintain Weight' => 2,
+               'Increase Flexibility' => 3, 'Increase Stamina' => 4 }
 
   def upcoming_events
-
     events.where('date_time >= ?', Time.zone.now)
   end
 end
