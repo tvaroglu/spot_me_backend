@@ -5,7 +5,8 @@ class Api::V1::Users::GymMemberships::EventsController < ApplicationController
   def create
     user = User.find(params[:user_id])
     gym_membership = GymMembership.find(params[:gym_membership_id])
-    user.gym_memberships.find(params[:gym_membership_id])
+    user_gym_membership = user.gym_memberships.find_by(yelp_gym_id: gym_membership.yelp_gym_id)
+    return error_message if user_gym_membership.nil?
 
     event = Event.create!(
       user: user,
@@ -29,5 +30,15 @@ class Api::V1::Users::GymMemberships::EventsController < ApplicationController
 
   def event_params
     params.permit(:date_time, :activity)
+  end
+
+  def error_message
+    render(
+      json: {
+        message: 'your query could not be completed',
+        errors: ['user does not belong to this gym']
+      },
+      status: :bad_request
+    )
   end
 end

@@ -109,14 +109,14 @@ describe 'Users::GymMemberships::Events API', type: :request do
         expect(json.size).to eq(2)
 
         message = 'your query could not be completed'
-        error_message = ["Couldn't find GymMembership with 'id'=#{new_gym_membership.id} [WHERE \"gym_memberships\".\"user_id\" = $1]"]
+        error_message = ['user does not belong to this gym']
 
         expect(json[:message]).to eq(message)
         expect(json[:errors]).to be_an Array
         expect(json[:errors]).to eq(error_message)
       end
 
-      include_examples 'status code 404'
+      include_examples 'status code 400'
     end
   end
 end
