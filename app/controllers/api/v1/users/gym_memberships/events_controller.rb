@@ -1,7 +1,6 @@
 # See spec/concerns/response.rb for #json_response and #json_error_response
 # helpers.
 class Api::V1::Users::GymMemberships::EventsController < ApplicationController
-  # TODO: This method should be refactored to slim it up.
   def create
     user = User.find(params[:user_id])
     gym_membership = GymMembership.find(params[:gym_membership_id])
