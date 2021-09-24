@@ -9,7 +9,7 @@
 [![Ruby Style Guide][rubocop-badge]][rubocop-url]
 ![Build][build-badge]
 
-# [SpotMe](https://spotme-app.herokuapp.com/) (BE)
+# [SpotMe](https://spotme-app.herokuapp.com/)
 
 This is the back-end architecture of the Spot-Me application, which exposes resources for the fitness application front end by consuming the Google OAuth and Yelp APIs, allowing users to perform the functions described within the application. Google OAuth allows the app to authorize users and retrieve data, such as their name, email address, Google ID, Google image URL, and zip code. Yelp allows the application users to search for specific gyms within an input location (zip code) based on a predefined radius.
 
@@ -102,7 +102,7 @@ In addition to the base project requirements, some extra explorations and extens
 
 ## Database Schema
 
-![schema](https://user-images.githubusercontent.com/58891447/134279349-099867ba-43ba-456c-b394-fd1b78efde5d.png)
+![schema](https://user-images.githubusercontent.com/58891447/134605631-b3d29050-7a44-46d4-8676-a746f7f258e1.jpeg)
 
 ## Endpoints
 
@@ -141,8 +141,8 @@ Get User's Gym Memberships | [docs](/docs/gym_memberships.md#get-users-gym-membe
 Create Gym Membership      | [docs](/docs/gym_memberships.md#create-gym-membership)
 Delete Gym Membership      | [docs](/docs/gym_memberships.md#delete-gym-membership)
 **Gym Search**             | [docs](/docs/gym_search.md)
-Get Gyms Near User         | *pending* | *pending*
-Get Gym Show Page          | *pending* | *pending*
+Get Gyms Near User         | [docs](/docs/gym_search#find-gyms.md) | [example](https://spotme-app-api.herokuapp.com/api/v1/gym_search?zip_code=80302)
+Get Gym Show Page          | [docs](/docs/gym_search#view-gym.md) | [example](https://spotme-app-api.herokuapp.com/api/v1/gym_search/c4bIf9XLgG1-CGuPl_QgWw)
 
 
 
