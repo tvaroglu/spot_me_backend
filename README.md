@@ -133,8 +133,8 @@ Delete Friendship          | [docs](/docs/friendships.md#delete-friendship)
 **Events**                 | [Docs](/docs/events.md) | Examples
 ---------------------------|------------------------------------------|--------
 Get User's Events          | [docs](/docs/events.md#get-user-events)  | [example](https://spotme-app-api.herokuapp.com/api/v1/users/1/events)
-Create User New Event      | [docs](/docs/events#create-new-event.md) |
-Delete Existing Event      | [docs](/docs/events#delete-existing-event.md) |
+Create User New Event      | [docs](/docs/events.md#create-new-event) |
+Delete Existing Event      | [docs](/docs/events.md#delete-existing-event) |
 
 **Gym Members**            | [Docs](/docs/gym_memberships.md) | Examples
 ---------------------------|------------------------------------------|--------
@@ -146,8 +146,8 @@ Delete Gym Membership      | [docs](/docs/gym_memberships.md#delete-gym-membersh
 
 **Gym Search**             | [Docs](/docs/gym_search.md) | Examples
 ---------------------------|------------------------------------------|--------
-Get Gyms Near User         | [docs](/docs/gym_search.md#find-gyms.md) | [example](https://spotme-app-api.herokuapp.com/api/v1/gym_search?zip_code=80302)
-Get Gym Show Page          | [docs](/docs/gym_search.md#view-gym.md) | [example](https://spotme-app-api.herokuapp.com/api/v1/gym_search/c4bIf9XLgG1-CGuPl_QgWw)
+Get Gyms Near User         | [docs](/docs/gym_search.md#find-gyms) | [example](https://spotme-app-api.herokuapp.com/api/v1/gym_search?zip_code=80302)
+Get Gym Show Page          | [docs](/docs/gym_search.md#view-gym) | [example](https://spotme-app-api.herokuapp.com/api/v1/gym_search/c4bIf9XLgG1-CGuPl_QgWw)
 
 
 <!-- Top Level Badges and Links -->
