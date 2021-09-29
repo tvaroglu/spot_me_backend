@@ -1,0 +1,48 @@
+version: 2.1
+
+orbs:
+  ruby: circleci/ruby@0.1.2
+  heroku: circleci/heroku@0.0.10
+
+workflows:
+  heroku_deploy:
+    jobs:
+      - build
+      - heroku/deploy-via-git: # Use the pre-configured job, deploy-via-git
+          requires:
+            - build
+          filters:
+            branches:
+              only: main
+          post-steps:
+            - run: heroku run rails db:migrate --app spotme-app-api
+jobs:
+  build:
+    parallelism: 1
+    docker:
+      - image: circleci/ruby:2.7.2
+      - image: circleci/postgres:9.6-alpine
+        environment:
+          POSTGRES_USER: postgres
+          POSTGRES_DB: spot_me_backend_test
+    environment:
+      BUNDLE_PATH: vendor/bundle
+      BUNDLE_JOBS: 3
+      BUNDLE_RETRY: 3
+      PGHOST: 127.0.0.1
+      PGUSER: postgres
+      RAILS_ENV: test
+    executor: ruby/default
+    steps:
+      - checkout
+      - run:
+          name: Which bundler?
+          command: bundle -v
+      - ruby/bundle-install
+      - run: sudo apt install -y postgresql-client || true
+      - run:
+          name: Setup DB
+          command: bundle exec rails db:create db:schema:load --trace
+      - run:
+          name: Run Test Suite
+          command: bundle exec rspec -fd
