@@ -27,33 +27,33 @@ http_interactions:
       Ratelimit-Dailylimit:
       - '5000'
       Ratelimit-Remaining:
-      - '4980'
-      Ratelimit-Resettime:
-      - '2021-09-21T00:00:00+00:00'
-      X-Zipkin-Id:
-      - be9911abdaebde56
-      X-Routing-Service:
-      - routing-main--useast1-7bbf457c88-sxplj; site=public_api_v3
-      X-B3-Sampled:
-      - '0'
+      - '4929'
       Server:
       - envoy
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-lbcmn; site=public_api_v3
+      X-B3-Sampled:
+      - '0'
+      X-Zipkin-Id:
+      - b7aa63c51e23f5d4
+      Ratelimit-Resettime:
+      - '2021-09-30T00:00:00+00:00'
       X-Cloudmap:
-      - routing_useast1
+      - routing_uswest2
       X-Proxied:
-      - 10-65-73-48-useast1aprod
+      - 10-69-113-185-uswest2aprod
       X-Extlb:
-      - 10-65-73-48-useast1aprod
+      - 10-69-113-185-uswest2aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 20 Sep 2021 14:25:31 GMT
+      - Wed, 29 Sep 2021 23:27:49 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-pwk4950-PWK
+      - cache-den8253-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -66,7 +66,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"id": "HxK5-XEhjl0x0RR9PAgBVQ", "alias": "ymca-of-south-collier-marco-ymca-marco-island",
         "name": "YMCA of South Collier-Marco YMCA", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/f3IWcztQgl8-9j1z8BsLdg/o.jpg",
-        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/ymca-of-south-collier-marco-ymca-marco-island?adjust_creative=U3I_hTsM_rclzkCXyDmD1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=U3I_hTsM_rclzkCXyDmD1w",
+        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/ymca-of-south-collier-marco-ymca-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
         "phone": "+12393949622", "display_phone": "(239) 394-9622", "review_count":
         10, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "childcare",
         "title": "Child Care & Day Care"}, {"alias": "healthtrainers", "title": "Trainers"}],
@@ -84,5 +84,5 @@ http_interactions:
         "0600", "end": "2000", "day": 5}, {"is_overnight": false, "start": "0600",
         "end": "2000", "day": 6}], "hours_type": "REGULAR", "is_open_now": true}],
         "transactions": []}'
-  recorded_at: Mon, 20 Sep 2021 14:25:31 GMT
+  recorded_at: Wed, 29 Sep 2021 23:27:49 GMT
 recorded_with: VCR 6.0.0
