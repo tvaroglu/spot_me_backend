@@ -35,6 +35,15 @@ class User < ApplicationRecord
     (hosted + invited).uniq
   end
 
+  def past_events(invitee_id = nil)
+    hosted = events.where('date_time < ?', Time.zone.now)
+    return hosted if invitee_id.nil?
+
+    invited = Event.where('date_time < ?', Time.zone.now)
+                   .where(user_id: invitee_id)
+    (hosted + invited).uniq
+  end
+
   def friends_at_same_gym(yelp_gym_id)
     followees.users_at_same_gym(yelp_gym_id)
   end
