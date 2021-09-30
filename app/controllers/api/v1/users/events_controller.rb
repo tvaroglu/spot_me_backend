@@ -3,9 +3,11 @@
 class Api::V1::Users::EventsController < ApplicationController
   def index
     user = User.find(params[:user_id])
-    # TODO: add flexibility based on query params to retrieve upcoming vs past
-    # events (e.g. if we decide to add activity log to dashboard)
-    events = user.upcoming_events(params[:user_id])
+    events = if params[:time_frame] == 'past'
+               user.past_events(params[:user_id])
+             else
+               user.upcoming_events(params[:user_id])
+             end
 
     options = {}
     options[:include] = [:user]

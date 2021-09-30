@@ -15,7 +15,10 @@ describe 'Users::Events API', type: :request do
     let(:no_event_user_id) { user9.id }
     let(:bad_user_id) { User.last.id + 1 }
 
-    context 'when the user has events they are hosting' do
+    let!(:gym_id) { user1.gym_memberships.first.id }
+    let!(:past_event) { create(:event, date_time: DateTime.yesterday, user_id: user2.id, gym_membership_id: gym_id) }
+
+    context 'when the user has upcoming events they are hosting' do
       before { get "/api/v1/users/#{user_id}/events" }
 
       it 'returns the users events and full name', :aggregate_failures do
@@ -33,7 +36,7 @@ describe 'Users::Events API', type: :request do
       include_examples 'status code 200'
     end
 
-    context 'when the user has events they are invited to' do
+    context 'when the user has upcoming events they are invited to' do
       before { get "/api/v1/users/#{invited_user_id}/events" }
 
       it 'returns the users events and full name', :aggregate_failures do
@@ -42,6 +45,42 @@ describe 'Users::Events API', type: :request do
         expect(json_data.size).to eq(2)
         expect(json_data.first[:id]).to eq(event1_1a_2.id.to_s)
         expect(json_data.last[:id]).to eq(event1_2a_2.id.to_s)
+
+        meta = json_data.first[:relationships][:user][:meta]
+
+        expect(meta.size).to eq 1
+        expect(meta[:full_name]).to be_a String
+      end
+
+      include_examples 'status code 200'
+    end
+
+    context 'when the user has events they had hosted in the past' do
+      before { get "/api/v1/users/#{user_id}/events?time_frame=past" }
+
+      it 'returns the users events and full name', :aggregate_failures do
+        expect(json).not_to be_empty
+
+        expect(json_data.size).to eq(1)
+        expect(json_data.first[:id]).to eq(past_event.id.to_s)
+
+        meta = json_data.first[:relationships][:user][:meta]
+
+        expect(meta.size).to eq 1
+        expect(meta[:full_name]).to be_a String
+      end
+
+      include_examples 'status code 200'
+    end
+
+    context 'when the user has events they were invited to in the past' do
+      before { get "/api/v1/users/#{invited_user_id}/events?time_frame=past" }
+
+      it 'returns the users events and full name', :aggregate_failures do
+        expect(json).not_to be_empty
+
+        expect(json_data.size).to eq(1)
+        expect(json_data.first[:id]).to eq(past_event.id.to_s)
 
         meta = json_data.first[:relationships][:user][:meta]
 
