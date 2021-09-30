@@ -13,7 +13,6 @@ class Api::V1::Users::GymMemberships::EventsController < ApplicationController
       date_time: event_params[:date_time],
       activity: event_params[:activity]
     )
-
     render json: EventSerializer.new(event).serializable_hash, status: :created
   end
 

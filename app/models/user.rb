@@ -28,7 +28,7 @@ class User < ApplicationRecord
 
   def upcoming_events(invitee_id = nil)
     hosted = events.where('date_time >= ?', Time.zone.now)
-    return hosted if invitee_id == nil
+    return hosted if invitee_id.nil?
 
     invited = Event.where('date_time >= ?', Time.zone.now)
                    .where(user_id: invitee_id)

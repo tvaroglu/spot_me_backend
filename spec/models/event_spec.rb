@@ -29,8 +29,7 @@ RSpec.describe Event, type: :model do
     describe '#host' do
       let(:user) { user_with_gym_membership }
       let(:gym_id) { user.gym_memberships.first.id }
-
-      subject(:event) { create(:event, user: user, gym_membership_id: gym_id) }
+      let(:event) { create(:event, user: user, gym_membership_id: gym_id) }
 
       it 'can return the full name of the user hosting the event' do
         expect(event.host).to eq user.full_name
