@@ -7,7 +7,7 @@
 [![Issues][issues-badge]][issues-url]
 [![Ruby Style Guide][rubocop-badge]][rubocop-url]
 ![Build][build-badge]
-<a href="https://github.com/tvaroglu/spot_me_frontend"><img src="https://img.shields.io/static/v1?style=flat-square&label=Spot+Me&message=Front+End+Repo&color=9cf"></a>
+[![SpotMe][front-end-badge]][front-end-url]
 
 # [SpotMe](https://spotme-app.herokuapp.com/)
 
@@ -16,9 +16,9 @@ This is the back-end architecture of the SpotMe application, which exposes resou
 ### SpotMe allows users to:<br>
 &nbsp; &nbsp; 🏋🏽 &nbsp; Search for gyms in their local area 🏋 <br>
 &nbsp; &nbsp; 🏋🏽 &nbsp; Add gyms to their account 🏋 <br>
-&nbsp; &nbsp; 🏋🏽 &nbsp; Search for swole-mates that have a gym(s) in common 🏋 <br>
-&nbsp; &nbsp; 🏋🏽 &nbsp; Add/delete swole-mates as friends 🏋 <br>
-&nbsp; &nbsp; 🏋🏽 &nbsp; Schedule/delete workout sessions with swol-mates 🏋 <br>
+&nbsp; &nbsp; 🏋🏽 &nbsp; Search for SwoleMates that have gyms in common 🏋 <br>
+&nbsp; &nbsp; 🏋🏽 &nbsp; Add/delete SwoleMates as friends 🏋 <br>
+&nbsp; &nbsp; 🏋🏽 &nbsp; Schedule/delete workout sessions with SwoleMates 🏋 <br>
 
 
 ## Contributors
@@ -44,7 +44,7 @@ This is the back-end architecture of the SpotMe application, which exposes resou
 |Development|Development|Testing|Deployment
 |--- |--- |--- |--- |
 |[Ruby 2.7.2](https://www.ruby-lang.org/en/downloads/)|[Atom](https://atom.io/)|[RSpec for Rails](https://github.com/rspec/rspec-rails)|[Heroku](http://virtual-watch-party.herokuapp.com)|
-|[Rails 5.2.6](https://rubygems.org/gems/rails/versions/5.2.6)|[GitHub](https://desktop.github.com/)|[Webmock](https://github.com/bblimke/webmock)|[TravisCI](https://travis-ci.org/)|
+|[Rails 5.2.6](https://rubygems.org/gems/rails/versions/5.2.6)|[GitHub](https://desktop.github.com/)|[Webmock](https://github.com/bblimke/webmock)|[CircleCI](https://circleci.com/)|
 |[Pry](https://rubygems.org/gems/pry/versions/0.10.3)|[Git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)|[VCR](https://github.com/vcr/vcr)|
 |[PostgresQL](https://www.postgresql.org/)|[HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)|[SimpleCov](https://rubygems.org/gems/simplecov/versions/0.12.0)|
 |[Postico](https://eggerapps.at/postico/)|[CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)|
@@ -81,13 +81,13 @@ The project description and base requirements can be found [here][consultancy-ho
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Create instance and class methods on a Rails model that use ActiveRecord methods and helpers<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Write model and feature tests that fully cover data logic and potential user behavior<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Implement a self-referential relationship in ActiveRecord<br>
-&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Utilize Continuous Integration via Travis CI<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Utilize Continuous Integration via CircleCI<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Deploy to Heroku<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Implement a production-quality user interface using Bootstrap or other common CSS styling framework<br>
-&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Implement agile project management by using project boards, participating in daily stand-ups and team retros<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Implement agile project management via Kanban boards, daily stand-ups, and team retros<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Utilize quality workflow practices: small commits, descriptive pull requests, and code reviews<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Organize and refactor code to be more maintainable<br>
-&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Apply RuboCop’s style guide for code quality<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Apply Rubocop’s style guide for code quality<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Write thorough, understandable documentation<br>
 
 <div align="center">
@@ -162,12 +162,14 @@ Get Gym Show Page          | [docs](/docs/gym_search.md#view-gym) | [example](ht
 [stars-url]: https://github.com/tvaroglu/spot_me_backend/stargazers
 [issues-badge]: https://img.shields.io/github/issues/tvaroglu/spot_me_backend.svg?style=flat-square
 [issues-url]: https://github.com/tvaroglu/spot_me_backend/issues
-[build-badge]: https://img.shields.io/travis/tvaroglu/spot_me_backend?style=flat-square
+[build-badge]: https://img.shields.io/circleci/build/github/tvaroglu/spot_me_backend?style=flat-square
+[front-end-badge]: https://img.shields.io/static/v1?style=flat-square&label=SpotMe&message=Front+End+Repo&color=9cf
+[front-end-url]: https://github.com/tvaroglu/spot_me_frontend
 
 <!-- Links -->
 [Repository]: https://github.com/tvaroglu/spot_me_backend
-[postman-url]: https://www.postman.com/
 [consultancy-home]: https://backend.turing.edu/module3/projects/consultancy/
+[postman-url]: https://www.postman.com/
 
 <!-- Images -->
 [github-avatar]: https://avatars.githubusercontent.com/u/79381792?s=100
