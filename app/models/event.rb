@@ -6,4 +6,8 @@ class Event < ApplicationRecord
   validates :gym_membership_id, presence: true, numericality: true
   validates :date_time, presence: true
   validates :activity, presence: true
+
+  def host
+    user.full_name
+  end
 end

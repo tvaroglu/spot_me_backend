@@ -1,11 +1,19 @@
 # See spec/concerns/response.rb for #json_response and #json_error_response
 # helpers.
+
+# TODO: add query parameter for relationship
 class Api::V1::Users::FriendshipsController < ApplicationController
   def index
     user = User.find(params[:user_id])
     friends = if params[:yelp_gym_id]
+                # if params[:relationship] == 'followee'
+                  # user.followees (current user.friends_at_same_gym method call )
+                # elsif params[:relationship] == 'follower'
+                  # user.followers (new method call, pending)
+                # end
                 user.friends_at_same_gym(params[:yelp_gym_id])
               else
+                # follow same conditional flow as above, independent of GymMembership
                 user.followees
               end
 
