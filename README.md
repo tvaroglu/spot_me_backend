@@ -87,7 +87,7 @@ The project description and base requirements can be found [here][consultancy-ho
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Implement agile project management via Kanban boards, daily stand-ups, and team retros<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Utilize quality workflow practices: small commits, descriptive pull requests, and code reviews<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Organize and refactor code to be more maintainable<br>
-&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Apply Rubocop’s style guide for code quality<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Apply RuboCop’s style guide for code quality<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Write thorough, understandable documentation<br>
 
 <div align="center">
