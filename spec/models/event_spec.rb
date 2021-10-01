@@ -40,4 +40,64 @@ RSpec.describe Event, type: :model do
       end
     end
   end
+
+  describe 'class methods' do
+    describe '::upcoming_invited_events and ::upcoming_past_events' do
+      let!(:user1) { user_with_gym_membership }
+      let!(:user2) { user_with_gym_membership }
+      let!(:gym_id) { user1.gym_memberships.first.id }
+
+      context 'when there are upcoming events' do
+        let!(:past_event) { create(:event, date_time: DateTime.yesterday, user_id: user2.id, gym_membership_id: gym_id) }
+        let!(:upcoming_event_1) { create(:event, date_time: DateTime.tomorrow, user_id: user2.id, gym_membership_id: gym_id) }
+        let!(:upcoming_event_2) { create(:event, date_time: DateTime.tomorrow, user_id: user2.id, gym_membership_id: gym_id) }
+        let!(:upcoming_event_3) { create(:event, date_time: DateTime.tomorrow, user_id: user2.id, gym_membership_id: gym_id) }
+
+        it 'returns the upcoming events' do
+          expect(Event.upcoming_events.first).to eq upcoming_event_1
+          expect(Event.upcoming_events.second).to eq upcoming_event_2
+          expect(Event.upcoming_events.third).to eq upcoming_event_3
+
+          expect(Event.upcoming_invited_events(user2).first).to eq upcoming_event_1
+          expect(Event.upcoming_invited_events(user2).second).to eq upcoming_event_2
+          expect(Event.upcoming_invited_events(user2).third).to eq upcoming_event_3
+        end
+
+        it 'returns the past events' do
+          expect(Event.past_events.first).to eq past_event
+
+          expect(Event.past_invited_events(user2).first).to eq past_event
+        end
+      end
+
+      context 'when there are no upcoming events' do
+        let!(:past_event) { create(:event, date_time: DateTime.yesterday, user: user2, gym_membership_id: gym_id) }
+
+        it 'can return an empty array' do
+          expect(Event.upcoming_events).to be_empty
+
+          expect(Event.upcoming_invited_events(user2)).to be_empty
+        end
+      end
+
+      context 'when there are no past events' do
+        let!(:upcoming_event) { create(:event, date_time: DateTime.tomorrow, user: user2, gym_membership_id: gym_id) }
+
+        it 'can return an empty array' do
+          expect(Event.past_events).to be_empty
+          expect(Event.past_invited_events(user2)).to be_empty
+        end
+      end
+
+      context 'when there are no events' do
+        it 'can return an empty array' do
+          expect(Event.upcoming_events).to be_empty
+          expect(Event.past_events).to be_empty
+
+          expect(Event.upcoming_invited_events(user2)).to be_empty
+          expect(Event.past_invited_events(user2)).to be_empty
+        end
+      end
+    end
+  end
 end

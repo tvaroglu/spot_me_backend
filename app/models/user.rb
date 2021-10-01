@@ -11,6 +11,9 @@ class User < ApplicationRecord
   has_many :gym_memberships, dependent: :destroy
   has_many :events, through: :gym_memberships
 
+  delegate :upcoming_events, to: :events
+  delegate :past_events, to: :events
+
   validates :email, presence: true, uniqueness: true
   validates :google_id, presence: true, uniqueness: true
   validates :google_image_url, presence: true, uniqueness: true
@@ -26,25 +29,15 @@ class User < ApplicationRecord
   enum goal: { 'Gain Muscle' => 0, 'Lose Weight' => 1, 'Maintain Weight' => 2,
                'Increase Flexibility' => 3, 'Increase Stamina' => 4 }
 
-  def upcoming_events(invitee_id = nil)
-    hosted = events.where('date_time >= ?', Time.zone.now)
-                   .order(date_time: :desc)
-    return hosted if invitee_id.nil?
-
-    invited = Event.where('date_time >= ?', Time.zone.now)
-                   .where(user_id: invitee_id)
-                   .order(date_time: :desc)
+  def all_upcoming_events
+    hosted = upcoming_events
+    invited = Event.upcoming_invited_events(self)
     (hosted + invited).uniq
   end
 
-  def past_events(invitee_id = nil)
-    hosted = events.where('date_time < ?', Time.zone.now)
-                   .order(date_time: :desc)
-    return hosted if invitee_id.nil?
-
-    invited = Event.where('date_time < ?', Time.zone.now)
-                   .where(user_id: invitee_id)
-                   .order(date_time: :desc)
+  def all_past_events
+    hosted = past_events
+    invited = Event.past_invited_events(self)
     (hosted + invited).uniq
   end
 

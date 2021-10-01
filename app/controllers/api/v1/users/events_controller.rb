@@ -4,9 +4,9 @@ class Api::V1::Users::EventsController < ApplicationController
   def index
     user = User.find(params[:user_id])
     events = if params[:time_frame] == 'past'
-               user.past_events(params[:user_id])
+               user.all_past_events
              else
-               user.upcoming_events(params[:user_id])
+               user.all_upcoming_events
              end
 
     render json: EventSerializer.new(

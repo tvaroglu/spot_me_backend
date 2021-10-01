@@ -14,4 +14,20 @@ class Event < ApplicationRecord
   def invited_name
     user.full_name
   end
+
+  def self.upcoming_events
+    where('date_time >= ?', Time.zone.now).order(date_time: :desc)
+  end
+
+  def self.upcoming_invited_events(user)
+    upcoming_events.where(user_id: user.id)
+  end
+
+  def self.past_events
+    where('date_time < ?', Time.zone.now).order(date_time: :desc)
+  end
+
+  def self.past_invited_events(user)
+    past_events.where(user_id: user.id)
+  end
 end
