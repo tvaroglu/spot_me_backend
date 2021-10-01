@@ -2,18 +2,18 @@
 # helpers.
 class Api::V1::Users::GymMemberships::EventsController < ApplicationController
   def create
-    user = User.find(params[:user_id])
-    gym_membership = GymMembership.find(params[:gym_membership_id])
-    user_gym_membership = user.gym_memberships.find_by(yelp_gym_id: gym_membership.yelp_gym_id)
-    return error_message if user_gym_membership.nil?
+    friend = User.find(params[:user_id])
+    current_user_gym_membership = GymMembership.find(params[:gym_membership_id])
+    friend_gym_membership = friend.gym_memberships.find_by(yelp_gym_id: current_user_gym_membership.yelp_gym_id)
+    return error_message if friend_gym_membership.nil?
 
     event = Event.create!(
-      user: user,
-      gym_membership: gym_membership,
+      user: friend,
+      gym_membership: current_user_gym_membership,
       date_time: event_params[:date_time],
       activity: event_params[:activity]
     )
-    render json: EventSerializer.new(event).serializable_hash, status: :created
+    render json: EventSerializer.new(event, { params: { current_user: current_user_gym_membership.user_id.to_s } }).serializable_hash, status: :created
   end
 
   def destroy

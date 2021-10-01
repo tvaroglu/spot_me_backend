@@ -7,7 +7,11 @@ class Event < ApplicationRecord
   validates :date_time, presence: true
   validates :activity, presence: true
 
-  def host
+  def host_name
+    gym_membership.user.full_name
+  end
+
+  def invited_name
     user.full_name
   end
 end

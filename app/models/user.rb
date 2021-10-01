@@ -26,6 +26,7 @@ class User < ApplicationRecord
   enum goal: { 'Gain Muscle' => 0, 'Lose Weight' => 1, 'Maintain Weight' => 2,
                'Increase Flexibility' => 3, 'Increase Stamina' => 4 }
 
+  # TODO: order by date
   def upcoming_events(invitee_id = nil)
     hosted = events.where('date_time >= ?', Time.zone.now)
     return hosted if invitee_id.nil?

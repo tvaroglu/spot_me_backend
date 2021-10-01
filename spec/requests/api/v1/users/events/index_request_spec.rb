@@ -27,10 +27,11 @@ describe 'Users::Events API', type: :request do
         expect(json_data.size).to eq(7)
         expect(json_data.first[:id]).to eq(event1_1a_2.id.to_s)
 
-        meta = json_data.first[:relationships][:user][:meta]
+        meta = json_data.first[:meta]
 
-        expect(meta.size).to eq 1
-        expect(meta[:full_name]).to be_a String
+        expect(meta.size).to eq 2
+        expect(meta[:friend_name]).to eq user2.full_name
+        expect(meta[:friend_role]).to eq 'invited'
       end
 
       include_examples 'status code 200'
@@ -46,10 +47,11 @@ describe 'Users::Events API', type: :request do
         expect(json_data.first[:id]).to eq(event1_1a_2.id.to_s)
         expect(json_data.last[:id]).to eq(event1_2a_2.id.to_s)
 
-        meta = json_data.first[:relationships][:user][:meta]
+        meta = json_data.first[:meta]
 
-        expect(meta.size).to eq 1
-        expect(meta[:full_name]).to be_a String
+        expect(meta.size).to eq 2
+        expect(meta[:friend_name]).to eq user1.full_name
+        expect(meta[:friend_role]).to eq 'host'
       end
 
       include_examples 'status code 200'
@@ -64,10 +66,11 @@ describe 'Users::Events API', type: :request do
         expect(json_data.size).to eq(1)
         expect(json_data.first[:id]).to eq(past_event.id.to_s)
 
-        meta = json_data.first[:relationships][:user][:meta]
+        meta = json_data.first[:meta]
 
-        expect(meta.size).to eq 1
-        expect(meta[:full_name]).to be_a String
+        expect(meta.size).to eq 2
+        expect(meta[:friend_name]).to eq user2.full_name
+        expect(meta[:friend_role]).to eq 'invited'
       end
 
       include_examples 'status code 200'
@@ -82,10 +85,11 @@ describe 'Users::Events API', type: :request do
         expect(json_data.size).to eq(1)
         expect(json_data.first[:id]).to eq(past_event.id.to_s)
 
-        meta = json_data.first[:relationships][:user][:meta]
+        meta = json_data.first[:meta]
 
-        expect(meta.size).to eq 1
-        expect(meta[:full_name]).to be_a String
+        expect(meta.size).to eq 2
+        expect(meta[:friend_name]).to eq user1.full_name
+        expect(meta[:friend_role]).to eq 'host'
       end
 
       include_examples 'status code 200'
