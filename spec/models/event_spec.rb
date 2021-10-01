@@ -26,7 +26,7 @@ RSpec.describe Event, type: :model do
   end
 
   describe 'instance methods' do
-    describe '#host_name' do
+    describe '#host_name and #invited_name' do
       let!(:user1) { user_with_gym_friend }
       let(:user2) { User.last }
       let(:gym_membership1) { create(:gym_membership, user: user1) }
@@ -34,20 +34,8 @@ RSpec.describe Event, type: :model do
       let(:gym_id) { user1.gym_memberships.first.yelp_gym_id }
       let(:event) { create(:event, user: user2, gym_membership: gym_membership1) }
 
-      it 'can return the full name of the user hosting the event' do
+      it 'can return the full names of the user hosting and the user invited to the event' do
         expect(event.host_name).to eq user1.full_name
-      end
-    end
-
-    describe '#invited_name' do
-      let!(:user1) { user_with_gym_friend }
-      let(:user2) { User.last }
-      let(:gym_membership1) { create(:gym_membership, user: user1) }
-      let(:gym_membership2) { create(:gym_membership, user: user2, yelp_gym_id: gym_id) }
-      let(:gym_id) { user1.gym_memberships.first.yelp_gym_id }
-      let(:event) { create(:event, user: user2, gym_membership: gym_membership1) }
-
-      it 'can return the full name of the user hosting the event' do
         expect(event.invited_name).to eq user2.full_name
       end
     end

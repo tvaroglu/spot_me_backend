@@ -21,7 +21,7 @@ describe 'Users::Events API', type: :request do
     context 'when the user has upcoming events they are hosting' do
       before { get "/api/v1/users/#{user_id}/events" }
 
-      it 'returns the users events and full name', :aggregate_failures do
+      it "returns the user's events and the invited friend", :aggregate_failures do
         expect(json).not_to be_empty
 
         expect(json_data.size).to eq(7)
@@ -40,7 +40,7 @@ describe 'Users::Events API', type: :request do
     context 'when the user has upcoming events they are invited to' do
       before { get "/api/v1/users/#{invited_user_id}/events" }
 
-      it 'returns the users events and full name', :aggregate_failures do
+      it "returns the user's events and the host of the event", :aggregate_failures do
         expect(json).not_to be_empty
 
         expect(json_data.size).to eq(2)
@@ -60,7 +60,7 @@ describe 'Users::Events API', type: :request do
     context 'when the user has events they had hosted in the past' do
       before { get "/api/v1/users/#{user_id}/events?time_frame=past" }
 
-      it 'returns the users events and full name', :aggregate_failures do
+      it "returns the user's events and the invited friend", :aggregate_failures do
         expect(json).not_to be_empty
 
         expect(json_data.size).to eq(1)
@@ -79,7 +79,7 @@ describe 'Users::Events API', type: :request do
     context 'when the user has events they were invited to in the past' do
       before { get "/api/v1/users/#{invited_user_id}/events?time_frame=past" }
 
-      it 'returns the users events and full name', :aggregate_failures do
+      it "returns the user's events and the host of the event", :aggregate_failures do
         expect(json).not_to be_empty
 
         expect(json_data.size).to eq(1)

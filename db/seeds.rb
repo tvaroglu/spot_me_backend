@@ -29,13 +29,14 @@ gym_member11 = GymMembership.all.order(:id)[10]
 gym_member12 = GymMembership.all.order(:id)[11]
 gym_member13 = GymMembership.all.order(:id)[12]
 gym_member14 = GymMembership.all.order(:id)[13]
+#gym_member15 :(
 gym_member16 = GymMembership.all.order(:id)[14]
 gym_member17 = GymMembership.all.order(:id)[15]
 gym_member18 = GymMembership.all.order(:id)[16]
 gym_member19 = GymMembership.all.order(:id)[17]
 gym_member20 = GymMembership.all.order(:id)[18]
 
-# EVENTS (user is the 'host')
+# EVENTS (user is the 'invitee')
 event1 = create(:event, user: user3, gym_membership: gym_member1)
 event2 = create(:event, user: user4, gym_membership: gym_member1)
 event3 = create(:event, user: user7, gym_membership: gym_member7)

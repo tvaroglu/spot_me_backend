@@ -138,9 +138,9 @@ RSpec.describe User, type: :model do
 
       context 'when there are upcoming events' do
         let!(:past_event) { create(:event, date_time: DateTime.yesterday, user_id: user2.id, gym_membership_id: gym_id) }
-        let!(:upcoming_event_1) { create(:event, user_id: user2.id, gym_membership_id: gym_id) }
-        let!(:upcoming_event_2) { create(:event, user_id: user2.id, gym_membership_id: gym_id) }
-        let!(:upcoming_event_3) { create(:event, user_id: user2.id, gym_membership_id: gym_id) }
+        let!(:upcoming_event_1) { create(:event, date_time: DateTime.tomorrow, user_id: user2.id, gym_membership_id: gym_id) }
+        let!(:upcoming_event_2) { create(:event, date_time: DateTime.tomorrow, user_id: user2.id, gym_membership_id: gym_id) }
+        let!(:upcoming_event_3) { create(:event, date_time: DateTime.tomorrow, user_id: user2.id, gym_membership_id: gym_id) }
 
         it 'returns the upcoming events for the user' do
           expect(user1.upcoming_events).to eq [upcoming_event_1, upcoming_event_2, upcoming_event_3]

@@ -26,22 +26,25 @@ class User < ApplicationRecord
   enum goal: { 'Gain Muscle' => 0, 'Lose Weight' => 1, 'Maintain Weight' => 2,
                'Increase Flexibility' => 3, 'Increase Stamina' => 4 }
 
-  # TODO: order by date
   def upcoming_events(invitee_id = nil)
     hosted = events.where('date_time >= ?', Time.zone.now)
+                   .order(date_time: :desc)
     return hosted if invitee_id.nil?
 
     invited = Event.where('date_time >= ?', Time.zone.now)
                    .where(user_id: invitee_id)
+                   .order(date_time: :desc)
     (hosted + invited).uniq
   end
 
   def past_events(invitee_id = nil)
     hosted = events.where('date_time < ?', Time.zone.now)
+                   .order(date_time: :desc)
     return hosted if invitee_id.nil?
 
     invited = Event.where('date_time < ?', Time.zone.now)
                    .where(user_id: invitee_id)
+                   .order(date_time: :desc)
     (hosted + invited).uniq
   end
 
