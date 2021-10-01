@@ -13,7 +13,9 @@ class Api::V1::Users::GymMemberships::EventsController < ApplicationController
       date_time: event_params[:date_time],
       activity: event_params[:activity]
     )
-    render json: EventSerializer.new(event, { params: { current_user: current_user_gym_membership.user_id.to_s } }).serializable_hash, status: :created
+    render json: EventSerializer.new(
+      event, { params: { current_user: current_user_gym_membership.user_id.to_s } })
+      .serializable_hash, status: :created
   end
 
   def destroy

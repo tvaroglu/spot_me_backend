@@ -164,6 +164,7 @@ RSpec.describe User, type: :model do
 
         it 'can return an empty array' do
           expect(user1.upcoming_events).to be_empty
+          expect(user2.upcoming_events).to be_empty
         end
       end
 
@@ -172,6 +173,7 @@ RSpec.describe User, type: :model do
 
         it 'can return an empty array' do
           expect(user1.past_events).to be_empty
+          expect(user2.past_events).to be_empty
         end
       end
 
@@ -179,6 +181,8 @@ RSpec.describe User, type: :model do
         it 'can return an empty array' do
           expect(user1.upcoming_events).to be_empty
           expect(user1.past_events).to be_empty
+          expect(user2.upcoming_events).to be_empty
+          expect(user2.past_events).to be_empty
         end
       end
     end

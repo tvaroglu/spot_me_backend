@@ -9,7 +9,8 @@ class Api::V1::Users::EventsController < ApplicationController
                user.upcoming_events(params[:user_id])
              end
 
-    render json: EventSerializer.new(events, { params: { current_user: params[:user_id] } })
-            .serializable_hash, status: :ok
+    render json: EventSerializer.new(
+      events, { params: { current_user: params[:user_id] } })
+      .serializable_hash, status: :ok
   end
 end
