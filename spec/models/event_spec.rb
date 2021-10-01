@@ -57,16 +57,10 @@ RSpec.describe Event, type: :model do
           expect(Event.upcoming_events.first).to eq upcoming_event_1
           expect(Event.upcoming_events.second).to eq upcoming_event_2
           expect(Event.upcoming_events.third).to eq upcoming_event_3
-
-          expect(Event.upcoming_invited_events(user2).first).to eq upcoming_event_1
-          expect(Event.upcoming_invited_events(user2).second).to eq upcoming_event_2
-          expect(Event.upcoming_invited_events(user2).third).to eq upcoming_event_3
         end
 
         it 'returns the past events' do
           expect(Event.past_events.first).to eq past_event
-
-          expect(Event.past_invited_events(user2).first).to eq past_event
         end
       end
 
@@ -75,8 +69,6 @@ RSpec.describe Event, type: :model do
 
         it 'can return an empty array' do
           expect(Event.upcoming_events).to be_empty
-
-          expect(Event.upcoming_invited_events(user2)).to be_empty
         end
       end
 
@@ -85,7 +77,6 @@ RSpec.describe Event, type: :model do
 
         it 'can return an empty array' do
           expect(Event.past_events).to be_empty
-          expect(Event.past_invited_events(user2)).to be_empty
         end
       end
 
@@ -93,9 +84,6 @@ RSpec.describe Event, type: :model do
         it 'can return an empty array' do
           expect(Event.upcoming_events).to be_empty
           expect(Event.past_events).to be_empty
-
-          expect(Event.upcoming_invited_events(user2)).to be_empty
-          expect(Event.past_invited_events(user2)).to be_empty
         end
       end
     end

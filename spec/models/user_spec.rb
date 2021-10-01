@@ -132,8 +132,10 @@ RSpec.describe User, type: :model do
 
   describe 'delegations' do
     describe '#upcoming_events and #past_events' do
-      it { should delegate_method(:upcoming_events).to(:events) }
-      it { should delegate_method(:past_events).to(:events) }
+      it { should delegate_method(:upcoming_events).to(:events).with_prefix(:hosted) }
+      it { should delegate_method(:past_events).to(:events).with_prefix(:hosted) }
+      it { should delegate_method(:upcoming_events).to(:invited_events).with_prefix(:invited) }
+      it { should delegate_method(:past_events).to(:invited_events).with_prefix(:invited) }
     end
   end
 
@@ -162,7 +164,7 @@ RSpec.describe User, type: :model do
         end
 
         it 'returns the past events the user was invited to' do
-          expect(user2.all_past_events).to eq user1.past_events
+          expect(user2.all_past_events).to eq user1.all_past_events
         end
       end
 

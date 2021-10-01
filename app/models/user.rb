@@ -11,8 +11,8 @@ class User < ApplicationRecord
   has_many :gym_memberships, dependent: :destroy
   has_many :events, through: :gym_memberships
 
-  delegate :upcoming_events, to: :events
-  delegate :past_events, to: :events
+  delegate :upcoming_events, :past_events, to: :events, prefix: :hosted
+  delegate :upcoming_events, :past_events, to: :invited_events, prefix: :invited
 
   validates :email, presence: true, uniqueness: true
   validates :google_id, presence: true, uniqueness: true
@@ -30,15 +30,11 @@ class User < ApplicationRecord
                'Increase Flexibility' => 3, 'Increase Stamina' => 4 }
 
   def all_upcoming_events
-    hosted = upcoming_events
-    invited = Event.upcoming_invited_events(self)
-    (hosted + invited).uniq
+    hosted_upcoming_events + invited_upcoming_events
   end
 
   def all_past_events
-    hosted = past_events
-    invited = Event.past_invited_events(self)
-    (hosted + invited).uniq
+    hosted_past_events + invited_past_events
   end
 
   def friends_at_same_gym(yelp_gym_id)
