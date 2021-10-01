@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/HxK5-XEhjl0x0RR9PAgBVp
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - DONT_SHARE_MY_SECRET_KEY
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '102'
+      Content-Type:
+      - application/json
+      X-B3-Sampled:
+      - '0'
+      X-Zipkin-Id:
+      - 2fff13cad2bb89d5
+      Server:
+      - envoy
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-tj4lc; site=public_api_v3
+      X-Cloudmap:
+      - routing_uswest2
+      X-Proxied:
+      - 10-69-130-205-uswest2bprod
+      X-Extlb:
+      - 10-69-130-205-uswest2bprod
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Fri, 01 Oct 2021 04:46:28 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-den8255-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: '{"error": {"code": "BUSINESS_NOT_FOUND", "description": "The requested
+        business could not be found."}}'
+  recorded_at: Fri, 01 Oct 2021 04:46:28 GMT
+recorded_with: VCR 6.0.0

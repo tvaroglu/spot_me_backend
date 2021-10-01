@@ -9,6 +9,7 @@ class GymSerializer
             attributes: {
               name: gym.name,
               address: gym.address,
+              address_details: gym.address_details,
               phone: gym.phone
             }
           }
@@ -24,6 +25,7 @@ class GymSerializer
           attributes: {
             name: gym.name,
             address: gym.address,
+            address_details: gym.address_details,
             phone: gym.phone
           }
         }
