@@ -18,8 +18,7 @@ class GymSerializer
 
     def format_gym(gym)
       {
-        data:
-        {
+        data: {
           id: gym.yelp_gym_id,
           type: 'gym',
           attributes: {
