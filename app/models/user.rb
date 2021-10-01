@@ -11,6 +11,9 @@ class User < ApplicationRecord
   has_many :gym_memberships, dependent: :destroy
   has_many :events, through: :gym_memberships
 
+  delegate :upcoming_events, :past_events, to: :events, prefix: :hosted
+  delegate :upcoming_events, :past_events, to: :invited_events, prefix: :invited
+
   validates :email, presence: true, uniqueness: true
   validates :google_id, presence: true, uniqueness: true
   validates :google_image_url, presence: true, uniqueness: true
@@ -26,8 +29,12 @@ class User < ApplicationRecord
   enum goal: { 'Gain Muscle' => 0, 'Lose Weight' => 1, 'Maintain Weight' => 2,
                'Increase Flexibility' => 3, 'Increase Stamina' => 4 }
 
-  def upcoming_events
-    events.where('date_time >= ?', Time.zone.now)
+  def all_upcoming_events
+    hosted_upcoming_events + invited_upcoming_events
+  end
+
+  def all_past_events
+    hosted_past_events + invited_past_events
   end
 
   def friends_at_same_gym(yelp_gym_id)

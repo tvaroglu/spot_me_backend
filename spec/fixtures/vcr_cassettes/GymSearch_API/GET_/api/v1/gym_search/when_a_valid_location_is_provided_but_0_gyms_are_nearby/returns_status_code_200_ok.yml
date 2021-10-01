@@ -24,20 +24,20 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Resettime:
-      - '2021-10-02T00:00:00+00:00'
-      Server:
-      - envoy
-      X-Zipkin-Id:
-      - e53ea605ae7ece96
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-2blvg; site=public_api_v3
       Ratelimit-Dailylimit:
       - '5000'
+      Ratelimit-Remaining:
+      - '4983'
+      Server:
+      - envoy
       X-B3-Sampled:
       - '0'
-      Ratelimit-Remaining:
-      - '4984'
-      X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-g8p9d; site=public_api_v3
+      Ratelimit-Resettime:
+      - '2021-10-02T00:00:00+00:00'
+      X-Zipkin-Id:
+      - 0c27ba16c4c7c06e
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
@@ -53,7 +53,7 @@ http_interactions:
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8256-DEN
+      - cache-den8238-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -66,5 +66,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"businesses": [], "total": 0, "region": {"center": {"longitude": -119.432373046875,
         "latitude": 40.4462157989704}}}'
-  recorded_at: Fri, 01 Oct 2021 05:54:58 GMT
+  recorded_at: Fri, 01 Oct 2021 05:54:59 GMT
 recorded_with: VCR 6.0.0

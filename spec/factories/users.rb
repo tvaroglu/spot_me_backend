@@ -52,13 +52,13 @@ def experienced_user
 
   # Event variable naming convention:
   #   event<user>_<gym>_<friend>
-  let!(:event1_1a_2) { create(:event, gym_membership: gym_mem1_1, user: user2) }
-  let!(:event1_1b_3) { create(:event, gym_membership: gym_mem1_1, user: user3) }
-  let!(:event1_1c_5) { create(:event, gym_membership: gym_mem1_1, user: user5) }
-  let!(:event1_1d_3) { create(:event, gym_membership: gym_mem1_1, user: user3) }
-  let!(:event1_2a_2) { create(:event, gym_membership: gym_mem1_2, user: user2) }
-  let!(:event1_2b_5) { create(:event, gym_membership: gym_mem1_2, user: user5) }
-  let!(:event1_2c_3) { create(:event, gym_membership: gym_mem1_2, user: user3) }
+  let!(:event1_1a_2) { create(:event, date_time: DateTime.tomorrow, gym_membership: gym_mem1_1, user: user2) }
+  let!(:event1_1b_3) { create(:event, date_time: DateTime.tomorrow, gym_membership: gym_mem1_1, user: user3) }
+  let!(:event1_1c_5) { create(:event, date_time: DateTime.tomorrow, gym_membership: gym_mem1_1, user: user5) }
+  let!(:event1_1d_3) { create(:event, date_time: DateTime.tomorrow, gym_membership: gym_mem1_1, user: user3) }
+  let!(:event1_2a_2) { create(:event, date_time: DateTime.tomorrow, gym_membership: gym_mem1_2, user: user2) }
+  let!(:event1_2b_5) { create(:event, date_time: DateTime.tomorrow, gym_membership: gym_mem1_2, user: user5) }
+  let!(:event1_2c_3) { create(:event, date_time: DateTime.tomorrow, gym_membership: gym_mem1_2, user: user3) }
 end
 
 def user_with_friend

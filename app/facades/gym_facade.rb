@@ -1,11 +1,5 @@
 class GymFacade
   class << self
-    # TODO: Perhaps we could use a guard clause instead of the if statement
-    #
-    # Example:
-    #   return some_error_message unless gyms[:businesses]
-    #
-    #   gyms[:businesses].map { |gym| Gym.new(gym) }
     def query_yelp(location)
       gyms = GymService.get_gyms(location)
 
@@ -18,18 +12,18 @@ class GymFacade
       return invalid_gym_id_length if gym_id.length != 22
 
       gym = GymService.find_gym(gym_id)
-      if gym[:error].present?
-        {
-          errors: {
-            error: gym[:error][:description],
-            status: :not_found.to_s.tr('_', ' ').titleize,
-            code: Rack::Utils::SYMBOL_TO_STATUS_CODE[:not_found]
-          },
-          code: :not_found
-        }
-      else
-        Gym.new(gym)
-      end
+      gym[:error].present? ? gym_error(gym) : Gym.new(gym)
+    end
+
+    def gym_error(gym)
+      {
+        errors: {
+          error: gym[:error][:description],
+          status: :not_found.to_s.tr('_', ' ').titleize,
+          code: Rack::Utils::SYMBOL_TO_STATUS_CODE[:not_found]
+        },
+        code: :not_found
+      }
     end
 
     def invalid_gym_id_length

@@ -14,6 +14,7 @@ describe Gym, type: :poros do
           longitude: -70.527933
         },
         location: {
+          address1: '2 Livewell Dr',
           city: 'Kennebunk',
           zip_code: '04043',
           country: 'US',
@@ -34,6 +35,7 @@ describe Gym, type: :poros do
       expect(new_gym).to be_an_instance_of(Gym)
       expect(new_gym.name).to eq('Quest Fitness')
       expect(new_gym.address).to eq('2 Livewell Dr, Kennebunk, ME 04043')
+      expect(new_gym.address_details).to be_an_instance_of(Hash)
       expect(new_gym.phone).to eq('(207) 467-3800')
       expect(new_gym.yelp_gym_id).to eq('gHmS3WIjRRhSWG4OdCQYLA')
     end

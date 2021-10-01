@@ -41,9 +41,11 @@ describe 'EventSerializer', type: :serializer do
           expect(event_attributes).to have_key(:activity)
           expect(event_attributes[:activity]).to be_a String
 
-          expect(event_data[:relationships][:user][:meta].size).to eq 1
-          expect(event_data[:relationships][:user][:meta]).to have_key(:full_name)
-          expect(event_data[:relationships][:user][:meta][:full_name]).to be_a String
+          expect(event_data[:meta].size).to eq 2
+          expect(event_data[:meta]).to have_key(:friend_name)
+          expect(event_data[:meta]).to have_key(:friend_role)
+          expect(event_data[:meta][:friend_name]).to be_a String
+          expect(event_data[:meta][:friend_role]).to be_a String
         end
       end
 

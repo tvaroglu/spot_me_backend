@@ -130,20 +130,41 @@ RSpec.describe User, type: :model do
     end
   end
 
+  describe 'delegations' do
+    describe '#upcoming_events and #past_events' do
+      it { should delegate_method(:upcoming_events).to(:events).with_prefix(:hosted) }
+      it { should delegate_method(:past_events).to(:events).with_prefix(:hosted) }
+      it { should delegate_method(:upcoming_events).to(:invited_events).with_prefix(:invited) }
+      it { should delegate_method(:past_events).to(:invited_events).with_prefix(:invited) }
+    end
+  end
+
   describe 'instance methods' do
-    describe '#upcoming_events' do
-      let(:user1) { user_with_gym_membership }
-      let(:user2) { user_with_gym_membership }
-      let(:gym_id) { user1.gym_memberships.first.id }
+    describe '#all_upcoming_events and #all_past_events' do
+      let!(:user1) { user_with_gym_membership }
+      let!(:user2) { user_with_gym_membership }
+      let!(:gym_id) { user1.gym_memberships.first.id }
 
       context 'when there are upcoming events' do
-        let!(:past_event) { create(:event, date_time: DateTime.yesterday, user: user2, gym_membership_id: gym_id) }
-        let!(:upcoming_event_1) { create(:event, user: user2, gym_membership_id: gym_id) }
-        let!(:upcoming_event_2) { create(:event, user: user2, gym_membership_id: gym_id) }
-        let!(:upcoming_event_3) { create(:event, user: user2, gym_membership_id: gym_id) }
+        let!(:past_event) { create(:event, date_time: DateTime.yesterday, user_id: user2.id, gym_membership_id: gym_id) }
+        let!(:upcoming_event_1) { create(:event, date_time: DateTime.tomorrow, user_id: user2.id, gym_membership_id: gym_id) }
+        let!(:upcoming_event_2) { create(:event, date_time: DateTime.tomorrow, user_id: user2.id, gym_membership_id: gym_id) }
+        let!(:upcoming_event_3) { create(:event, date_time: DateTime.tomorrow, user_id: user2.id, gym_membership_id: gym_id) }
 
         it 'returns the upcoming events for the user' do
-          expect(user1.upcoming_events).to eq [upcoming_event_1, upcoming_event_2, upcoming_event_3]
+          expect(user1.all_upcoming_events).to eq [upcoming_event_1, upcoming_event_2, upcoming_event_3]
+        end
+
+        it 'returns the past events for the user' do
+          expect(user1.all_past_events).to eq [past_event]
+        end
+
+        it 'returns the upcoming events the user has been invited to' do
+          expect(user2.all_upcoming_events).to eq user1.all_upcoming_events
+        end
+
+        it 'returns the past events the user was invited to' do
+          expect(user2.all_past_events).to eq user1.all_past_events
         end
       end
 
@@ -151,13 +172,26 @@ RSpec.describe User, type: :model do
         let!(:past_event) { create(:event, date_time: DateTime.yesterday, user: user2, gym_membership_id: gym_id) }
 
         it 'can return an empty array' do
-          expect(user1.upcoming_events).to be_empty
+          expect(user1.all_upcoming_events).to be_empty
+          expect(user2.all_upcoming_events).to be_empty
+        end
+      end
+
+      context 'when there are no past events' do
+        let!(:upcoming_event) { create(:event, date_time: DateTime.tomorrow, user: user2, gym_membership_id: gym_id) }
+
+        it 'can return an empty array' do
+          expect(user1.all_past_events).to be_empty
+          expect(user2.all_past_events).to be_empty
         end
       end
 
       context 'when there are no events' do
         it 'can return an empty array' do
-          expect(user1.upcoming_events).to be_empty
+          expect(user1.all_upcoming_events).to be_empty
+          expect(user1.all_past_events).to be_empty
+          expect(user2.all_upcoming_events).to be_empty
+          expect(user2.all_past_events).to be_empty
         end
       end
     end
@@ -194,7 +228,7 @@ RSpec.describe User, type: :model do
 
         it 'returns users from the shared gym' do
           expected = user1.non_friends_at_same_gym(yelp_gym_id)
-          # require "pry"; binding.pry
+
           expect(expected.length).to eq 1
           expect(expected.first).to eq user2
         end

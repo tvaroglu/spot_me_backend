@@ -3,5 +3,10 @@ class EventSerializer
 
   attributes :user_id, :gym_membership_id, :date_time, :activity
 
-  belongs_to :user, meta: proc { |event| { full_name: event.user.full_name } }
+  meta do |event, params|
+    {
+      friend_name: params[:current_user] == event.user_id.to_s ? event.host_name : event.invited_name,
+      friend_role: params[:current_user] == event.user_id.to_s ? 'host' : 'invited'
+    }
+  end
 end
