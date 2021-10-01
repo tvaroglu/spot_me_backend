@@ -27,6 +27,7 @@ describe 'GymSearch API', type: :request do
 
       it 'returns an error code 400', :aggregate_failures do
         expect(json).not_to be_empty
+        expect(json[:error]).to eq 'Invalid ID length'
       end
 
       include_examples 'status code 400'
@@ -37,6 +38,7 @@ describe 'GymSearch API', type: :request do
 
       it 'returns an error code 404', :aggregate_failures do
         expect(json).not_to be_empty
+        expect(json[:error]).to eq 'The requested business could not be found.'
       end
 
       include_examples 'status code 404'
