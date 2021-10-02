@@ -145,18 +145,19 @@ RSpec.describe User, type: :model do
       let!(:user2) { user_with_gym_membership }
       let!(:gym_id) { user1.gym_memberships.first.id }
 
-      context 'when there are upcoming events' do
-        let!(:past_event) { create(:event, date_time: DateTime.yesterday, user_id: user2.id, gym_membership_id: gym_id) }
-        let!(:upcoming_event_1) { create(:event, date_time: DateTime.tomorrow, user_id: user2.id, gym_membership_id: gym_id) }
-        let!(:upcoming_event_2) { create(:event, date_time: DateTime.tomorrow, user_id: user2.id, gym_membership_id: gym_id) }
-        let!(:upcoming_event_3) { create(:event, date_time: DateTime.tomorrow, user_id: user2.id, gym_membership_id: gym_id) }
+      context 'when there are upcoming and past events' do
+        let!(:past_event_1) { create(:event, date_time: DateTime.yesterday - 1, user_id: user2.id, gym_membership_id: gym_id) }
+        let!(:past_event_2) { create(:event, date_time: DateTime.yesterday - 2, user_id: user2.id, gym_membership_id: gym_id) }
+        let!(:upcoming_event_1) { create(:event, date_time: DateTime.tomorrow + 1, user_id: user2.id, gym_membership_id: gym_id) }
+        let!(:upcoming_event_2) { create(:event, date_time: DateTime.tomorrow + 2, user_id: user2.id, gym_membership_id: gym_id) }
+        let!(:upcoming_event_3) { create(:event, date_time: DateTime.tomorrow + 3, user_id: user2.id, gym_membership_id: gym_id) }
 
-        it 'returns the upcoming events for the user' do
+        it 'returns the upcoming events for the user in ascending order' do
           expect(user1.all_upcoming_events).to eq [upcoming_event_1, upcoming_event_2, upcoming_event_3]
         end
 
-        it 'returns the past events for the user' do
-          expect(user1.all_past_events).to eq [past_event]
+        it 'returns the past events for the user in descending order' do
+          expect(user1.all_past_events).to eq [past_event_1, past_event_2]
         end
 
         it 'returns the upcoming events the user has been invited to' do

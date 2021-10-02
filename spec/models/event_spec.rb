@@ -42,25 +42,27 @@ RSpec.describe Event, type: :model do
   end
 
   describe 'class methods' do
-    describe '::upcoming_invited_events and ::upcoming_past_events' do
+    describe '::upcoming_events and ::past_events' do
       let!(:user1) { user_with_gym_membership }
       let!(:user2) { user_with_gym_membership }
       let!(:gym_id) { user1.gym_memberships.first.id }
 
-      context 'when there are upcoming events' do
-        let!(:past_event) { create(:event, date_time: DateTime.yesterday, user_id: user2.id, gym_membership_id: gym_id) }
-        let!(:upcoming_event_1) { create(:event, date_time: DateTime.tomorrow, user_id: user2.id, gym_membership_id: gym_id) }
-        let!(:upcoming_event_2) { create(:event, date_time: DateTime.tomorrow, user_id: user2.id, gym_membership_id: gym_id) }
-        let!(:upcoming_event_3) { create(:event, date_time: DateTime.tomorrow, user_id: user2.id, gym_membership_id: gym_id) }
+      context 'when there are upcoming and past events' do
+        let!(:past_event_1) { create(:event, date_time: DateTime.yesterday - 1, user_id: user2.id, gym_membership_id: gym_id) }
+        let!(:past_event_2) { create(:event, date_time: DateTime.yesterday - 2, user_id: user2.id, gym_membership_id: gym_id) }
+        let!(:upcoming_event_1) { create(:event, date_time: DateTime.tomorrow + 1, user_id: user2.id, gym_membership_id: gym_id) }
+        let!(:upcoming_event_2) { create(:event, date_time: DateTime.tomorrow + 2, user_id: user2.id, gym_membership_id: gym_id) }
+        let!(:upcoming_event_3) { create(:event, date_time: DateTime.tomorrow + 3, user_id: user2.id, gym_membership_id: gym_id) }
 
-        it 'returns the upcoming events' do
+        it 'returns the upcoming events in ascending order' do
           expect(Event.upcoming_events.first).to eq upcoming_event_1
           expect(Event.upcoming_events.second).to eq upcoming_event_2
           expect(Event.upcoming_events.third).to eq upcoming_event_3
         end
 
-        it 'returns the past events' do
-          expect(Event.past_events.first).to eq past_event
+        it 'returns the past events in descending order' do
+          expect(Event.past_events.first).to eq past_event_1
+          expect(Event.past_events.second).to eq past_event_2
         end
       end
 

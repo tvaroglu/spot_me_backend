@@ -16,7 +16,7 @@ class Event < ApplicationRecord
   end
 
   def self.upcoming_events
-    where('date_time >= ?', Time.zone.now).order(date_time: :desc)
+    where('date_time >= ?', Time.zone.now).order(date_time: :asc)
   end
 
   def self.past_events
