@@ -54,7 +54,7 @@ RSpec.describe User, type: :model do
 
       it 'creates valid objects' do
         expect(User.all.size).to eq(9)
-        expect(Friendship.all.size).to eq(5)
+        expect(Friendship.all.size).to eq(6)
         expect(GymMembership.all.size).to eq(11)
         expect(Event.all.size).to eq(7)
       end
@@ -197,64 +197,102 @@ RSpec.describe User, type: :model do
       end
     end
 
-    describe 'friends_at_same_gym' do
+    describe '#followees_at_same_gym' do
       let!(:user1) { user_with_gym_friend }
       let!(:user2) { user1.followees.first }
       let!(:yelp_gym_id) { user1.gym_memberships.first.yelp_gym_id }
 
-      context 'when the user has a follower (friend)' do
-        it "returns the user's followers (friends) from the shared gym" do
-          expected = user1.friends_at_same_gym(yelp_gym_id)
+      context 'when the user has a followee (is following a user)' do
+        it "returns the user's followees from the shared gym" do
+          expected = user1.followees_at_same_gym(yelp_gym_id)
 
           expect(expected.length).to eq 1
           expect(expected.first).to eq user2
         end
       end
 
-      context "when the user doesn't have a follower (friend)" do
+      context "when the user doesn't have a followee (is not following any users)" do
         it 'returns an empty array' do
-          expected = user2.friends_at_same_gym(yelp_gym_id)
+          expected = user2.followees_at_same_gym(yelp_gym_id)
 
           expect(expected).to be_empty
         end
       end
     end
 
-    describe 'non_friends_at_same_gym' do
-      context 'when the user has a friend at the same gym' do
+    describe '#followers_at_same_gym' do
+      let!(:user1) { user_with_gym_friend }
+      let!(:user2) { user1.followees.first }
+      let!(:yelp_gym_id) { user1.gym_memberships.first.yelp_gym_id }
+
+      context 'when the user has a follower (is followed by a user)' do
+        it "returns the user's followers from the shared gym" do
+          expected = user2.followers_at_same_gym(yelp_gym_id)
+
+          expect(expected.length).to eq 1
+          expect(expected.first).to eq user1
+        end
+      end
+
+      context "when the user doesn't have a follower (is not followed by any users)" do
+        it 'returns an empty array' do
+          expected = user1.followers_at_same_gym(yelp_gym_id)
+
+          expect(expected).to be_empty
+        end
+      end
+    end
+
+    describe '#non_followees_at_same_gym' do
+      context 'when the user is not following a user at the same gym' do
         let!(:user1) { user_with_gym_friend }
         let!(:yelp_gym_id) { user1.gym_memberships.first.yelp_gym_id }
         let!(:user2) { create(:user) }
         let!(:gym_membership) { create(:gym_membership, user: user2, yelp_gym_id: yelp_gym_id) }
 
-        it 'returns users from the shared gym' do
-          expected = user1.non_friends_at_same_gym(yelp_gym_id)
+        it 'returns the user from the shared gym' do
+          expected = user1.non_followees_at_same_gym(yelp_gym_id)
 
           expect(expected.length).to eq 1
           expect(expected.first).to eq user2
         end
       end
 
-      context "when the user doesn't have a friend at the same gym" do
-        let!(:user1) { user_with_gym_membership }
+      context 'when the user is already following everyone at the gym' do
+        let!(:user1) { user_with_gym_friend }
+        let!(:yelp_gym_id) { user1.gym_memberships.first.yelp_gym_id }
+
+        it 'returns an empty array' do
+          expected = user1.non_followees_at_same_gym(yelp_gym_id)
+
+          expect(expected).to be_empty
+        end
+      end
+    end
+
+    describe '#non_followers_at_same_gym' do
+      context 'when the user is not followed by a user at the same gym' do
+        let!(:user1) { user_with_gym_friend }
         let!(:yelp_gym_id) { user1.gym_memberships.first.yelp_gym_id }
         let!(:user2) { create(:user) }
         let!(:gym_membership) { create(:gym_membership, user: user2, yelp_gym_id: yelp_gym_id) }
 
-        it "returns users from the shared gym who the user isn't following" do
-          expected = user1.non_friends_at_same_gym(yelp_gym_id)
+        it 'returns the user from the shared gym' do
+          expected = user1.non_followers_at_same_gym(yelp_gym_id)
 
-          expect(expected.length).to eq 1
-          expect(expected.first).to eq user2
+          expect(expected.length).to eq 2
+          expect(expected.first).to eq user1.followees.first
+          expect(expected.second).to eq user2
         end
       end
 
-      context 'when the user is already friends with everyone at the gym' do
+      context 'when the user is already followed by everyone at the gym' do
         let!(:user1) { user_with_gym_friend }
+        let!(:user2) { user1.followees.first }
         let!(:yelp_gym_id) { user1.gym_memberships.first.yelp_gym_id }
 
-        it "returns users from the shared gym who the user isn't following" do
-          expected = user1.non_friends_at_same_gym(yelp_gym_id)
+        it 'returns an empty array' do
+          expected = user2.non_followers_at_same_gym(yelp_gym_id)
 
           expect(expected).to be_empty
         end

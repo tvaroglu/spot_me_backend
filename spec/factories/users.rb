@@ -31,6 +31,7 @@ def experienced_user
   let!(:ff1_4) { create(:friendship, follower_id: user1.id, followee_id: user4.id) }
   let!(:ff1_5) { create(:friendship, follower_id: user1.id, followee_id: user5.id) }
   let!(:ff1_6) { create(:friendship, follower_id: user1.id, followee_id: user6.id) }
+  let!(:ff2_1) { create(:friendship, follower_id: user2.id, followee_id: user1.id) }
 
   let!(:gym1) { 'mkmn8pidmebehvh79u1ovg' }
   let!(:gym2) { 'fvdr0ksvy2nhith42ffur2' }
