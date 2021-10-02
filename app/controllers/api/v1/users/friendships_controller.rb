@@ -5,17 +5,18 @@
 class Api::V1::Users::FriendshipsController < ApplicationController
   def index
     user = User.find(params[:user_id])
-    friends = #if params[:relationship] == 'followers'
+    friends = if params[:relationship] == 'followers'
                 if params[:yelp_gym_id]
-              # if params[:relationship] == 'followee'
-                # user.followees (current user.friends_at_same_gym method call )
-              # elsif params[:relationship] == 'follower'
-                # user.followers (new method call, pending)
-              # end
-                user.followees_at_same_gym(params[:yelp_gym_id])
+                  user.followers_at_same_gym(params[:yelp_gym_id])
+                else
+                  user.followers
+                end
               else
-                # follow same conditional flow as above, independent of GymMembership
-                user.followees
+                if params[:yelp_gym_id]
+                  user.followees_at_same_gym(params[:yelp_gym_id])
+                else
+                  user.followees
+                end
               end
 
     render json: UserSerializer.new(friends).serializable_hash, status: :ok
