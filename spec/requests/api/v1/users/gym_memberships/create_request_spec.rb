@@ -7,9 +7,11 @@ require 'rails_helper'
 #
 # See spec/support/request_spec_helper.rb for #json and #json_data helpers.
 describe 'Users::GymMemberships API', type: :request do
-  describe 'POST /api/v1/users/:user_id/gym_memberships' do
-    let!(:user) { create(:user) }
-    let(:yelp_gym_id) { 'c2jzsndq8brvn9fbckeec2' }
+  describe 'POST /api/v1/users/:user_id/gym_memberships', :vcr do
+    let!(:yelp_gym) { GymFacade.find_gym('gHmS3WIjRRhSWG4OdCQYLA') }
+    let!(:user) { user_with_gym_membership(yelp_gym_id: yelp_gym.yelp_gym_id) }
+    let(:gym_membership) { user.gym_memberships.first }
+    let(:yelp_gym_id) { gym_membership.yelp_gym_id }
     let(:gym_name) { 'Planet Fitness' }
     let(:valid_attributes) do
       {
@@ -24,10 +26,12 @@ describe 'Users::GymMemberships API', type: :request do
 
       it 'creates a gym member', :aggregate_failures do
         expect(json).not_to be_empty
-        expect(json_data.size).to eq(3)
-        expect(json_data[:attributes][:user_id]).to eq(user.id)
-        expect(json_data[:attributes][:yelp_gym_id]).to eq(yelp_gym_id)
-        expect(json_data[:attributes][:gym_name]).to eq(gym_name)
+        expect(json_data.size).to eq 4
+        expect(json_data[:attributes][:user_id]).to eq user.id
+        expect(json_data[:attributes][:yelp_gym_id]).to eq yelp_gym_id
+        expect(json_data[:attributes][:gym_name]).to eq gym_name
+        expect(json_data[:meta][:address]).to eq yelp_gym.address
+        expect(json_data[:meta][:address_details]).to eq yelp_gym.address_details
       end
 
       include_examples 'status code 201'

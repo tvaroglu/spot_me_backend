@@ -24,36 +24,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-dc8nb; site=public_api_v3
-      Ratelimit-Resettime:
-      - '2021-10-04T00:00:00+00:00'
-      Server:
-      - envoy
-      X-B3-Sampled:
-      - '0'
       X-Zipkin-Id:
-      - 6311ceb48007003c
+      - 5e58e5ac9f7d9e6e
       Ratelimit-Dailylimit:
       - '5000'
       Ratelimit-Remaining:
-      - '4811'
+      - '4798'
+      Server:
+      - envoy
+      Ratelimit-Resettime:
+      - '2021-10-04T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-8fpx7; site=public_api_v3
+      X-B3-Sampled:
+      - '0'
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
-      - 10-69-130-205-uswest2bprod
+      - 10-69-126-17-uswest2aprod
       X-Extlb:
-      - 10-69-130-205-uswest2bprod
+      - 10-69-126-17-uswest2aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 03 Oct 2021 04:46:23 GMT
+      - Sun, 03 Oct 2021 04:46:32 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-bur17526-BUR
+      - cache-lax10638-LGB
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -84,7 +84,7 @@ http_interactions:
         "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700", "end":
         "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions":
         []}'
-  recorded_at: Sun, 03 Oct 2021 04:46:23 GMT
+  recorded_at: Sun, 03 Oct 2021 04:46:32 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/gHmS3WIjRRhSWG4OdCQYLA
@@ -109,36 +109,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
+      X-B3-Sampled:
+      - '0'
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-gx6zl; site=public_api_v3
+      Ratelimit-Dailylimit:
+      - '5000'
+      Server:
+      - envoy
       Ratelimit-Remaining:
-      - '4810'
+      - '4797'
       Ratelimit-Resettime:
       - '2021-10-04T00:00:00+00:00'
       X-Zipkin-Id:
-      - 1fc956b9229b7535
-      X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-fs2pm; site=public_api_v3
-      X-B3-Sampled:
-      - '0'
-      Server:
-      - envoy
-      Ratelimit-Dailylimit:
-      - '5000'
+      - 224fe6a537ea61aa
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
-      - 10-69-113-185-uswest2aprod
+      - 10-69-185-39-uswest2bprod
       X-Extlb:
-      - 10-69-113-185-uswest2aprod
+      - 10-69-185-39-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 03 Oct 2021 04:46:23 GMT
+      - Sun, 03 Oct 2021 04:46:32 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-lax10663-LGB
+      - cache-lax10647-LGB
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -169,7 +169,7 @@ http_interactions:
         "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700", "end":
         "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions":
         []}'
-  recorded_at: Sun, 03 Oct 2021 04:46:23 GMT
+  recorded_at: Sun, 03 Oct 2021 04:46:32 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/gHmS3WIjRRhSWG4OdCQYLA
@@ -194,20 +194,20 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-2brz6; site=public_api_v3
+      X-Zipkin-Id:
+      - 380df0b1084923d1
       Ratelimit-Dailylimit:
       - '5000'
+      Ratelimit-Remaining:
+      - '4796'
       X-B3-Sampled:
       - '0'
-      Ratelimit-Remaining:
-      - '4809'
       Ratelimit-Resettime:
       - '2021-10-04T00:00:00+00:00'
-      X-Zipkin-Id:
-      - c18e9cfe63c50df8
       Server:
       - envoy
-      X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-wdbvd; site=public_api_v3
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
@@ -219,11 +219,11 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 03 Oct 2021 04:46:23 GMT
+      - Sun, 03 Oct 2021 04:46:32 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-lax10663-LGB
+      - cache-bur17528-BUR
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -254,5 +254,5 @@ http_interactions:
         "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700", "end":
         "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions":
         []}'
-  recorded_at: Sun, 03 Oct 2021 04:46:23 GMT
+  recorded_at: Sun, 03 Oct 2021 04:46:32 GMT
 recorded_with: VCR 6.0.0

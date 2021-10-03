@@ -24,36 +24,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-Zipkin-Id:
-      - dd987466fc0a1c7f
-      X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-2qlg8; site=public_api_v3
-      Ratelimit-Dailylimit:
-      - '5000'
-      Ratelimit-Remaining:
-      - '4992'
-      X-B3-Sampled:
-      - '0'
       Ratelimit-Resettime:
       - '2021-10-04T00:00:00+00:00'
+      X-B3-Sampled:
+      - '0'
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-shc9c; site=public_api_v3
+      X-Zipkin-Id:
+      - d936dd4d9d5496f0
+      Ratelimit-Remaining:
+      - '4805'
+      Ratelimit-Dailylimit:
+      - '5000'
       Server:
       - envoy
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
-      - 10-69-69-73-uswest2aprod
+      - 10-69-173-40-uswest2bprod
       X-Extlb:
-      - 10-69-69-73-uswest2aprod
+      - 10-69-173-40-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 03 Oct 2021 04:00:19 GMT
+      - Sun, 03 Oct 2021 04:46:26 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-sna10744-LGB
+      - cache-lax10630-LGB
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -216,5 +216,5 @@ http_interactions:
         "+12073384598", "display_phone": "(207) 338-4598", "distance": 43655.58741866142}],
         "total": 16, "region": {"center": {"longitude": -69.36630249023438, "latitude":
         44.10811081310502}}}'
-  recorded_at: Sun, 03 Oct 2021 04:00:19 GMT
+  recorded_at: Sun, 03 Oct 2021 04:46:26 GMT
 recorded_with: VCR 6.0.0

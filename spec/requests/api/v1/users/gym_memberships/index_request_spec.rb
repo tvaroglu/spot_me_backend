@@ -7,7 +7,7 @@ require 'rails_helper'
 #
 # See spec/support/request_spec_helper.rb for #json and #json_data helpers.
 describe 'Users::GymMemberhips API', type: :request do
-  describe 'GET /api/v1/users/:id/gym_memberships' do
+  describe 'GET /api/v1/users/:id/gym_memberships', :vcr do
     # See spec/factories/users.rb for #experienced_user test setup method
     experienced_user
     let(:user_id) { user1.id }
@@ -24,6 +24,10 @@ describe 'Users::GymMemberhips API', type: :request do
         expect(json_data.size).to eq(2)
         expect(json_data.first[:id]).to eq(gym_membership1_id.to_s)
         expect(json_data.second[:id]).to eq(gym_membership2_id.to_s)
+        expect(json_data.first[:meta][:address]).to eq GymFacade.find_gym(gym1).address
+        expect(json_data.first[:meta][:address_details]).to eq GymFacade.find_gym(gym1).address_details
+        expect(json_data.second[:meta][:address]).to eq GymFacade.find_gym(gym2).address
+        expect(json_data.second[:meta][:address_details]).to eq GymFacade.find_gym(gym2).address_details
       end
 
       include_examples 'status code 200'

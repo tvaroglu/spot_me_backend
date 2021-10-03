@@ -33,9 +33,10 @@ def experienced_user
   let!(:ff1_6) { create(:friendship, follower_id: user1.id, followee_id: user6.id) }
   let!(:ff2_1) { create(:friendship, follower_id: user2.id, followee_id: user1.id) }
 
-  let!(:gym1) { 'mkmn8pidmebehvh79u1ovg' }
-  let!(:gym2) { 'fvdr0ksvy2nhith42ffur2' }
-  let!(:gym3) { 'j30b22smeauhacmvx4sfgh' }
+  # Note, real yelp_gym_ids for gym_membership.address and gym_membership.address_details method calls
+  let!(:gym1) { 'gHmS3WIjRRhSWG4OdCQYLA' }
+  let!(:gym2) { 'yQaElwKOFU865x1jxH3KGw' }
+  let!(:gym3) { '77ZmLGWFlgXoGie_p22wvQ' }
 
   # Gym Member variable naming convention:
   #   gym_mem<user>_<gym>

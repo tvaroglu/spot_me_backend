@@ -8,15 +8,16 @@ describe 'EventSerializer', type: :serializer do
         let(:event_hash) { EventSerializer.new(event).serializable_hash }
         let(:event_data) { event_hash[:data] }
         let(:event_attributes) { event_data[:attributes] }
+        let(:event_meta) { event_data[:meta] }
 
         it 'formats the single event response for delivery', :aggregate_failures do
           expect(event_hash).to be_a Hash
-          expect(event_hash.size).to eq(1)
+          expect(event_hash.size).to eq 1
 
           expect(event_hash).to have_key(:data)
 
           expect(event_data).to be_a Hash
-          expect(event_data.size).to eq(4)
+          expect(event_data.size).to eq 4
 
           expect(event_data).to have_key(:id)
           expect(event_data[:id]).to be_a String
@@ -27,7 +28,7 @@ describe 'EventSerializer', type: :serializer do
 
           expect(event_data).to have_key(:attributes)
           expect(event_attributes).to be_a Hash
-          expect(event_attributes.size).to eq(4)
+          expect(event_attributes.size).to eq 4
 
           expect(event_attributes).to have_key(:user_id)
           expect(event_attributes[:user_id]).to be_an Integer
@@ -41,15 +42,15 @@ describe 'EventSerializer', type: :serializer do
           expect(event_attributes).to have_key(:activity)
           expect(event_attributes[:activity]).to be_a String
 
-          expect(event_data[:meta].size).to eq 4
-          expect(event_data[:meta]).to have_key(:friend_name)
-          expect(event_data[:meta]).to have_key(:friend_role)
-          expect(event_data[:meta]).to have_key(:gym_name)
-          expect(event_data[:meta]).to have_key(:yelp_gym_id)
-          expect(event_data[:meta][:friend_name]).to be_a String
-          expect(event_data[:meta][:friend_role]).to be_a String
-          expect(event_data[:meta][:gym_name]).to be_a String
-          expect(event_data[:meta][:yelp_gym_id]).to be_a String
+          expect(event_meta.size).to eq 4
+          expect(event_meta).to have_key(:friend_name)
+          expect(event_meta).to have_key(:friend_role)
+          expect(event_meta).to have_key(:gym_name)
+          expect(event_meta).to have_key(:yelp_gym_id)
+          expect(event_meta[:friend_name]).to be_a String
+          expect(event_meta[:friend_role]).to be_a String
+          expect(event_meta[:gym_name]).to be_a String
+          expect(event_meta[:yelp_gym_id]).to be_a String
         end
       end
 
@@ -58,7 +59,7 @@ describe 'EventSerializer', type: :serializer do
 
         it 'returns a hash with data as nil' do
           expect(empty_event).to be_a Hash
-          expect(empty_event.size).to eq(1)
+          expect(empty_event.size).to eq 1
 
           expect(empty_event).to have_key(:data)
           expect(empty_event[:data]).to be_nil
