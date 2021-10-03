@@ -22,6 +22,13 @@ RSpec.describe GymMembership, type: :model do
     end
   end
 
+  describe 'delegations' do
+    describe '#address and #address_details' do
+      it { should delegate_method(:address).to(:find_gym) }
+      it { should delegate_method(:address_details).to(:find_gym) }
+    end
+  end
+
   describe 'instance methods' do
     describe '#address and #address_details', :vcr do
       let!(:yelp_gym) { GymFacade.find_gym('gHmS3WIjRRhSWG4OdCQYLA') }
