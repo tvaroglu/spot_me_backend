@@ -27,9 +27,9 @@ http_interactions:
       Content-Type:
       - application/json
       X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-5pch9; site=public_api_v3
+      - routing-main--uswest2-7b96896cd8-2j5zt; site=public_api_v3
       X-Zipkin-Id:
-      - b5f01d0fc308d28d
+      - 3d06d24ba544cd29
       Server:
       - envoy
       X-B3-Sampled:
@@ -43,11 +43,11 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Fri, 01 Oct 2021 05:55:08 GMT
+      - Sun, 03 Oct 2021 04:00:28 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8244-DEN
+      - cache-lax10641-LGB
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -56,5 +56,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"error": {"code": "BUSINESS_NOT_FOUND", "description": "The requested
         business could not be found."}}'
-  recorded_at: Fri, 01 Oct 2021 05:55:08 GMT
+  recorded_at: Sun, 03 Oct 2021 04:00:28 GMT
 recorded_with: VCR 6.0.0

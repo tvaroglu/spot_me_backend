@@ -24,36 +24,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Dailylimit:
-      - '5000'
-      X-B3-Sampled:
-      - '0'
-      Ratelimit-Remaining:
-      - '4974'
-      Ratelimit-Resettime:
-      - '2021-10-02T00:00:00+00:00'
-      X-Zipkin-Id:
-      - bc8d8de5240cdadb
       X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-rptf5; site=public_api_v3
+      - routing-main--uswest2-7b96896cd8-zkv7t; site=public_api_v3
       Server:
       - envoy
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4981'
+      X-B3-Sampled:
+      - '0'
+      Ratelimit-Resettime:
+      - '2021-10-04T00:00:00+00:00'
+      X-Zipkin-Id:
+      - 3a8f6b248e68605c
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
-      - 10-69-173-40-uswest2bprod
+      - 10-69-152-12-uswest2bprod
       X-Extlb:
-      - 10-69-173-40-uswest2bprod
+      - 10-69-152-12-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Fri, 01 Oct 2021 05:55:08 GMT
+      - Sun, 03 Oct 2021 04:00:28 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8263-DEN
+      - cache-lax10654-LGB
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -82,5 +82,5 @@ http_interactions:
         "1600", "day": 5}, {"is_overnight": false, "start": "0900", "end": "1500",
         "day": 6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions":
         []}'
-  recorded_at: Fri, 01 Oct 2021 05:55:08 GMT
+  recorded_at: Sun, 03 Oct 2021 04:00:28 GMT
 recorded_with: VCR 6.0.0
