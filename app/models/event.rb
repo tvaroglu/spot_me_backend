@@ -2,6 +2,9 @@ class Event < ApplicationRecord
   belongs_to :user
   belongs_to :gym_membership
 
+  delegate :gym_name, to: :gym_membership
+  delegate :yelp_gym_id, to: :gym_membership
+
   validates :user_id, presence: true, numericality: true
   validates :gym_membership_id, presence: true, numericality: true
   validates :date_time, presence: true
@@ -13,14 +16,6 @@ class Event < ApplicationRecord
 
   def invited_name
     user.full_name
-  end
-
-  def gym_name
-    gym_membership.gym_name
-  end
-
-  def yelp_gym_id
-    gym_membership.yelp_gym_id
   end
 
   def self.upcoming_events
