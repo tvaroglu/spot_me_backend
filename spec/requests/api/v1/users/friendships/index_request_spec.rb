@@ -53,7 +53,7 @@ describe 'Users::Friendships API', type: :request do
       include_examples 'status code 200'
     end
 
-    context 'when yelp_gym_id is provided within query params' do
+    context "when yelp_gym_id and 'followers' relationship is provided within query params" do
       before { get "/api/v1/users/#{user_id}/friendships?yelp_gym_id=#{gym1}&relationship=followers" }
 
       it "returns the user's followers at that gym", :aggregate_failures do

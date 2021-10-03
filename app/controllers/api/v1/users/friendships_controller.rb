@@ -6,17 +6,9 @@ class Api::V1::Users::FriendshipsController < ApplicationController
   def index
     user = User.find(params[:user_id])
     friends = if params[:relationship] == 'followers'
-                if params[:yelp_gym_id]
-                  user.followers_at_same_gym(params[:yelp_gym_id])
-                else
-                  user.followers
-                end
+                params[:yelp_gym_id].present? ? user.followers_at_same_gym(params[:yelp_gym_id]) : user.followers
               else
-                if params[:yelp_gym_id]
-                  user.followees_at_same_gym(params[:yelp_gym_id])
-                else
-                  user.followees
-                end
+                params[:yelp_gym_id].present? ? user.followees_at_same_gym(params[:yelp_gym_id]) : user.followees
               end
 
     render json: UserSerializer.new(friends).serializable_hash, status: :ok
