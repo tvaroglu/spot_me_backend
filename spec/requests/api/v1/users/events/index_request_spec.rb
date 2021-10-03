@@ -15,8 +15,8 @@ describe 'Users::Events API', type: :request do
     let(:no_event_user_id) { user9.id }
     let(:bad_user_id) { User.last.id + 1 }
 
-    let!(:gym_id) { user1.gym_memberships.first.id }
-    let!(:past_event) { create(:event, date_time: DateTime.yesterday, user_id: user2.id, gym_membership_id: gym_id) }
+    let!(:gym_membership) { user1.gym_memberships.first }
+    let!(:past_event) { create(:event, date_time: DateTime.yesterday, user_id: user2.id, gym_membership: gym_membership) }
 
     context 'when the user has upcoming events they are hosting' do
       before { get "/api/v1/users/#{user_id}/events" }
@@ -29,9 +29,11 @@ describe 'Users::Events API', type: :request do
 
         meta = json_data.first[:meta]
 
-        expect(meta.size).to eq 2
+        expect(meta.size).to eq 4
         expect(meta[:friend_name]).to eq user2.full_name
         expect(meta[:friend_role]).to eq 'invited'
+        expect(meta[:gym_name]).to eq gym_membership.gym_name
+        expect(meta[:yelp_gym_id]).to eq gym_membership.yelp_gym_id
       end
 
       include_examples 'status code 200'
@@ -49,9 +51,11 @@ describe 'Users::Events API', type: :request do
 
         meta = json_data.first[:meta]
 
-        expect(meta.size).to eq 2
+        expect(meta.size).to eq 4
         expect(meta[:friend_name]).to eq user1.full_name
         expect(meta[:friend_role]).to eq 'host'
+        expect(meta[:gym_name]).to eq gym_membership.gym_name
+        expect(meta[:yelp_gym_id]).to eq gym_membership.yelp_gym_id
       end
 
       include_examples 'status code 200'
@@ -68,9 +72,11 @@ describe 'Users::Events API', type: :request do
 
         meta = json_data.first[:meta]
 
-        expect(meta.size).to eq 2
+        expect(meta.size).to eq 4
         expect(meta[:friend_name]).to eq user2.full_name
         expect(meta[:friend_role]).to eq 'invited'
+        expect(meta[:gym_name]).to eq gym_membership.gym_name
+        expect(meta[:yelp_gym_id]).to eq gym_membership.yelp_gym_id
       end
 
       include_examples 'status code 200'
@@ -87,9 +93,11 @@ describe 'Users::Events API', type: :request do
 
         meta = json_data.first[:meta]
 
-        expect(meta.size).to eq 2
+        expect(meta.size).to eq 4
         expect(meta[:friend_name]).to eq user1.full_name
         expect(meta[:friend_role]).to eq 'host'
+        expect(meta[:gym_name]).to eq gym_membership.gym_name
+        expect(meta[:yelp_gym_id]).to eq gym_membership.yelp_gym_id
       end
 
       include_examples 'status code 200'

@@ -39,6 +39,17 @@ RSpec.describe Event, type: :model do
         expect(event.invited_name).to eq user2.full_name
       end
     end
+
+    describe '#gym_name and #yelp_gym_id' do
+      let!(:user) { user_with_gym_friend }
+      let(:gym_membership) { user.gym_memberships.first }
+      let(:event) { create(:event, user: user.followees.first, gym_membership: gym_membership) }
+
+      it 'can return the name and yelp_gym_id of the gym associated with the event' do
+        expect(event.gym_name).to eq gym_membership.gym_name
+        expect(event.yelp_gym_id).to eq gym_membership.yelp_gym_id
+      end
+    end
   end
 
   describe 'class methods' do

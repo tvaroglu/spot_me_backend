@@ -15,6 +15,14 @@ class Event < ApplicationRecord
     user.full_name
   end
 
+  def gym_name
+    gym_membership.gym_name
+  end
+
+  def yelp_gym_id
+    gym_membership.yelp_gym_id
+  end
+
   def self.upcoming_events
     where('date_time >= ?', Time.zone.now).order(date_time: :asc)
   end
