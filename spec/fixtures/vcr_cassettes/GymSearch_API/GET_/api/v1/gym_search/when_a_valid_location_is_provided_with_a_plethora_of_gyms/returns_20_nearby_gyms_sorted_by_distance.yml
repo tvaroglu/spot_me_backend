@@ -24,20 +24,20 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Server:
-      - envoy
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-dcrwj; site=public_api_v3
       X-B3-Sampled:
       - '0'
-      X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-dg5zz; site=public_api_v3
       Ratelimit-Dailylimit:
       - '5000'
+      Server:
+      - envoy
       Ratelimit-Remaining:
-      - '4988'
-      X-Zipkin-Id:
-      - f2336f30bf161dbb
+      - '4808'
       Ratelimit-Resettime:
-      - '2021-10-02T00:00:00+00:00'
+      - '2021-10-04T00:00:00+00:00'
+      X-Zipkin-Id:
+      - ae5102aa6d73b3da
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
@@ -49,11 +49,11 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Fri, 01 Oct 2021 05:54:55 GMT
+      - Sun, 03 Oct 2021 04:46:25 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8229-DEN
+      - cache-bur17580-BUR
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -75,7 +75,7 @@ http_interactions:
         "US", "state": "FL", "display_address": ["1817 San Marco Rd", "Marco Island,
         FL 34145"]}, "phone": "+12393949235", "display_phone": "(239) 394-9235", "distance":
         2580.2116310113224}, {"id": "yQaElwKOFU865x1jxH3KGw", "alias": "xcel-fitness-spa-marco-island",
-        "name": "Xcel Fitness Spa", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg",
+        "name": "Xcel Fitness Spa", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/ccAjpYauX08M1B23wHFE3Q/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/xcel-fitness-spa-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
         "review_count": 10, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias":
         "massage", "title": "Massage"}, {"alias": "healthtrainers", "title": "Trainers"}],
@@ -261,5 +261,5 @@ http_interactions:
         "phone": "+12393316915", "display_phone": "(239) 331-6915", "distance": 26708.835300594896}],
         "total": 114, "region": {"center": {"longitude": -81.69708251953125, "latitude":
         25.91046095897436}}}'
-  recorded_at: Fri, 01 Oct 2021 05:54:55 GMT
+  recorded_at: Sun, 03 Oct 2021 04:46:25 GMT
 recorded_with: VCR 6.0.0

@@ -1,0 +1,683 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/gHmS3WIjRRhSWG4OdCQYLA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - DONT_SHARE_MY_SECRET_KEY
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      X-B3-Sampled:
+      - '0'
+      X-Zipkin-Id:
+      - 8784b55910b9e308
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-dcrwj; site=public_api_v3
+      Server:
+      - envoy
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4786'
+      Ratelimit-Resettime:
+      - '2021-10-04T00:00:00+00:00'
+      X-Cloudmap:
+      - routing_uswest2
+      X-Proxied:
+      - 10-69-184-36-uswest2bprod
+      X-Extlb:
+      - 10-69-184-36-uswest2bprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 03 Oct 2021 04:46:36 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-sna10720-LGB
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id": "gHmS3WIjRRhSWG4OdCQYLA", "alias": "quest-fitness-kennebunk-2",
+        "name": "Quest Fitness", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/FJhv4yFveUoNyK5aJaDcqA/o.jpg",
+        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/quest-fitness-kennebunk-2?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "phone": "+12074673800", "display_phone": "(207) 467-3800", "review_count":
+        4, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
+        "taichi", "title": "Tai Chi"}, {"alias": "yoga", "title": "Yoga"}], "rating":
+        5.0, "location": {"address1": "2 Livewell Dr", "address2": null, "address3":
+        null, "city": "Kennebunk", "zip_code": "04043", "country": "US", "state":
+        "ME", "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
+        ""}, "coordinates": {"latitude": 43.393861, "longitude": -70.527933}, "photos":
+        ["https://s3-media4.fl.yelpcdn.com/bphoto/FJhv4yFveUoNyK5aJaDcqA/o.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/k-1eHyAz3uoOfM1lIcYx-A/o.jpg",
+        "https://s3-media4.fl.yelpcdn.com/bphoto/mZBPXGxNmvq4z6ZkzA36ow/o.jpg"], "hours":
+        [{"open": [{"is_overnight": false, "start": "0500", "end": "2030", "day":
+        0}, {"is_overnight": false, "start": "0500", "end": "2030", "day": 1}, {"is_overnight":
+        false, "start": "0500", "end": "2030", "day": 2}, {"is_overnight": false,
+        "start": "0500", "end": "2030", "day": 3}, {"is_overnight": false, "start":
+        "0500", "end": "1900", "day": 4}, {"is_overnight": false, "start": "0700",
+        "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700", "end":
+        "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions":
+        []}'
+  recorded_at: Sun, 03 Oct 2021 04:46:36 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/gHmS3WIjRRhSWG4OdCQYLA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - DONT_SHARE_MY_SECRET_KEY
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Server:
+      - envoy
+      X-B3-Sampled:
+      - '0'
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4785'
+      Ratelimit-Resettime:
+      - '2021-10-04T00:00:00+00:00'
+      X-Zipkin-Id:
+      - 987536fb12f8eea8
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-wdbvd; site=public_api_v3
+      X-Cloudmap:
+      - routing_uswest2
+      X-Proxied:
+      - 10-69-108-234-uswest2aprod
+      X-Extlb:
+      - 10-69-108-234-uswest2aprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 03 Oct 2021 04:46:32 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-bur17550-BUR
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id": "gHmS3WIjRRhSWG4OdCQYLA", "alias": "quest-fitness-kennebunk-2",
+        "name": "Quest Fitness", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/FJhv4yFveUoNyK5aJaDcqA/o.jpg",
+        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/quest-fitness-kennebunk-2?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "phone": "+12074673800", "display_phone": "(207) 467-3800", "review_count":
+        4, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
+        "taichi", "title": "Tai Chi"}, {"alias": "yoga", "title": "Yoga"}], "rating":
+        5.0, "location": {"address1": "2 Livewell Dr", "address2": null, "address3":
+        null, "city": "Kennebunk", "zip_code": "04043", "country": "US", "state":
+        "ME", "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
+        ""}, "coordinates": {"latitude": 43.393861, "longitude": -70.527933}, "photos":
+        ["https://s3-media4.fl.yelpcdn.com/bphoto/FJhv4yFveUoNyK5aJaDcqA/o.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/k-1eHyAz3uoOfM1lIcYx-A/o.jpg",
+        "https://s3-media4.fl.yelpcdn.com/bphoto/mZBPXGxNmvq4z6ZkzA36ow/o.jpg"], "hours":
+        [{"open": [{"is_overnight": false, "start": "0500", "end": "2030", "day":
+        0}, {"is_overnight": false, "start": "0500", "end": "2030", "day": 1}, {"is_overnight":
+        false, "start": "0500", "end": "2030", "day": 2}, {"is_overnight": false,
+        "start": "0500", "end": "2030", "day": 3}, {"is_overnight": false, "start":
+        "0500", "end": "1900", "day": 4}, {"is_overnight": false, "start": "0700",
+        "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700", "end":
+        "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions":
+        []}'
+  recorded_at: Sun, 03 Oct 2021 04:46:36 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/yQaElwKOFU865x1jxH3KGw
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - DONT_SHARE_MY_SECRET_KEY
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Ratelimit-Dailylimit:
+      - '5000'
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-g7dkv; site=public_api_v3
+      Server:
+      - envoy
+      X-B3-Sampled:
+      - '0'
+      X-Zipkin-Id:
+      - 07e61ea6eafa7e7d
+      Ratelimit-Resettime:
+      - '2021-10-04T00:00:00+00:00'
+      Ratelimit-Remaining:
+      - '4784'
+      X-Cloudmap:
+      - routing_uswest2
+      X-Proxied:
+      - 10-69-113-185-uswest2aprod
+      X-Extlb:
+      - 10-69-113-185-uswest2aprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 03 Oct 2021 04:46:36 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-sna10729-LGB
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id": "yQaElwKOFU865x1jxH3KGw", "alias": "xcel-fitness-spa-marco-island",
+        "name": "Xcel Fitness Spa", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/ccAjpYauX08M1B23wHFE3Q/o.jpg",
+        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/xcel-fitness-spa-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "phone": "+12393949235", "display_phone": "(239) 394-9235", "review_count":
+        10, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "massage",
+        "title": "Massage"}, {"alias": "healthtrainers", "title": "Trainers"}], "rating":
+        4.0, "location": {"address1": "1817 San Marco Rd", "address2": null, "address3":
+        "", "city": "Marco Island", "zip_code": "34145", "country": "US", "state":
+        "FL", "display_address": ["1817 San Marco Rd", "Marco Island, FL 34145"],
+        "cross_streets": ""}, "coordinates": {"latitude": 25.9341526, "longitude":
+        -81.6989467}, "photos": ["https://s3-media2.fl.yelpcdn.com/bphoto/ccAjpYauX08M1B23wHFE3Q/o.jpg",
+        "https://s3-media2.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/Qot7suis2wM54QxFQx1DIg/o.jpg"],
+        "price": "$$$", "hours": [{"open": [{"is_overnight": false, "start": "0900",
+        "end": "1900", "day": 0}, {"is_overnight": false, "start": "0900", "end":
+        "1900", "day": 1}, {"is_overnight": false, "start": "0900", "end": "1900",
+        "day": 2}, {"is_overnight": false, "start": "0900", "end": "1900", "day":
+        3}, {"is_overnight": false, "start": "0900", "end": "1900", "day": 4}, {"is_overnight":
+        false, "start": "0900", "end": "1500", "day": 5}, {"is_overnight": false,
+        "start": "0900", "end": "1500", "day": 6}], "hours_type": "REGULAR", "is_open_now":
+        false}], "transactions": []}'
+  recorded_at: Sun, 03 Oct 2021 04:46:36 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/yQaElwKOFU865x1jxH3KGw
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - DONT_SHARE_MY_SECRET_KEY
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      X-Zipkin-Id:
+      - 2b8fb33883ef8770
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-bwzdx; site=public_api_v3
+      Server:
+      - envoy
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4783'
+      X-B3-Sampled:
+      - '0'
+      Ratelimit-Resettime:
+      - '2021-10-04T00:00:00+00:00'
+      X-Cloudmap:
+      - routing_uswest2
+      X-Proxied:
+      - 10-69-105-191-uswest2aprod
+      X-Extlb:
+      - 10-69-105-191-uswest2aprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 03 Oct 2021 04:46:36 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-bur17540-BUR
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id": "yQaElwKOFU865x1jxH3KGw", "alias": "xcel-fitness-spa-marco-island",
+        "name": "Xcel Fitness Spa", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/ccAjpYauX08M1B23wHFE3Q/o.jpg",
+        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/xcel-fitness-spa-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "phone": "+12393949235", "display_phone": "(239) 394-9235", "review_count":
+        10, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "massage",
+        "title": "Massage"}, {"alias": "healthtrainers", "title": "Trainers"}], "rating":
+        4.0, "location": {"address1": "1817 San Marco Rd", "address2": null, "address3":
+        "", "city": "Marco Island", "zip_code": "34145", "country": "US", "state":
+        "FL", "display_address": ["1817 San Marco Rd", "Marco Island, FL 34145"],
+        "cross_streets": ""}, "coordinates": {"latitude": 25.9341526, "longitude":
+        -81.6989467}, "photos": ["https://s3-media2.fl.yelpcdn.com/bphoto/ccAjpYauX08M1B23wHFE3Q/o.jpg",
+        "https://s3-media2.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/Qot7suis2wM54QxFQx1DIg/o.jpg"],
+        "price": "$$$", "hours": [{"open": [{"is_overnight": false, "start": "0900",
+        "end": "1900", "day": 0}, {"is_overnight": false, "start": "0900", "end":
+        "1900", "day": 1}, {"is_overnight": false, "start": "0900", "end": "1900",
+        "day": 2}, {"is_overnight": false, "start": "0900", "end": "1900", "day":
+        3}, {"is_overnight": false, "start": "0900", "end": "1900", "day": 4}, {"is_overnight":
+        false, "start": "0900", "end": "1500", "day": 5}, {"is_overnight": false,
+        "start": "0900", "end": "1500", "day": 6}], "hours_type": "REGULAR", "is_open_now":
+        false}], "transactions": []}'
+  recorded_at: Sun, 03 Oct 2021 04:46:36 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/gHmS3WIjRRhSWG4OdCQYLA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - DONT_SHARE_MY_SECRET_KEY
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Server:
+      - envoy
+      Ratelimit-Dailylimit:
+      - '5000'
+      X-B3-Sampled:
+      - '0'
+      Ratelimit-Resettime:
+      - '2021-10-04T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-2df7g; site=public_api_v3
+      X-Zipkin-Id:
+      - 58693e428d6577fd
+      Ratelimit-Remaining:
+      - '4782'
+      X-Cloudmap:
+      - routing_uswest2
+      X-Proxied:
+      - 10-69-173-40-uswest2bprod
+      X-Extlb:
+      - 10-69-173-40-uswest2bprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 03 Oct 2021 04:46:37 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-bur17546-BUR
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id": "gHmS3WIjRRhSWG4OdCQYLA", "alias": "quest-fitness-kennebunk-2",
+        "name": "Quest Fitness", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/FJhv4yFveUoNyK5aJaDcqA/o.jpg",
+        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/quest-fitness-kennebunk-2?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "phone": "+12074673800", "display_phone": "(207) 467-3800", "review_count":
+        4, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
+        "taichi", "title": "Tai Chi"}, {"alias": "yoga", "title": "Yoga"}], "rating":
+        5.0, "location": {"address1": "2 Livewell Dr", "address2": null, "address3":
+        null, "city": "Kennebunk", "zip_code": "04043", "country": "US", "state":
+        "ME", "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
+        ""}, "coordinates": {"latitude": 43.393861, "longitude": -70.527933}, "photos":
+        ["https://s3-media4.fl.yelpcdn.com/bphoto/FJhv4yFveUoNyK5aJaDcqA/o.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/k-1eHyAz3uoOfM1lIcYx-A/o.jpg",
+        "https://s3-media4.fl.yelpcdn.com/bphoto/mZBPXGxNmvq4z6ZkzA36ow/o.jpg"], "hours":
+        [{"open": [{"is_overnight": false, "start": "0500", "end": "2030", "day":
+        0}, {"is_overnight": false, "start": "0500", "end": "2030", "day": 1}, {"is_overnight":
+        false, "start": "0500", "end": "2030", "day": 2}, {"is_overnight": false,
+        "start": "0500", "end": "2030", "day": 3}, {"is_overnight": false, "start":
+        "0500", "end": "1900", "day": 4}, {"is_overnight": false, "start": "0700",
+        "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700", "end":
+        "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions":
+        []}'
+  recorded_at: Sun, 03 Oct 2021 04:46:37 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/gHmS3WIjRRhSWG4OdCQYLA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - DONT_SHARE_MY_SECRET_KEY
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      X-Zipkin-Id:
+      - 2dcf540db25b1345
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-wgl7j; site=public_api_v3
+      Ratelimit-Dailylimit:
+      - '5000'
+      X-B3-Sampled:
+      - '0'
+      Ratelimit-Remaining:
+      - '4781'
+      Server:
+      - envoy
+      Ratelimit-Resettime:
+      - '2021-10-04T00:00:00+00:00'
+      X-Cloudmap:
+      - routing_uswest2
+      X-Proxied:
+      - 10-69-184-36-uswest2bprod
+      X-Extlb:
+      - 10-69-184-36-uswest2bprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 03 Oct 2021 04:46:37 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-lax10642-LGB
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id": "gHmS3WIjRRhSWG4OdCQYLA", "alias": "quest-fitness-kennebunk-2",
+        "name": "Quest Fitness", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/FJhv4yFveUoNyK5aJaDcqA/o.jpg",
+        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/quest-fitness-kennebunk-2?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "phone": "+12074673800", "display_phone": "(207) 467-3800", "review_count":
+        4, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
+        "taichi", "title": "Tai Chi"}, {"alias": "yoga", "title": "Yoga"}], "rating":
+        5.0, "location": {"address1": "2 Livewell Dr", "address2": null, "address3":
+        null, "city": "Kennebunk", "zip_code": "04043", "country": "US", "state":
+        "ME", "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
+        ""}, "coordinates": {"latitude": 43.393861, "longitude": -70.527933}, "photos":
+        ["https://s3-media4.fl.yelpcdn.com/bphoto/FJhv4yFveUoNyK5aJaDcqA/o.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/k-1eHyAz3uoOfM1lIcYx-A/o.jpg",
+        "https://s3-media4.fl.yelpcdn.com/bphoto/mZBPXGxNmvq4z6ZkzA36ow/o.jpg"], "hours":
+        [{"open": [{"is_overnight": false, "start": "0500", "end": "2030", "day":
+        0}, {"is_overnight": false, "start": "0500", "end": "2030", "day": 1}, {"is_overnight":
+        false, "start": "0500", "end": "2030", "day": 2}, {"is_overnight": false,
+        "start": "0500", "end": "2030", "day": 3}, {"is_overnight": false, "start":
+        "0500", "end": "1900", "day": 4}, {"is_overnight": false, "start": "0700",
+        "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700", "end":
+        "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions":
+        []}'
+  recorded_at: Sun, 03 Oct 2021 04:46:37 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/yQaElwKOFU865x1jxH3KGw
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - DONT_SHARE_MY_SECRET_KEY
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      X-Zipkin-Id:
+      - c62e29e5849ee365
+      X-B3-Sampled:
+      - '0'
+      Ratelimit-Dailylimit:
+      - '5000'
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-gq6gs; site=public_api_v3
+      Ratelimit-Remaining:
+      - '4780'
+      Server:
+      - envoy
+      Ratelimit-Resettime:
+      - '2021-10-04T00:00:00+00:00'
+      X-Cloudmap:
+      - routing_uswest2
+      X-Proxied:
+      - 10-69-126-17-uswest2aprod
+      X-Extlb:
+      - 10-69-126-17-uswest2aprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 03 Oct 2021 04:46:37 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-bur17566-BUR
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id": "yQaElwKOFU865x1jxH3KGw", "alias": "xcel-fitness-spa-marco-island",
+        "name": "Xcel Fitness Spa", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/ccAjpYauX08M1B23wHFE3Q/o.jpg",
+        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/xcel-fitness-spa-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "phone": "+12393949235", "display_phone": "(239) 394-9235", "review_count":
+        10, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "massage",
+        "title": "Massage"}, {"alias": "healthtrainers", "title": "Trainers"}], "rating":
+        4.0, "location": {"address1": "1817 San Marco Rd", "address2": null, "address3":
+        "", "city": "Marco Island", "zip_code": "34145", "country": "US", "state":
+        "FL", "display_address": ["1817 San Marco Rd", "Marco Island, FL 34145"],
+        "cross_streets": ""}, "coordinates": {"latitude": 25.9341526, "longitude":
+        -81.6989467}, "photos": ["https://s3-media2.fl.yelpcdn.com/bphoto/ccAjpYauX08M1B23wHFE3Q/o.jpg",
+        "https://s3-media2.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/Qot7suis2wM54QxFQx1DIg/o.jpg"],
+        "price": "$$$", "hours": [{"open": [{"is_overnight": false, "start": "0900",
+        "end": "1900", "day": 0}, {"is_overnight": false, "start": "0900", "end":
+        "1900", "day": 1}, {"is_overnight": false, "start": "0900", "end": "1900",
+        "day": 2}, {"is_overnight": false, "start": "0900", "end": "1900", "day":
+        3}, {"is_overnight": false, "start": "0900", "end": "1900", "day": 4}, {"is_overnight":
+        false, "start": "0900", "end": "1500", "day": 5}, {"is_overnight": false,
+        "start": "0900", "end": "1500", "day": 6}], "hours_type": "REGULAR", "is_open_now":
+        false}], "transactions": []}'
+  recorded_at: Sun, 03 Oct 2021 04:46:37 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/yQaElwKOFU865x1jxH3KGw
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - DONT_SHARE_MY_SECRET_KEY
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Ratelimit-Remaining:
+      - '4779'
+      X-B3-Sampled:
+      - '0'
+      X-Zipkin-Id:
+      - 754d2b875ae8b714
+      Ratelimit-Resettime:
+      - '2021-10-04T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-2j5zt; site=public_api_v3
+      Server:
+      - envoy
+      Ratelimit-Dailylimit:
+      - '5000'
+      X-Cloudmap:
+      - routing_uswest2
+      X-Proxied:
+      - 10-69-108-234-uswest2aprod
+      X-Extlb:
+      - 10-69-108-234-uswest2aprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 03 Oct 2021 04:46:37 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-lax10634-LGB
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id": "yQaElwKOFU865x1jxH3KGw", "alias": "xcel-fitness-spa-marco-island",
+        "name": "Xcel Fitness Spa", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/ccAjpYauX08M1B23wHFE3Q/o.jpg",
+        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/xcel-fitness-spa-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "phone": "+12393949235", "display_phone": "(239) 394-9235", "review_count":
+        10, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "massage",
+        "title": "Massage"}, {"alias": "healthtrainers", "title": "Trainers"}], "rating":
+        4.0, "location": {"address1": "1817 San Marco Rd", "address2": null, "address3":
+        "", "city": "Marco Island", "zip_code": "34145", "country": "US", "state":
+        "FL", "display_address": ["1817 San Marco Rd", "Marco Island, FL 34145"],
+        "cross_streets": ""}, "coordinates": {"latitude": 25.9341526, "longitude":
+        -81.6989467}, "photos": ["https://s3-media2.fl.yelpcdn.com/bphoto/ccAjpYauX08M1B23wHFE3Q/o.jpg",
+        "https://s3-media2.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/Qot7suis2wM54QxFQx1DIg/o.jpg"],
+        "price": "$$$", "hours": [{"open": [{"is_overnight": false, "start": "0900",
+        "end": "1900", "day": 0}, {"is_overnight": false, "start": "0900", "end":
+        "1900", "day": 1}, {"is_overnight": false, "start": "0900", "end": "1900",
+        "day": 2}, {"is_overnight": false, "start": "0900", "end": "1900", "day":
+        3}, {"is_overnight": false, "start": "0900", "end": "1900", "day": 4}, {"is_overnight":
+        false, "start": "0900", "end": "1500", "day": 5}, {"is_overnight": false,
+        "start": "0900", "end": "1500", "day": 6}], "hours_type": "REGULAR", "is_open_now":
+        false}], "transactions": []}'
+  recorded_at: Sun, 03 Oct 2021 04:46:37 GMT
+recorded_with: VCR 6.0.0

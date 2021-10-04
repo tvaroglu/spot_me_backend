@@ -14,10 +14,10 @@ describe 'Users::Friendships API', type: :request do
     let(:no_friend_user_id) { user9.id }
     let(:bad_user_id) { User.last.id + 1 }
 
-    context 'when the user friendships records exists' do
+    context 'when the user is following other users' do
       before { get "/api/v1/users/#{user_id}/friendships" }
 
-      it 'returns the users friendships', :aggregate_failures do
+      it "returns the user's followees", :aggregate_failures do
         expect(json).not_to be_empty
         expect(json_data.size).to eq(5)
         expect(json_data.first[:id]).to eq(user2.id.to_s)
@@ -26,16 +26,41 @@ describe 'Users::Friendships API', type: :request do
       include_examples 'status code 200'
     end
 
-    context 'when I provide yelp_gym_id in query params' do
+    context 'when the user is followed by other users' do
+      before { get "/api/v1/users/#{user_id}/friendships?relationship=followers" }
+
+      it "returns the user's followers", :aggregate_failures do
+        expect(json).not_to be_empty
+        expect(json_data.size).to eq(1)
+        expect(json_data.first[:id]).to eq(user2.id.to_s)
+      end
+
+      include_examples 'status code 200'
+    end
+
+    context 'when yelp_gym_id is provided within query params' do
       before { get "/api/v1/users/#{user_id}/friendships?yelp_gym_id=#{gym1}" }
 
-      it 'returns the users friends at that gym', :aggregate_failures do
+      it "returns the user's followees at that gym", :aggregate_failures do
         expect(json).not_to be_empty
         expect(json_data.size).to eq(3)
 
         expect(json_data.first[:id]).to eq(user2.id.to_s)
         expect(json_data.second[:id]).to eq(user3.id.to_s)
         expect(json_data.third[:id]).to eq(user5.id.to_s)
+      end
+
+      include_examples 'status code 200'
+    end
+
+    context "when yelp_gym_id and 'followers' relationship is provided within query params" do
+      before { get "/api/v1/users/#{user_id}/friendships?yelp_gym_id=#{gym1}&relationship=followers" }
+
+      it "returns the user's followers at that gym", :aggregate_failures do
+        expect(json).not_to be_empty
+        expect(json_data.size).to eq(1)
+
+        expect(json_data.first[:id]).to eq(user2.id.to_s)
       end
 
       include_examples 'status code 200'
@@ -57,8 +82,15 @@ describe 'Users::Friendships API', type: :request do
       include_examples 'status code 404'
     end
 
-    context 'when the user has no friendships' do
+    context 'when the user is not following any users (has no followees)' do
       before { get "/api/v1/users/#{no_friend_user_id}/friendships" }
+
+      include_examples 'returns nil data'
+      include_examples 'status code 200'
+    end
+
+    context 'when the user has no followers' do
+      before { get "/api/v1/users/#{no_friend_user_id}/friendships?relationship=followers" }
 
       include_examples 'returns nil data'
       include_examples 'status code 200'

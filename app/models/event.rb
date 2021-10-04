@@ -2,6 +2,9 @@ class Event < ApplicationRecord
   belongs_to :user
   belongs_to :gym_membership
 
+  delegate :gym_name, to: :gym_membership
+  delegate :yelp_gym_id, to: :gym_membership
+
   validates :user_id, presence: true, numericality: true
   validates :gym_membership_id, presence: true, numericality: true
   validates :date_time, presence: true
@@ -16,7 +19,7 @@ class Event < ApplicationRecord
   end
 
   def self.upcoming_events
-    where('date_time >= ?', Time.zone.now).order(date_time: :desc)
+    where('date_time >= ?', Time.zone.now).order(date_time: :asc)
   end
 
   def self.past_events

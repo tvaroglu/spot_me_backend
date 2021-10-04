@@ -5,7 +5,7 @@ class Api::V1::Users::GymMembersController < ApplicationController
     return error_message if params[:yelp_gym_id].blank?
 
     user = User.find(params[:user_id])
-    users = user.non_friends_at_same_gym(params[:yelp_gym_id])
+    users = user.non_followees_at_same_gym(params[:yelp_gym_id])
 
     render json: UserSerializer.new(users).serializable_hash, status: :ok
   end

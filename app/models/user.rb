@@ -37,13 +37,27 @@ class User < ApplicationRecord
     hosted_past_events + invited_past_events
   end
 
-  def friends_at_same_gym(yelp_gym_id)
+  def followees_at_same_gym(yelp_gym_id)
+    # users that the current user IS following at the same gym
     followees.users_at_same_gym(yelp_gym_id)
   end
 
-  def non_friends_at_same_gym(yelp_gym_id)
+  def followers_at_same_gym(yelp_gym_id)
+    # users that are following the current user at the same gym
+    followers.users_at_same_gym(yelp_gym_id)
+  end
+
+  def non_followees_at_same_gym(yelp_gym_id)
+    # users that the current user is NOT following at the same gym
     User.users_at_same_gym(yelp_gym_id) -
-      friends_at_same_gym(yelp_gym_id) -
+      followees_at_same_gym(yelp_gym_id) -
+      [self]
+  end
+
+  def non_followers_at_same_gym(yelp_gym_id)
+    # users that are not following the current user at the same gym
+    User.users_at_same_gym(yelp_gym_id) -
+      followers_at_same_gym(yelp_gym_id) -
       [self]
   end
 
