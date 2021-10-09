@@ -15,6 +15,7 @@ describe 'GymSearch API', type: :request do
         expect(json).not_to be_empty
         expect(json_data.size).to eq 20
         expect(json_data.first[:id]).to be_a(String)
+        expect(json_data.first[:attributes].keys).to eq([:name, :address, :address_details, :phone, :gym_member_count])
       end
 
       include_examples 'status code 200'
@@ -27,6 +28,7 @@ describe 'GymSearch API', type: :request do
         expect(json).not_to be_empty
         expect(json_data.size).to eq 16
         expect(json_data.first[:id]).to be_a(String)
+        expect(json_data.first[:attributes].keys).to eq([:name, :address, :address_details, :phone, :gym_member_count])
       end
 
       include_examples 'status code 200'
