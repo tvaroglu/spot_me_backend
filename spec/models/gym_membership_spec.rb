@@ -41,4 +41,25 @@ RSpec.describe GymMembership, type: :model do
       end
     end
   end
+
+  describe 'class methods' do
+    describe '::gym_member_count', :vcr do
+      let!(:yelp_gym) { GymFacade.find_gym('gHmS3WIjRRhSWG4OdCQYLA') }
+
+      context 'when there are no active GymMemberships associated with the Yelp Gym record' do
+        it 'can return 0' do
+          expect(GymMembership.gym_member_count(yelp_gym.yelp_gym_id)).to eq 0
+        end
+      end
+
+      context 'when there are active GymMemberships associated with the Yelp Gym record' do
+        let(:user) { user_with_gym_membership(yelp_gym_id: yelp_gym.yelp_gym_id) }
+        let(:gym_membership) { user.gym_memberships.first }
+
+        it 'can return the number of gym memberships associated with the Yelp Gym record' do
+          expect(GymMembership.gym_member_count(gym_membership.yelp_gym_id)).to eq 1
+        end
+      end
+    end
+  end
 end

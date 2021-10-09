@@ -13,4 +13,8 @@ class GymMembership < ApplicationRecord
   def find_gym
     GymFacade.find_gym(yelp_gym_id)
   end
+
+  def self.gym_member_count(yelp_gym_id)
+    GymMembership.where(yelp_gym_id: yelp_gym_id).size
+  end
 end
