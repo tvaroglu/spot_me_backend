@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.yelp.com/v3/businesses/search?location=23452345632456334234&radius=40000&sort_by=distance&term=gyms
+    uri: https://api.yelp.com/v3/businesses/search?limit=50&location=23452345632456334234&radius=40000&sort_by=distance&term=gyms
     body:
       encoding: US-ASCII
       string: ''
@@ -27,27 +27,27 @@ http_interactions:
       Content-Type:
       - application/json
       X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-pxc98; site=public_api_v3
+      - routing-main--uswest2-7b96896cd8-btzhq; site=public_api_v3
       X-B3-Sampled:
       - '0'
       X-Zipkin-Id:
-      - 1a754ebf9de37f1c
+      - 8feb4f3b3d8903df
       Server:
       - envoy
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
-      - 10-69-185-39-uswest2bprod
+      - 10-69-173-40-uswest2bprod
       X-Extlb:
-      - 10-69-185-39-uswest2bprod
+      - 10-69-173-40-uswest2bprod
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 03 Oct 2021 04:46:42 GMT
+      - Sat, 09 Oct 2021 20:36:33 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-sna10728-LGB
+      - cache-bur17542-BUR
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -56,5 +56,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"error": {"code": "LOCATION_NOT_FOUND", "description": "Could not
         execute search, try specifying a more exact location."}}'
-  recorded_at: Sun, 03 Oct 2021 04:46:42 GMT
+  recorded_at: Sat, 09 Oct 2021 20:36:33 GMT
 recorded_with: VCR 6.0.0

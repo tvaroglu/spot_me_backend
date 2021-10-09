@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.yelp.com/v3/businesses/search?location=04572&radius=40000&sort_by=distance&term=gyms
+    uri: https://api.yelp.com/v3/businesses/search?limit=50&location=04572&radius=40000&sort_by=distance&term=gyms
     body:
       encoding: US-ASCII
       string: ''
@@ -24,36 +24,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Resettime:
-      - '2021-10-04T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-s26dx; site=public_api_v3
       X-B3-Sampled:
       - '0'
-      X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-shc9c; site=public_api_v3
-      X-Zipkin-Id:
-      - d936dd4d9d5496f0
-      Ratelimit-Remaining:
-      - '4805'
-      Ratelimit-Dailylimit:
-      - '5000'
       Server:
       - envoy
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4954'
+      X-Zipkin-Id:
+      - f6565149907165c9
+      Ratelimit-Resettime:
+      - '2021-10-10T00:00:00+00:00'
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
-      - 10-69-173-40-uswest2bprod
+      - 10-69-126-17-uswest2aprod
       X-Extlb:
-      - 10-69-173-40-uswest2bprod
+      - 10-69-126-17-uswest2aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 03 Oct 2021 04:46:26 GMT
+      - Sat, 09 Oct 2021 20:36:05 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-lax10630-LGB
+      - cache-bur17533-BUR
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -94,14 +94,15 @@ http_interactions:
         {"id": "80XRogbI6fUCQc6r2fcOnw", "alias": "planet-fitness-rockland", "name":
         "Planet Fitness", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/e1N7-6kzc4SVNQeB5YHD5w/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/planet-fitness-rockland?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
-        "review_count": 2, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
-        5.0, "coordinates": {"latitude": 44.117653, "longitude": -69.10884}, "transactions":
-        [], "location": {"address1": "75 Maverick St", "address2": "", "address3":
-        null, "city": "Rockland", "zip_code": "04841", "country": "US", "state": "ME",
-        "display_address": ["75 Maverick St", "Rockland, ME 04841"]}, "phone": "+12074183111",
-        "display_phone": "(207) 418-3111", "distance": 20581.75182096001}, {"id":
-        "_9_amlJVk5SIQRcUAB_jmQ", "alias": "earth-flow-fire-and-earth-candy-rockland",
-        "name": "Earth Flow + Fire and Earth Candy", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Tjv9n6IU65Z2VkdCd-_RIQ/o.jpg",
+        "review_count": 2, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias":
+        "healthtrainers", "title": "Trainers"}], "rating": 5.0, "coordinates": {"latitude":
+        44.117653, "longitude": -69.10884}, "transactions": [], "location": {"address1":
+        "75 Maverick St", "address2": "", "address3": null, "city": "Rockland", "zip_code":
+        "04841", "country": "US", "state": "ME", "display_address": ["75 Maverick
+        St", "Rockland, ME 04841"]}, "phone": "+12074183111", "display_phone": "(207)
+        418-3111", "distance": 20581.75182096001}, {"id": "_9_amlJVk5SIQRcUAB_jmQ",
+        "alias": "earth-flow-fire-and-earth-candy-rockland", "name": "Earth Flow +
+        Fire and Earth Candy", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Tjv9n6IU65Z2VkdCd-_RIQ/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/earth-flow-fire-and-earth-candy-rockland?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
         "review_count": 14, "categories": [{"alias": "yoga", "title": "Yoga"}, {"alias":
         "juicebars", "title": "Juice Bars & Smoothies"}, {"alias": "vegan", "title":
@@ -216,5 +217,5 @@ http_interactions:
         "+12073384598", "display_phone": "(207) 338-4598", "distance": 43655.58741866142}],
         "total": 16, "region": {"center": {"longitude": -69.36630249023438, "latitude":
         44.10811081310502}}}'
-  recorded_at: Sun, 03 Oct 2021 04:46:26 GMT
+  recorded_at: Sat, 09 Oct 2021 20:36:06 GMT
 recorded_with: VCR 6.0.0

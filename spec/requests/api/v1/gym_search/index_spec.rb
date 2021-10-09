@@ -8,12 +8,12 @@ require 'rails_helper'
 # See spec/support/request_spec_helper.rb for #json and #json_data helpers.
 describe 'GymSearch API', type: :request do
   describe 'GET /api/v1/gym_search' do
-    context 'when a valid location is provided with a plethora of gyms', :vcr do
+    context 'when a valid location is provided with a plethora of available gyms', :vcr do
       before { get '/api/v1/gym_search?zip_code=34145' }
 
-      it 'returns 20 nearby gyms sorted by distance', :aggregate_failures do
+      it 'returns 50 nearby gyms sorted by distance', :aggregate_failures do
         expect(json).not_to be_empty
-        expect(json_data.size).to eq 20
+        expect(json_data.size).to eq 50
         expect(json_data.first[:id]).to be_a(String)
         expect(json_data.first[:attributes].keys).to eq([:name, :address, :address_details, :phone, :gym_member_count])
       end
@@ -21,10 +21,10 @@ describe 'GymSearch API', type: :request do
       include_examples 'status code 200'
     end
 
-    context 'when a valid location is provided with less than 20 available gyms', :vcr do
+    context 'when a valid location is provided with less than 50 available gyms', :vcr do
       before { get '/api/v1/gym_search?zip_code=04572' }
 
-      it 'returns 20 nearby gyms sorted by distance', :aggregate_failures do
+      it 'returns nearby gyms sorted by distance', :aggregate_failures do
         expect(json).not_to be_empty
         expect(json_data.size).to eq 16
         expect(json_data.first[:id]).to be_a(String)
