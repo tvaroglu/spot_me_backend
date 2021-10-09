@@ -74,11 +74,12 @@ describe 'GymSerializer', type: :serializer do
             expect(gym).to be_a Hash
             expect(gym[:id]).to be_a String
             expect(gym[:type]).to eq 'gym'
-            expect(gym[:attributes].size).to eq 4
+            expect(gym[:attributes].size).to eq 5
             expect(gym[:attributes][:name]).to be_a String
             expect(gym[:attributes][:address]).to be_a String
             expect(gym[:attributes][:address_details]).to be_a Hash
             expect(gym[:attributes][:phone]).to be_a String
+            expect(gym[:attributes][:gym_member_count]).to be_an Integer
           end
         end
 
@@ -86,11 +87,12 @@ describe 'GymSerializer', type: :serializer do
           expect(gym).to be_a Hash
           expect(gym[:data][:id]).to be_a String
           expect(gym[:data][:type]).to eq 'gym'
-          expect(gym[:data][:attributes].size).to eq 4
+          expect(gym[:data][:attributes].size).to eq 5
           expect(gym[:data][:attributes][:name]).to be_a String
           expect(gym[:data][:attributes][:address]).to be_a String
           expect(gym[:data][:attributes][:address_details]).to be_a Hash
           expect(gym[:data][:attributes][:phone]).to be_a String
+          expect(gym[:data][:attributes][:gym_member_count]).to be_an Integer
         end
       end
     end

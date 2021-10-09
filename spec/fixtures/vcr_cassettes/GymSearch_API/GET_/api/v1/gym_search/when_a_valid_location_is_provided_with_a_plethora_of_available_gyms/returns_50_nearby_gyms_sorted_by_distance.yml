@@ -24,36 +24,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-2ls9p; site=public_api_v3
       Server:
       - envoy
-      X-B3-Sampled:
-      - '0'
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-6flzf; site=public_api_v3
+      X-Zipkin-Id:
+      - e319d0ff780d6944
       Ratelimit-Dailylimit:
       - '5000'
-      X-Zipkin-Id:
-      - 4fcfe637e0c77353
       Ratelimit-Remaining:
-      - '4920'
+      - '4914'
       Ratelimit-Resettime:
       - '2021-10-10T00:00:00+00:00'
+      X-B3-Sampled:
+      - '0'
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
-      - 10-69-126-17-uswest2aprod
+      - 10-69-152-12-uswest2bprod
       X-Extlb:
-      - 10-69-126-17-uswest2aprod
+      - 10-69-152-12-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 09 Oct 2021 20:36:31 GMT
+      - Sat, 09 Oct 2021 20:39:52 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-bur17528-BUR
+      - cache-bur17563-BUR
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -555,5 +555,5 @@ http_interactions:
         "state": "FL", "display_address": ["Naples, FL 34103"]}, "phone": "+12392272926",
         "display_phone": "(239) 227-2926", "distance": 33113.57128366476}], "total":
         115, "region": {"center": {"longitude": -81.69708251953125, "latitude": 25.91046095897436}}}'
-  recorded_at: Sat, 09 Oct 2021 20:36:31 GMT
+  recorded_at: Sat, 09 Oct 2021 20:39:52 GMT
 recorded_with: VCR 6.0.0

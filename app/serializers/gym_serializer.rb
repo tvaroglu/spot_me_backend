@@ -16,7 +16,8 @@ class GymSerializer
           name: gym.name,
           address: gym.address,
           address_details: gym.address_details,
-          phone: gym.phone
+          phone: gym.phone,
+          gym_member_count: GymMembership.gym_member_count(gym.yelp_gym_id)
         }
       }
     end

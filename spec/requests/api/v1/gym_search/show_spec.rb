@@ -16,7 +16,7 @@ describe 'GymSearch API', type: :request do
 
         expect(json_data[:id]).to be_a(String)
         expect(json_data[:id]).to eq('HxK5-XEhjl0x0RR9PAgBVQ')
-        expect(json_data[:attributes].keys).to eq([:name, :address, :address_details, :phone])
+        expect(json_data[:attributes].keys).to eq([:name, :address, :address_details, :phone, :gym_member_count])
       end
 
       include_examples 'status code 200'

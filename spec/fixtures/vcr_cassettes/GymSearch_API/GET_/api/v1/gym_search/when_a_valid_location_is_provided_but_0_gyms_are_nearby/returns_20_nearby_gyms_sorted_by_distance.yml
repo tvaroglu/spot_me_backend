@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.yelp.com/v3/businesses/search?location=89405&radius=40000&sort_by=distance&term=gyms
+    uri: https://api.yelp.com/v3/businesses/search?limit=50&location=89405&radius=40000&sort_by=distance&term=gyms
     body:
       encoding: US-ASCII
       string: ''
@@ -24,20 +24,20 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-2nvqc; site=public_api_v3
+      Ratelimit-Remaining:
+      - '4953'
+      X-Zipkin-Id:
+      - 975396a127899c05
       Ratelimit-Resettime:
-      - '2021-10-04T00:00:00+00:00'
+      - '2021-10-10T00:00:00+00:00'
+      Ratelimit-Dailylimit:
+      - '5000'
       X-B3-Sampled:
       - '0'
       Server:
       - envoy
-      X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-g7dkv; site=public_api_v3
-      Ratelimit-Dailylimit:
-      - '5000'
-      X-Zipkin-Id:
-      - 8f2a81550d1675fd
-      Ratelimit-Remaining:
-      - '4804'
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
@@ -49,11 +49,11 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 03 Oct 2021 04:46:27 GMT
+      - Sat, 09 Oct 2021 20:36:06 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-sna10750-LGB
+      - cache-bur17580-BUR
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -66,5 +66,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"businesses": [], "total": 0, "region": {"center": {"longitude": -119.432373046875,
         "latitude": 40.4462157989704}}}'
-  recorded_at: Sun, 03 Oct 2021 04:46:27 GMT
+  recorded_at: Sat, 09 Oct 2021 20:36:06 GMT
 recorded_with: VCR 6.0.0

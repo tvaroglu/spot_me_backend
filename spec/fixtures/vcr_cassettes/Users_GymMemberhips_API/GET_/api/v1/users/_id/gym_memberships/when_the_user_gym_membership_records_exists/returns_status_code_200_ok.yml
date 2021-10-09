@@ -24,36 +24,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Resettime:
-      - '2021-10-04T00:00:00+00:00'
-      X-B3-Sampled:
-      - '0'
-      X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-8fpx7; site=public_api_v3
       Ratelimit-Dailylimit:
       - '5000'
+      Ratelimit-Remaining:
+      - '4927'
       Server:
       - envoy
-      Ratelimit-Remaining:
-      - '4778'
+      Ratelimit-Resettime:
+      - '2021-10-10T00:00:00+00:00'
       X-Zipkin-Id:
-      - b5f2e8a0a53c8423
+      - 4f1117097b9e2566
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-jp7wh; site=public_api_v3
+      X-B3-Sampled:
+      - '0'
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
-      - 10-69-185-39-uswest2bprod
+      - 10-69-184-36-uswest2bprod
       X-Extlb:
-      - 10-69-185-39-uswest2bprod
+      - 10-69-184-36-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 03 Oct 2021 04:46:38 GMT
+      - Sat, 09 Oct 2021 20:36:26 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-bur17540-BUR
+      - cache-bur17546-BUR
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -82,9 +82,9 @@ http_interactions:
         "start": "0500", "end": "2030", "day": 3}, {"is_overnight": false, "start":
         "0500", "end": "1900", "day": 4}, {"is_overnight": false, "start": "0700",
         "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700", "end":
-        "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions":
+        "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": true}], "transactions":
         []}'
-  recorded_at: Sun, 03 Oct 2021 04:46:38 GMT
+  recorded_at: Sat, 09 Oct 2021 20:36:26 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/gHmS3WIjRRhSWG4OdCQYLA
@@ -109,36 +109,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Remaining:
-      - '4777'
       Ratelimit-Resettime:
-      - '2021-10-04T00:00:00+00:00'
-      X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-2qlg8; site=public_api_v3
+      - '2021-10-10T00:00:00+00:00'
+      X-Zipkin-Id:
+      - ec8d23f7f213caf8
       X-B3-Sampled:
       - '0'
-      X-Zipkin-Id:
-      - 4697f4697da77d4f
-      Server:
-      - envoy
       Ratelimit-Dailylimit:
       - '5000'
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-xmzh6; site=public_api_v3
+      Server:
+      - envoy
+      Ratelimit-Remaining:
+      - '4926'
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
-      - 10-69-126-17-uswest2aprod
+      - 10-69-185-39-uswest2bprod
       X-Extlb:
-      - 10-69-126-17-uswest2aprod
+      - 10-69-185-39-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 03 Oct 2021 04:46:38 GMT
+      - Sat, 09 Oct 2021 20:36:27 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-sna10751-LGB
+      - cache-bur17558-BUR
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -167,9 +167,9 @@ http_interactions:
         "start": "0500", "end": "2030", "day": 3}, {"is_overnight": false, "start":
         "0500", "end": "1900", "day": 4}, {"is_overnight": false, "start": "0700",
         "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700", "end":
-        "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions":
+        "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": true}], "transactions":
         []}'
-  recorded_at: Sun, 03 Oct 2021 04:46:38 GMT
+  recorded_at: Sat, 09 Oct 2021 20:36:27 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/yQaElwKOFU865x1jxH3KGw
@@ -194,36 +194,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-Zipkin-Id:
-      - 9bee93be1c63b362
-      Ratelimit-Dailylimit:
-      - '5000'
+      Ratelimit-Resettime:
+      - '2021-10-10T00:00:00+00:00'
       Server:
       - envoy
       X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-2brz6; site=public_api_v3
+      - routing-main--uswest2-7b96896cd8-x2jrm; site=public_api_v3
       X-B3-Sampled:
       - '0'
-      Ratelimit-Resettime:
-      - '2021-10-04T00:00:00+00:00'
+      X-Zipkin-Id:
+      - c90a7b6bea781af7
+      Ratelimit-Dailylimit:
+      - '5000'
       Ratelimit-Remaining:
-      - '4776'
+      - '4925'
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
-      - 10-69-184-36-uswest2bprod
+      - 10-69-130-205-uswest2bprod
       X-Extlb:
-      - 10-69-184-36-uswest2bprod
+      - 10-69-130-205-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 03 Oct 2021 04:46:38 GMT
+      - Sat, 09 Oct 2021 20:36:27 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-bur17534-BUR
+      - cache-bur17562-BUR
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -235,7 +235,7 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"id": "yQaElwKOFU865x1jxH3KGw", "alias": "xcel-fitness-spa-marco-island",
-        "name": "Xcel Fitness Spa", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/ccAjpYauX08M1B23wHFE3Q/o.jpg",
+        "name": "Xcel Fitness Spa", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg",
         "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/xcel-fitness-spa-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
         "phone": "+12393949235", "display_phone": "(239) 394-9235", "review_count":
         10, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "massage",
@@ -244,8 +244,8 @@ http_interactions:
         "", "city": "Marco Island", "zip_code": "34145", "country": "US", "state":
         "FL", "display_address": ["1817 San Marco Rd", "Marco Island, FL 34145"],
         "cross_streets": ""}, "coordinates": {"latitude": 25.9341526, "longitude":
-        -81.6989467}, "photos": ["https://s3-media2.fl.yelpcdn.com/bphoto/ccAjpYauX08M1B23wHFE3Q/o.jpg",
-        "https://s3-media2.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/Qot7suis2wM54QxFQx1DIg/o.jpg"],
+        -81.6989467}, "photos": ["https://s3-media2.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg",
+        "https://s3-media2.fl.yelpcdn.com/bphoto/ccAjpYauX08M1B23wHFE3Q/o.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/Qot7suis2wM54QxFQx1DIg/o.jpg"],
         "price": "$$$", "hours": [{"open": [{"is_overnight": false, "start": "0900",
         "end": "1900", "day": 0}, {"is_overnight": false, "start": "0900", "end":
         "1900", "day": 1}, {"is_overnight": false, "start": "0900", "end": "1900",
@@ -254,7 +254,7 @@ http_interactions:
         false, "start": "0900", "end": "1500", "day": 5}, {"is_overnight": false,
         "start": "0900", "end": "1500", "day": 6}], "hours_type": "REGULAR", "is_open_now":
         false}], "transactions": []}'
-  recorded_at: Sun, 03 Oct 2021 04:46:38 GMT
+  recorded_at: Sat, 09 Oct 2021 20:36:27 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/yQaElwKOFU865x1jxH3KGw
@@ -279,36 +279,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
+      X-Routing-Service:
+      - routing-main--uswest2-7b96896cd8-x2jrm; site=public_api_v3
       X-B3-Sampled:
       - '0'
-      Server:
-      - envoy
-      X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-pxc98; site=public_api_v3
-      Ratelimit-Remaining:
-      - '4775'
-      X-Zipkin-Id:
-      - 7e91b83fcf62c408
       Ratelimit-Dailylimit:
       - '5000'
+      Ratelimit-Remaining:
+      - '4924'
       Ratelimit-Resettime:
-      - '2021-10-04T00:00:00+00:00'
+      - '2021-10-10T00:00:00+00:00'
+      X-Zipkin-Id:
+      - 6d4473f447bdf827
+      Server:
+      - envoy
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
-      - 10-69-105-191-uswest2aprod
+      - 10-69-185-39-uswest2bprod
       X-Extlb:
-      - 10-69-105-191-uswest2aprod
+      - 10-69-185-39-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 03 Oct 2021 04:46:39 GMT
+      - Sat, 09 Oct 2021 20:36:28 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-sna10729-LGB
+      - cache-bur17543-BUR
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -320,7 +320,7 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"id": "yQaElwKOFU865x1jxH3KGw", "alias": "xcel-fitness-spa-marco-island",
-        "name": "Xcel Fitness Spa", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/ccAjpYauX08M1B23wHFE3Q/o.jpg",
+        "name": "Xcel Fitness Spa", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg",
         "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/xcel-fitness-spa-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
         "phone": "+12393949235", "display_phone": "(239) 394-9235", "review_count":
         10, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "massage",
@@ -329,8 +329,8 @@ http_interactions:
         "", "city": "Marco Island", "zip_code": "34145", "country": "US", "state":
         "FL", "display_address": ["1817 San Marco Rd", "Marco Island, FL 34145"],
         "cross_streets": ""}, "coordinates": {"latitude": 25.9341526, "longitude":
-        -81.6989467}, "photos": ["https://s3-media2.fl.yelpcdn.com/bphoto/ccAjpYauX08M1B23wHFE3Q/o.jpg",
-        "https://s3-media2.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/Qot7suis2wM54QxFQx1DIg/o.jpg"],
+        -81.6989467}, "photos": ["https://s3-media2.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg",
+        "https://s3-media2.fl.yelpcdn.com/bphoto/ccAjpYauX08M1B23wHFE3Q/o.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/Qot7suis2wM54QxFQx1DIg/o.jpg"],
         "price": "$$$", "hours": [{"open": [{"is_overnight": false, "start": "0900",
         "end": "1900", "day": 0}, {"is_overnight": false, "start": "0900", "end":
         "1900", "day": 1}, {"is_overnight": false, "start": "0900", "end": "1900",
@@ -339,5 +339,5 @@ http_interactions:
         false, "start": "0900", "end": "1500", "day": 5}, {"is_overnight": false,
         "start": "0900", "end": "1500", "day": 6}], "hours_type": "REGULAR", "is_open_now":
         false}], "transactions": []}'
-  recorded_at: Sun, 03 Oct 2021 04:46:39 GMT
+  recorded_at: Sat, 09 Oct 2021 20:36:28 GMT
 recorded_with: VCR 6.0.0
