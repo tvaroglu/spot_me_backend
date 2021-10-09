@@ -7,7 +7,7 @@ class GymService
     end
 
     def params
-      'term=gyms&radius=40000&sort_by=distance'
+      'term=gyms&radius=40000&sort_by=distance&limit=50'
     end
 
     def get_gyms(location)
