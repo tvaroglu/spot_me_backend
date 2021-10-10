@@ -5,7 +5,7 @@ HTTP Verb | Endpoint                   | Description                | Link
 GET       | `/users/{user_id}/gym_members` | Get users that belong to the same gym.     | [Link](#get-users-at-same-gym)
 GET       | `/users/{user_id}/gym_memberships` | Get a user's gym memberships.     | [Link](#get-users-gym-memberships)
 POST      | `/users/{user_id}/gym_memberships` | Create gym membership.     | [Link](#create-gym-membership)
-DELETE    | `/users/{user_id}/gym_memberships/{gym_membership_id}` | Remove a gym membership from a user.     | [Link](#delete-gym-membership)
+DELETE    | `/users/{user_id}/gym_memberships/{gym_membership_id}` | Delete a user's gym membership.     | [Link](#delete-gym-membership)
 
 ---
 
@@ -40,38 +40,37 @@ Status: 200 OK
 ```
 
 ```
-{
-  "data": [
+{"data":[
   {
-    "id": "4",
-    "type": "user",
-    "attributes": {
-      "email": "cordell_doyle@williamson.net",
-      "google_id": "5zfwrgzcm0xx6wxwqd07d",
-      "google_image_url": "https://robohash.org/rationesitdeleniti.png?size=300x300&set=set1",
-      "zip_code": "96808",
-      "summary": "Beware the barrenness of a busy life.",
-      "goal": "Increase Stamina",
-      "availability_morning": true,
-      "availability_afternoon": true,
-      "availability_evening": false,
-      "full_name": "Isobel Huels"
+    "id":"4",
+    "type":"user",
+    "attributes":{
+      "email":"cordell_doyle@williamson.net",
+      "google_id":"5zfwrgzcm0xx6wxwqd07d",
+      "google_image_url":"https://robohash.org/rationesitdeleniti.png?size=300x300&set=set1",
+      "zip_code":"96808",
+      "summary":"Beware the barrenness of a busy life.",
+      "goal":"Increase Stamina",
+      "availability_morning":true,
+      "availability_afternoon":true,
+      "availability_evening":false,
+      "full_name":"Isobel Huels"
     }
   },
   {
-    "id": "7",
-    "type": "user",
-    "attributes": {
-      "email": "venetta@kilback.io",
-      "google_id": "mun5m26nj31nfi6jc4xf7",
-      "google_image_url": "https://robohash.org/aliquidexreprehenderit.png?size=300x300&set=set1",
-      "zip_code": "48703",
-      "summary": "Dignity does not consist in possessing honors, but in deserving them.",
-      "goal": "Increase Flexibility",
-      "availability_morning": true,
-      "availability_afternoon": true,
-      "availability_evening": true,
-      "full_name": "Monty Beer"
+    "id":"7",
+    "type":"user",
+    "attributes":{
+      "email":"venetta@kilback.io",
+      "google_id":"mun5m26nj31nfi6jc4xf7",
+      "google_image_url":"https://robohash.org/aliquidexreprehenderit.png?size=300x300&set=set1",
+      "zip_code":"48703",
+      "summary":"Dignity does not consist in possessing honors, but in deserving them.",
+      "goal":"Increase Flexibility",
+      "availability_morning":true,
+      "availability_afternoon":true,
+      "availability_evening":true,
+      "full_name":"Monty Beer"
     }
   }]
 }
@@ -85,7 +84,7 @@ Status: 200 OK
 
 ```
 {
-  :data=>[]
+  "data":[]
 }
 ```
 
@@ -97,8 +96,8 @@ Status: 404 Not Found
 
 ```
 {
-  :message=>"your query could not be completed",
-  :errors=>["Couldn't find User with 'id'=40"]
+  "message":"your query could not be completed",
+  "errors":["Couldn't find User with 'id'=40"]
 }
 ```
 
@@ -134,23 +133,46 @@ Status: 200 OK
 ```
 
 ```
-{:data=>
+{"data":
   [
     {
-      :id=>"7172", :type=>"gym_membership",
-      :attributes=>{
-        :user_id=>8355,
-        :yelp_gym_id=>"mkmn8pidmebehvh79u1ovg",
-        :gym_name=>"Blick, Hoppe and Cremin"
+      "id":"7172",
+      "type":"gym_membership",
+      "attributes":{
+        "user_id":8355,
+        "yelp_gym_id":"mkmn8pidmebehvh79u1ovg",
+        "gym_name":"Blick, Hoppe and Cremin"
+      },
+      "meta":{
+        "address":"123 Main St, Denver CO 80032",
+        "address_details":{
+          "address1":"123 Main St",
+          "address2":"",
+          "address3":"",
+          "city":"Denver",
+          "state":"CO",
+          "zip_code":"80032"
+        }
       }
     },
     {
-      :id=>"7173",
-      :type=>"gym_membership",
-      :attributes=>{
-        :user_id=>8355,
-        :yelp_gym_id=>"fvdr0ksvy2nhith42ffur2",
-        :gym_name=>"Labadie-Wyman"
+      "id":"7173",
+      "type":"gym_membership",
+      "attributes":{
+        "user_id":8355,
+        "yelp_gym_id":"fvdr0ksvy2nhith42ffur2",
+        "gym_name":"Labadie-Wyman"
+      },
+      "meta":{
+        "address":"45 Broadway Ave, Boulder CO 80302",
+        "address_details":{
+          "address1":"45 Broadway Ave.",
+          "address2":"",
+          "address3":"",
+          "city":"Boulder",
+          "state":"CO",
+          "zip_code":"80302"
+        }
       }
     }
   ]
@@ -165,7 +187,7 @@ Status: 200 OK
 
 ```
 {
-  :data=>[]
+  "data":[]
 }
 ```
 
@@ -177,8 +199,8 @@ Status: 404 Not Found
 
 ```
 {
-  :message=>"your query could not be completed",
-  :errors=>["Couldn't find User with 'id'=40"]
+  "message":"your query could not be completed",
+  "errors":["Couldn't find User with 'id'=40"]
 }
 ```
 
@@ -228,15 +250,25 @@ Status: 201 Created
 
 ```
 {
-  :data=>
-    {
-      :id=>"3995",
-      :type=>"gym_membership",
-      :attributes=>{
-        :user_id=>1,
-        :yelp_gym_id=>'c2jzsndq8brvn9fbckeec2',
-        :gym_name=>'Planet Fitness'
+  "data":{
+    "id":"3995",
+    "type":"gym_membership",
+    "attributes":{
+      "user_id":1,
+      "yelp_gym_id":"c2jzsndq8brvn9fbckeec2",
+      "gym_name":'Planet Fitness'
+    },
+    "meta":{
+      "address":"123 Main St, Denver CO 80032",
+      "address_details":{
+        "address1":"123 Main St.",
+        "address2":"",
+        "address3":"",
+        "city":"Denver",
+        "state":"CO",
+        "zip_code":"80032"
       }
+    }
   }
 }
 ```
@@ -249,8 +281,8 @@ Status: 404 Not Found
 
 ```
 {
-  :message=>"your query could not be completed",
-  :errors=>["Couldn't find User with 'id'=1432"]
+  "message":"your query could not be completed",
+  "errors":["Couldn't find User with 'id'=1432"]
 }
 ```
 
@@ -264,8 +296,8 @@ Status: 422 Unprocessable Entity
 
 ```
 {
-  :message=>"your query could not be completed",
-  :errors=>["Yelp gym can't be blank"]
+  "message":"your query could not be completed",
+  "errors":["Yelp gym can't be blank"]
 }
 ```
 
@@ -279,8 +311,8 @@ Status: 422 Unprocessable Entity
 
 ```
 {
-  :message=>"your query could not be completed",
-  :errors=>["Gym name can't be blank"]
+  "message":"your query could not be completed",
+  "errors":["Gym name can't be blank"]
 }
 ```
 
@@ -299,7 +331,7 @@ DELETE /users/{user_id}/gym_memberships/{gym_membership_id}
 Name       | Data Type    | In    | Required/Optional | Description
 -----------|--------------|-------|-------------------|------------
 `user_id` | String | Path | Required | The id of the user record.
-`gym_membership_id` | String | Path | Required | The id of the gym record.
+`gym_membership_id` | String | Path | Required | The id of the gym membership record.
 
 ### Example Request
 
@@ -322,8 +354,8 @@ Status: 404 Not Found
 
 ```
 {
-  :message=>"your query could not be completed",
-  :errors=>["Couldn't find User with 'id'=4879"]
+  "message":"your query could not be completed",
+  "errors":["Couldn't find User with 'id'=4879"]
 }
 ```
 
@@ -335,7 +367,7 @@ Status: 400 Bad Request
 
 ```
 {
-  :message=>"your query could not be completed",
-  :errors=>["Couldn't find GymMembership with 'id'=1084"]
+  "message":"your query could not be completed",
+  "errors":["Couldn't find GymMembership with 'id'=1084"]
 }
 ```
