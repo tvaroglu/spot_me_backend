@@ -42,7 +42,8 @@ Status: 200 OK
     "attributes": {
       "name": "Yoga in Your Park",
       "address": "Boulder, CO 80302",
-      "phone": "(207) 664-9220"
+      "phone": "(207) 664-9220",
+      "gym_member_count": 10
       }
     },
     {
@@ -51,7 +52,8 @@ Status: 200 OK
       "attributes": {
         "name": "Origins Rolfing",
         "address": "745 Poplar Ave, Boulder, CO 80304",
-        "phone": "(720) 260-4893"
+        "phone": "(720) 260-4893",
+        "gym_member_count": 0
         }
      }]
  }
