@@ -362,7 +362,7 @@ Status: 404 Not Found
 ### Gym Membership Not Found
 
 ```
-Status: 400 Bad Request
+Status: 404 Not Found
 ```
 
 ```

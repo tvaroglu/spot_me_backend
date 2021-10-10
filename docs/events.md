@@ -44,15 +44,13 @@ Status: 200 OK
     {
       "id":"1211",
       "type":"event",
-      "attributes":
-        {
-          "user_id":5142,
-          "gym_id":613,
-          "date_time":"2021-09-21T13:37:24.508Z",
-          "activity":"Lifting"
-        },
-      "meta":
-      {
+      "attributes":{
+        "user_id":5142,
+        "gym_id":613,
+        "date_time":"2021-09-21T13:37:24.508Z",
+        "activity":"Lifting"
+      },
+      "meta":{
         "friend_name":"John Doe",
         "friend_role":"invited",
         "gym_name":"Planet Fitness",
@@ -62,15 +60,13 @@ Status: 200 OK
     {
       "id":"1212",
       "type":"event",
-      "attributes":
-        {
-          "user_id":5142,
-          "gym_id":613,
-          "date_time":"2021-09-20T13:37:24.511Z",
-          "activity":"Cycling"
-        },
-      "meta":
-      {
+      "attributes":{
+        "user_id":5142,
+        "gym_id":613,
+        "date_time":"2021-09-20T13:37:24.511Z",
+        "activity":"Cycling"
+      },
+      "meta":{
         "friend_name":"Jane Doe",
         "friend_role":"invited",
         "gym_name":"Planet Fitness",
@@ -80,15 +76,13 @@ Status: 200 OK
     {
       "id":"1213",
       "type":"event",
-      "attributes":
-        {
-          "user_id":5142,
-          "gym_id":613,
-          "date_time":"2021-09-23T13:37:24.513Z",
-          "activity":"Cardio"
-        },
-      "meta":
-      {
+      "attributes":{
+        "user_id":5142,
+        "gym_id":613,
+        "date_time":"2021-09-23T13:37:24.513Z",
+        "activity":"Cardio"
+      },
+      "meta":{
         "friend_name":"Joe Doe",
         "friend_role":"invited",
         "gym_name":"Planet Fitness",
@@ -117,15 +111,13 @@ Status: 200 OK
     {
       "id":"1211",
       "type":"event",
-      "attributes":
-        {
-          "user_id":5142,
-          "gym_id":613,
-          "date_time":"2021-09-21T13:37:24.508Z",
-          "activity":"Lifting"
-        },
-      "meta":
-      {
+      "attributes":{
+        "user_id":5142,
+        "gym_id":613,
+        "date_time":"2021-09-21T13:37:24.508Z",
+        "activity":"Lifting"
+      },
+      "meta":{
         "friend_name":"John Doe",
         "friend_role":"invited",
         "gym_name":"Planet Fitness",
@@ -135,15 +127,13 @@ Status: 200 OK
     {
       "id":"1212",
       "type":"event",
-      "attributes":
-        {
-          "user_id":5142,
-          "gym_id":613,
-          "date_time":"2021-09-20T13:37:24.511Z",
-          "activity":"Cycling"
-        },
-      "meta":
-      {
+      "attributes":{
+        "user_id":5142,
+        "gym_id":613,
+        "date_time":"2021-09-20T13:37:24.511Z",
+        "activity":"Cycling"
+      },
+      "meta":{
         "friend_name":"Jane Doe",
         "friend_role":"invited",
         "gym_name":"Planet Fitness",
@@ -153,15 +143,13 @@ Status: 200 OK
     {
       "id":"1213",
       "type":"event",
-      "attributes":
-        {
-          "user_id":5142,
-          "gym_id":613,
-          "date_time":"2021-09-23T13:37:24.513Z",
-          "activity":"Cardio"
-        },
-      "meta":
-      {
+      "attributes":{
+        "user_id":5142,
+        "gym_id":613,
+        "date_time":"2021-09-23T13:37:24.513Z",
+        "activity":"Cardio"
+      },
+      "meta":{
         "friend_name":"Joe Doe",
         "friend_role":"invited",
         "gym_name":"Planet Fitness",

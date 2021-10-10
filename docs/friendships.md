@@ -265,7 +265,7 @@
 ### Example Request
 
   ```
-  DELETE https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships/1
+  DELETE https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships/2
   ```
 
 ### Example Response
