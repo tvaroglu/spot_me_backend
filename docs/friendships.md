@@ -4,13 +4,13 @@
   ----------|----------------------------|--------------------------------|---------------------------
   GET       | `/users/{user_id}/friendships` | Get a user's friends.      | [Link](#get-users-friends)
   POST      | `/users/{user_id}/friendships` | Create a new friendship.   | [Link](#create-new-friendship)
-  DELETE    | `/users/{user_id}/friendships/{friendship_id}` | Delete an existing friendship. | [Link](#delete-friendship)
+  DELETE    | `/users/{user_id}/friendships/{followee_id}` | Delete an existing friendship. | [Link](#delete-friendship)
 
 ---
 
 ## Get User's Friends
 
-  Returns a user's friends.
+  Returns a user's friends (`followees`).
 
   ```
   GET /users/{user_id}/friendships
@@ -21,6 +21,7 @@
   Name       | Data Type    | In    | Required/Optional | Description
   -----------|--------------|-------|-------------------|------------
   `user_id`  | Integer      | Path  | Required          | The ID of the user.
+  `relationship`  | String      | Query Parameters  | Optional          | Return the user's  `followers` (vs `followees`).
 
 ### Example Request
 
@@ -38,40 +39,111 @@
 
   ```
   {
-    :data=>[
+    "data":[
       {
-        :id=>"5071",
-        :type=>"user",
-        :attributes=>{
-          :email=>"rich@lynch-heller.name",
-          :google_id=>"123456789102345678910",
-          :google_image_url=>
+        "id":"5071",
+        "type":"user",
+        "attributes":{
+          "email":"rich@lynch-heller.name",
+          "google_id":"123456789102345678910",
+          "google_image_url":
            "https://robohash.org/isteanimiillum.png?size=300x300&set=set1",
-          :zip_code=>"01498",
-          :summary=>
+          "zip_code":"01498",
+          "summary":
            "Know how to listen, and you will profit even from those who talk badly.",
-          :goal=>5,
-          :availability_morning=>false,
-          :availability_afternoon=>false,
-          :availability_evening=>false,
-          :full_name=>"Toni Mitchell"
+          "goal":4,
+          "availability_morning":false,
+          "availability_afternoon":false,
+          "availability_evening":false,
+          "full_name":"Toni Mitchell"
         }
       },
       {
-        :id=>"5072",
-        :type=>"user",
-        :attributes=>{
-          :email=>"catina_altenwerth@wyman.name",
-          :google_id=>"198765432101987654321",
-          :google_image_url=>
+        "id":"5072",
+        "type":"user",
+        "attributes":{
+          "email":"catina_altenwerth@wyman.name",
+          "google_id":"198765432101987654321",
+          "google_image_url":
            "https://robohash.org/officiapariaturdolorem.png?size=300x300&set=set1",
-          :zip_code=>"42574",
-          :summary=>"Love is composed of a single soul inhabiting two bodies.",
-          :goal=>4,
-          :availability_morning=>false,
-          :availability_afternoon=>false,
-          :availability_evening=>true,
-          :full_name=>"Vince Dickens"
+          "zip_code":"42574",
+          "summary":"Love is composed of a single soul inhabiting two bodies.",
+          "goal":4,
+          "availability_morning":false,
+          "availability_afternoon":false,
+          "availability_evening":true,
+          "full_name":"Vince Dickens"
+        }
+      }
+    ]
+  }
+  ```
+
+## Get User's Followers
+
+  Returns a user's followers.
+
+  ```
+  GET /users/{user_id}/friendships
+  ```
+
+### Parameters
+
+  Name       | Data Type    | In    | Required/Optional | Description
+  -----------|--------------|-------|-------------------|------------
+  `user_id`  | Integer      | Path  | Required          | The ID of the user.
+  `relationship`  | String      | Query Parameters  | Required          | Return the user's  `followers` (vs `followees`).
+
+### Example Request
+
+  ```
+  GET https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships?relationship=followers
+  ```
+
+### Example Response
+
+  When the user has followers:
+
+  ```
+  Status: 200 OK
+  ```
+
+  ```
+  {
+    "data":[
+      {
+        "id":"5071",
+        "type":"user",
+        "attributes":{
+          "email":"rich@lynch-heller.name",
+          "google_id":"123456789102345678910",
+          "google_image_url":
+           "https://robohash.org/isteanimiillum.png?size=300x300&set=set1",
+          "zip_code":"01498",
+          "summary":
+           "Know how to listen, and you will profit even from those who talk badly.",
+          "goal":4,
+          "availability_morning":false,
+          "availability_afternoon":false,
+          "availability_evening":false,
+          "full_name":"Toni Mitchell"
+        }
+      },
+      {
+        "id":"5072",
+        "type":"user",
+        "attributes":{
+          "email":"catina_altenwerth@wyman.name",
+          "google_id":"198765432101987654321",
+          "google_image_url":
+           "https://robohash.org/officiapariaturdolorem.png?size=300x300&set=set1",
+          "zip_code":"42574",
+          "summary":"Love is composed of a single soul inhabiting two bodies.",
+          "goal":4,
+          "availability_morning":false,
+          "availability_afternoon":false,
+          "availability_evening":true,
+          "full_name":"Vince Dickens"
         }
       }
     ]
@@ -88,7 +160,7 @@
 
   ```
   {
-    :data=>[]
+    "data":[]
   }
   ```
 
@@ -100,8 +172,8 @@
 
   ```
   {
-    :message=>"your query could not be completed",
-    :errors=>["Couldn't find User with 'id'=40"]
+    "message":"your query could not be completed",
+    "errors":["Couldn't find User with 'id'=40"]
   }
   ```
 
@@ -149,12 +221,12 @@
 
   ```
   {
-    :data=>{
-      :id=>"1",
-      :type=>"friendship",
-      :attributes=>{
-        :follower_id=>1,
-        :followee_id=>2
+    "data":{
+      "id":"1",
+      "type":"friendship",
+      "attributes":{
+        "follower_id":1,
+        "followee_id":2
       }
     }
   }
@@ -168,8 +240,8 @@
 
   ```
   {
-    :message=>"your query could not be completed",
-    :errors=>["Couldn't find User with 'id'=40"]
+    "message":"your query could not be completed",
+    "errors":["Couldn't find User with 'id'=40"]
   }
   ```
 
@@ -177,10 +249,10 @@
 
 ## Delete Friendship
 
-  Remove an existing friendship.
+  Delete an existing friendship.
 
   ```
-  DELETE /users/{user_id}/friendships/{friendship_id}
+  DELETE /users/{user_id}/friendships/{followee_id}
   ```
 
 ### Parameters
@@ -188,7 +260,7 @@
   Name       | Data Type    | In    | Required/Optional | Description
   -----------|--------------|-------|-------------------|------------
   `user_id` | String | Path | Required | The id of the user record.
-  `friendship_id` | String | Path | Required | The id of the friendship.
+  `followee_id` | String | Path | Required | The id of the followed user.
 
 ### Example Request
 
@@ -211,8 +283,8 @@
 
   ```
   {
-    :message=>"your query could not be completed",
-    :errors=>["Couldn't find User with 'id'=4879"]
+    "message":"your query could not be completed",
+    "errors":["Couldn't find User with 'id'=4879"]
   }
   ```
 
@@ -224,7 +296,7 @@
 
   ```
   {
-    :message=>"your query could not be completed",
-    :errors=>["Couldn't find User with 'id'=1084"]
+    "message":"your query could not be completed",
+    "errors":["Couldn't find User with 'id'=1084"]
   }
   ```

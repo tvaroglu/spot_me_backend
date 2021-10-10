@@ -23,7 +23,7 @@ GET /users/{user_id}/events
 Name       | Data Type    | In    | Required/Optional | Description
 -----------|--------------|-------|-------------------|------------
 `user_id` | Integer | Path | Required | The ID of the user.
-`time_frame`  | String      | Query Parameters  | Optional          | Retrieve `past` events (vs  upcoming events).
+`time_frame`  | String      | Query Parameters  | Optional          | Retrieve `past` events (vs upcoming events).
 
 
 ### Example Request (Upcoming Events)
@@ -180,7 +180,9 @@ Status: 200 OK
 ```
 
 ```
-{"data":[]}
+{
+  "data":[]
+}
 ```
 
 ### Example Response (Resource Not Found)
@@ -206,12 +208,17 @@ Create a new event based on provided attributes.
 POST /users/{user_id}/gym_memberships/{gym_membership_id}/events
 ```
 
-### Request Body
+### Parameters
 
 Name       | Data Type    | In    | Required/Optional | Description
 -----------|--------------|-------|-------------------|------------
 `user_id` | String | Path | Required | The id of the user invited to the event.
 `gym_membership_id` | String | Path | Required | The id of the gym the event will take place at.
+
+### Request Body
+
+Name       | Data Type    | In    | Required/Optional | Description
+-----------|--------------|-------|-------------------|------------
 `activity` | String | Body | Required | The activity (title) of the event.
 `date_time` | Datetime | Body | Required | The date and time of the event.
 
