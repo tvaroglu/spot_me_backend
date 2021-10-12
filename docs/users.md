@@ -37,21 +37,21 @@ Status: 200 OK
 
 ```
 {
-  :data=>{
-    :id=>"4965",
-    :type=>"user",
-    :attributes=>{
-      :email=>"ron_hermiston@schinner.net",
-      :google_id=>"123456789102345678910",
-      :google_image_url=>
+  "data":{
+    "id":"4965",
+    "type":"user",
+    "attributes":{
+      "email":"ron_hermiston@schinner.net",
+      "google_id":"123456789102345678910",
+      "google_image_url":
         "https://robohash.org/doloribusutmagni.png?size=300x300&set=set1",
-      :zip_code=>"55919",
-      :summary=>"The secret to humor is surprise.",
-      :goal=>4,
-      :availability_morning=>false,
-      :availability_afternoon=>true,
-      :availability_evening=>true,
-      :full_name=>"Alvaro Stanton"
+      "zip_code":"55919",
+      "summary":"The secret to humor is surprise.",
+      "goal":4,
+      "availability_morning":false,
+      "availability_afternoon":true,
+      "availability_evening":true,
+      "full_name":"Alvaro Stanton"
     }
   }
 }
@@ -65,8 +65,8 @@ Status: 404 Not Found
 
 ```
 {
-  :message=>"your query could not be completed",
-  :errors=>["Couldn't find User"]
+  message:"your query could not be completed",
+  errors:["Couldn't find User"]
 }
 ```
 
@@ -100,21 +100,21 @@ Status: 200 OK
 
 ```
 {
-  :data=>{
-    :id=>"4965",
-    :type=>"user",
-    :attributes=>{
-      :email=>"ron_hermiston@schinner.net",
-      :google_id=>"123456789102345678910",
-      :google_image_url=>
+  "data":{
+    "id":"4965",
+    "type":"user",
+    "attributes":{
+      "email":"ron_hermiston@schinner.net",
+      "google_id":"123456789102345678910",
+      "google_image_url":
         "https://robohash.org/doloribusutmagni.png?size=300x300&set=set1",
-      :zip_code=>"55919",
-      :summary=>"The secret to humor is surprise.",
-      :goal=>4,
-      :availability_morning=>false,
-      :availability_afternoon=>true,
-      :availability_evening=>true,
-      :full_name=>"Alvaro Stanton"
+      "zip_code":"55919",
+      "summary":"The secret to humor is surprise.",
+      "goal":4,
+      "availability_morning":false,
+      "availability_afternoon":true,
+      "availability_evening":true,
+      "full_name":"Alvaro Stanton"
     }
   }
 }
@@ -128,8 +128,8 @@ Status: 404 Not Found
 
 ```
 {
-  :message=>"your query could not be completed",
-  :errors=>["Couldn't find User with 'id'=40"]
+  message:"your query could not be completed",
+  errors:["Couldn't find User with 'id'=40"]
 }
 ```
 
@@ -169,18 +169,18 @@ With the following request body:
 
 ```
 {
-  :full_name=>"Joann Champlin"
-  :email=>"jenna@runolfsdottir.info",
-  :google_id=>"123456789102345678910",
-  :google_image_url=>
+  "email":"jenna@runolfsdottir.info",
+  "google_id":"123456789102345678910",
+  "google_image_url":
     "https://robohash.org/rerumnamenim.png?size=300x300&set=set1",
-  :zip_code=>"41895",
-  :summary=>
+  "zip_code":"41895",
+  "summary":
     "The virtue of justice consists in moderation, as regulated by wisdom.",
-  :goal=>5,
-  :availability_morning=>false,
-  :availability_afternoon=>false,
-  :availability_evening=>false,
+  "goal":4,
+  "availability_morning":false,
+  "availability_afternoon":false,
+  "availability_evening":false,
+  "full_name":"Joann Champlin"
 }
 ```
 
@@ -192,22 +192,22 @@ Status: 201 Created
 
 ```
 {
-  :data=>{
-    :id=>"5265",
-    :type=>"user",
-    :attributes=>{
-      :email=>"jenna@runolfsdottir.info",
-      :google_id=>"123456789102345678910",
-      :google_image_url=>
+  "data":{
+    "id":"5265",
+    "type":"user",
+    "attributes":{
+      "email":"jenna@runolfsdottir.info",
+      "google_id":"123456789102345678910",
+      "google_image_url":
         "https://robohash.org/rerumnamenim.png?size=300x300&set=set1",
-      :zip_code=>"41895",
-      :summary=>
+      "zip_code":"41895",
+      "summary":
         "The virtue of justice consists in moderation, as regulated by wisdom.",
-      :goal=>5,
-      :availability_morning=>false,
-      :availability_afternoon=>false,
-      :availability_evening=>false,
-      :full_name=>"Joann Champlin"
+      "goal":4,
+      "availability_morning":false,
+      "availability_afternoon":false,
+      "availability_evening":false,
+      "full_name":"Joann Champlin"
     }
   }
 }
@@ -221,8 +221,8 @@ Status: 422 Unprocessable Entity
 
 ```
 {
-  :message=>"your record could not be saved",
-  :errors=>[
+  message:"your record could not be saved",
+  errors:[
     "Email can't be blank",
     "Google id can't be blank",
     "Google image url can't be blank",
@@ -275,18 +275,18 @@ With the following request body:
 
 ```
 {
-  :full_name=>"Joann Champlin"
-  :email=>"jenna@runolfsdottir.info",
-  :google_id=>"123456789102345678910",
-  :google_image_url=>
+  "email":"jenna@runolfsdottir.info",
+  "google_id":"123456789102345678910",
+  "google_image_url":
     "https://robohash.org/rerumnamenim.png?size=300x300&set=set1",
-  :zip_code=>"41895",
-  :summary=>
+  "zip_code":"41895",
+  "summary":
     "The virtue of justice consists in moderation, as regulated by wisdom.",
-  :goal=>5,
-  :availability_morning=>false,
-  :availability_afternoon=>false,
-  :availability_evening=>false,
+  "goal":4,
+  "availability_morning":false,
+  "availability_afternoon":false,
+  "availability_evening":false,
+  "full_name":"Joann Champlin"
 }
 ```
 
@@ -298,22 +298,22 @@ Status: 200 OK
 
 ```
 {
-  :data=>{
-    :id=>"5265",
-    :type=>"user",
-    :attributes=>{
-      :email=>"jenna@runolfsdottir.info",
-      :google_id=>"123456789102345678910",
-      :google_image_url=>
+  "data":{
+    "id":"5265",
+    "type":"user",
+    "attributes":{
+      "email":"jenna@runolfsdottir.info",
+      "google_id":"123456789102345678910",
+      "google_image_url":
         "https://robohash.org/rerumnamenim.png?size=300x300&set=set1",
-      :zip_code=>"41895",
-      :summary=>
+      "zip_code":"41895",
+      "summary":
         "The virtue of justice consists in moderation, as regulated by wisdom.",
-      :goal=>5,
-      :availability_morning=>false,
-      :availability_afternoon=>false,
-      :availability_evening=>false,
-      :full_name=>"Joann Champlin"
+      "goal":4,
+      "availability_morning":false,
+      "availability_afternoon":false,
+      "availability_evening":false,
+      "full_name":"Joann Champlin"
     }
   }
 }
@@ -327,8 +327,8 @@ Status: 404 Not Found
 
 ```
 {
-  :message=>"your query could not be completed",
-  :errors=>["Couldn't find User with 'id'=40"]
+  message:"your query could not be completed",
+  errors:["Couldn't find User with 'id'=40"]
 }
 ```
 
@@ -340,8 +340,8 @@ Status: 422 Unprocessable Entity
 
 ```
 {
-  :message=>"your record could not be saved",
-  :errors=>[
+  message:"your record could not be saved",
+  errors:[
     "Zip code can't be blank",
     "Goal is not a number",
     "Summary can't be blank",

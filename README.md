@@ -107,7 +107,7 @@ The project description and base requirements can be found [here][consultancy-ho
 The `base path` of each endpoint is:
 
 ```
-https://spotme-app.herokuapp.com/api/v1
+https://spotme-app-api.herokuapp.com/api/v1
 ```
 
 - For `GET` requests, you can send the endpoint requests through your internet browser, or utilize an API client (i.e. [Postman][postman-url])

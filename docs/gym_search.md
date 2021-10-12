@@ -42,19 +42,21 @@ Status: 200 OK
     "attributes": {
       "name": "Yoga in Your Park",
       "address": "Boulder, CO 80302",
-      "phone": "(207) 664-9220"
-      }
-    },
-    {
-      "id": "EAg1SRtEr_0xrd1NJndnPg",
-      "type": "gym",
-      "attributes": {
-        "name": "Origins Rolfing",
-        "address": "745 Poplar Ave, Boulder, CO 80304",
-        "phone": "(720) 260-4893"
-        }
-     }]
- }
+      "phone": "(207) 664-9220",
+      "gym_member_count": 10
+    }
+  },
+  {
+    "id": "EAg1SRtEr_0xrd1NJndnPg",
+    "type": "gym",
+    "attributes": {
+      "name": "Origins Rolfing",
+      "address": "745 Poplar Ave, Boulder, CO 80304",
+      "phone": "(720) 260-4893",
+      "gym_member_count": 0
+    }
+  }]
+}
 ```
 
 ### Example Request (Invalid Zip Code)
@@ -107,7 +109,8 @@ Status: 200 OK
     "attributes": {
       "name": "Yoga in Your Park",
       "address": "Boulder, CO 80302",
-      "phone": "(207) 664-9220"
+      "phone": "(207) 664-9220",
+      "gym_member_count": 10
     }
   }
 }
