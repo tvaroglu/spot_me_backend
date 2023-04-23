@@ -28,26 +28,26 @@ http_interactions:
       - application/json
       X-B3-Sampled:
       - '0'
-      X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-c2tjq; site=public_api_v3
-      X-Zipkin-Id:
-      - d8d27325de3f2ed6
       Server:
       - envoy
-      X-Cloudmap:
-      - routing_uswest2
+      X-Routing-Service:
+      - routing-main--useast1-987598964-ffrkb; site=public_api_v3
+      X-Zipkin-Id:
+      - b029a75b948f9cd8
+      X-Mode:
+      - ro
       X-Proxied:
-      - 10-69-185-39-uswest2bprod
+      - 10-65-135-149-useast1bprod
       X-Extlb:
-      - 10-69-185-39-uswest2bprod
+      - 10-65-135-149-useast1bprod
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 09 Oct 2021 20:40:04 GMT
+      - Sun, 23 Apr 2023 01:25:34 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-bur17583-BUR
+      - cache-den8243-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -56,5 +56,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"error": {"code": "LOCATION_NOT_FOUND", "description": "Could not
         execute search, try specifying a more exact location."}}'
-  recorded_at: Sat, 09 Oct 2021 20:40:04 GMT
+  recorded_at: Sun, 23 Apr 2023 01:25:34 GMT
 recorded_with: VCR 6.0.0

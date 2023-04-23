@@ -24,36 +24,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-B3-Sampled:
-      - '0'
       Server:
       - envoy
-      Ratelimit-Resettime:
-      - '2021-10-10T00:00:00+00:00'
-      Ratelimit-Remaining:
-      - '4950'
-      X-Zipkin-Id:
-      - e1fd257a4f676e3c
-      X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-fsr5p; site=public_api_v3
       Ratelimit-Dailylimit:
-      - '5000'
-      X-Cloudmap:
-      - routing_uswest2
+      - '5000.0'
+      X-Zipkin-Id:
+      - cdb4bc2e31fa72b1
+      Ratelimit-Remaining:
+      - '4988.0'
+      X-B3-Sampled:
+      - '0'
+      Ratelimit-Resettime:
+      - '2023-04-24T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--useast1-987598964-lb5pq; site=public_api_v3
+      X-Mode:
+      - ro
       X-Proxied:
-      - 10-69-173-40-uswest2bprod
+      - 10-65-141-236-useast1bprod
       X-Extlb:
-      - 10-69-173-40-uswest2bprod
+      - 10-65-141-236-useast1bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 09 Oct 2021 20:36:08 GMT
+      - Sun, 23 Apr 2023 01:25:20 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-bur17535-BUR
+      - cache-den8226-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -68,9 +68,9 @@ http_interactions:
         "name": "YMCA of South Collier-Marco YMCA", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/f3IWcztQgl8-9j1z8BsLdg/o.jpg",
         "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/ymca-of-south-collier-marco-ymca-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
         "phone": "+12393949622", "display_phone": "(239) 394-9622", "review_count":
-        10, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "childcare",
+        13, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "childcare",
         "title": "Child Care & Day Care"}, {"alias": "healthtrainers", "title": "Trainers"}],
-        "rating": 4.0, "location": {"address1": "101 Sand Hill St", "address2": "",
+        "rating": 3.5, "location": {"address1": "101 Sand Hill St", "address2": "",
         "address3": "", "city": "Marco Island", "zip_code": "34145", "country": "US",
         "state": "FL", "display_address": ["101 Sand Hill St", "Marco Island, FL 34145"],
         "cross_streets": ""}, "coordinates": {"latitude": 25.93536, "longitude": -81.70816},
@@ -82,7 +82,7 @@ http_interactions:
         false, "start": "0500", "end": "2100", "day": 3}, {"is_overnight": false,
         "start": "0500", "end": "2000", "day": 4}, {"is_overnight": false, "start":
         "0600", "end": "2000", "day": 5}, {"is_overnight": false, "start": "0600",
-        "end": "2000", "day": 6}], "hours_type": "REGULAR", "is_open_now": true}],
+        "end": "2000", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}],
         "transactions": []}'
-  recorded_at: Sat, 09 Oct 2021 20:36:08 GMT
+  recorded_at: Sun, 23 Apr 2023 01:25:20 GMT
 recorded_with: VCR 6.0.0

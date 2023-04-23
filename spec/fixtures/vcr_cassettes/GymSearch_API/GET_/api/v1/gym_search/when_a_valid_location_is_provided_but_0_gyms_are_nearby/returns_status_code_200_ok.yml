@@ -24,36 +24,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-Routing-Service:
-      - routing-main--uswest2-7b96896cd8-l92xd; site=public_api_v3
-      X-Zipkin-Id:
-      - 287423a98586f355
-      X-B3-Sampled:
-      - '0'
-      Ratelimit-Dailylimit:
-      - '5000'
-      Ratelimit-Remaining:
-      - '4952'
-      Ratelimit-Resettime:
-      - '2021-10-10T00:00:00+00:00'
       Server:
       - envoy
-      X-Cloudmap:
-      - routing_uswest2
+      Ratelimit-Dailylimit:
+      - '5000.0'
+      X-Zipkin-Id:
+      - cb2130dd466335b1
+      Ratelimit-Remaining:
+      - '4990.0'
+      X-B3-Sampled:
+      - '0'
+      Ratelimit-Resettime:
+      - '2023-04-24T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--useast1-987598964-66h4v; site=public_api_v3
+      X-Mode:
+      - ro
       X-Proxied:
-      - 10-69-105-191-uswest2aprod
+      - 10-65-69-118-useast1aprod
       X-Extlb:
-      - 10-69-105-191-uswest2aprod
+      - 10-65-69-118-useast1aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 09 Oct 2021 20:36:07 GMT
+      - Sun, 23 Apr 2023 01:25:19 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-bur17536-BUR
+      - cache-den8280-DEN
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -66,5 +66,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"businesses": [], "total": 0, "region": {"center": {"longitude": -119.432373046875,
         "latitude": 40.4462157989704}}}'
-  recorded_at: Sat, 09 Oct 2021 20:36:07 GMT
+  recorded_at: Sun, 23 Apr 2023 01:25:19 GMT
 recorded_with: VCR 6.0.0
