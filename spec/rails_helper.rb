@@ -25,7 +25,7 @@ end
 VCR.configure do |config|
   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
   config.hook_into :webmock
-  config.filter_sensitive_data('DONT_SHARE_MY_SECRET_KEY') { ENV['yelp_api_key'] }
+  config.filter_sensitive_data('DONT_SHARE_MY_SECRET_KEY') { ENV['YELP_API_KEY'] }
   config.default_cassette_options = { re_record_interval: 7.days }
   config.configure_rspec_metadata!
 end
