@@ -1,14 +1,16 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.2'
+ruby '3.1.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.6'
+gem 'rails', '~> 6.0.6.1'
 # Use postgresql as the database for Active Record
+# gem 'pg', '~> 1.6.2'  # front end app's version
+# gem 'pg', '~> 1.5'  # alternative (potentially compatible) option..
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -23,41 +25,40 @@ gem 'puma', '~> 3.11'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', '~> 1.15', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
-gem 'date'
-gem 'faraday'
-gem 'json'
+gem 'faraday', '~> 1.10'
 gem 'jsonapi-serializer'
-gem 'omniauth-google-oauth2'
-gem 'factory_bot_rails'
-gem 'faker'
+gem 'omniauth'
+gem 'omniauth-google-oauth2', '~> 1.1'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'pry'
-  gem 'figaro'
+  # gem 'figaro'
 end
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'rubocop', require: false
-  gem 'rubocop-performance', require: false
-  gem 'rubocop-rails', require: false
-  gem 'rubocop-rake', require: false
-  gem 'rubocop-rspec', require: false
-  gem 'travis'
+  gem 'web-console', '~> 4.2'
+  gem 'listen', '>= 3.6', '< 4.0'
+  gem 'rubocop', '~> 1.42', require: false
+  gem 'rubocop-performance', '~> 1.15', require: false
+  gem 'rubocop-rails', '~> 2.16', require: false
+  gem 'rubocop-rake', '~> 0.6', require: false
+  gem 'rubocop-rspec', '~> 2.5', require: false
 end
 
 group :test do
-  gem 'rspec-rails', '~> 4.0.1'
-  gem 'simplecov'
-  gem 'shoulda-matchers'
-  gem 'webmock'
-  gem 'vcr'
+  gem 'rspec-rails', '~> 5.1'
+  gem 'factory_bot_rails', '~> 6.3'
+  gem 'faker', '~> 2.23'
+  gem 'webmock', '~> 3.23'
+  gem 'vcr', '~> 6.0'
+  gem 'simplecov', '~> 0.22'
+  gem 'shoulda-matchers', '~> 5.3'
 end
 
 
