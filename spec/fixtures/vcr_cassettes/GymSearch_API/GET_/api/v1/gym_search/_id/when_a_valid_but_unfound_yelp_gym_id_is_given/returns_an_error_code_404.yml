@@ -10,7 +10,7 @@ http_interactions:
       Authorization:
       - DONT_SHARE_MY_SECRET_KEY
       User-Agent:
-      - Faraday v1.8.0
+      - Faraday v1.10.4
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -26,35 +26,45 @@ http_interactions:
       - '102'
       Content-Type:
       - application/json
-      X-Zipkin-Id:
-      - 1f17f404b53f844c
-      X-Routing-Service:
-      - routing-main--useast1-987598964-dll54; site=public_api_v3
-      X-B3-Sampled:
-      - '0'
+      Access-Control-Max-Age:
+      - '1728000'
       Server:
       - envoy
+      X-Zipkin-Id:
+      - 7aa81d5ff951d7802518b4bfb99f3bcc
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      X-Routing-Service:
+      - routing-main--uswest2-674977b97c-gn9wr; site=public_api_v3
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept, Authorization
+      Access-Control-Allow-Origin:
+      - "*"
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-141-236-useast1bprod
+      - 10-69-156-247-uswest2bprod
       X-Extlb:
-      - 10-65-141-236-useast1bprod
+      - 10-69-156-247-uswest2bprod
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 23 Apr 2023 01:25:20 GMT
+      - Tue, 25 Nov 2025 09:34:48 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8238-DEN
+      - cache-sjc10035-SJC
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
+      Alt-Svc:
+      - h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
       encoding: UTF-8
       string: '{"error": {"code": "BUSINESS_NOT_FOUND", "description": "The requested
         business could not be found."}}'
-  recorded_at: Sun, 23 Apr 2023 01:25:20 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Tue, 25 Nov 2025 09:34:48 GMT
+recorded_with: VCR 6.3.1
