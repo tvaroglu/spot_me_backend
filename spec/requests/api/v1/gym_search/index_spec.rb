@@ -37,7 +37,7 @@ describe 'GymSearch API', type: :request do
     end
 
     context 'when a valid location is provided but 0 gyms are nearby', :vcr do
-      before { get '/api/v1/gym_search?zip_code=89405' }
+      before { get '/api/v1/gym_search?zip_code=99723' }
 
       it 'returns 20 nearby gyms sorted by distance', :aggregate_failures do
         expect(json).not_to be_empty
