@@ -36,7 +36,7 @@ RSpec.describe GymService do
 
       context 'when there are 0 gyms nearby' do
         it 'retrieves an empty dataset, not an error', :vcr do
-          zip_code = '89405'
+          zip_code = '99723'
           results = GymService.get_gyms(zip_code)
 
           expect(results[:businesses].count).to eq(0)
