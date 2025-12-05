@@ -24,49 +24,49 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Remaining:
-      - '4892'
-      Ratelimit-Resettime:
-      - '2025-11-26T00:00:00+00:00'
-      X-Zipkin-Id:
-      - fa5139b47c11f173e6d8c41ade50bde9
-      Access-Control-Allow-Methods:
-      - POST,OPTIONS,GET,DELETE,PUT,PATCH
-      Access-Control-Allow-Headers:
-      - Origin, Content-Type, Accept, Authorization
+      Access-Control-Allow-Origin:
+      - "*"
+      Ratelimit-Dailylimit:
+      - '5000'
       Server:
       - envoy
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept, Authorization
+      Access-Control-Allow-Credentials:
+      - 'true'
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|86067a0e-2c6f-457e-b20b-914a9bc45893
       Set-Cookie:
       - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
         GMT
-      Access-Control-Allow-Credentials:
-      - 'true'
       Access-Control-Max-Age:
       - '1728000'
       X-Routing-Service:
-      - routing-main--uswest2-674977b97c-24gbb; site=public_api_v3
-      Access-Control-Allow-Origin:
-      - "*"
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|33c0becd-d7c4-45e1-9334-75d5f8f9d63e
-      Ratelimit-Dailylimit:
-      - '5000'
+      - routing-main--useast1-d6b549d6-wgb5r; site=public_api_v3
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      Ratelimit-Resettime:
+      - '2025-12-07T00:00:00+00:00'
+      X-Zipkin-Id:
+      - 567894c157c84883e235e8ed5ed7ef7d
+      Ratelimit-Remaining:
+      - '4943'
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-66-215-uswest2aprod
+      - 10-65-183-31-useast1bprod
       X-Extlb:
-      - 10-69-66-215-uswest2aprod
+      - 10-65-183-31-useast1bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 25 Nov 2025 09:34:45 GMT
+      - Sat, 06 Dec 2025 00:01:04 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-sjc1000122-SJC
+      - cache-iad-kcgs7200096-IAD
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -81,5 +81,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"businesses": [], "total": 0, "region": {"center": {"longitude": -156.76116943359375,
         "latitude": 71.28570519281563}}}'
-  recorded_at: Tue, 25 Nov 2025 09:34:45 GMT
+  recorded_at: Sat, 06 Dec 2025 00:01:04 GMT
 recorded_with: VCR 6.3.1
