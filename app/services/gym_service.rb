@@ -2,7 +2,7 @@ class GymService
   class << self
     def conn
       Faraday.new(url: 'https://api.yelp.com/') do |faraday|
-        faraday.headers['Authorization'] = ENV['yelp_api_key']
+        faraday.headers['Authorization'] = ENV['YELP_API_KEY']
       end
     end
 

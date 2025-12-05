@@ -10,7 +10,7 @@ http_interactions:
       Authorization:
       - DONT_SHARE_MY_SECRET_KEY
       User-Agent:
-      - Faraday v1.8.0
+      - Faraday v1.10.4
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -26,35 +26,45 @@ http_interactions:
       - '123'
       Content-Type:
       - application/json
-      X-B3-Sampled:
-      - '0'
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept, Authorization
+      Access-Control-Allow-Credentials:
+      - 'true'
+      X-Routing-Service:
+      - routing-main--uswest2-674977b97c-4kzw4; site=public_api_v3
+      Access-Control-Max-Age:
+      - '1728000'
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Zipkin-Id:
+      - 20307b8924ee4f3831f68a7d65fc4230
       Server:
       - envoy
-      X-Routing-Service:
-      - routing-main--useast1-987598964-ffrkb; site=public_api_v3
-      X-Zipkin-Id:
-      - b029a75b948f9cd8
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-135-149-useast1bprod
+      - 10-69-104-34-uswest2aprod
       X-Extlb:
-      - 10-65-135-149-useast1bprod
+      - 10-69-104-34-uswest2aprod
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 23 Apr 2023 01:25:34 GMT
+      - Tue, 25 Nov 2025 09:35:21 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8243-DEN
+      - cache-sjc10030-SJC
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
+      Alt-Svc:
+      - h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
       encoding: UTF-8
       string: '{"error": {"code": "LOCATION_NOT_FOUND", "description": "Could not
         execute search, try specifying a more exact location."}}'
-  recorded_at: Sun, 23 Apr 2023 01:25:34 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Tue, 25 Nov 2025 09:35:21 GMT
+recorded_with: VCR 6.3.1

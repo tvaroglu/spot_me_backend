@@ -8,7 +8,7 @@ RSpec.describe GymService do
         params = GymService.params
 
         expect(setup.headers).to include('Authorization')
-        expect(setup.headers.values).to include(ENV['yelp_api_key'])
+        expect(setup.headers.values).to include(ENV['YELP_API_KEY'])
         expect(params).to eq('term=gyms&radius=40000&sort_by=distance&limit=50')
       end
     end
@@ -36,7 +36,7 @@ RSpec.describe GymService do
 
       context 'when there are 0 gyms nearby' do
         it 'retrieves an empty dataset, not an error', :vcr do
-          zip_code = '89405'
+          zip_code = '99723'
           results = GymService.get_gyms(zip_code)
 
           expect(results[:businesses].count).to eq(0)

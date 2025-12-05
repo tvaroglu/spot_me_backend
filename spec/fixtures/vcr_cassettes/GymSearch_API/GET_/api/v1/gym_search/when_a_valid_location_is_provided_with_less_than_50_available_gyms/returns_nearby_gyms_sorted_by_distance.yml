@@ -10,7 +10,7 @@ http_interactions:
       Authorization:
       - DONT_SHARE_MY_SECRET_KEY
       User-Agent:
-      - Faraday v1.8.0
+      - Faraday v1.10.4
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -24,68 +24,325 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Remaining:
-      - '4993.0'
+      Set-Cookie:
+      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
+        GMT
+      Ratelimit-Dailylimit:
+      - '5000'
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|9ca033a7-adc2-46d7-a963-02dfa093ca33
+      Access-Control-Allow-Credentials:
+      - 'true'
       Ratelimit-Resettime:
-      - '2023-04-24T00:00:00+00:00'
+      - '2025-11-26T00:00:00+00:00'
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept, Authorization
       Server:
       - envoy
       X-Zipkin-Id:
-      - c0d496501ef638b8
+      - 89629df17c39c233939dab910ba6713f
       X-Routing-Service:
-      - routing-main--useast1-987598964-66h4v; site=public_api_v3
-      X-B3-Sampled:
-      - '0'
-      Ratelimit-Dailylimit:
-      - '5000.0'
+      - routing-main--uswest2-674977b97c-tlpkz; site=public_api_v3
+      Access-Control-Max-Age:
+      - '1728000'
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      Ratelimit-Remaining:
+      - '4894'
+      Access-Control-Allow-Origin:
+      - "*"
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-164-182-useast1bprod
+      - 10-69-66-215-uswest2aprod
       X-Extlb:
-      - 10-65-164-182-useast1bprod
+      - 10-69-66-215-uswest2aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 23 Apr 2023 01:25:18 GMT
+      - Tue, 25 Nov 2025 09:34:43 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8274-DEN
+      - cache-sjc1000115-SJC
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       Vary:
       - Accept-Encoding
+      Alt-Svc:
+      - h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"businesses": [{"id": "80XRogbI6fUCQc6r2fcOnw", "alias": "planet-fitness-rockland",
-        "name": "Planet Fitness", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/s2lmRM0BY9E2omJtMryioQ/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/planet-fitness-rockland?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
-        "review_count": 6, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias":
-        "healthtrainers", "title": "Trainers"}], "rating": 4.0, "coordinates": {"latitude":
-        44.117653, "longitude": -69.10884}, "transactions": [], "location": {"address1":
-        "75 Maverick St", "address2": "", "address3": null, "city": "Rockland", "zip_code":
-        "04841", "country": "US", "state": "ME", "display_address": ["75 Maverick
-        St", "Rockland, ME 04841"]}, "phone": "+12074183111", "display_phone": "(207)
-        418-3111", "distance": 20581.75182096001}, {"id": "wtzdNWtMkw2Eaz9Mx7iZ1w",
-        "alias": "rockland-ymca-program-center-rockland", "name": "Rockland YMCA Program
-        Center", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/MnMxJUivVtpdQ3gG-l_UCw/o.jpg",
+      string: '{"businesses": [{"id": "WzSBzb-6e6FUCzWb0HTsMQ", "alias": "condition-orange-defense-academy-waldoboro",
+        "name": "Condition Orange Defense Academy", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/uA3lIOkfHFxWS6JPP5gyFw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/condition-orange-defense-academy-waldoboro?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "martialarts", "title": "Martial
+        Arts"}], "rating": 0.0, "coordinates": {"latitude": 44.0956567, "longitude":
+        -69.3763646}, "transactions": [], "location": {"address1": "251 Jefferson
+        St", "address2": "", "address3": "", "city": "Waldoboro", "zip_code": "04572",
+        "country": "US", "state": "ME", "display_address": ["251 Jefferson St", "Waldoboro,
+        ME 04572"]}, "phone": "+12076191223", "display_phone": "(207) 619-1223", "distance":
+        1601.030410342786}, {"id": "zTW22gLRv73nieIDfidWbQ", "alias": "panthers-gym-waldoboro",
+        "name": "Panther''s Gym", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/je7MW1rE_bXHcRD2QGLzzw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/panthers-gym-waldoboro?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "tanningbeds", "title": "Tanning
+        Beds"}, {"alias": "gyms", "title": "Gyms"}, {"alias": "healthtrainers", "title":
+        "Trainers"}], "rating": 0.0, "coordinates": {"latitude": 44.10264866311096,
+        "longitude": -69.38838609999999}, "transactions": [], "location": {"address1":
+        "75 Winslows Mills Rd", "address2": null, "address3": "", "city": "Waldoboro",
+        "zip_code": "04572", "country": "US", "state": "ME", "display_address": ["75
+        Winslows Mills Rd", "Waldoboro, ME 04572"]}, "phone": "+12077908585", "display_phone":
+        "(207) 790-8585", "distance": 1864.9311605211728}, {"id": "5_N82cpNS9gOX-uvVEyhtA",
+        "alias": "waldoboro-fitness-center-waldoboro", "name": "Waldoboro Fitness
+        Center", "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/waldoboro-fitness-center-waldoboro?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
+        0.0, "coordinates": {"latitude": 44.10239, "longitude": -69.38822}, "transactions":
+        [], "location": {"address1": "75 Winslows Mills Rd", "address2": "", "address3":
+        "", "city": "Waldoboro", "zip_code": "04572", "country": "US", "state": "ME",
+        "display_address": ["75 Winslows Mills Rd", "Waldoboro, ME 04572"]}, "phone":
+        "+12078320611", "display_phone": "(207) 832-0611", "distance": 1880.0563722647853},
+        {"id": "S2OATxhgjyEpzBExmZd4Ag", "alias": "flying-leap-fitness-waldoboro",
+        "name": "Flying Leap Fitness", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/d6Zyzdvnyadvue9SKswPjw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/flying-leap-fitness-waldoboro?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
+        0.0, "coordinates": {"latitude": 44.11058, "longitude": -69.399185}, "transactions":
+        [], "location": {"address1": "500 Winslows Mills Rd", "address2": "", "address3":
+        "", "city": "Waldoboro", "zip_code": "04572", "country": "US", "state": "ME",
+        "display_address": ["500 Winslows Mills Rd", "Waldoboro, ME 04572"]}, "phone":
+        "+12077120374", "display_phone": "(207) 712-0374", "distance": 2639.4485243883523},
+        {"id": "jZjXt-AiZiA42JDH57It_Q", "alias": "dance-maineia-waldoboro", "name":
+        "Dance Maineia", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/XlxTVTILwsEKYVNTFnFbbw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/dance-maineia-waldoboro?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 1, "categories": [{"alias": "dancestudio", "title": "Dance
+        Studios"}], "rating": 5.0, "coordinates": {"latitude": 44.11895846326754,
+        "longitude": -69.40889212418573}, "transactions": [], "location": {"address1":
+        "931 Winslows Mills Rd", "address2": "", "address3": null, "city": "Waldoboro",
+        "zip_code": "04572", "country": "US", "state": "ME", "display_address": ["931
+        Winslows Mills Rd", "Waldoboro, ME 04572"]}, "phone": "+12073801726", "display_phone":
+        "(207) 380-1726", "distance": 3607.700434076567}, {"id": "OsXO9xt1vwPt_Sk85u6ddg",
+        "alias": "y-m-c-a-damariscotta", "name": "Y M C A", "image_url": "", "is_closed":
+        false, "url": "https://www.yelp.com/biz/y-m-c-a-damariscotta?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
+        0.0, "coordinates": {"latitude": 44.04693, "longitude": -69.50744}, "transactions":
+        [], "location": {"address1": "Business Rt 1", "address2": "", "address3":
+        "", "city": "Damariscotta", "zip_code": "04543", "country": "US", "state":
+        "ME", "display_address": ["Business Rt 1", "Damariscotta, ME 04543"]}, "phone":
+        "+12075639622", "display_phone": "(207) 563-9622", "distance": 11895.058272276878},
+        {"id": "qcZlHidq8oM8N-TteyRCeA", "alias": "ymca-damariscotta", "name": "YMCA",
+        "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/ymca-damariscotta?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
+        0.0, "coordinates": {"latitude": 44.04693, "longitude": -69.50744}, "transactions":
+        [], "location": {"address1": "Business Rt 1", "address2": "", "address3":
+        "", "city": "Damariscotta", "zip_code": "04543", "country": "US", "state":
+        "ME", "display_address": ["Business Rt 1", "Damariscotta, ME 04543"]}, "phone":
+        "+12075633477", "display_phone": "(207) 563-3477", "distance": 11895.058272276878},
+        {"id": "rKIIU8DDTwzlbfW97KoXFQ", "alias": "rolling-meadows-retreat-friendship",
+        "name": "Rolling Meadows Retreat", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/3Dv8-8-XmkZVfdviIIfvXw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/rolling-meadows-retreat-friendship?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "yoga", "title": "Yoga"}, {"alias":
+        "meditationcenters", "title": "Meditation Centers"}], "rating": 0.0, "coordinates":
+        {"latitude": 43.992346, "longitude": -69.321459}, "transactions": [], "location":
+        {"address1": "151 Cushing Rd", "address2": null, "address3": "", "city": "Friendship",
+        "zip_code": "04547", "country": "US", "state": "ME", "display_address": ["151
+        Cushing Rd", "Friendship, ME 04547"]}, "phone": "+18886666412", "display_phone":
+        "(888) 666-6412", "distance": 13361.900982667756}, {"id": "bAy8Z7IxQkoZQK4HZ3XN7Q",
+        "alias": "central-lincoln-county-ymca-damariscotta", "name": "Central Lincoln
+        County YMCA", "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/central-lincoln-county-ymca-damariscotta?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias":
+        "childcare", "title": "Child Care & Day Care"}], "rating": 0.0, "coordinates":
+        {"latitude": 44.0395787358284, "longitude": -69.5108158886433}, "transactions":
+        [], "location": {"address1": "525 Main St", "address2": "", "address3": "",
+        "city": "Damariscotta", "zip_code": "04543", "country": "US", "state": "ME",
+        "display_address": ["525 Main St", "Damariscotta, ME 04543"]}, "phone": "+12075639622",
+        "display_phone": "(207) 563-9622", "distance": 13685.68483347195}, {"id":
+        "uLaWjuTdD2oH9E0aZiINfQ", "alias": "designer-training-damariscotta", "name":
+        "Designer Training", "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/designer-training-damariscotta?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "healthtrainers", "title": "Trainers"}],
+        "rating": 0.0, "coordinates": {"latitude": 44.03619, "longitude": -69.50626},
+        "transactions": [], "location": {"address1": "57 Biscay Rd", "address2": "",
+        "address3": "", "city": "Damariscotta", "zip_code": "04543", "country": "US",
+        "state": "ME", "display_address": ["57 Biscay Rd", "Damariscotta, ME 04543"]},
+        "phone": "+12075637702", "display_phone": "(207) 563-7702", "distance": 13769.416327333138},
+        {"id": "RI8Gd94NEgZMuPJLCCXc5A", "alias": "ocean-blue-fitness-damariscotta",
+        "name": "Ocean Blue Fitness", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/Dpp_3Mn5OLs7IsOI5SqARg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/ocean-blue-fitness-damariscotta?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 1, "categories": [{"alias": "pilates", "title": "Pilates"},
+        {"alias": "healthtrainers", "title": "Trainers"}], "rating": 5.0, "coordinates":
+        {"latitude": 44.03321, "longitude": -69.51981}, "transactions": [], "location":
+        {"address1": "64 Chapman St", "address2": "", "address3": null, "city": "Damariscotta",
+        "zip_code": "04543", "country": "US", "state": "ME", "display_address": ["64
+        Chapman St", "Damariscotta, ME 04543"]}, "phone": "+12075632668", "display_phone":
+        "(207) 563-2668", "distance": 14789.019101331081}, {"id": "imLqEWlS0TFtLwcuF5JQgQ",
+        "alias": "hybrid-fitness-thomaston", "name": "Hybrid Fitness", "image_url":
+        "https://s3-media0.fl.yelpcdn.com/bphoto/AduXWnfKej25POTMjPBiyA/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/hybrid-fitness-thomaston?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "bootcamps", "title": "Boot Camps"},
+        {"alias": "pilates", "title": "Pilates"}, {"alias": "yoga", "title": "Yoga"}],
+        "rating": 0.0, "coordinates": {"latitude": 44.0789295, "longitude": -69.1826827},
+        "transactions": [], "location": {"address1": "161 Main St", "address2": null,
+        "address3": "", "city": "Thomaston", "zip_code": "04861", "country": "US",
+        "state": "ME", "display_address": ["161 Main St", "Thomaston, ME 04861"]},
+        "phone": "+12075583102", "display_phone": "(207) 558-3102", "distance": 15018.706086529184},
+        {"id": "qu6m-_Sty_L_IGC3YrNJUQ", "alias": "shapers-llc-main-street-rear-damariscotta",
+        "name": "Shapers Llc Main Street Rear", "image_url": "", "is_closed": false,
+        "url": "https://www.yelp.com/biz/shapers-llc-main-street-rear-damariscotta?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
+        0.0, "coordinates": {"latitude": 44.029178, "longitude": -69.5210829}, "transactions":
+        [], "location": {"address1": "90 School St", "address2": null, "address3":
+        null, "city": "Damariscotta", "zip_code": "04543", "country": "US", "state":
+        "ME", "display_address": ["90 School St", "Damariscotta, ME 04543"]}, "phone":
+        "+12075633030", "display_phone": "(207) 563-3030", "distance": 15164.22482857117},
+        {"id": "xl9eo8ztbniFXBi5H9NyGw", "alias": "conditioning-center-damariscotta",
+        "name": "Conditioning Center", "image_url": "", "is_closed": false, "url":
+        "https://www.yelp.com/biz/conditioning-center-damariscotta?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "healthtrainers", "title": "Trainers"}],
+        "rating": 0.0, "coordinates": {"latitude": 44.033022, "longitude": -69.529445},
+        "transactions": [], "location": {"address1": "Elm", "address2": "", "address3":
+        "", "city": "Damariscotta", "zip_code": "04543", "country": "US", "state":
+        "ME", "display_address": ["Elm", "Damariscotta, ME 04543"]}, "phone": "+12075636255",
+        "display_phone": "(207) 563-6255", "distance": 15482.301764451333}, {"id":
+        "QvfAnmU7rbqCkWZcBlPulw", "alias": "midcoast-yoga-shala-damariscotta", "name":
+        "Midcoast Yoga Shala", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/igWz34TMbenbhxSTfIO7LQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/midcoast-yoga-shala-damariscotta?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 2, "categories": [{"alias": "yoga", "title": "Yoga"}], "rating":
+        4.0, "coordinates": {"latitude": 44.0332339704037, "longitude": -69.5331358909607},
+        "transactions": [], "location": {"address1": "49 Main St", "address2": "Ste
+        4", "address3": "", "city": "Damariscotta", "zip_code": "04543", "country":
+        "US", "state": "ME", "display_address": ["49 Main St", "Ste 4", "Damariscotta,
+        ME 04543"]}, "phone": "+12075631917", "display_phone": "(207) 563-1917", "distance":
+        15720.189869122167}, {"id": "_osVYV4QSDXLZAySILo74g", "alias": "fundamental-moves-rockland",
+        "name": "Fundamental Moves", "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/fundamental-moves-rockland?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "martialarts", "title": "Martial
+        Arts"}], "rating": 0.0, "coordinates": {"latitude": 44.169498, "longitude":
+        -69.1548}, "transactions": [], "location": {"address1": "890 West St", "address2":
+        "", "address3": "", "city": "Rockland", "zip_code": "04841", "country": "US",
+        "state": "ME", "display_address": ["890 West St", "Rockland, ME 04841"]},
+        "phone": "+12075962700", "display_phone": "(207) 596-2700", "distance": 18216.13378726099},
+        {"id": "JPkZvMjcSX3u_8WTzcCnrw", "alias": "christian-clayton-rockland", "name":
+        "Christian Clayton", "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/christian-clayton-rockland?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "dancestudio", "title": "Dance
+        Studios"}], "rating": 0.0, "coordinates": {"latitude": 44.127373544834285,
+        "longitude": -69.13687851003404}, "transactions": [], "location": {"address1":
+        "", "address2": null, "address3": "", "city": "Rockland", "zip_code": "04841",
+        "country": "US", "state": "ME", "display_address": ["Rockland, ME 04841"]},
+        "phone": "+12075708089", "display_phone": "(207) 570-8089", "distance": 18439.264566000067},
+        {"id": "vagVv1xwhUpHXeNmkFPHyw", "alias": "maine-outdoor-yoga-bristol", "name":
+        "Maine Outdoor Yoga", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/yI1oYvIHJeT1eP8ZEz6uXg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/maine-outdoor-yoga-bristol?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "yoga", "title": "Yoga"}], "rating":
+        0.0, "coordinates": {"latitude": 43.95913, "longitude": -69.50958}, "transactions":
+        [], "location": {"address1": null, "address2": null, "address3": "", "city":
+        "Bristol", "zip_code": "04539", "country": "US", "state": "ME", "display_address":
+        ["Bristol, ME 04539"]}, "phone": "+12075928361", "display_phone": "(207) 592-8361",
+        "distance": 19162.389650016903}, {"id": "djo4osojVvqKrRuCNgRhew", "alias":
+        "hoola-rockland", "name": "Hoola", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/dQO6audlvmkdC7eDnDJAwQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/hoola-rockland?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "reflexology", "title": "Reflexology"},
+        {"alias": "reiki", "title": "Reiki"}, {"alias": "yoga", "title": "Yoga"}],
+        "rating": 0.0, "coordinates": {"latitude": 44.10344, "longitude": -69.1121},
+        "transactions": [], "location": {"address1": "17 Masonic St", "address2":
+        null, "address3": "", "city": "Rockland", "zip_code": "04841", "country":
+        "US", "state": "ME", "display_address": ["17 Masonic St", "Rockland, ME 04841"]},
+        "phone": "+12072424577", "display_phone": "(207) 242-4577", "distance": 20301.706976619527},
+        {"id": "CIY8glZXf36wl8Zd_emZcw", "alias": "stearns-mona-rockland", "name":
+        "Stearns Mona", "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/stearns-mona-rockland?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "healthtrainers", "title": "Trainers"}],
+        "rating": 0.0, "coordinates": {"latitude": 44.1019099, "longitude": -69.11158},
+        "transactions": [], "location": {"address1": "44 Park St", "address2": null,
+        "address3": null, "city": "Rockland", "zip_code": "04841", "country": "US",
+        "state": "ME", "display_address": ["44 Park St", "Rockland, ME 04841"]}, "phone":
+        "+12075962952", "display_phone": "(207) 596-2952", "distance": 20349.215796105073},
+        {"id": "On6mAeQjrMMuRwEc7eonVQ", "alias": "soma-rockland", "name": "Soma",
+        "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/soma-rockland?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 1, "categories": [{"alias": "healthtrainers", "title": "Trainers"}],
+        "rating": 1.0, "coordinates": {"latitude": 44.10384, "longitude": -69.10901},
+        "transactions": [], "location": {"address1": "385 Main St", "address2": "Ste
+        3", "address3": "", "city": "Rockland", "zip_code": "04841", "country": "US",
+        "state": "ME", "display_address": ["385 Main St", "Ste 3", "Rockland, ME 04841"]},
+        "phone": "+12075966177", "display_phone": "(207) 596-6177", "distance": 20567.851609016572},
+        {"id": "_9_amlJVk5SIQRcUAB_jmQ", "alias": "earth-flow-fire-and-earth-candy-rockland",
+        "name": "Earth Flow + Fire and Earth Candy", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/ZFeEmr-lvDMnQaSvJxrv1Q/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/earth-flow-fire-and-earth-candy-rockland?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 15, "categories": [{"alias": "yoga", "title": "Yoga"}, {"alias":
+        "juicebars", "title": "Juice Bars & Smoothies"}, {"alias": "vegan", "title":
+        "Vegan"}], "rating": 4.1, "coordinates": {"latitude": 44.103983090593, "longitude":
+        -69.1083925317452}, "transactions": [], "location": {"address1": "385 Main
+        St", "address2": "", "address3": null, "city": "Rockland", "zip_code": "04841",
+        "country": "US", "state": "ME", "display_address": ["385 Main St", "Rockland,
+        ME 04841"]}, "phone": "+12075938269", "display_phone": "(207) 593-8269", "distance":
+        20597.602993219323}, {"id": "wtzdNWtMkw2Eaz9Mx7iZ1w", "alias": "rockland-ymca-program-center-rockland",
+        "name": "Rockland YMCA Program Center", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/MnMxJUivVtpdQ3gG-l_UCw/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/rockland-ymca-program-center-rockland?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
-        "review_count": 3, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias":
-        "childcare", "title": "Child Care & Day Care"}], "rating": 3.5, "coordinates":
+        "review_count": 4, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias":
+        "childcare", "title": "Child Care & Day Care"}], "rating": 4.0, "coordinates":
         {"latitude": 44.098741, "longitude": -69.10767}, "transactions": [], "location":
         {"address1": "12 Water St", "address2": null, "address3": null, "city": "Rockland",
         "zip_code": "04841", "country": "US", "state": "ME", "display_address": ["12
         Water St", "Rockland, ME 04841"]}, "phone": "+12075938500", "display_phone":
-        "(207) 593-8500", "distance": 20677.358933719544}, {"id": "2taLnHxJ1_EdjmXVAmDLxA",
-        "alias": "cj-strength-and-conditioning-rockport", "name": "CJ Strength & Conditioning",
-        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/O1ZV67x7IhB_LseU3DrhRA/o.jpg",
+        "(207) 593-8500", "distance": 20677.358933719544}, {"id": "80XRogbI6fUCQc6r2fcOnw",
+        "alias": "planet-fitness-rockland", "name": "Planet Fitness", "image_url":
+        "https://s3-media0.fl.yelpcdn.com/bphoto/nZOPeSjJoeNTicgwmGN8rw/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/planet-fitness-rockland?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 11, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias":
+        "healthtrainers", "title": "Trainers"}], "rating": 3.3, "coordinates": {"latitude":
+        44.1180781, "longitude": -69.1063894}, "transactions": [], "location": {"address1":
+        "75 Maverick St", "address2": "", "address3": null, "city": "Rockland", "zip_code":
+        "04841", "country": "US", "state": "ME", "display_address": ["75 Maverick
+        St", "Rockland, ME 04841"]}, "phone": "+12074183111", "display_phone": "(207)
+        418-3111", "distance": 20779.529342981685}, {"id": "8qpIwzcBS-FF-JdytAnaSg",
+        "alias": "mid-coast-physical-therapy-rockland", "name": "Mid-Coast Physical
+        Therapy", "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/mid-coast-physical-therapy-rockland?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
+        0.0, "coordinates": {"latitude": 44.105067551136, "longitude": -69.1053899377584},
+        "transactions": [], "location": {"address1": "11 Lime St", "address2": "",
+        "address3": "", "city": "Rockland", "zip_code": "04841", "country": "US",
+        "state": "ME", "display_address": ["11 Lime St", "Rockland, ME 04841"]}, "phone":
+        "+12075966889", "display_phone": "(207) 596-6889", "distance": 20845.73279751671},
+        {"id": "O9jDRNXOn0HSfbATX8qNrw", "alias": "optimum-performance-harborview-rockport",
+        "name": "Optimum Performance Harborview", "image_url": "", "is_closed": false,
+        "url": "https://www.yelp.com/biz/optimum-performance-harborview-rockport?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
+        0.0, "coordinates": {"latitude": 44.18532, "longitude": -69.12702}, "transactions":
+        [], "location": {"address1": "535 West St", "address2": "", "address3": "",
+        "city": "Rockport", "zip_code": "04856", "country": "US", "state": "ME", "display_address":
+        ["535 West St", "Rockport, ME 04856"]}, "phone": "+12072360844", "display_phone":
+        "(207) 236-0844", "distance": 21004.133013303093}, {"id": "dvik6fZhgD1NeB1bJLDHng",
+        "alias": "midcoast-martial-arts-rockport", "name": "Midcoast Martial Arts",
+        "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/zhmxJQQdAziOLJVnZrJEZw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/midcoast-martial-arts-rockport?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "martialarts", "title": "Martial
+        Arts"}], "rating": 0.0, "coordinates": {"latitude": 44.18532, "longitude":
+        -69.12702}, "transactions": [], "location": {"address1": "535 W St", "address2":
+        "", "address3": "", "city": "Rockport", "zip_code": "04856", "country": "US",
+        "state": "ME", "display_address": ["535 W St", "Rockport, ME 04856"]}, "phone":
+        "+12075425005", "display_phone": "(207) 542-5005", "distance": 21004.133013303093},
+        {"id": "3DCcyntE540ML7YmmrE33A", "alias": "brystle-noble-fitness-rockport",
+        "name": "Brystle Noble Fitness", "image_url": "", "is_closed": false, "url":
+        "https://www.yelp.com/biz/brystle-noble-fitness-rockport?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 1, "categories": [{"alias": "healthtrainers", "title": "Trainers"},
+        {"alias": "paddleboarding", "title": "Paddleboarding"}, {"alias": "bootcamps",
+        "title": "Boot Camps"}], "rating": 5.0, "coordinates": {"latitude": 44.1757122,
+        "longitude": -69.110256}, "transactions": [], "location": {"address1": "535
+        West St", "address2": "", "address3": null, "city": "Rockport", "zip_code":
+        "04856", "country": "US", "state": "ME", "display_address": ["535 West St",
+        "Rockport, ME 04856"]}, "phone": "+12074582545", "display_phone": "(207) 458-2545",
+        "distance": 21770.203359421295}, {"id": "g5NmHOUzFLaV630w7dommQ", "alias":
+        "anderson-fit-whitefield", "name": "Anderson Fit", "image_url": "", "is_closed":
+        false, "url": "https://www.yelp.com/biz/anderson-fit-whitefield?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "healthtrainers", "title": "Trainers"}],
+        "rating": 0.0, "coordinates": {"latitude": 44.25739, "longitude": -69.55242},
+        "transactions": [], "location": {"address1": null, "address2": null, "address3":
+        null, "city": "Whitefield", "zip_code": "04353", "country": "US", "state":
+        "ME", "display_address": ["Whitefield, ME 04353"]}, "phone": "+12074419738",
+        "display_phone": "(207) 441-9738", "distance": 23979.799782196027}, {"id":
+        "2taLnHxJ1_EdjmXVAmDLxA", "alias": "cj-strength-and-conditioning-rockport",
+        "name": "CJ Strength & Conditioning", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/O1ZV67x7IhB_LseU3DrhRA/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/cj-strength-and-conditioning-rockport?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
         "review_count": 4, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias":
         "cardioclasses", "title": "Cardio Classes"}], "rating": 5.0, "coordinates":
@@ -93,36 +350,194 @@ http_interactions:
         {"address1": "321 Commercial St", "address2": null, "address3": null, "city":
         "Rockport", "zip_code": "04856", "country": "US", "state": "ME", "display_address":
         ["321 Commercial St", "Rockport, ME 04856"]}, "phone": "+12075923004", "display_phone":
-        "(207) 592-3004", "distance": 24123.465792882624}, {"id": "21v8vUQKyTw7KCzXU6gI3g",
-        "alias": "penobscot-bay-ymca-rockport", "name": "Penobscot Bay YMCA", "image_url":
-        "", "is_closed": false, "url": "https://www.yelp.com/biz/penobscot-bay-ymca-rockport?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "(207) 592-3004", "distance": 24123.465792882624}, {"id": "jVj9_ef4B4xJtccy8bjAcw",
+        "alias": "open-door-yoga-center-camden", "name": "Open Door Yoga Center",
+        "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/open-door-yoga-center-camden?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "yoga", "title": "Yoga"}], "rating":
+        0.0, "coordinates": {"latitude": 44.2314, "longitude": -69.10667}, "transactions":
+        [], "location": {"address1": "255 Molyneaux Rd", "address2": "", "address3":
+        "", "city": "Camden", "zip_code": "04843", "country": "US", "state": "ME",
+        "display_address": ["255 Molyneaux Rd", "Camden, ME 04843"]}, "phone": "+12072300776",
+        "display_phone": "(207) 230-0776", "distance": 24851.062051605193}, {"id":
+        "UpSCH4Vh5M52B0JFX54zBw", "alias": "revolutions-personal-training-camden",
+        "name": "Revolutions Personal Training", "image_url": "", "is_closed": false,
+        "url": "https://www.yelp.com/biz/revolutions-personal-training-camden?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "healthtrainers", "title": "Trainers"}],
+        "rating": 0.0, "coordinates": {"latitude": 44.20187, "longitude": -69.07655},
+        "transactions": [], "location": {"address1": "5 John St", "address2": "",
+        "address3": "", "city": "Camden", "zip_code": "04843", "country": "US", "state":
+        "ME", "display_address": ["5 John St", "Camden, ME 04843"]}, "phone": "+12072367906",
+        "display_phone": "(207) 236-7906", "distance": 25381.526145837768}, {"id":
+        "21v8vUQKyTw7KCzXU6gI3g", "alias": "penobscot-bay-ymca-rockport", "name":
+        "Penobscot Bay YMCA", "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/penobscot-bay-ymca-rockport?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
         "review_count": 3, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias":
         "childcare", "title": "Child Care & Day Care"}], "rating": 5.0, "coordinates":
         {"latitude": 44.1961784362793, "longitude": -69.0691833496094}, "transactions":
         [], "location": {"address1": "116 Union St", "address2": "", "address3": "",
         "city": "Rockport", "zip_code": "04856", "country": "US", "state": "ME", "display_address":
         ["116 Union St", "Rockport, ME 04856"]}, "phone": "+12072363375", "display_phone":
-        "(207) 236-3375", "distance": 25659.941679247007}, {"id": "2-ci-AfKX_TYKxvlbCdV3A",
-        "alias": "boothbay-region-ymca-boothbay-harbor", "name": "Boothbay Region
-        YMCA", "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/boothbay-region-ymca-boothbay-harbor?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "(207) 236-3375", "distance": 25656.897536458768}, {"id": "dpuB_TvHgu_WctnwthxRiA",
+        "alias": "sanctuary-day-spa-camden", "name": "Sanctuary Day Spa", "image_url":
+        "", "is_closed": false, "url": "https://www.yelp.com/biz/sanctuary-day-spa-camden?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 4, "categories": [{"alias": "spas", "title": "Day Spas"},
+        {"alias": "yoga", "title": "Yoga"}], "rating": 3.0, "coordinates": {"latitude":
+        44.2040657, "longitude": -69.0726015}, "transactions": [], "price": "$$",
+        "location": {"address1": "91 Elm St", "address2": null, "address3": null,
+        "city": "Camden", "zip_code": "04843", "country": "US", "state": "ME", "display_address":
+        ["91 Elm St", "Camden, ME 04843"]}, "phone": "+12072363338", "display_phone":
+        "(207) 236-3338", "distance": 25745.315927455682}, {"id": "tWpPstgOJt6Dx-pgK-0gOw",
+        "alias": "atlantic-ballet-company-camden", "name": "Atlantic Ballet Company",
+        "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/a08DwPWRgtiqiMEzA3BNjA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/atlantic-ballet-company-camden?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "dance_schools", "title": "Dance
+        Schools"}, {"alias": "dancestudio", "title": "Dance Studios"}], "rating":
+        0.0, "coordinates": {"latitude": 44.2124774, "longitude": -69.07125578528776},
+        "transactions": [], "location": {"address1": "27 Knowlton St", "address2":
+        null, "address3": "", "city": "Camden", "zip_code": "04843", "country": "US",
+        "state": "ME", "display_address": ["27 Knowlton St", "Camden, ME 04843"]},
+        "phone": "+12075429205", "display_phone": "(207) 542-9205", "distance": 26241.548507822274},
+        {"id": "1D3Wmzz9E8oG-HJkwApwqg", "alias": "leblanc-sterling-personal-trainer-camden",
+        "name": "Leblanc Sterling Personal Trainer", "image_url": "", "is_closed":
+        false, "url": "https://www.yelp.com/biz/leblanc-sterling-personal-trainer-camden?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "healthtrainers", "title": "Trainers"}],
+        "rating": 0.0, "coordinates": {"latitude": 44.21011, "longitude": -69.06647},
+        "transactions": [], "location": {"address1": "25 Mechanic St", "address2":
+        "", "address3": "", "city": "Camden", "zip_code": "04843", "country": "US",
+        "state": "ME", "display_address": ["25 Mechanic St", "Camden, ME 04843"]},
+        "phone": "+12072362214", "display_phone": "(207) 236-2214", "distance": 26485.771442457062},
+        {"id": "LOXJrfsWS0glhoZtrTPRHg", "alias": "five-elements-mountain-school-of-martial-arts-woolwich",
+        "name": "Five Elements Mountain School of Martial Arts", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/d4znjUCutuSEBQHjv1nxAg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/five-elements-mountain-school-of-martial-arts-woolwich?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "martialarts", "title": "Martial
+        Arts"}, {"alias": "taichi", "title": "Tai Chi"}], "rating": 0.0, "coordinates":
+        {"latitude": 43.916895, "longitude": -69.80175}, "transactions": [], "location":
+        {"address1": "59 Main St", "address2": null, "address3": "", "city": "Woolwich",
+        "zip_code": "04578", "country": "US", "state": "ME", "display_address": ["59
+        Main St", "Woolwich, ME 04578"]}, "phone": "+12075044553", "display_phone":
+        "(207) 504-4553", "distance": 26549.74533350607}, {"id": "qa60MAw_u80AUPLybkOzZg",
+        "alias": "madilyns-camden-3", "name": "Madilyn''s", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/B4cxxiw9Op4hUbSDc26ElQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/madilyns-camden-3?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 5, "categories": [{"alias": "psychics", "title": "Psychics"},
+        {"alias": "meditationcenters", "title": "Meditation Centers"}, {"alias": "lifecoach",
+        "title": "Life Coach"}], "rating": 4.2, "coordinates": {"latitude": 44.21091,
+        "longitude": -69.06478}, "transactions": [], "location": {"address1": "43
+        Main St", "address2": "", "address3": null, "city": "Camden", "zip_code":
+        "04843", "country": "US", "state": "ME", "display_address": ["43 Main St",
+        "Camden, ME 04843"]}, "phone": "+12075424555", "display_phone": "(207) 542-4555",
+        "distance": 26630.590700280754}, {"id": "uqsii0SVF4GX3q9DAMDA7g", "alias":
+        "on-point-massage-camden", "name": "On Point Massage", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/YPQ6MoTXbjoqwxdZBTM5pA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/on-point-massage-camden?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "massage", "title": "Massage"},
+        {"alias": "alternativemedicine", "title": "Alternative Medicine"}, {"alias":
+        "healthtrainers", "title": "Trainers"}], "rating": 0.0, "coordinates": {"latitude":
+        44.212345, "longitude": -69.065042}, "transactions": [], "location": {"address1":
+        "", "address2": null, "address3": "", "city": "Camden", "zip_code": "04843",
+        "country": "US", "state": "ME", "display_address": ["Camden, ME 04843"]},
+        "phone": "+12079752550", "display_phone": "(207) 975-2550", "distance": 26680.6443057977},
+        {"id": "uHOhyvQsJrnycDvYP0vsdA", "alias": "wicked-good-yoga-wiscasset", "name":
+        "Wicked Good Yoga", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/47unwsbyeHOxRiD7oT86nQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/wicked-good-yoga-wiscasset?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 7, "categories": [{"alias": "yoga", "title": "Yoga"}], "rating":
+        5.0, "coordinates": {"latitude": 44.00408, "longitude": -69.67283}, "transactions":
+        [], "location": {"address1": "5 Bradford Rd", "address2": "", "address3":
+        "", "city": "Wiscasset", "zip_code": "04578", "country": "US", "state": "ME",
+        "display_address": ["5 Bradford Rd", "Wiscasset, ME 04578"]}, "phone": "+12078826892",
+        "display_phone": "(207) 882-6892", "distance": 27038.20224433696}, {"id":
+        "m4UCINSanmwjhCFu-sXX0Q", "alias": "bridge-academy-dresden", "name": "Bridge
+        Academy", "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/bridge-academy-dresden?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "martialarts", "title": "Martial
+        Arts"}], "rating": 0.0, "coordinates": {"latitude": 44.0863, "longitude":
+        -69.76216}, "transactions": [], "location": {"address1": "RR 197", "address2":
+        "", "address3": "", "city": "Dresden", "zip_code": "04342", "country": "US",
+        "state": "ME", "display_address": ["RR 197", "Dresden, ME 04342"]}, "phone":
+        "+12077378810", "display_phone": "(207) 737-8810", "distance": 30136.636096363665},
+        {"id": "i19c1au5b2earZNP8dDQgw", "alias": "lulu-s-barn-westport-island", "name":
+        "Lulu\u2019s Barn", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/k3ETvh7rKQRU5Wg9ikpSeQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/lulu-s-barn-westport-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 1, "categories": [{"alias": "attractionfarms", "title": "Attraction
+        Farms"}, {"alias": "yoga", "title": "Yoga"}], "rating": 5.0, "coordinates":
+        {"latitude": 43.951, "longitude": -69.68265}, "transactions": [], "location":
+        {"address1": "389 Main Rd", "address2": null, "address3": "", "city": "Westport
+        Island", "zip_code": "04578", "country": "US", "state": "ME", "display_address":
+        ["389 Main Rd", "Westport Island, ME 04578"]}, "phone": "+12072157039", "display_phone":
+        "(207) 215-7039", "distance": 30571.796931695084}, {"id": "K49zMdE8StfZ_8D2DvtrQw",
+        "alias": "maine-jiu-jitsu-academy-boothbay", "name": "Maine Jiu Jitsu Academy",
+        "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/maine-jiu-jitsu-academy-boothbay?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "martialarts", "title": "Martial
+        Arts"}], "rating": 0.0, "coordinates": {"latitude": 43.9006933, "longitude":
+        -69.6256133}, "transactions": [], "location": {"address1": "638 Wiscasset
+        Rd", "address2": null, "address3": null, "city": "Boothbay", "zip_code": "04537",
+        "country": "US", "state": "ME", "display_address": ["638 Wiscasset Rd", "Boothbay,
+        ME 04537"]}, "phone": "+12076336552", "display_phone": "(207) 633-6552", "distance":
+        31022.114122528834}, {"id": "-Qr4BkhsTfREsB7WSv5f7w", "alias": "empowered-pole-fitness-augusta",
+        "name": "Empowered Pole Fitness", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/NjrppH07QeKmrL53ezElOw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/empowered-pole-fitness-augusta?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 1, "categories": [{"alias": "dancestudio", "title": "Dance
+        Studios"}], "rating": 5.0, "coordinates": {"latitude": 44.32534653621904,
+        "longitude": -69.6408239}, "transactions": [], "location": {"address1": "227
+        Ward Rd", "address2": null, "address3": "", "city": "Augusta", "zip_code":
+        "04330", "country": "US", "state": "ME", "display_address": ["227 Ward Rd",
+        "Augusta, ME 04330"]}, "phone": "+12075589555", "display_phone": "(207) 558-9555",
+        "distance": 32590.183479359013}, {"id": "amP4FDGL8LWZe47arSDW1A", "alias":
+        "ami-han-martial-arts-augusta-6", "name": "Ami Han Martial Arts", "image_url":
+        "https://s3-media0.fl.yelpcdn.com/bphoto/JtWFM7EDo4hqK3fqIGg97Q/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/ami-han-martial-arts-augusta-6?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "martialarts", "title": "Martial
+        Arts"}, {"alias": "boxing", "title": "Boxing"}], "rating": 0.0, "coordinates":
+        {"latitude": 44.30103, "longitude": -69.697779}, "transactions": [], "location":
+        {"address1": "178 Spring Rd", "address2": null, "address3": null, "city":
+        "Augusta", "zip_code": "04330", "country": "US", "state": "ME", "display_address":
+        ["178 Spring Rd", "Augusta, ME 04330"]}, "phone": "+12073337913", "display_phone":
+        "(207) 333-7913", "distance": 34034.777531249354}, {"id": "zPkQU_poabriVKuTgbuQBA",
+        "alias": "happy-feet-dance-south-china", "name": "Happy Feet Dance", "image_url":
+        "https://s3-media0.fl.yelpcdn.com/bphoto/qkKd2xewqizoaRkgsp1IBw/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/happy-feet-dance-south-china?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "childcare", "title": "Child Care
+        & Day Care"}, {"alias": "dancestudio", "title": "Dance Studios"}], "rating":
+        0.0, "coordinates": {"latitude": 44.3739586, "longitude": -69.5796127}, "transactions":
+        [], "location": {"address1": "16 Meadow Wood Dr", "address2": null, "address3":
+        "", "city": "South China", "zip_code": "04358", "country": "US", "state":
+        "ME", "display_address": ["16 Meadow Wood Dr", "South China, ME 04358"]},
+        "phone": "+12073138833", "display_phone": "(207) 313-8833", "distance": 34099.0869230108},
+        {"id": "2-ci-AfKX_TYKxvlbCdV3A", "alias": "boothbay-region-ymca-boothbay-harbor",
+        "name": "Boothbay Region YMCA", "image_url": "", "is_closed": false, "url":
+        "https://www.yelp.com/biz/boothbay-region-ymca-boothbay-harbor?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
         "review_count": 5, "categories": [{"alias": "childcare", "title": "Child Care
-        & Day Care"}, {"alias": "gyms", "title": "Gyms"}], "rating": 5.0, "coordinates":
+        & Day Care"}, {"alias": "gyms", "title": "Gyms"}], "rating": 4.8, "coordinates":
         {"latitude": 43.8642996808783, "longitude": -69.6283435821533}, "transactions":
         [], "location": {"address1": "261 Townsend Ave", "address2": "", "address3":
         "", "city": "Boothbay Harbor", "zip_code": "04538", "country": "US", "state":
         "ME", "display_address": ["261 Townsend Ave", "Boothbay Harbor, ME 04538"]},
         "phone": "+12076332855", "display_phone": "(207) 633-2855", "distance": 34270.9382916149},
-        {"id": "_KpYvJmQdxnsizYJAeflUw", "alias": "waldo-county-ymca-belfast", "name":
-        "Waldo County YMCA", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/wEEoZA3CN3AKwBuSLEAgmQ/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/waldo-county-ymca-belfast?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
-        "review_count": 3, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias":
-        "childcare", "title": "Child Care & Day Care"}], "rating": 2.5, "coordinates":
-        {"latitude": 44.4140573590994, "longitude": -69.022863060236}, "transactions":
-        [], "location": {"address1": "157 Lincolnville Ave", "address2": "", "address3":
-        "", "city": "Belfast", "zip_code": "04915", "country": "US", "state": "ME",
-        "display_address": ["157 Lincolnville Ave", "Belfast, ME 04915"]}, "phone":
-        "+12073384598", "display_phone": "(207) 338-4598", "distance": 43646.85046559528}],
-        "total": 6, "region": {"center": {"longitude": -69.36630249023438, "latitude":
+        {"id": "ddVxU2S2YQGeGPSFJ26SYQ", "alias": "hester-kohl-wellness-lincolnville",
+        "name": "Hester Kohl Wellness", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/cB-Q2a-Pmt36HAIvKKdKQQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/hester-kohl-wellness-lincolnville?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "healthcoach", "title": "Health
+        Coach"}, {"alias": "meditationcenters", "title": "Meditation Centers"}], "rating":
+        0.0, "coordinates": {"latitude": 44.28406, "longitude": -69.00855}, "transactions":
+        [], "location": {"address1": "", "address2": "", "address3": "", "city": "Lincolnville",
+        "zip_code": "04849", "country": "US", "state": "ME", "display_address": ["Lincolnville,
+        ME 04849"]}, "phone": "+12075051066", "display_phone": "(207) 505-1066", "distance":
+        34401.56552396251}, {"id": "B8rYoSsHs0HI-umsS7T6FA", "alias": "carol-a-richards-richmond-2",
+        "name": "Carol A Richards", "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/carol-a-richards-richmond-2?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "tcm", "title": "Traditional Chinese
+        Medicine"}, {"alias": "healthtrainers", "title": "Trainers"}, {"alias": "reiki",
+        "title": "Reiki"}, {"alias": "lifecoach", "title": "Life Coach"}], "rating":
+        0.0, "coordinates": {"latitude": 44.087106, "longitude": -69.803133}, "transactions":
+        [], "location": {"address1": "", "address2": null, "address3": null, "city":
+        "Richmond", "zip_code": "04357", "country": "US", "state": "ME", "display_address":
+        ["Richmond, ME 04357"]}, "phone": "+12074093626", "display_phone": "(207)
+        409-3626", "distance": 34961.22527092544}, {"id": "40SjxLpXaI21eOuEBC1h8w",
+        "alias": "focused-fitness-martial-arts-center-gardiner", "name": "Focused
+        Fitness Martial Arts Center", "image_url": "", "is_closed": false, "url":
+        "https://www.yelp.com/biz/focused-fitness-martial-arts-center-gardiner?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "martialarts", "title": "Martial
+        Arts"}], "rating": 0.0, "coordinates": {"latitude": 44.22975, "longitude":
+        -69.77316}, "transactions": [], "location": {"address1": "279 Water St", "address2":
+        "", "address3": "", "city": "Gardiner", "zip_code": "04345", "country": "US",
+        "state": "ME", "display_address": ["279 Water St", "Gardiner, ME 04345"]},
+        "phone": "+12075826365", "display_phone": "(207) 582-6365", "distance": 35147.90623952684}],
+        "total": 135, "region": {"center": {"longitude": -69.36630249023438, "latitude":
         44.10811081310502}}}'
-  recorded_at: Sun, 23 Apr 2023 01:25:18 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Tue, 25 Nov 2025 09:34:43 GMT
+recorded_with: VCR 6.3.1

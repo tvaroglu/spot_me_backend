@@ -2,26 +2,25 @@ version: 2.1
 
 orbs:
   ruby: circleci/ruby@0.1.2
-  heroku: circleci/heroku@0.0.10
 
+# TODO: comment in deploy job once stack fully upgraded && rebuilt
 workflows:
-  heroku_deploy:
-    jobs:
-      - build
-      - heroku/deploy-via-git: # Use the pre-configured job, deploy-via-git
-          requires:
-            - build
-          filters:
-            branches:
-              only: main
-          post-steps:
-            - run: heroku run rails db:migrate --app spotme-app-api
+  # heroku_deploy:
+  #   jobs:
+  #     - build
+  #     - deploy:
+  #         requires:
+  #           - build
+  #         filters:
+  #           branches:
+  #             only: main
+
 jobs:
   build:
     parallelism: 1
     docker:
-      - image: circleci/ruby:2.7.2
-      - image: circleci/postgres:9.6-alpine
+      - image: cimg/ruby:3.1.4
+      - image: cimg/postgres:13.9
         environment:
           POSTGRES_USER: postgres
           POSTGRES_DB: spot_me_backend_test
@@ -38,11 +37,51 @@ jobs:
       - run:
           name: Which bundler?
           command: bundle -v
-      - ruby/bundle-install
-      - run: sudo apt install -y postgresql-client || true
       - run:
-          name: Setup DB
+          name: Ensure Bundler 2.3.25 (matches lockfile)
+          command: gem install bundler -v 2.3.25
+      - ruby/bundle-install
+      - run:
+          name: Install PG client
+          command: sudo apt install -y postgresql-client || true
+      - run:
+          name: Setup Test DB
           command: bundle exec rails db:create db:schema:load --trace
       - run:
           name: Run Test Suite
           command: bundle exec rspec -fd
+
+  deploy:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: Install Heroku CLI
+          command: |
+            curl https://cli-assets.heroku.com/install.sh | sh
+      - run:
+          name: Authenticate with Heroku
+          command: |
+            cat > ~/.netrc \<<EOF
+            machine api.heroku.com
+              login $HEROKU_EMAIL
+              password $HEROKU_API_KEY
+            machine git.heroku.com
+              login $HEROKU_EMAIL
+              password $HEROKU_API_KEY
+            EOF
+            chmod 600 ~/.netrc
+            heroku auth:whoami
+      - run:
+          name: Deploy to Heroku via Git
+          command: |
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/spotme-app-api.git main
+      - run:
+          name: Run migrations
+          command: |
+            if heroku config:get DATABASE_URL --app spotme-app-api | grep -q 'postgres'; then
+              heroku run rails db:migrate --app spotme-app-api
+            else
+              echo "No database detected; skipping migrations."
+            fi

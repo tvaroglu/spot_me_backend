@@ -10,7 +10,7 @@ http_interactions:
       Authorization:
       - DONT_SHARE_MY_SECRET_KEY
       User-Agent:
-      - Faraday v1.8.0
+      - Faraday v1.10.4
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -24,58 +24,73 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
+      Ratelimit-Resettime:
+      - '2025-11-26T00:00:00+00:00'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      X-Zipkin-Id:
+      - ac4e19effb12caf387ad90d0905e3d5b
       Server:
       - envoy
-      Ratelimit-Dailylimit:
-      - '5000.0'
-      X-Zipkin-Id:
-      - cdb4bc2e31fa72b1
-      Ratelimit-Remaining:
-      - '4988.0'
-      X-B3-Sampled:
-      - '0'
-      Ratelimit-Resettime:
-      - '2023-04-24T00:00:00+00:00'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '1728000'
+      Set-Cookie:
+      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
+        GMT
       X-Routing-Service:
-      - routing-main--useast1-987598964-lb5pq; site=public_api_v3
+      - routing-main--uswest2-674977b97c-k9dj2; site=public_api_v3
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept, Authorization
+      Ratelimit-Dailylimit:
+      - '5000'
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|d5fa2633-1de2-4eb1-99ef-d39a9fb31982
+      Ratelimit-Remaining:
+      - '4889'
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-141-236-useast1bprod
+      - 10-69-156-155-uswest2bprod
       X-Extlb:
-      - 10-65-141-236-useast1bprod
+      - 10-69-156-155-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 23 Apr 2023 01:25:20 GMT
+      - Tue, 25 Nov 2025 09:34:48 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8226-DEN
+      - cache-sjc10049-SJC
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       Vary:
       - Accept-Encoding
+      Alt-Svc:
+      - h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
       string: '{"id": "HxK5-XEhjl0x0RR9PAgBVQ", "alias": "ymca-of-south-collier-marco-ymca-marco-island",
-        "name": "YMCA of South Collier-Marco YMCA", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/f3IWcztQgl8-9j1z8BsLdg/o.jpg",
+        "name": "YMCA of South Collier-Marco YMCA", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/loazD31GrXjSORZt2gysNA/o.jpg",
         "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/ymca-of-south-collier-marco-ymca-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
         "phone": "+12393949622", "display_phone": "(239) 394-9622", "review_count":
-        13, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "childcare",
+        16, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "childcare",
         "title": "Child Care & Day Care"}, {"alias": "healthtrainers", "title": "Trainers"}],
-        "rating": 3.5, "location": {"address1": "101 Sand Hill St", "address2": "",
+        "rating": 3.4, "location": {"address1": "101 Sand Hill St", "address2": "",
         "address3": "", "city": "Marco Island", "zip_code": "34145", "country": "US",
         "state": "FL", "display_address": ["101 Sand Hill St", "Marco Island, FL 34145"],
         "cross_streets": ""}, "coordinates": {"latitude": 25.93536, "longitude": -81.70816},
-        "photos": ["https://s3-media4.fl.yelpcdn.com/bphoto/f3IWcztQgl8-9j1z8BsLdg/o.jpg",
-        "https://s3-media4.fl.yelpcdn.com/bphoto/FojEQxZSyNSM59MXST8ekw/o.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/loazD31GrXjSORZt2gysNA/o.jpg"],
+        "photos": ["https://s3-media0.fl.yelpcdn.com/bphoto/loazD31GrXjSORZt2gysNA/o.jpg",
+        "https://s3-media0.fl.yelpcdn.com/bphoto/rg62s4hjjapN4clb20H7vQ/o.jpg", "https://s3-media0.fl.yelpcdn.com/bphoto/huB0ERdPm4pcbp1TbWPyqw/o.jpg"],
         "hours": [{"open": [{"is_overnight": false, "start": "0500", "end": "2100",
         "day": 0}, {"is_overnight": false, "start": "0500", "end": "2100", "day":
         1}, {"is_overnight": false, "start": "0500", "end": "2100", "day": 2}, {"is_overnight":
@@ -84,5 +99,5 @@ http_interactions:
         "0600", "end": "2000", "day": 5}, {"is_overnight": false, "start": "0600",
         "end": "2000", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}],
         "transactions": []}'
-  recorded_at: Sun, 23 Apr 2023 01:25:20 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Tue, 25 Nov 2025 09:34:47 GMT
+recorded_with: VCR 6.3.1

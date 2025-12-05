@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.yelp.com/v3/businesses/search?limit=50&location=89405&radius=40000&sort_by=distance&term=gyms
+    uri: https://api.yelp.com/v3/businesses/search?limit=50&location=99723&radius=40000&sort_by=distance&term=gyms
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       Authorization:
       - DONT_SHARE_MY_SECRET_KEY
       User-Agent:
-      - Faraday v1.8.0
+      - Faraday v1.10.4
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -24,47 +24,62 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Dailylimit:
-      - '5000.0'
       Ratelimit-Remaining:
-      - '4991.0'
+      - '4892'
+      Ratelimit-Resettime:
+      - '2025-11-26T00:00:00+00:00'
+      X-Zipkin-Id:
+      - fa5139b47c11f173e6d8c41ade50bde9
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept, Authorization
       Server:
       - envoy
-      Ratelimit-Resettime:
-      - '2023-04-24T00:00:00+00:00'
+      Set-Cookie:
+      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
+        GMT
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '1728000'
       X-Routing-Service:
-      - routing-main--useast1-987598964-mjg7s; site=public_api_v3
-      X-B3-Sampled:
-      - '0'
-      X-Zipkin-Id:
-      - 60a0f4cd234ef918
+      - routing-main--uswest2-674977b97c-24gbb; site=public_api_v3
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|33c0becd-d7c4-45e1-9334-75d5f8f9d63e
+      Ratelimit-Dailylimit:
+      - '5000'
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-79-31-useast1aprod
+      - 10-69-66-215-uswest2aprod
       X-Extlb:
-      - 10-65-79-31-useast1aprod
+      - 10-69-66-215-uswest2aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 23 Apr 2023 01:25:19 GMT
+      - Tue, 25 Nov 2025 09:34:45 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-den8283-DEN
+      - cache-sjc1000122-SJC
       X-Cache:
       - MISS
       X-Cache-Hits:
       - '0'
       Vary:
       - Accept-Encoding
+      Alt-Svc:
+      - h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"businesses": [], "total": 0, "region": {"center": {"longitude": -119.432373046875,
-        "latitude": 40.4462157989704}}}'
-  recorded_at: Sun, 23 Apr 2023 01:25:19 GMT
-recorded_with: VCR 6.0.0
+      string: '{"businesses": [], "total": 0, "region": {"center": {"longitude": -156.76116943359375,
+        "latitude": 71.28570519281563}}}'
+  recorded_at: Tue, 25 Nov 2025 09:34:45 GMT
+recorded_with: VCR 6.3.1
