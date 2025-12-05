@@ -3,17 +3,16 @@ version: 2.1
 orbs:
   ruby: circleci/ruby@0.1.2
 
-# TODO: comment in deploy job once stack fully upgraded && rebuilt
 workflows:
-  # heroku_deploy:
-  #   jobs:
-  #     - build
-  #     - deploy:
-  #         requires:
-  #           - build
-  #         filters:
-  #           branches:
-  #             only: main
+  heroku_deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: main
 
 jobs:
   build:
