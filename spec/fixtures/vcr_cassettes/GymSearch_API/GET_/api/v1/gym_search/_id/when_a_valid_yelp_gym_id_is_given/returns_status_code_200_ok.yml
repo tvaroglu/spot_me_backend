@@ -24,49 +24,49 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Resettime:
-      - '2025-11-26T00:00:00+00:00'
-      Access-Control-Allow-Origin:
-      - "*"
+      X-Routing-Service:
+      - routing-main--useast1-d6b549d6-dlbdx; site=public_api_v3
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|75303762-a73b-43e1-838c-807603840181
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4940'
       Access-Control-Allow-Methods:
       - POST,OPTIONS,GET,DELETE,PUT,PATCH
       X-Zipkin-Id:
-      - ac4e19effb12caf387ad90d0905e3d5b
-      Server:
-      - envoy
+      - 66c5f6da3cfb86daa51babfe41f0d596
+      Ratelimit-Resettime:
+      - '2025-12-07T00:00:00+00:00'
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Max-Age:
       - '1728000'
+      Access-Control-Allow-Origin:
+      - "*"
       Set-Cookie:
       - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
         GMT
-      X-Routing-Service:
-      - routing-main--uswest2-674977b97c-k9dj2; site=public_api_v3
+      Server:
+      - envoy
       Access-Control-Allow-Headers:
       - Origin, Content-Type, Accept, Authorization
-      Ratelimit-Dailylimit:
-      - '5000'
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|d5fa2633-1de2-4eb1-99ef-d39a9fb31982
-      Ratelimit-Remaining:
-      - '4889'
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-156-155-uswest2bprod
+      - 10-65-86-223-useast1aprod
       X-Extlb:
-      - 10-69-156-155-uswest2bprod
+      - 10-65-86-223-useast1aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 25 Nov 2025 09:34:48 GMT
+      - Sat, 06 Dec 2025 00:01:05 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-sjc10049-SJC
+      - cache-iad-kcgs7200154-IAD
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -97,7 +97,7 @@ http_interactions:
         false, "start": "0500", "end": "2100", "day": 3}, {"is_overnight": false,
         "start": "0500", "end": "2000", "day": 4}, {"is_overnight": false, "start":
         "0600", "end": "2000", "day": 5}, {"is_overnight": false, "start": "0600",
-        "end": "2000", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}],
+        "end": "2000", "day": 6}], "hours_type": "REGULAR", "is_open_now": true}],
         "transactions": []}'
-  recorded_at: Tue, 25 Nov 2025 09:34:47 GMT
+  recorded_at: Sat, 06 Dec 2025 00:01:05 GMT
 recorded_with: VCR 6.3.1

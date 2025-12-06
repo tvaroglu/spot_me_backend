@@ -5,7 +5,9 @@ class GymFacade
 
       return unless gyms[:businesses]
 
-      gyms[:businesses].map { |gym| Gym.new(gym) }
+      # require pry; binding.pry
+      gyms[:businesses].select { |b| b[:review_count].to_i > 0 }
+                       .map { |gym| Gym.new(gym) }
     end
 
     def find_gym(gym_id)

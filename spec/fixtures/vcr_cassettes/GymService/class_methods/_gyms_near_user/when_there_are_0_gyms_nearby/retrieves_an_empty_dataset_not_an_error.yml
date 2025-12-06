@@ -26,47 +26,47 @@ http_interactions:
       - application/json
       Access-Control-Max-Age:
       - '1728000'
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Set-Cookie:
-      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
-        GMT
-      Access-Control-Allow-Headers:
-      - Origin, Content-Type, Accept, Authorization
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|595bba88-4af5-4a67-9de5-c10d68b571e9
-      Access-Control-Allow-Origin:
-      - "*"
-      X-Routing-Service:
-      - routing-main--uswest2-674977b97c-cfsw2; site=public_api_v3
+      X-Zipkin-Id:
+      - 4fcef5a8317685631dc241f6dafebe49
       Ratelimit-Dailylimit:
       - '5000'
       Ratelimit-Remaining:
-      - '4857'
+      - '4908'
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|2ca377d0-7886-48aa-bf6c-f61933c4fab1
+      Ratelimit-Resettime:
+      - '2025-12-07T00:00:00+00:00'
+      Access-Control-Allow-Origin:
+      - "*"
+      Set-Cookie:
+      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
+        GMT
       Access-Control-Allow-Methods:
       - POST,OPTIONS,GET,DELETE,PUT,PATCH
-      X-Zipkin-Id:
-      - ed59a5809a9a46f7cc90fbc598396834
+      X-Routing-Service:
+      - routing-main--useast1-d6b549d6-d4tzj; site=public_api_v3
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept, Authorization
       Server:
       - envoy
-      Ratelimit-Resettime:
-      - '2025-11-26T00:00:00+00:00'
+      Access-Control-Allow-Credentials:
+      - 'true'
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-104-34-uswest2aprod
+      - 10-65-183-31-useast1bprod
       X-Extlb:
-      - 10-69-104-34-uswest2aprod
+      - 10-65-183-31-useast1bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 25 Nov 2025 09:35:20 GMT
+      - Sat, 06 Dec 2025 00:01:27 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-sjc1000090-SJC
+      - cache-iad-kcgs7200150-IAD
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -81,5 +81,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"businesses": [], "total": 0, "region": {"center": {"longitude": -156.76116943359375,
         "latitude": 71.28570519281563}}}'
-  recorded_at: Tue, 25 Nov 2025 09:35:20 GMT
+  recorded_at: Sat, 06 Dec 2025 00:01:26 GMT
 recorded_with: VCR 6.3.1

@@ -26,36 +26,36 @@ http_interactions:
       - '102'
       Content-Type:
       - application/json
+      X-Zipkin-Id:
+      - 9f579acb3c3b018c2a7d0fe136f18878
       Access-Control-Max-Age:
       - '1728000'
-      X-Routing-Service:
-      - routing-main--uswest2-674977b97c-9dp2f; site=public_api_v3
-      Access-Control-Allow-Credentials:
-      - 'true'
-      X-Zipkin-Id:
-      - ea09fdc9e98f1b3095874728d5ff55e2
-      Access-Control-Allow-Headers:
-      - Origin, Content-Type, Accept, Authorization
-      Access-Control-Allow-Methods:
-      - POST,OPTIONS,GET,DELETE,PUT,PATCH
-      Access-Control-Allow-Origin:
-      - "*"
       Server:
       - envoy
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept, Authorization
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      X-Routing-Service:
+      - routing-main--uswest2-6956899454-z4dg5; site=public_api_v3
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-66-215-uswest2aprod
+      - 10-65-139-192-useast1bprod
       X-Extlb:
-      - 10-69-66-215-uswest2aprod
+      - 10-65-139-192-useast1bprod
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 25 Nov 2025 09:34:49 GMT
+      - Sat, 06 Dec 2025 00:01:06 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-sjc10057-SJC
+      - cache-iad-kcgs7200047-IAD
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -66,5 +66,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"error": {"code": "BUSINESS_NOT_FOUND", "description": "The requested
         business could not be found."}}'
-  recorded_at: Tue, 25 Nov 2025 09:34:49 GMT
+  recorded_at: Sat, 06 Dec 2025 00:01:06 GMT
 recorded_with: VCR 6.3.1

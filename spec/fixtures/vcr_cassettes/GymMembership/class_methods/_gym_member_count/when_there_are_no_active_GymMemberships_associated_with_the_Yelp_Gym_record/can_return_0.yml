@@ -26,47 +26,47 @@ http_interactions:
       - application/json
       Access-Control-Allow-Methods:
       - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      Ratelimit-Dailylimit:
+      - '5000'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Ratelimit-Remaining:
+      - '4949'
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|6f5b39e9-f737-4726-8dd2-25cf93ebaa8d
       Access-Control-Allow-Headers:
       - Origin, Content-Type, Accept, Authorization
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Routing-Service:
+      - routing-main--useast1-d6b549d6-wgb5r; site=public_api_v3
+      Access-Control-Max-Age:
+      - '1728000'
+      Server:
+      - envoy
       Set-Cookie:
       - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
         GMT
-      Access-Control-Max-Age:
-      - '1728000'
-      X-Zipkin-Id:
-      - cc5599d72978f1462654997de89f981f
-      Ratelimit-Dailylimit:
-      - '5000'
-      X-Routing-Service:
-      - routing-main--uswest2-674977b97c-qmp67; site=public_api_v3
-      Ratelimit-Remaining:
-      - '4898'
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Server:
-      - envoy
       Ratelimit-Resettime:
-      - '2025-11-26T00:00:00+00:00'
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|38928f9d-2c3d-484c-9775-fc56d4862255
+      - '2025-12-07T00:00:00+00:00'
+      X-Zipkin-Id:
+      - 3eb7e3b569c55c68b9c2e7f7b0d88b8a
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-147-83-uswest2bprod
+      - 10-65-106-124-useast1aprod
       X-Extlb:
-      - 10-69-147-83-uswest2bprod
+      - 10-65-106-124-useast1aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 25 Nov 2025 09:34:37 GMT
+      - Sat, 06 Dec 2025 00:00:58 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-sjc10064-SJC
+      - cache-iad-kcgs7200110-IAD
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -99,5 +99,5 @@ http_interactions:
         "0700", "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700",
         "end": "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}],
         "transactions": []}'
-  recorded_at: Tue, 25 Nov 2025 09:34:37 GMT
+  recorded_at: Sat, 06 Dec 2025 00:00:58 GMT
 recorded_with: VCR 6.3.1

@@ -26,36 +26,36 @@ http_interactions:
       - '102'
       Content-Type:
       - application/json
-      Access-Control-Max-Age:
-      - '1728000'
-      Server:
-      - envoy
-      X-Zipkin-Id:
-      - 7aa81d5ff951d7802518b4bfb99f3bcc
-      Access-Control-Allow-Methods:
-      - POST,OPTIONS,GET,DELETE,PUT,PATCH
-      X-Routing-Service:
-      - routing-main--uswest2-674977b97c-gn9wr; site=public_api_v3
       Access-Control-Allow-Credentials:
       - 'true'
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
       Access-Control-Allow-Headers:
       - Origin, Content-Type, Accept, Authorization
+      Server:
+      - envoy
+      Access-Control-Max-Age:
+      - '1728000'
+      X-Routing-Service:
+      - routing-main--useast1-d6b549d6-7kwzv; site=public_api_v3
+      X-Zipkin-Id:
+      - f99cba3ccf5e8961961eb77ae49bd134
       Access-Control-Allow-Origin:
       - "*"
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-156-247-uswest2bprod
+      - 10-65-128-57-useast1bprod
       X-Extlb:
-      - 10-69-156-247-uswest2bprod
+      - 10-65-128-57-useast1bprod
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 25 Nov 2025 09:34:48 GMT
+      - Sat, 06 Dec 2025 00:01:05 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-sjc10035-SJC
+      - cache-iad-kcgs7200104-IAD
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -66,5 +66,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"error": {"code": "BUSINESS_NOT_FOUND", "description": "The requested
         business could not be found."}}'
-  recorded_at: Tue, 25 Nov 2025 09:34:48 GMT
+  recorded_at: Sat, 06 Dec 2025 00:01:05 GMT
 recorded_with: VCR 6.3.1

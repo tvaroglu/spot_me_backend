@@ -24,49 +24,49 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Remaining:
-      - '4886'
-      Access-Control-Allow-Methods:
-      - POST,OPTIONS,GET,DELETE,PUT,PATCH
-      Ratelimit-Resettime:
-      - '2025-11-26T00:00:00+00:00'
-      X-Zipkin-Id:
-      - 5a666e255929d91523f45d792d4dc392
-      Server:
-      - envoy
-      X-Routing-Service:
-      - routing-main--uswest2-674977b97c-gcdjw; site=public_api_v3
-      Access-Control-Allow-Origin:
-      - "*"
       Set-Cookie:
       - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
         GMT
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|18cbccb1-5fe5-4ed8-a80d-f3c3d1bc8f43
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      Access-Control-Allow-Origin:
+      - "*"
+      Ratelimit-Resettime:
+      - '2025-12-07T00:00:00+00:00'
+      Server:
+      - envoy
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Max-Age:
       - '1728000'
+      X-Zipkin-Id:
+      - 0f52b4c6ff20d40177e968c755a06c52
+      X-Routing-Service:
+      - routing-main--useast1-d6b549d6-9vmw5; site=public_api_v3
       Access-Control-Allow-Headers:
       - Origin, Content-Type, Accept, Authorization
+      Ratelimit-Remaining:
+      - '4937'
       Ratelimit-Dailylimit:
       - '5000'
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|37cc3338-76ad-4f6d-b9a6-0ba3607fece7
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-66-215-uswest2aprod
+      - 10-65-86-223-useast1aprod
       X-Extlb:
-      - 10-69-66-215-uswest2aprod
+      - 10-65-86-223-useast1aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 25 Nov 2025 09:34:54 GMT
+      - Sat, 06 Dec 2025 00:01:13 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-sjc10056-SJC
+      - cache-iad-kcgs7200167-IAD
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -99,7 +99,7 @@ http_interactions:
         "0700", "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700",
         "end": "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}],
         "transactions": []}'
-  recorded_at: Tue, 25 Nov 2025 09:34:54 GMT
+  recorded_at: Sat, 06 Dec 2025 00:01:12 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/gHmS3WIjRRhSWG4OdCQYLA
@@ -124,49 +124,49 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
+      Ratelimit-Remaining:
+      - '4936'
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|1e23593e-9eb2-47da-b098-d3bb5606b5b4
+      Ratelimit-Resettime:
+      - '2025-12-07T00:00:00+00:00'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      Access-Control-Max-Age:
+      - '1728000'
       Access-Control-Allow-Headers:
       - Origin, Content-Type, Accept, Authorization
-      Access-Control-Allow-Credentials:
-      - 'true'
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|eb199c0e-0e53-4f2a-bebf-7f2494584f3a
       Server:
       - envoy
       Set-Cookie:
       - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
         GMT
+      X-Routing-Service:
+      - routing-main--useast1-d6b549d6-ks5sm; site=public_api_v3
+      X-Zipkin-Id:
+      - 6343b5786daa032835acaa9992e342cb
       Ratelimit-Dailylimit:
       - '5000'
-      Ratelimit-Remaining:
-      - '4885'
-      Ratelimit-Resettime:
-      - '2025-11-26T00:00:00+00:00'
-      X-Routing-Service:
-      - routing-main--uswest2-674977b97c-5vzdn; site=public_api_v3
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - POST,OPTIONS,GET,DELETE,PUT,PATCH
-      X-Zipkin-Id:
-      - 4fa285a7a2d34bfea342ad5a28445ad5
-      Access-Control-Max-Age:
-      - '1728000'
+      Access-Control-Allow-Credentials:
+      - 'true'
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-66-215-uswest2aprod
+      - 10-65-106-124-useast1aprod
       X-Extlb:
-      - 10-69-66-215-uswest2aprod
+      - 10-65-106-124-useast1aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 25 Nov 2025 09:34:55 GMT
+      - Sat, 06 Dec 2025 00:01:13 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-sjc10037-SJC
+      - cache-iad-kcgs7200141-IAD
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -199,7 +199,7 @@ http_interactions:
         "0700", "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700",
         "end": "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}],
         "transactions": []}'
-  recorded_at: Tue, 25 Nov 2025 09:34:55 GMT
+  recorded_at: Sat, 06 Dec 2025 00:01:13 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/gHmS3WIjRRhSWG4OdCQYLA
@@ -224,49 +224,49 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Access-Control-Max-Age:
-      - '1728000'
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|7d1dd0ce-ff91-421b-93b1-353c30418bf1
       Server:
       - envoy
-      X-Zipkin-Id:
-      - 05de1d44d23a50a18bebc26f1d8079bd
       Ratelimit-Dailylimit:
       - '5000'
+      X-Zipkin-Id:
+      - fa9b2b4b54606606b523500911a1b9b5
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|e2fcccfb-71aa-4956-98cd-69ae115c6022
+      Ratelimit-Resettime:
+      - '2025-12-07T00:00:00+00:00'
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
       Set-Cookie:
       - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
         GMT
-      Ratelimit-Remaining:
-      - '4884'
-      Ratelimit-Resettime:
-      - '2025-11-26T00:00:00+00:00'
       Access-Control-Allow-Origin:
       - "*"
-      Access-Control-Allow-Methods:
-      - POST,OPTIONS,GET,DELETE,PUT,PATCH
-      X-Routing-Service:
-      - routing-main--uswest2-674977b97c-5vzdn; site=public_api_v3
       Access-Control-Allow-Headers:
       - Origin, Content-Type, Accept, Authorization
       Access-Control-Allow-Credentials:
       - 'true'
+      X-Routing-Service:
+      - routing-main--useast1-d6b549d6-jp6mt; site=public_api_v3
+      Access-Control-Max-Age:
+      - '1728000'
+      Ratelimit-Remaining:
+      - '4935'
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-104-34-uswest2aprod
+      - 10-65-86-223-useast1aprod
       X-Extlb:
-      - 10-69-104-34-uswest2aprod
+      - 10-65-86-223-useast1aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 25 Nov 2025 09:34:56 GMT
+      - Sat, 06 Dec 2025 00:01:13 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-sjc10025-SJC
+      - cache-iad-kcgs7200178-IAD
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -299,5 +299,5 @@ http_interactions:
         "0700", "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700",
         "end": "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}],
         "transactions": []}'
-  recorded_at: Tue, 25 Nov 2025 09:34:55 GMT
+  recorded_at: Sat, 06 Dec 2025 00:01:13 GMT
 recorded_with: VCR 6.3.1

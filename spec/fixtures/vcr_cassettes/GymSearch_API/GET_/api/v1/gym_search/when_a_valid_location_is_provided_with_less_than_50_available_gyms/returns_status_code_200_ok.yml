@@ -24,49 +24,49 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
+      Access-Control-Allow-Credentials:
+      - 'true'
       Access-Control-Allow-Methods:
       - POST,OPTIONS,GET,DELETE,PUT,PATCH
       Access-Control-Allow-Headers:
       - Origin, Content-Type, Accept, Authorization
-      Access-Control-Allow-Credentials:
-      - 'true'
+      Server:
+      - envoy
       Set-Cookie:
       - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
         GMT
-      Ratelimit-Resettime:
-      - '2025-11-26T00:00:00+00:00'
       Ratelimit-Dailylimit:
       - '5000'
       Ratelimit-Remaining:
-      - '4893'
-      X-Routing-Service:
-      - routing-main--uswest2-674977b97c-l8x8c; site=public_api_v3
-      Access-Control-Max-Age:
-      - '1728000'
+      - '4944'
+      X-Zipkin-Id:
+      - 03cda943601d69c6b713da81c4d2cc4a
+      Ratelimit-Resettime:
+      - '2025-12-07T00:00:00+00:00'
       X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|db09a85b-6b8e-43e6-b9df-080b11ec9420
-      Server:
-      - envoy
+      - p|awGBNkM_j8pKscZth2VNGA|a8b57811-81ed-46f3-803c-b6ea0f11ebab
       Access-Control-Allow-Origin:
       - "*"
-      X-Zipkin-Id:
-      - dce66af681e128804337fc2d7fd97270
+      Access-Control-Max-Age:
+      - '1728000'
+      X-Routing-Service:
+      - routing-main--uswest2-6956899454-9kbxw; site=public_api_v3
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-156-247-uswest2bprod
+      - 10-65-106-124-useast1aprod
       X-Extlb:
-      - 10-69-156-247-uswest2bprod
+      - 10-65-106-124-useast1aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 25 Nov 2025 09:34:44 GMT
+      - Sat, 06 Dec 2025 00:01:03 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-sjc10062-SJC
+      - cache-iad-kcgs7200067-IAD
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -125,23 +125,23 @@ http_interactions:
         "931 Winslows Mills Rd", "address2": "", "address3": null, "city": "Waldoboro",
         "zip_code": "04572", "country": "US", "state": "ME", "display_address": ["931
         Winslows Mills Rd", "Waldoboro, ME 04572"]}, "phone": "+12073801726", "display_phone":
-        "(207) 380-1726", "distance": 3607.700434076567}, {"id": "OsXO9xt1vwPt_Sk85u6ddg",
-        "alias": "y-m-c-a-damariscotta", "name": "Y M C A", "image_url": "", "is_closed":
-        false, "url": "https://www.yelp.com/biz/y-m-c-a-damariscotta?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
-        "review_count": 0, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
-        0.0, "coordinates": {"latitude": 44.04693, "longitude": -69.50744}, "transactions":
-        [], "location": {"address1": "Business Rt 1", "address2": "", "address3":
-        "", "city": "Damariscotta", "zip_code": "04543", "country": "US", "state":
-        "ME", "display_address": ["Business Rt 1", "Damariscotta, ME 04543"]}, "phone":
-        "+12075639622", "display_phone": "(207) 563-9622", "distance": 11895.058272276878},
-        {"id": "qcZlHidq8oM8N-TteyRCeA", "alias": "ymca-damariscotta", "name": "YMCA",
-        "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/ymca-damariscotta?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "(207) 380-1726", "distance": 3607.700434076567}, {"id": "qcZlHidq8oM8N-TteyRCeA",
+        "alias": "ymca-damariscotta", "name": "YMCA", "image_url": "", "is_closed":
+        false, "url": "https://www.yelp.com/biz/ymca-damariscotta?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
         "review_count": 0, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
         0.0, "coordinates": {"latitude": 44.04693, "longitude": -69.50744}, "transactions":
         [], "location": {"address1": "Business Rt 1", "address2": "", "address3":
         "", "city": "Damariscotta", "zip_code": "04543", "country": "US", "state":
         "ME", "display_address": ["Business Rt 1", "Damariscotta, ME 04543"]}, "phone":
         "+12075633477", "display_phone": "(207) 563-3477", "distance": 11895.058272276878},
+        {"id": "OsXO9xt1vwPt_Sk85u6ddg", "alias": "y-m-c-a-damariscotta", "name":
+        "Y M C A", "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/y-m-c-a-damariscotta?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "review_count": 0, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
+        0.0, "coordinates": {"latitude": 44.04693, "longitude": -69.50744}, "transactions":
+        [], "location": {"address1": "Business Rt 1", "address2": "", "address3":
+        "", "city": "Damariscotta", "zip_code": "04543", "country": "US", "state":
+        "ME", "display_address": ["Business Rt 1", "Damariscotta, ME 04543"]}, "phone":
+        "+12075639622", "display_phone": "(207) 563-9622", "distance": 11895.058272276878},
         {"id": "rKIIU8DDTwzlbfW97KoXFQ", "alias": "rolling-meadows-retreat-friendship",
         "name": "Rolling Meadows Retreat", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/3Dv8-8-XmkZVfdviIIfvXw/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/rolling-meadows-retreat-friendship?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
@@ -406,7 +406,7 @@ http_interactions:
         "state": "ME", "display_address": ["25 Mechanic St", "Camden, ME 04843"]},
         "phone": "+12072362214", "display_phone": "(207) 236-2214", "distance": 26485.771442457062},
         {"id": "LOXJrfsWS0glhoZtrTPRHg", "alias": "five-elements-mountain-school-of-martial-arts-woolwich",
-        "name": "Five Elements Mountain School of Martial Arts", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/d4znjUCutuSEBQHjv1nxAg/o.jpg",
+        "name": "Five Elements Mountain School of Martial Arts", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/MYrdjEA1pDtEmCbiLkufLA/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/five-elements-mountain-school-of-martial-arts-woolwich?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=awGBNkM_j8pKscZth2VNGA",
         "review_count": 0, "categories": [{"alias": "martialarts", "title": "Martial
         Arts"}, {"alias": "taichi", "title": "Tai Chi"}], "rating": 0.0, "coordinates":
@@ -539,5 +539,5 @@ http_interactions:
         "phone": "+12075826365", "display_phone": "(207) 582-6365", "distance": 35147.90623952684}],
         "total": 135, "region": {"center": {"longitude": -69.36630249023438, "latitude":
         44.10811081310502}}}'
-  recorded_at: Tue, 25 Nov 2025 09:34:44 GMT
+  recorded_at: Sat, 06 Dec 2025 00:01:03 GMT
 recorded_with: VCR 6.3.1

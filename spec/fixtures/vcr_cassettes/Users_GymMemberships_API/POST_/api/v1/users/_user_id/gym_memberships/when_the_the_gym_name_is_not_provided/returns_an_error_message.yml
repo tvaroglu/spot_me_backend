@@ -24,49 +24,49 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|34e25f89-0305-45f1-9502-86912671759c
-      Ratelimit-Dailylimit:
-      - '5000'
-      Ratelimit-Remaining:
-      - '4878'
-      X-Routing-Service:
-      - routing-main--uswest2-674977b97c-9dp2f; site=public_api_v3
       Access-Control-Allow-Credentials:
       - 'true'
-      Access-Control-Allow-Methods:
-      - POST,OPTIONS,GET,DELETE,PUT,PATCH
       Access-Control-Allow-Headers:
       - Origin, Content-Type, Accept, Authorization
-      Ratelimit-Resettime:
-      - '2025-11-26T00:00:00+00:00'
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Max-Age:
-      - '1728000'
-      X-Zipkin-Id:
-      - 9b5a8a2f91bce64947617057b7784e69
-      Server:
-      - envoy
       Set-Cookie:
       - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
         GMT
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|6f5b39e9-f737-4726-8dd2-25cf93ebaa8d
+      X-Zipkin-Id:
+      - e44a2dd395059acd513eaa69b2d5a267
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4929'
+      Ratelimit-Resettime:
+      - '2025-12-07T00:00:00+00:00'
+      Server:
+      - envoy
+      X-Routing-Service:
+      - routing-main--useast1-d6b549d6-ks5sm; site=public_api_v3
+      Access-Control-Max-Age:
+      - '1728000'
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      Access-Control-Allow-Origin:
+      - "*"
       X-Mode:
       - ro
       X-Proxied:
-      - 10-69-66-215-uswest2aprod
+      - 10-65-183-31-useast1bprod
       X-Extlb:
-      - 10-69-66-215-uswest2aprod
+      - 10-65-183-31-useast1bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 25 Nov 2025 09:35:01 GMT
+      - Sat, 06 Dec 2025 00:01:15 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-sjc1000115-SJC
+      - cache-iad-kcgs7200071-IAD
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -99,5 +99,5 @@ http_interactions:
         "0700", "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700",
         "end": "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}],
         "transactions": []}'
-  recorded_at: Tue, 25 Nov 2025 09:35:00 GMT
+  recorded_at: Sat, 06 Dec 2025 00:01:15 GMT
 recorded_with: VCR 6.3.1
