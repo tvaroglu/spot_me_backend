@@ -43,15 +43,15 @@ This is the back-end architecture of the SpotMe application, which exposes resou
 
 |Development|Development|Testing|Deployment
 |--- |--- |--- |--- |
-|[Ruby 2.7.2](https://www.ruby-lang.org/en/downloads/)|[Atom](https://atom.io/)|[RSpec for Rails](https://github.com/rspec/rspec-rails)|[Heroku](http://virtual-watch-party.herokuapp.com)|
-|[Rails 5.2.6](https://rubygems.org/gems/rails/versions/5.2.6)|[GitHub](https://desktop.github.com/)|[Webmock](https://github.com/bblimke/webmock)|[CircleCI](https://circleci.com/)|
+|[Ruby 3.1.4](https://www.ruby-lang.org/en/downloads/)|[Atom](https://atom.io/)|[RSpec for Rails](https://github.com/rspec/rspec-rails)|[Heroku](http://virtual-watch-party.herokuapp.com)|
+|[Rails 6.0.6.1](https://rubygems.org/gems/rails/versions/5.2.6)|[GitHub](https://desktop.github.com/)|[Webmock](https://github.com/bblimke/webmock)|[CircleCI](https://circleci.com/)|
 |[Pry](https://rubygems.org/gems/pry/versions/0.10.3)|[Git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)|[VCR](https://github.com/vcr/vcr)|
 |[PostgresQL](https://www.postgresql.org/)|[HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)|[SimpleCov](https://rubygems.org/gems/simplecov/versions/0.12.0)|
 |[Postico](https://eggerapps.at/postico/)|[CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)|
 |[OmniAuth Google OAuth2](https://github.com/zquestz/omniauth-google-oauth2)|[Rubocop](https://rubygems.org/gems/rubocop/versions/0.39.0)|
 |[Faraday](https://github.com/lostisland/faraday)|[FactoryBot](https://github.com/thoughtbot/factory_bot)|
-|[Figaro](https://github.com/laserlemon/figaro)||
-|[Postman](https://www.postman.com/product/rest-client/)|
+|[Postman](https://www.postman.com/product/rest-client/)||
+|
 
 </div>
 
