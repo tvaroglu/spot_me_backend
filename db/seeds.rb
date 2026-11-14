@@ -1,6 +1,15 @@
 # require 'factory_bot_rails'
 include FactoryBot::Syntax::Methods
 
+# Only reset development data:
+raise 'Invalid environment for seed script!' unless Rails.env.development?
+
+User.destroy_all
+
+users = Array.new(11) { create(:user) }
+
+19.times { |i| create(:gym_membership, user: users[i % users.size]) }
+
 # USERS
 user1 = User.all.order(:id)[0]
 user2 = User.all.order(:id)[1]

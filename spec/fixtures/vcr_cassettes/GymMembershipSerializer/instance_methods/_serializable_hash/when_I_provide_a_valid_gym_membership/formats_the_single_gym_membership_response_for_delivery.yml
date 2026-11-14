@@ -24,49 +24,49 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|87ae89aa-456f-4a9b-aa6e-10032f132ec0
-      Server:
-      - envoy
+      Ratelimit-Resettime:
+      - '2026-11-15T00:00:00+00:00'
+      X-Zipkin-Id:
+      - 4978c445e8856cbae68f2400dca5e182
+      Access-Control-Max-Age:
+      - '1728000'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      X-Routing-Service:
+      - routing-main--uswest2-5c69bd8797-lrn4m; site=public_api_v3
       Set-Cookie:
       - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
         GMT
-      X-Routing-Service:
-      - routing-main--uswest2-6956899454-gdg5g; site=public_api_v3
-      Ratelimit-Resettime:
-      - '2025-12-07T00:00:00+00:00'
-      Access-Control-Allow-Credentials:
-      - 'true'
-      X-Zipkin-Id:
-      - c599f7bebb41a519925ebc79685f83e7
-      Access-Control-Allow-Methods:
-      - POST,OPTIONS,GET,DELETE,PUT,PATCH
-      Ratelimit-Remaining:
-      - '4913'
-      Ratelimit-Dailylimit:
-      - '5000'
-      Access-Control-Allow-Headers:
-      - Origin, Content-Type, Accept, Authorization
-      Access-Control-Max-Age:
-      - '1728000'
+      Server:
+      - envoy
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|a156f91c-f8c7-4dd3-a36b-3962732a6cf5
       Access-Control-Allow-Origin:
       - "*"
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4905'
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept, Authorization
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-139-192-useast1bprod
+      - 10-69-152-226-uswest2bprod
       X-Extlb:
-      - 10-65-139-192-useast1bprod
+      - 10-69-152-226-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 06 Dec 2025 00:01:24 GMT
+      - Sat, 14 Nov 2026 01:47:14 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-iad-kcgs7200063-IAD
+      - cache-sjc10031-SJC
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -83,11 +83,11 @@ http_interactions:
         "name": "Quest Fitness", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
         "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/quest-fitness-kennebunk-2?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
         "phone": "+12074673800", "display_phone": "(207) 467-3800", "review_count":
-        8, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
+        10, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
         "taichi", "title": "Tai Chi"}, {"alias": "yoga", "title": "Yoga"}], "rating":
-        4.6, "location": {"address1": "2 Livewell Dr", "address2": null, "address3":
-        null, "city": "Kennebunk", "zip_code": "04043", "country": "US", "state":
-        "ME", "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
+        4.3, "location": {"address1": "2 Livewell Dr", "address2": "", "address3":
+        "", "city": "Kennebunk", "zip_code": "04043", "country": "US", "state": "ME",
+        "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
         ""}, "coordinates": {"latitude": 43.39341914518459, "longitude": -70.5282839055221},
         "photos": ["https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
         "https://s3-media0.fl.yelpcdn.com/bphoto/mTXI6YgYy1gSdCB-KPJ0Sg/o.jpg", "https://s3-media0.fl.yelpcdn.com/bphoto/iJDHvL4ScRxXCsGMaJHHrg/o.jpg"],
@@ -99,107 +99,7 @@ http_interactions:
         "0700", "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700",
         "end": "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}],
         "transactions": []}'
-  recorded_at: Sat, 06 Dec 2025 00:01:24 GMT
-- request:
-    method: get
-    uri: https://api.yelp.com/v3/businesses/gHmS3WIjRRhSWG4OdCQYLA
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Authorization:
-      - DONT_SHARE_MY_SECRET_KEY
-      User-Agent:
-      - Faraday v1.10.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Ratelimit-Dailylimit:
-      - '5000'
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - POST,OPTIONS,GET,DELETE,PUT,PATCH
-      Access-Control-Allow-Headers:
-      - Origin, Content-Type, Accept, Authorization
-      X-Zipkin-Id:
-      - d772e09ff89beca13fe3d64aa2c6a3e7
-      Ratelimit-Resettime:
-      - '2025-12-07T00:00:00+00:00'
-      X-Routing-Service:
-      - routing-main--useast1-d6b549d6-7596g; site=public_api_v3
-      Set-Cookie:
-      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
-        GMT
-      Access-Control-Max-Age:
-      - '1728000'
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|ae8a6825-6a86-4c62-9e8f-794d3c491106
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Server:
-      - envoy
-      Ratelimit-Remaining:
-      - '4912'
-      X-Mode:
-      - ro
-      X-Proxied:
-      - 10-65-77-237-useast1aprod
-      X-Extlb:
-      - 10-65-77-237-useast1aprod
-      Cache-Control:
-      - max-age=0, no-store, private, no-transform
-      Accept-Ranges:
-      - bytes
-      Date:
-      - Sat, 06 Dec 2025 00:01:24 GMT
-      Via:
-      - 1.1 varnish
-      X-Served-By:
-      - cache-iad-kcgs7200092-IAD
-      X-Cache:
-      - MISS
-      X-Cache-Hits:
-      - '0'
-      Vary:
-      - Accept-Encoding
-      Alt-Svc:
-      - h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: '{"id": "gHmS3WIjRRhSWG4OdCQYLA", "alias": "quest-fitness-kennebunk-2",
-        "name": "Quest Fitness", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
-        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/quest-fitness-kennebunk-2?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
-        "phone": "+12074673800", "display_phone": "(207) 467-3800", "review_count":
-        8, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
-        "taichi", "title": "Tai Chi"}, {"alias": "yoga", "title": "Yoga"}], "rating":
-        4.6, "location": {"address1": "2 Livewell Dr", "address2": null, "address3":
-        null, "city": "Kennebunk", "zip_code": "04043", "country": "US", "state":
-        "ME", "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
-        ""}, "coordinates": {"latitude": 43.39341914518459, "longitude": -70.5282839055221},
-        "photos": ["https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
-        "https://s3-media0.fl.yelpcdn.com/bphoto/mTXI6YgYy1gSdCB-KPJ0Sg/o.jpg", "https://s3-media0.fl.yelpcdn.com/bphoto/iJDHvL4ScRxXCsGMaJHHrg/o.jpg"],
-        "hours": [{"open": [{"is_overnight": false, "start": "0500", "end": "2030",
-        "day": 0}, {"is_overnight": false, "start": "0500", "end": "2030", "day":
-        1}, {"is_overnight": false, "start": "0500", "end": "2030", "day": 2}, {"is_overnight":
-        false, "start": "0500", "end": "2030", "day": 3}, {"is_overnight": false,
-        "start": "0500", "end": "1900", "day": 4}, {"is_overnight": false, "start":
-        "0700", "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700",
-        "end": "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}],
-        "transactions": []}'
-  recorded_at: Sat, 06 Dec 2025 00:01:24 GMT
+  recorded_at: Sat, 14 Nov 2026 01:47:14 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/gHmS3WIjRRhSWG4OdCQYLA
@@ -227,46 +127,46 @@ http_interactions:
       Set-Cookie:
       - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
         GMT
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Credentials:
-      - 'true'
-      X-Zipkin-Id:
-      - c205e6287dbe455a948f02a1a86db078
-      Access-Control-Max-Age:
-      - '1728000'
-      X-Routing-Service:
-      - routing-main--uswest2-6956899454-htqzz; site=public_api_v3
-      Server:
-      - envoy
       Ratelimit-Dailylimit:
       - '5000'
+      Ratelimit-Remaining:
+      - '4884'
+      X-Routing-Service:
+      - routing-main--uswest2-5c69bd8797-69slz; site=public_api_v3
+      Ratelimit-Resettime:
+      - '2026-11-15T00:00:00+00:00'
+      Server:
+      - envoy
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|5ef74587-acba-4aa1-8717-3d8eba9f91e9
       Access-Control-Allow-Methods:
       - POST,OPTIONS,GET,DELETE,PUT,PATCH
       Access-Control-Allow-Headers:
       - Origin, Content-Type, Accept, Authorization
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|2e21bce6-e26d-4622-9f72-5b5ae5681f78
-      Ratelimit-Remaining:
-      - '4911'
-      Ratelimit-Resettime:
-      - '2025-12-07T00:00:00+00:00'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '1728000'
+      X-Zipkin-Id:
+      - 996f8e638c16e7bd8fc76d415741c290
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-139-192-useast1bprod
+      - 10-69-73-2-uswest2aprod
       X-Extlb:
-      - 10-65-139-192-useast1bprod
+      - 10-69-73-2-uswest2aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 06 Dec 2025 00:01:25 GMT
+      - Sat, 14 Nov 2026 01:47:45 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-iad-kcgs7200024-IAD
+      - cache-sjc1000088-SJC
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -283,11 +183,11 @@ http_interactions:
         "name": "Quest Fitness", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
         "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/quest-fitness-kennebunk-2?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
         "phone": "+12074673800", "display_phone": "(207) 467-3800", "review_count":
-        8, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
+        10, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
         "taichi", "title": "Tai Chi"}, {"alias": "yoga", "title": "Yoga"}], "rating":
-        4.6, "location": {"address1": "2 Livewell Dr", "address2": null, "address3":
-        null, "city": "Kennebunk", "zip_code": "04043", "country": "US", "state":
-        "ME", "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
+        4.3, "location": {"address1": "2 Livewell Dr", "address2": "", "address3":
+        "", "city": "Kennebunk", "zip_code": "04043", "country": "US", "state": "ME",
+        "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
         ""}, "coordinates": {"latitude": 43.39341914518459, "longitude": -70.5282839055221},
         "photos": ["https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
         "https://s3-media0.fl.yelpcdn.com/bphoto/mTXI6YgYy1gSdCB-KPJ0Sg/o.jpg", "https://s3-media0.fl.yelpcdn.com/bphoto/iJDHvL4ScRxXCsGMaJHHrg/o.jpg"],
@@ -299,5 +199,105 @@ http_interactions:
         "0700", "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700",
         "end": "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}],
         "transactions": []}'
-  recorded_at: Sat, 06 Dec 2025 00:01:25 GMT
+  recorded_at: Sat, 14 Nov 2026 01:47:45 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/gHmS3WIjRRhSWG4OdCQYLA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - DONT_SHARE_MY_SECRET_KEY
+      User-Agent:
+      - Faraday v1.10.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Ratelimit-Resettime:
+      - '2026-11-15T00:00:00+00:00'
+      X-Zipkin-Id:
+      - b95d3ba7b9ab658639db54f7e0da9fa7
+      Set-Cookie:
+      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
+        GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '1728000'
+      X-Routing-Service:
+      - routing-main--uswest2-5c69bd8797-nbn9z; site=public_api_v3
+      Server:
+      - envoy
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|7ae33b1c-ca68-4300-8f32-11db26ab4c08
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4883'
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept, Authorization
+      X-Mode:
+      - ro
+      X-Proxied:
+      - 10-69-94-198-uswest2aprod
+      X-Extlb:
+      - 10-69-94-198-uswest2aprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 14 Nov 2026 01:47:46 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-sjc10064-SJC
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Alt-Svc:
+      - h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id": "gHmS3WIjRRhSWG4OdCQYLA", "alias": "quest-fitness-kennebunk-2",
+        "name": "Quest Fitness", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
+        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/quest-fitness-kennebunk-2?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "phone": "+12074673800", "display_phone": "(207) 467-3800", "review_count":
+        10, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
+        "taichi", "title": "Tai Chi"}, {"alias": "yoga", "title": "Yoga"}], "rating":
+        4.3, "location": {"address1": "2 Livewell Dr", "address2": "", "address3":
+        "", "city": "Kennebunk", "zip_code": "04043", "country": "US", "state": "ME",
+        "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
+        ""}, "coordinates": {"latitude": 43.39341914518459, "longitude": -70.5282839055221},
+        "photos": ["https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
+        "https://s3-media0.fl.yelpcdn.com/bphoto/mTXI6YgYy1gSdCB-KPJ0Sg/o.jpg", "https://s3-media0.fl.yelpcdn.com/bphoto/iJDHvL4ScRxXCsGMaJHHrg/o.jpg"],
+        "hours": [{"open": [{"is_overnight": false, "start": "0500", "end": "2030",
+        "day": 0}, {"is_overnight": false, "start": "0500", "end": "2030", "day":
+        1}, {"is_overnight": false, "start": "0500", "end": "2030", "day": 2}, {"is_overnight":
+        false, "start": "0500", "end": "2030", "day": 3}, {"is_overnight": false,
+        "start": "0500", "end": "1900", "day": 4}, {"is_overnight": false, "start":
+        "0700", "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700",
+        "end": "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}],
+        "transactions": []}'
+  recorded_at: Sat, 14 Nov 2026 01:47:45 GMT
 recorded_with: VCR 6.3.1

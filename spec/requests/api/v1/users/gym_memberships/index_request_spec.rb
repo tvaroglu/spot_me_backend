@@ -33,6 +33,24 @@ describe 'Users::GymMemberhips API', type: :request do
       include_examples 'status code 200'
     end
 
+    context 'when Yelp rate-limits a saved gym' do
+      let!(:saved_membership) { create(:gym_membership, user: user1) }
+
+      it 'still returns all saved memberships' do
+        allow(GymFacade).to receive(:find_gym).and_return(
+          errors: { error: 'You have exceeded the queries-per-second limit' }, code: :not_found
+        )
+        allow(Rails.logger).to receive(:warn)
+
+        get "/api/v1/users/#{user_id}/gym_memberships"
+
+        expect(response).to have_http_status(:ok)
+        expect(json_data.size).to eq(3)
+        expect(json_data.map { |m| m[:id] }).to include(saved_membership.id.to_s)
+        expect(json_data).to all(include(meta: { address: nil, address_details: {} }))
+      end
+    end
+
     context 'when the user record does not exist' do
       before { get "/api/v1/users/#{bad_user_id}/gym_memberships" }
 

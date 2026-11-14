@@ -37,6 +37,8 @@ gem 'omniauth-google-oauth2', '~> 1.1'
 gem 'dotenv-rails'
 
 group :development, :test do
+  gem 'factory_bot_rails', '~> 6.3'
+  gem 'faker', '~> 2.23'
   gem 'pry'
   # gem 'figaro'
 end
@@ -53,8 +55,6 @@ end
 
 group :test do
   gem 'rspec-rails', '~> 5.1'
-  gem 'factory_bot_rails', '~> 6.3'
-  gem 'faker', '~> 2.23'
   gem 'webmock', '~> 3.23'
   gem 'vcr', '~> 6.0'
   gem 'simplecov', '~> 0.22'

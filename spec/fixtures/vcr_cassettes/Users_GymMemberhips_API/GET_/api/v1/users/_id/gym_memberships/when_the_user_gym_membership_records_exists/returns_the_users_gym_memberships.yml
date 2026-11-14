@@ -24,49 +24,49 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-Routing-Service:
-      - routing-main--useast1-d6b549d6-z52wm; site=public_api_v3
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|6f5b39e9-f737-4726-8dd2-25cf93ebaa8d
-      Access-Control-Max-Age:
-      - '1728000'
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Set-Cookie:
-      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
-        GMT
+      Server:
+      - envoy
       Ratelimit-Dailylimit:
       - '5000'
-      Ratelimit-Remaining:
-      - '4925'
       X-Zipkin-Id:
-      - d53eec08871e5b4a788f90f13cc150d1
+      - 99883e2909c921f6e8a688897386a265
+      Access-Control-Allow-Credentials:
+      - 'true'
       Access-Control-Allow-Headers:
       - Origin, Content-Type, Accept, Authorization
       Ratelimit-Resettime:
-      - '2025-12-07T00:00:00+00:00'
+      - '2026-11-15T00:00:00+00:00'
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|4dbca10f-c78c-489e-bd27-ac01cb555d98
+      X-Routing-Service:
+      - routing-main--uswest2-5c69bd8797-vtb27; site=public_api_v3
+      Access-Control-Allow-Origin:
+      - "*"
       Access-Control-Allow-Methods:
       - POST,OPTIONS,GET,DELETE,PUT,PATCH
-      Server:
-      - envoy
+      Access-Control-Max-Age:
+      - '1728000'
+      Ratelimit-Remaining:
+      - '4911'
+      Set-Cookie:
+      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
+        GMT
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-112-70-useast1aprod
+      - 10-69-183-4-uswest2bprod
       X-Extlb:
-      - 10-65-112-70-useast1aprod
+      - 10-69-183-4-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 06 Dec 2025 00:01:18 GMT
+      - Sat, 14 Nov 2026 01:47:12 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-iad-kcgs7200132-IAD
+      - cache-sjc1000111-SJC
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -83,11 +83,11 @@ http_interactions:
         "name": "Quest Fitness", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
         "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/quest-fitness-kennebunk-2?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
         "phone": "+12074673800", "display_phone": "(207) 467-3800", "review_count":
-        8, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
+        10, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
         "taichi", "title": "Tai Chi"}, {"alias": "yoga", "title": "Yoga"}], "rating":
-        4.6, "location": {"address1": "2 Livewell Dr", "address2": null, "address3":
-        null, "city": "Kennebunk", "zip_code": "04043", "country": "US", "state":
-        "ME", "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
+        4.3, "location": {"address1": "2 Livewell Dr", "address2": "", "address3":
+        "", "city": "Kennebunk", "zip_code": "04043", "country": "US", "state": "ME",
+        "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
         ""}, "coordinates": {"latitude": 43.39341914518459, "longitude": -70.5282839055221},
         "photos": ["https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
         "https://s3-media0.fl.yelpcdn.com/bphoto/mTXI6YgYy1gSdCB-KPJ0Sg/o.jpg", "https://s3-media0.fl.yelpcdn.com/bphoto/iJDHvL4ScRxXCsGMaJHHrg/o.jpg"],
@@ -99,107 +99,7 @@ http_interactions:
         "0700", "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700",
         "end": "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}],
         "transactions": []}'
-  recorded_at: Sat, 06 Dec 2025 00:01:18 GMT
-- request:
-    method: get
-    uri: https://api.yelp.com/v3/businesses/gHmS3WIjRRhSWG4OdCQYLA
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Authorization:
-      - DONT_SHARE_MY_SECRET_KEY
-      User-Agent:
-      - Faraday v1.10.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Server:
-      - envoy
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|1d98185f-6a49-440b-969f-61caa842cf83
-      X-Routing-Service:
-      - routing-main--useast1-d6b549d6-4rmw5; site=public_api_v3
-      X-Zipkin-Id:
-      - ba90d4e41069d92dd8fd6a719a049617
-      Access-Control-Max-Age:
-      - '1728000'
-      Set-Cookie:
-      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
-        GMT
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Methods:
-      - POST,OPTIONS,GET,DELETE,PUT,PATCH
-      Ratelimit-Dailylimit:
-      - '5000'
-      Access-Control-Allow-Headers:
-      - Origin, Content-Type, Accept, Authorization
-      Ratelimit-Remaining:
-      - '4924'
-      Ratelimit-Resettime:
-      - '2025-12-07T00:00:00+00:00'
-      X-Mode:
-      - ro
-      X-Proxied:
-      - 10-65-86-223-useast1aprod
-      X-Extlb:
-      - 10-65-86-223-useast1aprod
-      Cache-Control:
-      - max-age=0, no-store, private, no-transform
-      Accept-Ranges:
-      - bytes
-      Date:
-      - Sat, 06 Dec 2025 00:01:18 GMT
-      Via:
-      - 1.1 varnish
-      X-Served-By:
-      - cache-iad-kcgs7200143-IAD
-      X-Cache:
-      - MISS
-      X-Cache-Hits:
-      - '0'
-      Vary:
-      - Accept-Encoding
-      Alt-Svc:
-      - h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: '{"id": "gHmS3WIjRRhSWG4OdCQYLA", "alias": "quest-fitness-kennebunk-2",
-        "name": "Quest Fitness", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
-        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/quest-fitness-kennebunk-2?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
-        "phone": "+12074673800", "display_phone": "(207) 467-3800", "review_count":
-        8, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
-        "taichi", "title": "Tai Chi"}, {"alias": "yoga", "title": "Yoga"}], "rating":
-        4.6, "location": {"address1": "2 Livewell Dr", "address2": null, "address3":
-        null, "city": "Kennebunk", "zip_code": "04043", "country": "US", "state":
-        "ME", "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
-        ""}, "coordinates": {"latitude": 43.39341914518459, "longitude": -70.5282839055221},
-        "photos": ["https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
-        "https://s3-media0.fl.yelpcdn.com/bphoto/mTXI6YgYy1gSdCB-KPJ0Sg/o.jpg", "https://s3-media0.fl.yelpcdn.com/bphoto/iJDHvL4ScRxXCsGMaJHHrg/o.jpg"],
-        "hours": [{"open": [{"is_overnight": false, "start": "0500", "end": "2030",
-        "day": 0}, {"is_overnight": false, "start": "0500", "end": "2030", "day":
-        1}, {"is_overnight": false, "start": "0500", "end": "2030", "day": 2}, {"is_overnight":
-        false, "start": "0500", "end": "2030", "day": 3}, {"is_overnight": false,
-        "start": "0500", "end": "1900", "day": 4}, {"is_overnight": false, "start":
-        "0700", "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700",
-        "end": "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}],
-        "transactions": []}'
-  recorded_at: Sat, 06 Dec 2025 00:01:18 GMT
+  recorded_at: Sat, 14 Nov 2026 01:47:11 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/yQaElwKOFU865x1jxH3KGw
@@ -225,48 +125,48 @@ http_interactions:
       Content-Type:
       - application/json
       X-Routing-Service:
-      - routing-main--useast1-d6b549d6-dlbdx; site=public_api_v3
-      Ratelimit-Dailylimit:
-      - '5000'
-      X-Zipkin-Id:
-      - 547c9bbb30351ce255da2cace561d2cb
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Methods:
-      - POST,OPTIONS,GET,DELETE,PUT,PATCH
-      Ratelimit-Resettime:
-      - '2025-12-07T00:00:00+00:00'
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|0272dee2-8dbd-4665-9a70-57ed645eb810
-      Access-Control-Max-Age:
-      - '1728000'
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - envoy
-      Access-Control-Allow-Headers:
-      - Origin, Content-Type, Accept, Authorization
+      - routing-main--uswest2-5c69bd8797-6jj47; site=public_api_v3
       Set-Cookie:
       - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
         GMT
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Resettime:
+      - '2026-11-15T00:00:00+00:00'
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|db15cb09-a1bc-4cfe-873f-129d8a240463
+      Server:
+      - envoy
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '1728000'
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept, Authorization
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Zipkin-Id:
+      - 48b6fb35272b51c81cada9f087b637ba
       Ratelimit-Remaining:
-      - '4923'
+      - '4909'
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-86-223-useast1aprod
+      - 10-69-155-119-uswest2bprod
       X-Extlb:
-      - 10-65-86-223-useast1aprod
+      - 10-69-155-119-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 06 Dec 2025 00:01:18 GMT
+      - Sat, 14 Nov 2026 01:47:12 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-iad-kcgs7200046-IAD
+      - cache-sjc10026-SJC
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -283,123 +183,21 @@ http_interactions:
         "name": "Xcel Fitness Spa", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg",
         "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/xcel-fitness-spa-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
         "phone": "+12393949235", "display_phone": "(239) 394-9235", "review_count":
-        17, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "massage",
+        18, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "massage",
         "title": "Massage"}, {"alias": "healthtrainers", "title": "Trainers"}], "rating":
-        3.9, "location": {"address1": "1817 San Marco Rd", "address2": null, "address3":
+        4.0, "location": {"address1": "1817 San Marco Rd", "address2": "", "address3":
         "", "city": "Marco Island", "zip_code": "34145", "country": "US", "state":
         "FL", "display_address": ["1817 San Marco Rd", "Marco Island, FL 34145"],
         "cross_streets": ""}, "coordinates": {"latitude": 25.9341526, "longitude":
-        -81.6989467}, "photos": ["https://s3-media0.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg",
-        "https://s3-media0.fl.yelpcdn.com/bphoto/ccAjpYauX08M1B23wHFE3Q/o.jpg", "https://s3-media0.fl.yelpcdn.com/bphoto/Qot7suis2wM54QxFQx1DIg/o.jpg"],
-        "price": "$$$", "hours": [{"open": [{"is_overnight": false, "start": "0700",
-        "end": "1900", "day": 0}, {"is_overnight": false, "start": "0700", "end":
-        "1900", "day": 1}, {"is_overnight": false, "start": "0700", "end": "1900",
-        "day": 2}, {"is_overnight": false, "start": "0700", "end": "1900", "day":
-        3}, {"is_overnight": false, "start": "0700", "end": "1900", "day": 4}, {"is_overnight":
-        false, "start": "0800", "end": "1500", "day": 5}, {"is_overnight": false,
-        "start": "0900", "end": "1500", "day": 6}], "hours_type": "REGULAR", "is_open_now":
-        false}], "transactions": []}'
-  recorded_at: Sat, 06 Dec 2025 00:01:18 GMT
-- request:
-    method: get
-    uri: https://api.yelp.com/v3/businesses/yQaElwKOFU865x1jxH3KGw
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Authorization:
-      - DONT_SHARE_MY_SECRET_KEY
-      User-Agent:
-      - Faraday v1.10.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json
-      Server:
-      - envoy
-      Set-Cookie:
-      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
-        GMT
-      Ratelimit-Remaining:
-      - '4922'
-      X-Routing-Service:
-      - routing-main--useast1-d6b549d6-mcxzt; site=public_api_v3
-      Ratelimit-Resettime:
-      - '2025-12-07T00:00:00+00:00'
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - POST,OPTIONS,GET,DELETE,PUT,PATCH
-      Access-Control-Allow-Headers:
-      - Origin, Content-Type, Accept, Authorization
-      X-Zipkin-Id:
-      - ff97be3fae2312a5a1c6aa87977fe5a0
-      Access-Control-Allow-Credentials:
-      - 'true'
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|b51b08f4-ed2e-446d-9f43-d0561ad945e7
-      Access-Control-Max-Age:
-      - '1728000'
-      Ratelimit-Dailylimit:
-      - '5000'
-      X-Mode:
-      - ro
-      X-Proxied:
-      - 10-65-139-192-useast1bprod
-      X-Extlb:
-      - 10-65-139-192-useast1bprod
-      Cache-Control:
-      - max-age=0, no-store, private, no-transform
-      Accept-Ranges:
-      - bytes
-      Date:
-      - Sat, 06 Dec 2025 00:01:19 GMT
-      Via:
-      - 1.1 varnish
-      X-Served-By:
-      - cache-iad-kcgs7200103-IAD
-      X-Cache:
-      - MISS
-      X-Cache-Hits:
-      - '0'
-      Vary:
-      - Accept-Encoding
-      Alt-Svc:
-      - h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: '{"id": "yQaElwKOFU865x1jxH3KGw", "alias": "xcel-fitness-spa-marco-island",
-        "name": "Xcel Fitness Spa", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg",
-        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/xcel-fitness-spa-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
-        "phone": "+12393949235", "display_phone": "(239) 394-9235", "review_count":
-        17, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "massage",
-        "title": "Massage"}, {"alias": "healthtrainers", "title": "Trainers"}], "rating":
-        3.9, "location": {"address1": "1817 San Marco Rd", "address2": null, "address3":
-        "", "city": "Marco Island", "zip_code": "34145", "country": "US", "state":
-        "FL", "display_address": ["1817 San Marco Rd", "Marco Island, FL 34145"],
-        "cross_streets": ""}, "coordinates": {"latitude": 25.9341526, "longitude":
-        -81.6989467}, "photos": ["https://s3-media0.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg",
-        "https://s3-media0.fl.yelpcdn.com/bphoto/ccAjpYauX08M1B23wHFE3Q/o.jpg", "https://s3-media0.fl.yelpcdn.com/bphoto/Qot7suis2wM54QxFQx1DIg/o.jpg"],
-        "price": "$$$", "hours": [{"open": [{"is_overnight": false, "start": "0700",
-        "end": "1900", "day": 0}, {"is_overnight": false, "start": "0700", "end":
-        "1900", "day": 1}, {"is_overnight": false, "start": "0700", "end": "1900",
-        "day": 2}, {"is_overnight": false, "start": "0700", "end": "1900", "day":
-        3}, {"is_overnight": false, "start": "0700", "end": "1900", "day": 4}, {"is_overnight":
-        false, "start": "0800", "end": "1500", "day": 5}, {"is_overnight": false,
-        "start": "0900", "end": "1500", "day": 6}], "hours_type": "REGULAR", "is_open_now":
-        false}], "transactions": []}'
-  recorded_at: Sat, 06 Dec 2025 00:01:19 GMT
+        -81.6989467}, "photos": [], "price": "$$$", "hours": [{"open": [{"is_overnight":
+        false, "start": "0700", "end": "1900", "day": 0}, {"is_overnight": false,
+        "start": "0700", "end": "1900", "day": 1}, {"is_overnight": false, "start":
+        "0700", "end": "1900", "day": 2}, {"is_overnight": false, "start": "0700",
+        "end": "1900", "day": 3}, {"is_overnight": false, "start": "0700", "end":
+        "1900", "day": 4}, {"is_overnight": false, "start": "0800", "end": "1500",
+        "day": 5}, {"is_overnight": false, "start": "0900", "end": "1500", "day":
+        6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions": []}'
+  recorded_at: Sat, 14 Nov 2026 01:47:12 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/gHmS3WIjRRhSWG4OdCQYLA
@@ -425,48 +223,48 @@ http_interactions:
       Content-Type:
       - application/json
       X-Routing-Service:
-      - routing-main--useast1-d6b549d6-dlbdx; site=public_api_v3
-      Ratelimit-Remaining:
-      - '4921'
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|caca6342-74c9-40d0-9b0e-d5893710bdd5
-      Ratelimit-Resettime:
-      - '2025-12-07T00:00:00+00:00'
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Methods:
-      - POST,OPTIONS,GET,DELETE,PUT,PATCH
-      Access-Control-Allow-Headers:
-      - Origin, Content-Type, Accept, Authorization
-      X-Zipkin-Id:
-      - 380e0d6cb7c293e77b20effcf607944d
-      Access-Control-Allow-Origin:
-      - "*"
-      Set-Cookie:
-      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
-        GMT
+      - routing-main--uswest2-5c69bd8797-wllzz; site=public_api_v3
       Server:
       - envoy
       Access-Control-Max-Age:
       - '1728000'
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept, Authorization
+      Set-Cookie:
+      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
+        GMT
+      Access-Control-Allow-Credentials:
+      - 'true'
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|ae9bb629-6ef8-4e79-8bc1-0dc1d58883db
+      X-Zipkin-Id:
+      - 19acd7c76842dfcb9a5ef0cd5e2d91bf
+      Ratelimit-Resettime:
+      - '2026-11-15T00:00:00+00:00'
       Ratelimit-Dailylimit:
       - '5000'
+      Access-Control-Allow-Origin:
+      - "*"
+      Ratelimit-Remaining:
+      - '4892'
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-86-223-useast1aprod
+      - 10-69-152-226-uswest2bprod
       X-Extlb:
-      - 10-65-86-223-useast1aprod
+      - 10-69-152-226-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 06 Dec 2025 00:01:19 GMT
+      - Sat, 14 Nov 2026 01:47:42 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-iad-kcgs7200068-IAD
+      - cache-phx1710127-PHX
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -483,11 +281,11 @@ http_interactions:
         "name": "Quest Fitness", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
         "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/quest-fitness-kennebunk-2?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
         "phone": "+12074673800", "display_phone": "(207) 467-3800", "review_count":
-        8, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
+        10, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
         "taichi", "title": "Tai Chi"}, {"alias": "yoga", "title": "Yoga"}], "rating":
-        4.6, "location": {"address1": "2 Livewell Dr", "address2": null, "address3":
-        null, "city": "Kennebunk", "zip_code": "04043", "country": "US", "state":
-        "ME", "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
+        4.3, "location": {"address1": "2 Livewell Dr", "address2": "", "address3":
+        "", "city": "Kennebunk", "zip_code": "04043", "country": "US", "state": "ME",
+        "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
         ""}, "coordinates": {"latitude": 43.39341914518459, "longitude": -70.5282839055221},
         "photos": ["https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
         "https://s3-media0.fl.yelpcdn.com/bphoto/mTXI6YgYy1gSdCB-KPJ0Sg/o.jpg", "https://s3-media0.fl.yelpcdn.com/bphoto/iJDHvL4ScRxXCsGMaJHHrg/o.jpg"],
@@ -499,7 +297,105 @@ http_interactions:
         "0700", "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700",
         "end": "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}],
         "transactions": []}'
-  recorded_at: Sat, 06 Dec 2025 00:01:19 GMT
+  recorded_at: Sat, 14 Nov 2026 01:47:42 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/yQaElwKOFU865x1jxH3KGw
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - DONT_SHARE_MY_SECRET_KEY
+      User-Agent:
+      - Faraday v1.10.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|92773957-1424-4a73-a254-9d13e2f1b759
+      X-Routing-Service:
+      - routing-main--uswest2-5c69bd8797-t96fj; site=public_api_v3
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4891'
+      Ratelimit-Resettime:
+      - '2026-11-15T00:00:00+00:00'
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept, Authorization
+      Access-Control-Allow-Origin:
+      - "*"
+      Set-Cookie:
+      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
+        GMT
+      X-Zipkin-Id:
+      - e6b670c6ab216a63bef44be7c25663ff
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '1728000'
+      Server:
+      - envoy
+      X-Mode:
+      - ro
+      X-Proxied:
+      - 10-69-160-113-uswest2bprod
+      X-Extlb:
+      - 10-69-160-113-uswest2bprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 14 Nov 2026 01:47:42 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-sjc1000109-SJC
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Alt-Svc:
+      - h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id": "yQaElwKOFU865x1jxH3KGw", "alias": "xcel-fitness-spa-marco-island",
+        "name": "Xcel Fitness Spa", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg",
+        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/xcel-fitness-spa-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "phone": "+12393949235", "display_phone": "(239) 394-9235", "review_count":
+        18, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "massage",
+        "title": "Massage"}, {"alias": "healthtrainers", "title": "Trainers"}], "rating":
+        4.0, "location": {"address1": "1817 San Marco Rd", "address2": "", "address3":
+        "", "city": "Marco Island", "zip_code": "34145", "country": "US", "state":
+        "FL", "display_address": ["1817 San Marco Rd", "Marco Island, FL 34145"],
+        "cross_streets": ""}, "coordinates": {"latitude": 25.9341526, "longitude":
+        -81.6989467}, "photos": [], "price": "$$$", "hours": [{"open": [{"is_overnight":
+        false, "start": "0700", "end": "1900", "day": 0}, {"is_overnight": false,
+        "start": "0700", "end": "1900", "day": 1}, {"is_overnight": false, "start":
+        "0700", "end": "1900", "day": 2}, {"is_overnight": false, "start": "0700",
+        "end": "1900", "day": 3}, {"is_overnight": false, "start": "0700", "end":
+        "1900", "day": 4}, {"is_overnight": false, "start": "0800", "end": "1500",
+        "day": 5}, {"is_overnight": false, "start": "0900", "end": "1500", "day":
+        6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions": []}'
+  recorded_at: Sat, 14 Nov 2026 01:47:42 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/gHmS3WIjRRhSWG4OdCQYLA
@@ -524,49 +420,49 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Remaining:
-      - '4920'
-      Ratelimit-Resettime:
-      - '2025-12-07T00:00:00+00:00'
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|0ac4aab0-618d-484d-9b10-e536c30e1a24
       Server:
       - envoy
-      Access-Control-Max-Age:
-      - '1728000'
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|0b755966-9db7-4acc-bc94-93c95f0090a8
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4890'
+      Set-Cookie:
+      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
+        GMT
+      Ratelimit-Resettime:
+      - '2026-11-15T00:00:00+00:00'
+      X-Zipkin-Id:
+      - 7b1ff4a8c8daddbc9d3b2d429274f3c1
       Access-Control-Allow-Origin:
       - "*"
+      Access-Control-Max-Age:
+      - '1728000'
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept, Authorization
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Methods:
       - POST,OPTIONS,GET,DELETE,PUT,PATCH
-      Access-Control-Allow-Headers:
-      - Origin, Content-Type, Accept, Authorization
       X-Routing-Service:
-      - routing-main--useast1-d6b549d6-9vmw5; site=public_api_v3
-      X-Zipkin-Id:
-      - f933e0a14fab998f2eafcecc7b92f78c
-      Set-Cookie:
-      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
-        GMT
-      Ratelimit-Dailylimit:
-      - '5000'
+      - routing-main--uswest2-5c69bd8797-95jjj; site=public_api_v3
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-183-31-useast1bprod
+      - 10-69-160-113-uswest2bprod
       X-Extlb:
-      - 10-65-183-31-useast1bprod
+      - 10-69-160-113-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 06 Dec 2025 00:01:19 GMT
+      - Sat, 14 Nov 2026 01:47:42 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-iad-kcgs7200097-IAD
+      - cache-phx1710052-PHX
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -583,11 +479,11 @@ http_interactions:
         "name": "Quest Fitness", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
         "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/quest-fitness-kennebunk-2?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
         "phone": "+12074673800", "display_phone": "(207) 467-3800", "review_count":
-        8, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
+        10, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
         "taichi", "title": "Tai Chi"}, {"alias": "yoga", "title": "Yoga"}], "rating":
-        4.6, "location": {"address1": "2 Livewell Dr", "address2": null, "address3":
-        null, "city": "Kennebunk", "zip_code": "04043", "country": "US", "state":
-        "ME", "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
+        4.3, "location": {"address1": "2 Livewell Dr", "address2": "", "address3":
+        "", "city": "Kennebunk", "zip_code": "04043", "country": "US", "state": "ME",
+        "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
         ""}, "coordinates": {"latitude": 43.39341914518459, "longitude": -70.5282839055221},
         "photos": ["https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
         "https://s3-media0.fl.yelpcdn.com/bphoto/mTXI6YgYy1gSdCB-KPJ0Sg/o.jpg", "https://s3-media0.fl.yelpcdn.com/bphoto/iJDHvL4ScRxXCsGMaJHHrg/o.jpg"],
@@ -599,7 +495,107 @@ http_interactions:
         "0700", "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700",
         "end": "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}],
         "transactions": []}'
-  recorded_at: Sat, 06 Dec 2025 00:01:19 GMT
+  recorded_at: Sat, 14 Nov 2026 01:47:42 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/gHmS3WIjRRhSWG4OdCQYLA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - DONT_SHARE_MY_SECRET_KEY
+      User-Agent:
+      - Faraday v1.10.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Access-Control-Max-Age:
+      - '1728000'
+      Ratelimit-Resettime:
+      - '2026-11-15T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--uswest2-5c69bd8797-6jj47; site=public_api_v3
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|cc0a9cb6-f369-41c2-a2a3-d4e40a9abad3
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept, Authorization
+      Server:
+      - envoy
+      Set-Cookie:
+      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
+        GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4889'
+      X-Zipkin-Id:
+      - 70f79bae887a14543c80c356126cb493
+      X-Mode:
+      - ro
+      X-Proxied:
+      - 10-69-155-119-uswest2bprod
+      X-Extlb:
+      - 10-69-155-119-uswest2bprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 14 Nov 2026 01:47:42 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-phx1710063-PHX
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Alt-Svc:
+      - h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id": "gHmS3WIjRRhSWG4OdCQYLA", "alias": "quest-fitness-kennebunk-2",
+        "name": "Quest Fitness", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
+        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/quest-fitness-kennebunk-2?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
+        "phone": "+12074673800", "display_phone": "(207) 467-3800", "review_count":
+        10, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
+        "taichi", "title": "Tai Chi"}, {"alias": "yoga", "title": "Yoga"}], "rating":
+        4.3, "location": {"address1": "2 Livewell Dr", "address2": "", "address3":
+        "", "city": "Kennebunk", "zip_code": "04043", "country": "US", "state": "ME",
+        "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
+        ""}, "coordinates": {"latitude": 43.39341914518459, "longitude": -70.5282839055221},
+        "photos": ["https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
+        "https://s3-media0.fl.yelpcdn.com/bphoto/mTXI6YgYy1gSdCB-KPJ0Sg/o.jpg", "https://s3-media0.fl.yelpcdn.com/bphoto/iJDHvL4ScRxXCsGMaJHHrg/o.jpg"],
+        "hours": [{"open": [{"is_overnight": false, "start": "0500", "end": "2030",
+        "day": 0}, {"is_overnight": false, "start": "0500", "end": "2030", "day":
+        1}, {"is_overnight": false, "start": "0500", "end": "2030", "day": 2}, {"is_overnight":
+        false, "start": "0500", "end": "2030", "day": 3}, {"is_overnight": false,
+        "start": "0500", "end": "1900", "day": 4}, {"is_overnight": false, "start":
+        "0700", "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700",
+        "end": "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}],
+        "transactions": []}'
+  recorded_at: Sat, 14 Nov 2026 01:47:42 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/yQaElwKOFU865x1jxH3KGw
@@ -625,48 +621,48 @@ http_interactions:
       Content-Type:
       - application/json
       Ratelimit-Resettime:
-      - '2025-12-07T00:00:00+00:00'
-      X-Routing-Service:
-      - routing-main--useast1-d6b549d6-2fkfr; site=public_api_v3
+      - '2026-11-15T00:00:00+00:00'
       X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|c45c73c9-1e58-44e8-a72a-ff23ffd5c0fe
-      Access-Control-Max-Age:
-      - '1728000'
-      X-Zipkin-Id:
-      - 7899e2a11f2e5e016d59d98576cfe1dd
-      Access-Control-Allow-Origin:
-      - "*"
+      - p|awGBNkM_j8pKscZth2VNGA|69d95f62-b1ac-4cc4-9157-3c9eb5040773
+      X-Routing-Service:
+      - routing-main--uswest2-5c69bd8797-cw5zw; site=public_api_v3
       Set-Cookie:
       - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
         GMT
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '1728000'
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Zipkin-Id:
+      - 585f7ea7cbf804508a127a2f431759da
       Server:
       - envoy
       Ratelimit-Dailylimit:
       - '5000'
-      Ratelimit-Remaining:
-      - '4919'
       Access-Control-Allow-Headers:
       - Origin, Content-Type, Accept, Authorization
+      Ratelimit-Remaining:
+      - '4888'
       Access-Control-Allow-Methods:
       - POST,OPTIONS,GET,DELETE,PUT,PATCH
-      Access-Control-Allow-Credentials:
-      - 'true'
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-106-124-useast1aprod
+      - 10-69-94-198-uswest2aprod
       X-Extlb:
-      - 10-65-106-124-useast1aprod
+      - 10-69-94-198-uswest2aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 06 Dec 2025 00:01:20 GMT
+      - Sat, 14 Nov 2026 01:47:43 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-iad-kcgs7200057-IAD
+      - cache-sjc10061-SJC
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -683,23 +679,21 @@ http_interactions:
         "name": "Xcel Fitness Spa", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg",
         "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/xcel-fitness-spa-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
         "phone": "+12393949235", "display_phone": "(239) 394-9235", "review_count":
-        17, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "massage",
+        18, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "massage",
         "title": "Massage"}, {"alias": "healthtrainers", "title": "Trainers"}], "rating":
-        3.9, "location": {"address1": "1817 San Marco Rd", "address2": null, "address3":
+        4.0, "location": {"address1": "1817 San Marco Rd", "address2": "", "address3":
         "", "city": "Marco Island", "zip_code": "34145", "country": "US", "state":
         "FL", "display_address": ["1817 San Marco Rd", "Marco Island, FL 34145"],
         "cross_streets": ""}, "coordinates": {"latitude": 25.9341526, "longitude":
-        -81.6989467}, "photos": ["https://s3-media0.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg",
-        "https://s3-media0.fl.yelpcdn.com/bphoto/ccAjpYauX08M1B23wHFE3Q/o.jpg", "https://s3-media0.fl.yelpcdn.com/bphoto/Qot7suis2wM54QxFQx1DIg/o.jpg"],
-        "price": "$$$", "hours": [{"open": [{"is_overnight": false, "start": "0700",
-        "end": "1900", "day": 0}, {"is_overnight": false, "start": "0700", "end":
-        "1900", "day": 1}, {"is_overnight": false, "start": "0700", "end": "1900",
-        "day": 2}, {"is_overnight": false, "start": "0700", "end": "1900", "day":
-        3}, {"is_overnight": false, "start": "0700", "end": "1900", "day": 4}, {"is_overnight":
-        false, "start": "0800", "end": "1500", "day": 5}, {"is_overnight": false,
-        "start": "0900", "end": "1500", "day": 6}], "hours_type": "REGULAR", "is_open_now":
-        false}], "transactions": []}'
-  recorded_at: Sat, 06 Dec 2025 00:01:20 GMT
+        -81.6989467}, "photos": [], "price": "$$$", "hours": [{"open": [{"is_overnight":
+        false, "start": "0700", "end": "1900", "day": 0}, {"is_overnight": false,
+        "start": "0700", "end": "1900", "day": 1}, {"is_overnight": false, "start":
+        "0700", "end": "1900", "day": 2}, {"is_overnight": false, "start": "0700",
+        "end": "1900", "day": 3}, {"is_overnight": false, "start": "0700", "end":
+        "1900", "day": 4}, {"is_overnight": false, "start": "0800", "end": "1500",
+        "day": 5}, {"is_overnight": false, "start": "0900", "end": "1500", "day":
+        6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions": []}'
+  recorded_at: Sat, 14 Nov 2026 01:47:43 GMT
 - request:
     method: get
     uri: https://api.yelp.com/v3/businesses/yQaElwKOFU865x1jxH3KGw
@@ -724,49 +718,49 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Ratelimit-Remaining:
-      - '4918'
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept, Authorization
+      Server:
+      - envoy
       Set-Cookie:
       - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
         GMT
-      Ratelimit-Resettime:
-      - '2025-12-07T00:00:00+00:00'
-      X-Zipkin-Id:
-      - a03640a41e34754f06fb5f30b9ab3d52
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Max-Age:
-      - '1728000'
-      Access-Control-Allow-Headers:
-      - Origin, Content-Type, Accept, Authorization
       Access-Control-Allow-Credentials:
       - 'true'
-      X-Routing-Service:
-      - routing-main--uswest2-6956899454-gb4lz; site=public_api_v3
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|3447cb89-2d12-417f-9fca-6fcca84f4ac2
-      Server:
-      - envoy
-      Access-Control-Allow-Methods:
-      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Zipkin-Id:
+      - 190cdc538b2577b194855ccb22b9188f
       Ratelimit-Dailylimit:
       - '5000'
+      Ratelimit-Remaining:
+      - '4887'
+      Ratelimit-Resettime:
+      - '2026-11-15T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--uswest2-5c69bd8797-5cxq8; site=public_api_v3
+      Access-Control-Max-Age:
+      - '1728000'
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|d6990e10-231a-4bf7-8ce9-4b8bbd2667e1
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-159-87-useast1bprod
+      - 10-69-73-2-uswest2aprod
       X-Extlb:
-      - 10-65-159-87-useast1bprod
+      - 10-69-73-2-uswest2aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 06 Dec 2025 00:01:20 GMT
+      - Sat, 14 Nov 2026 01:47:43 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-iad-kcgs7200020-IAD
+      - cache-sjc10066-SJC
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -783,21 +777,19 @@ http_interactions:
         "name": "Xcel Fitness Spa", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg",
         "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/xcel-fitness-spa-marco-island?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
         "phone": "+12393949235", "display_phone": "(239) 394-9235", "review_count":
-        17, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "massage",
+        18, "categories": [{"alias": "gyms", "title": "Gyms"}, {"alias": "massage",
         "title": "Massage"}, {"alias": "healthtrainers", "title": "Trainers"}], "rating":
-        3.9, "location": {"address1": "1817 San Marco Rd", "address2": null, "address3":
+        4.0, "location": {"address1": "1817 San Marco Rd", "address2": "", "address3":
         "", "city": "Marco Island", "zip_code": "34145", "country": "US", "state":
         "FL", "display_address": ["1817 San Marco Rd", "Marco Island, FL 34145"],
         "cross_streets": ""}, "coordinates": {"latitude": 25.9341526, "longitude":
-        -81.6989467}, "photos": ["https://s3-media0.fl.yelpcdn.com/bphoto/Rx1MuJegPvksWLbH82DmNg/o.jpg",
-        "https://s3-media0.fl.yelpcdn.com/bphoto/ccAjpYauX08M1B23wHFE3Q/o.jpg", "https://s3-media0.fl.yelpcdn.com/bphoto/Qot7suis2wM54QxFQx1DIg/o.jpg"],
-        "price": "$$$", "hours": [{"open": [{"is_overnight": false, "start": "0700",
-        "end": "1900", "day": 0}, {"is_overnight": false, "start": "0700", "end":
-        "1900", "day": 1}, {"is_overnight": false, "start": "0700", "end": "1900",
-        "day": 2}, {"is_overnight": false, "start": "0700", "end": "1900", "day":
-        3}, {"is_overnight": false, "start": "0700", "end": "1900", "day": 4}, {"is_overnight":
-        false, "start": "0800", "end": "1500", "day": 5}, {"is_overnight": false,
-        "start": "0900", "end": "1500", "day": 6}], "hours_type": "REGULAR", "is_open_now":
-        false}], "transactions": []}'
-  recorded_at: Sat, 06 Dec 2025 00:01:20 GMT
+        -81.6989467}, "photos": [], "price": "$$$", "hours": [{"open": [{"is_overnight":
+        false, "start": "0700", "end": "1900", "day": 0}, {"is_overnight": false,
+        "start": "0700", "end": "1900", "day": 1}, {"is_overnight": false, "start":
+        "0700", "end": "1900", "day": 2}, {"is_overnight": false, "start": "0700",
+        "end": "1900", "day": 3}, {"is_overnight": false, "start": "0700", "end":
+        "1900", "day": 4}, {"is_overnight": false, "start": "0800", "end": "1500",
+        "day": 5}, {"is_overnight": false, "start": "0900", "end": "1500", "day":
+        6}], "hours_type": "REGULAR", "is_open_now": false}], "transactions": []}'
+  recorded_at: Sat, 14 Nov 2026 01:47:43 GMT
 recorded_with: VCR 6.3.1

@@ -26,36 +26,36 @@ http_interactions:
       - '123'
       Content-Type:
       - application/json
-      Server:
-      - envoy
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Max-Age:
-      - '1728000'
       Access-Control-Allow-Methods:
       - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      X-Routing-Service:
+      - routing-main--uswest2-5c69bd8797-hdbzg; site=public_api_v3
       Access-Control-Allow-Headers:
       - Origin, Content-Type, Accept, Authorization
+      Access-Control-Allow-Origin:
+      - "*"
       X-Zipkin-Id:
-      - 54afce0b6cf6bded0be338348e48940a
-      X-Routing-Service:
-      - routing-main--useast1-d6b549d6-4jdms; site=public_api_v3
+      - d03c77d6f3f779673f3c180083f9aa06
+      Access-Control-Max-Age:
+      - '1728000'
       Access-Control-Allow-Credentials:
       - 'true'
+      Server:
+      - envoy
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-139-192-useast1bprod
+      - 10-69-160-113-uswest2bprod
       X-Extlb:
-      - 10-65-139-192-useast1bprod
+      - 10-69-160-113-uswest2bprod
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 06 Dec 2025 00:01:27 GMT
+      - Sat, 14 Nov 2026 01:47:16 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-iad-kcgs7200129-IAD
+      - cache-sjc1000126-SJC
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -66,5 +66,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"error": {"code": "LOCATION_NOT_FOUND", "description": "Could not
         execute search, try specifying a more exact location."}}'
-  recorded_at: Sat, 06 Dec 2025 00:01:27 GMT
+  recorded_at: Sat, 14 Nov 2026 01:47:16 GMT
 recorded_with: VCR 6.3.1

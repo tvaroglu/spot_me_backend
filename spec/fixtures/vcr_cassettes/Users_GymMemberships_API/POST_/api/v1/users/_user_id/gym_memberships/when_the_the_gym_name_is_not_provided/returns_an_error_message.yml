@@ -24,49 +24,49 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
+      Access-Control-Max-Age:
+      - '1728000'
+      X-Routing-Service:
+      - routing-main--uswest2-5c69bd8797-jvnjc; site=public_api_v3
+      Server:
+      - envoy
+      X-Zipkin-Id:
+      - 941d8cf02c9b8227cad0d7becd8d3694
+      Ratelimit-Remaining:
+      - '4918'
       Access-Control-Allow-Credentials:
       - 'true'
-      Access-Control-Allow-Headers:
-      - Origin, Content-Type, Accept, Authorization
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      Ratelimit-Resettime:
+      - '2026-11-15T00:00:00+00:00'
       Set-Cookie:
       - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
         GMT
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|6f5b39e9-f737-4726-8dd2-25cf93ebaa8d
-      X-Zipkin-Id:
-      - e44a2dd395059acd513eaa69b2d5a267
-      Ratelimit-Dailylimit:
-      - '5000'
-      Ratelimit-Remaining:
-      - '4929'
-      Ratelimit-Resettime:
-      - '2025-12-07T00:00:00+00:00'
-      Server:
-      - envoy
-      X-Routing-Service:
-      - routing-main--useast1-d6b549d6-ks5sm; site=public_api_v3
-      Access-Control-Max-Age:
-      - '1728000'
-      Access-Control-Allow-Methods:
-      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept, Authorization
       Access-Control-Allow-Origin:
       - "*"
+      Ratelimit-Dailylimit:
+      - '5000'
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|45b69b0a-a0f6-494e-b5f4-b1f2eb73f55f
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-183-31-useast1bprod
+      - 10-69-155-119-uswest2bprod
       X-Extlb:
-      - 10-65-183-31-useast1bprod
+      - 10-69-155-119-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 06 Dec 2025 00:01:15 GMT
+      - Sat, 14 Nov 2026 01:47:09 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-iad-kcgs7200071-IAD
+      - cache-sjc10078-SJC
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -83,11 +83,11 @@ http_interactions:
         "name": "Quest Fitness", "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
         "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/quest-fitness-kennebunk-2?adjust_creative=awGBNkM_j8pKscZth2VNGA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=awGBNkM_j8pKscZth2VNGA",
         "phone": "+12074673800", "display_phone": "(207) 467-3800", "review_count":
-        8, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
+        10, "categories": [{"alias": "healthtrainers", "title": "Trainers"}, {"alias":
         "taichi", "title": "Tai Chi"}, {"alias": "yoga", "title": "Yoga"}], "rating":
-        4.6, "location": {"address1": "2 Livewell Dr", "address2": null, "address3":
-        null, "city": "Kennebunk", "zip_code": "04043", "country": "US", "state":
-        "ME", "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
+        4.3, "location": {"address1": "2 Livewell Dr", "address2": "", "address3":
+        "", "city": "Kennebunk", "zip_code": "04043", "country": "US", "state": "ME",
+        "display_address": ["2 Livewell Dr", "Kennebunk, ME 04043"], "cross_streets":
         ""}, "coordinates": {"latitude": 43.39341914518459, "longitude": -70.5282839055221},
         "photos": ["https://s3-media0.fl.yelpcdn.com/bphoto/JvTUeODPIiawkP1f619MGA/o.jpg",
         "https://s3-media0.fl.yelpcdn.com/bphoto/mTXI6YgYy1gSdCB-KPJ0Sg/o.jpg", "https://s3-media0.fl.yelpcdn.com/bphoto/iJDHvL4ScRxXCsGMaJHHrg/o.jpg"],
@@ -99,5 +99,5 @@ http_interactions:
         "0700", "end": "1800", "day": 5}, {"is_overnight": false, "start": "0700",
         "end": "1800", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}],
         "transactions": []}'
-  recorded_at: Sat, 06 Dec 2025 00:01:15 GMT
+  recorded_at: Sat, 14 Nov 2026 01:47:09 GMT
 recorded_with: VCR 6.3.1
