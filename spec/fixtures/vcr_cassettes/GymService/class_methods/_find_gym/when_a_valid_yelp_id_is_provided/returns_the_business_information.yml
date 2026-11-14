@@ -24,49 +24,49 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
+      Ratelimit-Remaining:
+      - '4900'
+      Ratelimit-Resettime:
+      - '2026-11-15T00:00:00+00:00'
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|6d8753ae-3784-4c24-b731-2938fb1b5f70
+      X-Routing-Service:
+      - routing-main--uswest2-5c69bd8797-cw5zw; site=public_api_v3
       Set-Cookie:
       - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
         GMT
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Zipkin-Id:
+      - 546d374a6d725f506481dced177207dc
       Access-Control-Max-Age:
       - '1728000'
+      Server:
+      - envoy
+      Ratelimit-Dailylimit:
+      - '5000'
       Access-Control-Allow-Methods:
       - POST,OPTIONS,GET,DELETE,PUT,PATCH
       Access-Control-Allow-Headers:
       - Origin, Content-Type, Accept, Authorization
-      X-Zipkin-Id:
-      - 151731033ae15b03556ce00802535a66
-      X-Routing-Service:
-      - routing-main--useast1-d6b549d6-4tlgm; site=public_api_v3
-      Access-Control-Allow-Origin:
-      - "*"
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|68860389-2a5d-4127-a869-90287e0182df
-      Ratelimit-Dailylimit:
-      - '5000'
-      Ratelimit-Remaining:
-      - '4906'
-      Server:
-      - envoy
-      Ratelimit-Resettime:
-      - '2025-12-07T00:00:00+00:00'
-      Access-Control-Allow-Credentials:
-      - 'true'
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-128-57-useast1bprod
+      - 10-69-107-204-uswest2aprod
       X-Extlb:
-      - 10-65-128-57-useast1bprod
+      - 10-69-107-204-uswest2aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 06 Dec 2025 00:01:27 GMT
+      - Sat, 14 Nov 2026 01:47:16 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-iad-kcgs7200037-IAD
+      - cache-sjc10031-SJC
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -95,7 +95,7 @@ http_interactions:
         false, "start": "0600", "end": "2000", "day": 3}, {"is_overnight": false,
         "start": "0600", "end": "2000", "day": 4}, {"is_overnight": false, "start":
         "0800", "end": "1600", "day": 5}, {"is_overnight": false, "start": "0900",
-        "end": "1500", "day": 6}], "hours_type": "REGULAR", "is_open_now": true}],
+        "end": "1500", "day": 6}], "hours_type": "REGULAR", "is_open_now": false}],
         "transactions": []}'
-  recorded_at: Sat, 06 Dec 2025 00:01:27 GMT
+  recorded_at: Sat, 14 Nov 2026 01:47:16 GMT
 recorded_with: VCR 6.3.1
