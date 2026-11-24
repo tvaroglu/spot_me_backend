@@ -142,5 +142,10 @@ describe 'Users::GymMemberships API', type: :request do
     #
     #   include_examples 'status code 404'
     # end
+
+    # TODO: remove temp sleep call if Yelp upgrades the free API to not suck so much..
+    after(:each) do
+      sleep 1
+    end
   end
 end
