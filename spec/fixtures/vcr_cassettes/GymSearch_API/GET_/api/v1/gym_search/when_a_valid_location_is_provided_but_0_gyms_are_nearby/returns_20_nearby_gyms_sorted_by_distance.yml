@@ -24,49 +24,49 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      Access-Control-Allow-Origin:
-      - "*"
       Ratelimit-Dailylimit:
       - '5000'
-      Server:
-      - envoy
+      X-Ctx-Guv:
+      - p|awGBNkM_j8pKscZth2VNGA|1c65b0d0-e5f0-4025-b62c-5cdc658138ac
+      Ratelimit-Resettime:
+      - '2026-11-26T00:00:00+00:00'
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
       Access-Control-Allow-Headers:
       - Origin, Content-Type, Accept, Authorization
       Access-Control-Allow-Credentials:
       - 'true'
-      X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|86067a0e-2c6f-457e-b20b-914a9bc45893
+      X-Routing-Service:
+      - routing-main--uswest2-65c4df4b8-5p5j2; site=public_api_v3
+      Access-Control-Max-Age:
+      - '1728000'
+      Ratelimit-Remaining:
+      - '4992'
       Set-Cookie:
       - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
         GMT
-      Access-Control-Max-Age:
-      - '1728000'
-      X-Routing-Service:
-      - routing-main--useast1-d6b549d6-wgb5r; site=public_api_v3
-      Access-Control-Allow-Methods:
-      - POST,OPTIONS,GET,DELETE,PUT,PATCH
-      Ratelimit-Resettime:
-      - '2025-12-07T00:00:00+00:00'
+      Access-Control-Allow-Origin:
+      - "*"
       X-Zipkin-Id:
-      - 567894c157c84883e235e8ed5ed7ef7d
-      Ratelimit-Remaining:
-      - '4943'
+      - 1dc8d5e3d22f61e66e1359c7d1ace770
+      Server:
+      - envoy
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-183-31-useast1bprod
+      - 10-69-111-127-uswest2aprod
       X-Extlb:
-      - 10-65-183-31-useast1bprod
+      - 10-69-111-127-uswest2aprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 06 Dec 2025 00:01:04 GMT
+      - Wed, 25 Nov 2026 00:00:45 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-iad-kcgs7200096-IAD
+      - cache-sjc10056-SJC
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -81,5 +81,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"businesses": [], "total": 0, "region": {"center": {"longitude": -156.76116943359375,
         "latitude": 71.28570519281563}}}'
-  recorded_at: Sat, 06 Dec 2025 00:01:04 GMT
+  recorded_at: Wed, 25 Nov 2026 00:00:44 GMT
 recorded_with: VCR 6.3.1
