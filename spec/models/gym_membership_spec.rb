@@ -22,10 +22,37 @@ RSpec.describe GymMembership, type: :model do
     end
   end
 
-  describe 'delegations' do
-    describe '#address and #address_details' do
-      it { should delegate_method(:address).to(:find_gym) }
-      it { should delegate_method(:address_details).to(:find_gym) }
+  describe 'Yelp lookup resilience' do
+    let(:gym_membership) { create(:gym_membership) }
+
+    it 'performs only one Yelp lookup when both address fields are read' do
+      # Construct a real Gym PORO for the type check:
+      gym = Gym.new(id: gym_membership.yelp_gym_id, name: 'Test Gym',
+                    location: { display_address: ['123 Main St'], city: 'Denver' },
+                    display_phone: '')
+      allow(GymFacade).to receive(:find_gym).with(gym_membership.yelp_gym_id).and_return(gym)
+
+      expect(gym_membership.address).to eq('123 Main St')
+      expect(gym_membership.address_details[:city]).to eq('Denver')
+      expect(GymFacade).to have_received(:find_gym).once
+    end
+
+    it 'returns empty address metadata instead of crashing on a Yelp error' do
+      allow(GymFacade).to receive(:find_gym).and_return(errors: { error: 'rate limited' })
+      allow(Rails.logger).to receive(:warn)
+
+      expect(gym_membership.address).to be_nil
+      expect(gym_membership.address_details).to eq({})
+      expect(GymFacade).to have_received(:find_gym).once
+    end
+
+    it 'returns empty address metadata when the HTTP connection fails' do
+      allow(GymFacade).to receive(:find_gym).and_raise(Faraday::ConnectionFailed, 'unavailable')
+      allow(Rails.logger).to receive(:warn)
+
+      expect(gym_membership.address_details).to eq({})
+      expect(gym_membership.address).to be_nil
+      expect(GymFacade).to have_received(:find_gym).once
     end
   end
 

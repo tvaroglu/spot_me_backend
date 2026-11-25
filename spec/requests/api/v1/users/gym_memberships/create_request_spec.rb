@@ -9,9 +9,8 @@ require 'rails_helper'
 describe 'Users::GymMemberships API', type: :request do
   describe 'POST /api/v1/users/:user_id/gym_memberships', :vcr do
     let!(:yelp_gym) { GymFacade.find_gym('gHmS3WIjRRhSWG4OdCQYLA') }
-    let!(:user) { user_with_gym_membership(yelp_gym_id: yelp_gym.yelp_gym_id) }
-    let(:gym_membership) { user.gym_memberships.first }
-    let(:yelp_gym_id) { gym_membership.yelp_gym_id }
+    let!(:user) { create(:user) }
+    let(:yelp_gym_id) { yelp_gym.yelp_gym_id }
     let(:gym_name) { 'Planet Fitness' }
     let(:valid_attributes) do
       {
@@ -35,6 +34,21 @@ describe 'Users::GymMemberships API', type: :request do
       end
 
       include_examples 'status code 201'
+    end
+
+    context 'when the same gym is added twice' do
+      it 'returns the same membership and leaves the database unchanged' do
+        post "/api/v1/users/#{user.id}/gym_memberships", params: valid_attributes
+        original_id = json_data[:id]
+
+        expect do
+          post "/api/v1/users/#{user.id}/gym_memberships", params: valid_attributes
+        end.not_to change(GymMembership, :count)
+
+        expect(response).to have_http_status(:ok)
+        expect(json_data[:id]).to eq(original_id)
+        expect(user.gym_memberships.where(yelp_gym_id: yelp_gym_id).count).to eq(1)
+      end
     end
 
     context 'when the user does not exist' do
@@ -128,5 +142,10 @@ describe 'Users::GymMemberships API', type: :request do
     #
     #   include_examples 'status code 404'
     # end
+
+    # TODO: remove temp sleep call if Yelp upgrades the free API to not suck so much..
+    after(:each) do
+      sleep 1
+    end
   end
 end

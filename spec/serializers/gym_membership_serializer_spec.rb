@@ -49,6 +49,25 @@ describe 'GymMembershipSerializer', type: :serializer do
         end
       end
 
+      context 'when Yelp throttles a saved gym' do
+        let(:gym_membership) { create(:gym_membership) }
+        let(:yelp_error) do
+          { errors: { error: 'You have exceeded the queries-per-second limit' }, code: :not_found }
+        end
+
+        it 'retains the membership and omits unavailable address metadata' do
+          allow(GymFacade).to receive(:find_gym).with(gym_membership.yelp_gym_id)
+                                                .and_return(yelp_error)
+          allow(Rails.logger).to receive(:warn)
+
+          data = GymMembershipSerializer.new(gym_membership).serializable_hash[:data]
+
+          expect(data[:attributes][:gym_name]).to eq(gym_membership.gym_name)
+          expect(data[:meta]).to eq(address: nil, address_details: {})
+          expect(GymFacade).to have_received(:find_gym).once
+        end
+      end
+
       context 'when I provide no valid event or events' do
         subject(:empty_gym_membership) { GymMembershipSerializer.new(nil).serializable_hash }
 

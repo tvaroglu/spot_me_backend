@@ -24,49 +24,49 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
+      Server:
+      - envoy
+      X-Zipkin-Id:
+      - 903e9c81960cd489f8ea6e856aac4823
+      Access-Control-Allow-Methods:
+      - POST,OPTIONS,GET,DELETE,PUT,PATCH
       Ratelimit-Dailylimit:
       - '5000'
       Ratelimit-Remaining:
-      - '4942'
-      X-Zipkin-Id:
-      - 2d785c48d795b7942c69632a3b812d88
+      - '4991'
+      Set-Cookie:
+      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
+        GMT
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept, Authorization
       Ratelimit-Resettime:
-      - '2025-12-07T00:00:00+00:00'
+      - '2026-11-26T00:00:00+00:00'
       Access-Control-Allow-Origin:
       - "*"
       X-Routing-Service:
-      - routing-main--uswest2-6956899454-fznm6; site=public_api_v3
+      - routing-main--uswest2-65c4df4b8-sgrnn; site=public_api_v3
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Max-Age:
       - '1728000'
-      Set-Cookie:
-      - pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59
-        GMT
-      Server:
-      - envoy
-      Access-Control-Allow-Headers:
-      - Origin, Content-Type, Accept, Authorization
       X-Ctx-Guv:
-      - p|awGBNkM_j8pKscZth2VNGA|641d48d1-d137-40ec-9549-b43eed185549
-      Access-Control-Allow-Methods:
-      - POST,OPTIONS,GET,DELETE,PUT,PATCH
+      - p|awGBNkM_j8pKscZth2VNGA|3493d3bc-f554-4112-aa6b-a68bed7c00af
       X-Mode:
       - ro
       X-Proxied:
-      - 10-65-86-223-useast1aprod
+      - 10-69-167-109-uswest2bprod
       X-Extlb:
-      - 10-65-86-223-useast1aprod
+      - 10-69-167-109-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 06 Dec 2025 00:01:04 GMT
+      - Wed, 25 Nov 2026 00:00:45 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-iad-kcgs7200178-IAD
+      - cache-sjc1000132-SJC
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -81,5 +81,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"businesses": [], "total": 0, "region": {"center": {"longitude": -156.76116943359375,
         "latitude": 71.28570519281563}}}'
-  recorded_at: Sat, 06 Dec 2025 00:01:04 GMT
+  recorded_at: Wed, 25 Nov 2026 00:00:45 GMT
 recorded_with: VCR 6.3.1
